@@ -1,27 +1,24 @@
+import { BrowserRouter as Routes, Switch, Route } from 'react-router-dom';
+import Home from './component/pages/Home';
+import Acoes from './component/pages/Acoes';
+import Doacoes from './component/pages/Doacoes';
+import Loja from './component/pages/Loja';
+import Sobre from './component/pages/Sobre';
+import Voluntariado from './component/pages/Voluntariado';
 
-import {BrowserRouter as Routes, Switch, Route} from 'react-router-dom'
-import Home from './component/pages/Home'
-import Acoes from './component/pages/Acoes'
-import Doacoes from './component/pages/Doacoes'
-import Loja from './component/pages/Loja'
-import Sobre from './component/pages/Sobre'
-import Voluntariado from './component/pages/Voluntariado'
-
-import Container from './component/layout/Container'
-import Navbar from './component/layout/Navbar1'
-import Footer1 from './component/layout/Footer1'
-
-
+import Container from './component/layout/Container';
+import Navbar from './component/layout/Navbar1';
+import Footer1 from './component/layout/Footer1';
 
 //teste Bulma
-import "rbx/index.css"
+import 'rbx/index.css';
 
 function App() {
   return (
     <Routes>
       <Navbar />
       <Switch>
-        <Container  customClass="min-height">
+        <Container customClass="min-height">
           <Route exact path="/">
             <Home />
           </Route>
@@ -42,7 +39,7 @@ function App() {
           </Route>
         </Container>
       </Switch>
-      <Footer1/>
+      <Footer1 />
     </Routes>
   );
 }
