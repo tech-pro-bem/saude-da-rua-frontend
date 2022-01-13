@@ -128,3 +128,104 @@ export const Div = styled.menu`
   left: 136px;
   top: 100px;
 `;
+
+/* ----------------------------PAGINA ONDE ESTAMOS----------------------------------------------- */
+/*Onde estamos */
+export const DivWhere = styled.menu`
+  position: absolute;
+  width: 1213px;
+  height: 546.27px;
+  left: 132px;
+  top: 100.55px;
+`;
+
+export const Map = styled.img`
+  margin-top: 5px;
+
+  position: absolute;
+  width: 100%;
+  max-width: 477px;
+  height: 530px;
+  left: 835px;
+  top: 1000px; /*232px */
+`;
+
+export const OndeEstamosTitle = styled.text`
+  position: absolute;
+  width: 298px;
+  height: 60px;
+  left: 132px;
+  top: 1000px;
+
+  /* Headers/H2 */
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  /* identical to box height */
+
+  /* Cores secundárias/Principal */
+
+  color: #e9e9e9;
+`;
+
+export const OndeEstamosSubTitle1 = styled.text`
+  position: absolute;
+  width: 61px;
+  height: 36px;
+  left: 132px;
+  top: 1100px;
+
+  /* Font families/Medium */
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+
+  /* Cores secundárias/Principal */
+
+  color: #e9e9e9;
+`;
+export const OndeEstamosSubTitle2 = styled.text`
+  position: absolute;
+  width: 223px;
+  height: 36px;
+  left: 132px;
+  top: 1150px;
+
+  /* Font families/Regular */
+
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  /* Cores primárias/Principal */
+
+  color: #0095f6;
+`;
+
+export const TextWhere = styled.text`
+  position: absolute;
+  width: 485px;
+  height: 35px;
+  left: 132px;
+  top: 1230px;
+
+  /* Font families/Medium */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  /* identical to box height */
+  /* Cores secundárias/Principal */
+
+  color: #e9e9e9;
+`;
