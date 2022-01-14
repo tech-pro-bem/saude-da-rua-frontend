@@ -139,7 +139,7 @@ export const DivWhere = styled.menu`
   top: 100.55px;
 `;
 
-export const Map = styled.img`
+export const MapImag = styled.img`
   margin-top: 5px;
 
   position: absolute;

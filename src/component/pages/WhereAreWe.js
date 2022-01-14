@@ -1,4 +1,4 @@
-import { DivWhere, Map } from '../layout/styles';
+import { DivWhere, MapImag } from '../layout/styles';
 
 import WrapperTextWhere from '../layout/WrapperTextWhere';
 
@@ -9,7 +9,7 @@ function WhereAreWe() {
         {/*  <WrapperTextWhere/> ERRO RESOLVIDO*/}
 
         <WrapperTextWhere />
-        <Map />
+        <MapImag />
       </DivWhere>
     </>
   );
