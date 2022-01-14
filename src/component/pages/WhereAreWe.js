@@ -6,7 +6,7 @@ function WhereAreWe() {
   return (
     <>
       <DivWhere>
-        {/*  <WrapperTextWhere/> Erro nessa página, não sei o que é*/}
+        {/*  <WrapperTextWhere/> ERRO RESOLVIDO*/}
 
         <WrapperTextWhere />
         <Map />
