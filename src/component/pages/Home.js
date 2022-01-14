@@ -1,7 +1,6 @@
-import Carrossel from '../Carrossel/Carrossel';
-
 import AboutUs from '.././pages/AboutUs';
 import WhereAreWe from './WhereAreWe';
+import Partners from './Partners';
 
 function Home() {
   return (
@@ -9,10 +8,12 @@ function Home() {
       <AboutUs />
 
       <WhereAreWe />
+
+      <Partners />
     </>
   );
 }
 
 export default Home;
 
-/* <Carrossel />*/
+/* <Carrossel /> import Carrossel from '../Carrossel/Carrossel';*/
