@@ -305,6 +305,7 @@ export const Button = styled.button`
   background-color: black;
 
   cursor: pointer;
+  pointer-events: auto;
 
   transition: all 0.3s;
 
