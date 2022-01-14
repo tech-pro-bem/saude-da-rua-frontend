@@ -274,7 +274,7 @@ export const PartnersPhoto = styled.img`
   background: url(image.png);
 `;
 
-export const ButtonPartnersStyle = styled.button`
+export const Button = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -288,7 +288,7 @@ export const ButtonPartnersStyle = styled.button`
   top: 2100px;
 
   color: #0095f6;
-  font-family: Poppins;
+  font-family: Verdana, Poppins, Geneva, Tahoma, sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -302,4 +302,18 @@ export const ButtonPartnersStyle = styled.button`
   border: 2px solid #0095f6;
   box-sizing: border-box;
   border-radius: 40px;
+  background-color: black;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    color: #0095f6;
+  }
+  &:active {
+    color: white;
+    background-color: #0095f6;
+  }
 `;

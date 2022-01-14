@@ -1,9 +1,9 @@
-import { ButtonPartnersStyle } from '../layout/styles';
+import { Button } from '../layout/styles';
 
 function ButtonPartners() {
   return (
     <>
-      <ButtonPartnersStyle>Seja nosso parceiro</ButtonPartnersStyle>
+      <Button>Seja nosso parceiro</Button>
     </>
   );
 }
