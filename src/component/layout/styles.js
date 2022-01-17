@@ -229,3 +229,92 @@ export const TextWhere = styled.p`
 
   color: #e9e9e9;
 `;
+/*------------------------------EMPRESAS QUE NOS APOIAM ------------------------ */
+
+/*Empreas que nos apoaiam */
+export const DivPartners = styled.menu`
+  position: static;
+  width: 1439px;
+  height: 458px;
+  left: 0px;
+  top: 3400px; /*3400px */
+  /* Inside auto layout */
+  flex: none;
+  order: 5;
+  flex-grow: 0;
+  margin: 16px 0px;
+`;
+
+export const PartnersText = styled.p`
+  position: absolute;
+  width: 379px;
+  height: 42px;
+  left: 530px;
+  top: 1800px;
+  /* Headers/H3 */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 42px;
+  /* identical to box height */
+  color: #e9e9e9;
+`;
+export const SpanColor = styled.text`
+  color: #0095f6;
+`;
+
+export const PartnersPhoto = styled.img`
+  position: absolute;
+  width: 367px;
+  height: 147.3px;
+  left: 536px;
+  top: 1900px;
+
+  background: url(image.png);
+`;
+
+export const Button = styled.button`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  position: absolute;
+  width: 280px;
+  height: 57px;
+  left: 560px;
+  top: 2100px;
+
+  color: #0095f6;
+  font-family: Verdana, Poppins, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 9px;
+
+  border: 2px solid #0095f6;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background-color: black;
+
+  cursor: pointer;
+  pointer-events: auto;
+
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    color: #0095f6;
+  }
+  &:active {
+    color: white;
+    background-color: #0095f6;
+  }
+`;
