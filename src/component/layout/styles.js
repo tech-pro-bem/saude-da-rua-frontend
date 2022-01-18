@@ -141,10 +141,8 @@ export const DivWhere = styled.menu`
 
 export const MapImag = styled.img`
   margin-top: 5px;
-
   position: absolute;
-  width: 100%;
-  max-width: 477px;
+  width: 477px;
   height: 530px;
   left: 835px;
   top: 1000px; /*232px */
