@@ -1,11 +1,7 @@
-import Home from './component/pages/Home';
+import { Home } from './pages/index';
 
 function App() {
-  return (
-    <>
-      <Home />
-    </>
-  );
+  return <Home />;
 }
 
 export default App;

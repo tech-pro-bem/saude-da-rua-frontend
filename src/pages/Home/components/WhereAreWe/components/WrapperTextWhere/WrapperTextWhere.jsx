@@ -3,7 +3,7 @@ import {
   OndeEstamosSubTitle1,
   OndeEstamosSubTitle2,
   TextWhere,
-} from './styles';
+} from './WrapperTextWhere.style';
 
 function WrapperTextWhere() {
   return (
@@ -22,7 +22,6 @@ function WrapperTextWhere() {
       <TextWhere>
         <p>Filiais </p>
         <p>
-          {' '}
           Saúde da Rua Campinas - SP
           <br></br>
           Saúde da Rua Itajaí - SC

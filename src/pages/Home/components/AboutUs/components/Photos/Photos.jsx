@@ -1,10 +1,12 @@
-import imag1 from './../../img/DSC_0182.png';
-import imag2 from './../../img/H21.png';
-import imag3 from './../../img/H61.png';
-
-import { FrameImg1, FrameImg2, FrameImg3 } from './styles';
-
-import { Img1, Img2, Img3 } from './styles';
+import { imag1, imag2, imag3 } from '../../../../../../assets';
+import {
+  FrameImg1,
+  FrameImg2,
+  FrameImg3,
+  Img1,
+  Img2,
+  Img3,
+} from './Photos.styles';
 
 function Photos() {
   return (
