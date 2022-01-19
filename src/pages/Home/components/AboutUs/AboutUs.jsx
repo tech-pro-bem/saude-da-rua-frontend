@@ -1,12 +1,12 @@
 import { Container } from './AboutUs.style';
-import { Photos, WrapperTextAbout } from './components';
+import { Photos, WrapperTextAboutUs } from './components';
 
 function AboutUs() {
   return (
     <>
       <Container>
         <Photos />
-        <WrapperTextAbout />
+        <WrapperTextAboutUs />
       </Container>
     </>
   );
