@@ -15,37 +15,34 @@ html,body, #root {
 
 
 p.big {
-font-weight: normal;
-line-height: 32px;
-font-size: 22px;
+font-weight: 400;
+line-height: 2rem;
+font-size: 1.375rem;
 }
 
 
 p.default {
-  font-weight: normal;
-  line-height: 24px;
-  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  font-size: 1rem;
   }
 
 h1 {
-font-weight: bold;
-line-height: auto;
-font-size: 52px;
-weight: regular
+font-weight: 700;
+line-height: 4.875rem;
+font-size: 3.25rem;
 }
 
 h2{
-  font-weight: bold;
-  line-height: auto;
-  font-size: 40px;
-  weight: regular
+  font-weight: 600;
+  line-height: 3.75rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-weight: bold;
-  line-height: auto;
-  font-size: 28px;
-  weight: regular
+  font-weight: 500;
+  line-height: 2.625rem;
+  font-size: 1.75rem;
 }
 
 button {

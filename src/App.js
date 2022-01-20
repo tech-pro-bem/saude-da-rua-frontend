@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Home } from './pages/index';
 
 export const Structure = styled.div`
-  width: 1140px;
+  width: 71.25rem;
 
   display: flex;
   flex-direction: column;
