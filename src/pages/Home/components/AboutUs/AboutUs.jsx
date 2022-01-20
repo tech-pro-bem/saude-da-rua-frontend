@@ -3,12 +3,10 @@ import { Photos, WrapperTextAboutUs } from './components';
 
 function AboutUs() {
   return (
-    <>
-      <Container>
-        <Photos />
-        <WrapperTextAboutUs />
-      </Container>
-    </>
+    <Container>
+      <Photos />
+      <WrapperTextAboutUs />
+    </Container>
   );
 }
 
