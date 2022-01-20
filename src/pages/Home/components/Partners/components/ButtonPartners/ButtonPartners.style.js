@@ -7,11 +7,8 @@ export const Button = styled.button`
   align-items: center;
   padding: 0px;
 
-  position: absolute;
   width: 280px;
   height: 57px;
-  left: 560px;
-  top: 2100px;
 
   color: #0095f6;
   font-family: Verdana, Poppins, Geneva, Tahoma, sans-serif;

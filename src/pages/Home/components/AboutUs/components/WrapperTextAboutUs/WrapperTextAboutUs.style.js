@@ -7,7 +7,6 @@ export const QuemSomosTitle = styled.text`
   font-size: 40px;
   line-height: 60px;
   color: #e9e9e9;
-  position: absolute;
   width: 100%;
   max-width: 479px;
   min-height: 60px;
@@ -23,10 +22,7 @@ export const AboutText = styled.text`
   font-feature-settings: 'pnum' on, 'onum' on;
   color: #e9e9e9;
   margin-top: 5px;
-  position: absolute;
   width: 100%;
   max-width: 477px;
   height: 530px;
-  left: 835px;
-  top: 232px;
 `;

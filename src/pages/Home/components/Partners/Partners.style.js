@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
 export const PartnersText = styled.p`
-  position: absolute;
   width: 379px;
   height: 42px;
-  left: 530px;
-  top: 1800px;
   /* Headers/H3 */
   font-family: Poppins;
   font-style: normal;
@@ -21,11 +18,8 @@ export const SpanColor = styled.text`
 `;
 
 export const DivPartners = styled.menu`
-  position: static;
   width: 1439px;
   height: 458px;
-  left: 0px;
-  top: 3400px; /*3400px */
   /* Inside auto layout */
   flex: none;
   order: 5;
