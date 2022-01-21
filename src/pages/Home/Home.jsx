@@ -1,6 +1,7 @@
+import React from 'react';
 import { AboutUs, WhereAreWe, Partners } from './components/index';
 
-function Home() {
+const Home = () => {
   return (
     <>
       <AboutUs />
@@ -10,6 +11,6 @@ function Home() {
       <Partners />
     </>
   );
-}
+};
 
 export default Home;
