@@ -12,6 +12,7 @@ const globalStyle = createGlobalStyle`
     outline: 0;
     background: ${(props) => props.theme.colors.black}
     height: 100%;
+     -webkit-font-smoothing: antialiased !important;
   }
 
 
@@ -52,9 +53,14 @@ const globalStyle = createGlobalStyle`
     cursor: pointer;
   }
 
+
   a{
       text-decoration: none;
       outline: none;
+  }
+
+  ::selection {
+    background: ${(props) => props.theme.colors.light};
   }
   `;
 
