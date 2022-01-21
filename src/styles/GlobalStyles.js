@@ -7,7 +7,7 @@ const globalStyle = createGlobalStyle`
       box-sizing: border-box;
   }
 
-  html,body, #root {
+  html,body, :root {
     font-family: ${(props) => props.theme.font.fontFamily}
     outline: 0;
     background: ${(props) => props.theme.colors.black}
