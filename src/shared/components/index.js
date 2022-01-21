@@ -1,3 +1,3 @@
-import Header from './Header/components/Header';
+import Structure from './Structure/Structure';
 
-export { Header };
+export { Structure };

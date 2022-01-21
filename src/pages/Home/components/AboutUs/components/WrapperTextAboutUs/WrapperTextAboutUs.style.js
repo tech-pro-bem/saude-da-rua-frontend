@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+// TODO:
+// - alterar os nomes das constantes e manter um padrão
+
+// que tag HTML é essa text????
+// utilizar variaveis do tema para cores
+// se foi setado globalmente a tipografia, não é necessário coloca-la aqui de novo
+// lembrar de utilizar hierarquia das tags h1,h2,h3, p, etc...
+
 export const QuemSomosTitle = styled.text`
   font-family: Poppins;
   font-style: normal;
@@ -13,6 +21,7 @@ export const QuemSomosTitle = styled.text`
   left: 833px;
   top: 127px;
 `;
+
 export const AboutText = styled.text`
   font-family: Poppins;
   font-style: normal;

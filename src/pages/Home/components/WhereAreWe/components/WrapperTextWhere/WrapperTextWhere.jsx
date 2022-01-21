@@ -5,6 +5,12 @@ import {
   TextWhere,
 } from './WrapperTextWhere.style';
 
+///** TODO:
+// - refatorar function para function component
+// - mesma utilização errada do styled-component aqui, um p dentro de outro p
+// - manter padrão de linguagem PT ou EN
+// - como cada um dois locais é um objeto clicavel, não podemos utiliza-los dentro de uma mesma tag html
+
 function WrapperTextWhere() {
   return (
     <>

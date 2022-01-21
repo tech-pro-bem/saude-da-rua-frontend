@@ -1,21 +1,23 @@
-import styled from 'styled-components';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import { Home } from './pages/index';
+import { Structure } from './shared/components/';
 
-export const Structure = styled.div`
-  width: 71.25rem;
+import theme from './styles/theme';
 
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-  justify-content: center;
-  padding-left: 150rem;
-`;
-
-function App() {
+const App = () => {
   return (
-    <Structure>
-      <Home />
-    </Structure>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        {/*
+          OBS: Elementos que ocupam mais de 1140px de largura devem estar FORA da estrutura
+       */}
+        <Structure>
+          <Home />
+        </Structure>
+      </BrowserRouter>
+    </ThemeProvider>
   );
-}
+};
+
 export default App;
