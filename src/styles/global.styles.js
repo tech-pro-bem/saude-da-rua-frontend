@@ -16,32 +16,32 @@ html,body, #root {
 
 p.big {
 font-weight: 400;
-line-height: 2rem;
+line-height: auto;
 font-size: 1.375rem;
 }
 
 
 p.default {
   font-weight: 400;
-  line-height: 1.5rem;
+  line-height: auto;
   font-size: 1rem;
   }
 
 h1 {
 font-weight: 700;
-line-height: 4.875rem;
+line-height: auto;
 font-size: 3.25rem;
 }
 
 h2{
   font-weight: 600;
-  line-height: 3.75rem;
+  line-height: auto;
   font-size: 2.5rem;
 }
 
 h3 {
   font-weight: 500;
-  line-height: 2.625rem;
+  line-height: auto;
   font-size: 1.75rem;
 }
 
