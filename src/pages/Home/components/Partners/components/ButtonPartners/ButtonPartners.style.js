@@ -1,4 +1,7 @@
 import styled from 'styled-components';
+///** TODO:
+// - utilizar variaveis de cor do theme
+// - utilizar a variavel de fonte que vem do theme
 
 export const Button = styled.button`
   display: flex;

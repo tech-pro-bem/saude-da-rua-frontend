@@ -8,7 +8,7 @@ const globalStyle = createGlobalStyle`
   }
 
   html,body, #root {
-    font-family: 'Poppins', sans-serif;
+    font-family: ${(props) => props.theme.font.fontFamily}
     outline: 0;
     background: ${(props) => props.theme.colors.black}
     height: 100%;

@@ -14,7 +14,6 @@ export const WrapperPhoto = styled.div`
   justify-content: center;
 `;
 
-/*DSC_0182 */
 export const Img1 = styled.img`
   display: block;
 
@@ -24,14 +23,11 @@ export const Img1 = styled.img`
   height: 50%;
 `;
 
-/*Frame the photo DSC_0182  */
 export const FrameImg1 = styled.div`
   width: 609px;
   height: 366px;
 
-  /* Cores primárias/Principal */
-
-  border: 2px solid #0095f6;
+  border: 2px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;
   border-radius: 12px;
 
@@ -40,7 +36,6 @@ export const FrameImg1 = styled.div`
   right: 10px;
 `;
 
-/*H21 */
 export const Img2 = styled.img`
   display: block;
   width: 100%;
@@ -48,19 +43,15 @@ export const Img2 = styled.img`
   width: 197px;
   height: 280px;
 `;
-/*Frame the photo H21 */
+
 export const FrameImg2 = styled.img`
   width: 189px;
   height: 272px;
-
-  /* Cores primárias/Principal */
-
-  border: 2px solid #0095f6;
+  border: 2px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;
   border-radius: 12px;
 `;
 
-/*H61 */
 export const Img3 = styled.img`
   display: block;
   margin-right: 100vh;
@@ -70,14 +61,12 @@ export const Img3 = styled.img`
 
   height: 280px;
 `;
-/*Frame the photo H61 */
+
 export const FrameImg3 = styled.img`
   width: 412px;
   height: 272px;
 
-  /* Cores primárias/Principal */
-
-  border: 2px solid #0095f6;
+  border: 2px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;
   border-radius: 12px;
 `;

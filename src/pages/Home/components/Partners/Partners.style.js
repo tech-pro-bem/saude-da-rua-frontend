@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+///** TODO:
+// utilizar variaveis do tema para cores
+// se foi setado globalmente a tipografia, não é necessário coloca-la aqui de novo
+
 export const PartnersText = styled.p`
   width: 379px;
   height: 42px;
@@ -20,7 +24,7 @@ export const SpanColor = styled.text`
 export const DivPartners = styled.menu`
   width: 1439px;
   height: 458px;
-  /* Inside auto layout */
+
   flex: none;
   order: 5;
   flex-grow: 0;

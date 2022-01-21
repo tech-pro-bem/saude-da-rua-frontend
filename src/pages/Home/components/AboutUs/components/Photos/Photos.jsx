@@ -11,6 +11,11 @@ import {
   WrapperPhoto,
 } from './Photos.styles';
 
+// TODO:
+// - alterar para function component
+// - o alt deve descrever a imagem que está sendo exibida e não o nome da imagem
+// lembrete: alterar titulo dos arquivos de imagem
+
 function Photos() {
   return (
     <Container>
