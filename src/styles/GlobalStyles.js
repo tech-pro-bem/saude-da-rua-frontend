@@ -15,7 +15,6 @@ const globalStyle = createGlobalStyle`
      -webkit-font-smoothing: antialiased !important;
   }
 
-
   p.big {
     font-weight: 400;
     line-height: auto;
