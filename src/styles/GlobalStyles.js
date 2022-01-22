@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   html,body, :root {
     font-family: 'Poppins, sans-serif';
     outline: 0;
-    background: ${(props) => props.theme.colors.black};
+    background: ${(props) => props.theme.colors.blackUI};
     height: 100%;
      -webkit-font-smoothing: antialiased !important;
   }
