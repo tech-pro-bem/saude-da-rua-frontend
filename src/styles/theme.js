@@ -10,7 +10,7 @@ const colors = {
   primary: PRIMARY,
   light: LIGHT,
   dark: DARK,
-  black: BLACK,
+  blackUI: BLACK,
 };
 
 const theme = {

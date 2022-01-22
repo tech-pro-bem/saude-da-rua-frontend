@@ -8,7 +8,6 @@ export const PartnersText = styled.p`
   width: 379px;
   height: 42px;
   /* Headers/H3 */
-  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -17,11 +16,11 @@ export const PartnersText = styled.p`
   color: #e9e9e9;
 `;
 
-export const SpanColor = styled.text`
+export const SpanColor = styled.p`
   color: #0095f6;
 `;
 
-export const DivPartners = styled.menu`
+export const DivPartners = styled.div`
   width: 1439px;
   height: 458px;
 

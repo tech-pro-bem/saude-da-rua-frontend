@@ -1,16 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
-const globalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
+      font-family: Poppins, sans-serif;
   }
 
-  html,body, :root {
-    font-family: ${(props) => props.theme.font.fontFamily}
+  html, body, :root {
     outline: 0;
-    background: ${(props) => props.theme.colors.black}
+    background: ${(props) => props.theme.colors.blackUI};
     height: 100%;
      -webkit-font-smoothing: antialiased !important;
   }
@@ -63,4 +63,4 @@ const globalStyle = createGlobalStyle`
   }
   `;
 
-export default globalStyle;
+export default GlobalStyle;
