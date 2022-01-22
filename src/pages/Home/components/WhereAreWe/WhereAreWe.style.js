@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const DivWhere = styled.menu`
-  width: 1213px;
   height: 546.27px;
 `;
 

@@ -34,7 +34,6 @@ export const OndeEstamosSubTitle2 = styled.p`
   width: 223px;
   height: 36px;
 
-  font-family: Poppins;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -47,7 +46,6 @@ export const TextWhere = styled.p`
   width: 485px;
   height: 35px;
 
-  font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;

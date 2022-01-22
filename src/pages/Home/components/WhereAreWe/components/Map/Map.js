@@ -1,6 +1,6 @@
 import Mapa from './../../img/mapa.png';
 
-import { MapImag } from './styles';
+// import { MapImag } from './styles';
 
 ///** TODO:
 // - refatorar function para function component
