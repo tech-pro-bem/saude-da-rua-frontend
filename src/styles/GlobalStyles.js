@@ -5,10 +5,10 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
       margin: 0;
       box-sizing: border-box;
+      font-family: Poppins, sans-serif;
   }
 
-  html,body, :root {
-    font-family: 'Poppins, sans-serif';
+  html, body, :root {
     outline: 0;
     background: ${(props) => props.theme.colors.blackUI};
     height: 100%;
