@@ -2,11 +2,14 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Home } from './pages/index';
 import { Structure } from './shared/components/';
+import GlobalStyle from './styles/GlobalStyles';
 
 import theme from './styles/theme';
 
 const App = () => {
   return (
+    <>    
+    <GlobalStyle />
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         {/*
@@ -17,6 +20,7 @@ const App = () => {
         </Structure>
       </BrowserRouter>
     </ThemeProvider>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const globalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   * {
       padding: 0;
       margin: 0;
@@ -8,9 +8,9 @@ const globalStyle = createGlobalStyle`
   }
 
   html,body, :root {
-    font-family: ${(props) => props.theme.font.fontFamily}
+    font-family: ${(props) => props.theme.font.fontFamily};
     outline: 0;
-    background: ${(props) => props.theme.colors.black}
+    background: ${(props) => props.theme.colors.black};
     height: 100%;
      -webkit-font-smoothing: antialiased !important;
   }
@@ -63,4 +63,4 @@ const globalStyle = createGlobalStyle`
   }
   `;
 
-export default globalStyle;
+export default GlobalStyle;
