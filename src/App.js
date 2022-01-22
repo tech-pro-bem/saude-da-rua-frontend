@@ -2,24 +2,24 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Home } from './pages/index';
 import { Structure } from './shared/components/';
-import GlobalStyle from './styles/GlobalStyles';
+import GlobalStyle from './styles/globalStyles';
 
 import theme from './styles/theme';
 
 const App = () => {
   return (
-    <>    
-    <GlobalStyle />
-    <ThemeProvider theme={theme}>
-      <BrowserRouter>
-        {/*
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <BrowserRouter>
+          {/*
           OBS: Elementos que ocupam mais de 1140px de largura devem estar FORA da estrutura
        */}
-        <Structure>
-          <Home />
-        </Structure>
-      </BrowserRouter>
-    </ThemeProvider>
+          <Structure>
+            <Home />
+          </Structure>
+        </BrowserRouter>
+      </ThemeProvider>
     </>
   );
 };
