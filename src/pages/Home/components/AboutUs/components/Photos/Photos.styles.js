@@ -18,7 +18,6 @@ export const WrapperSmallPhotos = styled.div`
   position: relative;
 
   margin-top: 32px;
-  margin-left: 32px;
 `;
 
 export const WrapperBorders = styled.div`
@@ -84,8 +83,7 @@ export const HorizontalPhoto = styled.div`
   flex: 1;
 
   position: relative;
-
-  margin-left: 32px;
+  margin-top: 16px;
 `;
 
 export const Img1 = styled.img`
@@ -93,7 +91,6 @@ export const Img1 = styled.img`
   width: 99%;
 
   z-index: 9;
-  margin-top: 8px;
   margin-left: 8px;
 `;
 
@@ -105,6 +102,6 @@ export const FrameImg1 = styled.div`
   border-radius: 12px;
 
   position: absolute;
-  top: 0;
+  top: 8px;
   left: 0;
 `;
