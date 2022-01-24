@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 662px;
+  height: 100%;
+  display: flex;
 `;

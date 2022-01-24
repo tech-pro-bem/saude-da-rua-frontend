@@ -1,4 +1,8 @@
-import { QuemSomosTitle, AboutText } from './WrapperTextAboutUs.style';
+import {
+  QuemSomosTitle,
+  AboutText,
+  Container,
+} from './WrapperTextAboutUs.style';
 
 ///** TODO:
 // - refatorar function para function component
@@ -10,8 +14,29 @@ import { QuemSomosTitle, AboutText } from './WrapperTextAboutUs.style';
 
 function WrapperTextAboutUs() {
   return (
-    <>
-      <QuemSomosTitle>
+    <Container>
+      <h2>Quem somos</h2>
+
+      <p
+        className="
+      big"
+      >
+        O Saúde da Rua nasceu em julho de 2020, <br></br>
+        em meio à pandemia do Covid-19, com a<br></br>
+        missão de <strong> levar atendimento médico humanizado </strong>e
+        recorrente às camadas mais vulneráveis da sociedade.
+      </p>
+
+      <p className="big">
+        Desde então, com o trabalho de cerca de
+        <strong> 500 voluntários </strong>
+        realizamos diversas ações, com o objetivo de promover um
+        <strong> serviço de alta qualidade </strong>, de forma individualizada e
+        única, direcionado as
+        <strong> reais necessidades do paciente</strong>.
+      </p>
+
+      {/* <QuemSomosTitle>
         <p>Quem somos</p>
       </QuemSomosTitle>
       <AboutText>
@@ -27,8 +52,8 @@ function WrapperTextAboutUs() {
         <b> serviço de alta qualidade </b>, de forma individualizada e única,
         direcionado as <br></br>
         <b> reais necessidades do paciente</b>.
-      </AboutText>
-    </>
+      </AboutText> */}
+    </Container>
   );
 }
 

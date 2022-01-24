@@ -1,72 +1,110 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 627px;
-  height: 662px;
-
+  width: 636px;
+  height: 100%;
   display: flex;
+  flex-direction: column;
 `;
 
-export const WrapperPhoto = styled.div`
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-`;
-
-export const Img1 = styled.img`
-  display: block;
-
-  max-width: 609px;
-
-  width: 100%;
+export const WrapperSmallPhotos = styled.div`
   height: 50%;
-`;
+  width: 100%;
 
-export const FrameImg1 = styled.div`
-  width: 609px;
-  height: 366px;
-
-  border: 2px solid ${(props) => props.theme.colors.primary};
-  box-sizing: border-box;
-  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
   position: relative;
-  top: 380px;
-  right: 10px;
+
+  margin-top: 32px;
+  margin-left: 32px;
+`;
+
+export const WrapperBorders = styled.div`
+  display: flex;
+  flex: 1;
+  gap: 16px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+`;
+
+export const WrapperPhotos = styled.div`
+  display: flex;
+  flex: 1;
+  gap: 16px;
+
+  z-index: 9;
+  margin-top: 8px;
+  margin-left: 8px;
 `;
 
 export const Img2 = styled.img`
   display: block;
-  width: 100%;
 
   width: 197px;
   height: 280px;
 `;
 
-export const FrameImg2 = styled.img`
-  width: 189px;
-  height: 272px;
-  border: 2px solid ${(props) => props.theme.colors.primary};
-  box-sizing: border-box;
+export const FrameImg2 = styled.div`
+  display: block;
+  width: 197px;
+  height: 280px;
+  background: ${(props) => props.theme.colors.blackUI};
+  backdrop-filter: blur(0px);
+  vertical-align: bottom;
+
   border-radius: 12px;
+  border: 2px solid ${(props) => props.theme.colors.primary};
 `;
 
 export const Img3 = styled.img`
   display: block;
-  margin-right: 100vh;
-  width: 100%;
-  max-width: 420px;
-  top: 100px;
 
+  width: 412px;
   height: 280px;
 `;
 
-export const FrameImg3 = styled.img`
+export const FrameImg3 = styled.div`
   width: 412px;
-  height: 272px;
+  height: 280px;
 
   border: 2px solid ${(props) => props.theme.colors.primary};
-  box-sizing: border-box;
   border-radius: 12px;
+`;
+
+export const HorizontalPhoto = styled.div`
+  height: 50%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  position: relative;
+
+  margin-left: 32px;
+`;
+
+export const Img1 = styled.img`
+  display: block;
+  width: 99%;
+
+  z-index: 9;
+  margin-top: 8px;
+  margin-left: 8px;
+`;
+
+export const FrameImg1 = styled.div`
+  width: 630px;
+  height: 380px;
+
+  border: 2px solid ${(props) => props.theme.colors.primary};
+  border-radius: 12px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
