@@ -1,37 +1,33 @@
 import styled from 'styled-components';
 
 // TODO:
-// - alterar os nomes das constantes e manter um padrão
+// - alterar os nomes das constantes e manter um padrão ok
 
-// que tag HTML é text????
-// utilizar variaveis do tema para cores
+// que tag HTML é text???? alterei para div
+// utilizar variaveis do tema para cores ok
 // se foi setado globalmente a tipografia, não é necessário coloca-la aqui de novo
 // lembrar de utilizar hierarquia das tags h1,h2,h3, p, etc...
 
-export const QuemSomosTitle = styled.text`
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
+export const AboutTitle = styled.h1`
   line-height: 60px;
-  color: #e9e9e9;
+  color: ${(props) => props.theme.colors.primary_light};
   width: 100%;
-  max-width: 479px;
-  min-height: 60px;
-  left: 833px;
-  top: 127px;
+  width: 479px;
+  height: 60px;
+  margin-left: 485px;
+  margin-top: -600px;
 `;
 
-export const AboutText = styled.text`
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 21.328px;
+export const AboutText = styled.div`
   line-height: 32px;
   font-feature-settings: 'pnum' on, 'onum' on;
-  color: #e9e9e9;
-  margin-top: 5px;
-  width: 100%;
-  max-width: 477px;
+  color: ${(props) => props.theme.colors.primary_light};
+  margin-top: 100px;
+  width: 477px;
   height: 530px;
+  margin-left: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
+  // padding-top: 32px;
 `;
