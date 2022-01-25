@@ -1,21 +1,14 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  //  width: 627px;
-  // height: 662px;
-  //display: flex;
-
-  //teste git
   height: 705px;
 `;
 
 export const WrapperPhoto = styled.div`
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  //teste
   flex: 1;
   gap: 16px;
   position: absolute;
@@ -24,7 +17,7 @@ export const WrapperPhoto = styled.div`
 `;
 
 export const Img1 = styled.img`
-  display: ruby;
+  display: flex;
   margin-top: 388px;
   align-items: flex-end;
   width: 617px;
@@ -44,7 +37,7 @@ export const FrameImg1 = styled.div`
 `;
 
 export const Img2 = styled.img`
-  display: ruby;
+  display: flex;
   margin-right: auto;
   width: 100%;
   max-width: 189px;
@@ -66,8 +59,7 @@ export const FrameImg2 = styled.div`
 `;
 
 export const Img3 = styled.img`
-  display: ruby;
-  // margin-right: 100vh;
+  display: flex;
   width: 420px;
   margin-top: 100px;
   margin-left: -444px;
