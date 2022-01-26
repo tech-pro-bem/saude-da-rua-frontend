@@ -5,13 +5,13 @@ import { Header } from '../../shared/components/index';
 const Home = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
 
       <AboutUs />
 
-      <WhereAreWe />
+      {/*  <WhereAreWe /> */}
 
-      <Partners />
+      {/*  <Partners /> */}
     </>
   );
 };
