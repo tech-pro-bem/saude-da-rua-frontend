@@ -32,6 +32,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     line-height: auto;
     font-size: 3.25rem;
+    color: ${(props) => props.theme.colors.primary_light};
   }
 
   h2{
