@@ -5,8 +5,6 @@ import { Header } from '../../shared/components/index';
 const Home = () => {
   return (
     <>
-      <Header />
-
       <AboutUs />
 
       <WhereAreWe />
