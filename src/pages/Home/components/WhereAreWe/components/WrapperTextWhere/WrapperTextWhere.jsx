@@ -1,44 +1,40 @@
 import {
-  OndeEstamosTitle,
-  OndeEstamosSubTitle1,
-  OndeEstamosSubTitle2,
-  TextWhere,
+  WhereAreWeTitle,
+  WhereAreWeSubTitle1,
+  WhereAreWeSubTitle2,
+  TextWhereAreWe,
 } from './WrapperTextWhere.style';
 
 ///** TODO:
-// - refatorar function para function component
-// - mesma utilização errada do styled-component aqui, um p dentro de outro p
-// - manter padrão de linguagem PT ou EN
-// - como cada um dois locais é um objeto clicavel, não podemos utiliza-los dentro de uma mesma tag html
+// - refatorar function para function component ok
+// - mesma utilização errada do styled-component aqui, um p dentro de outro p ok
+// - manter padrão de linguagem PT ou EN ok
+// - como cada um dois locais é um objeto clicavel, não podemos utiliza-los dentro de uma mesma tag html ok
 
-function WrapperTextWhere() {
+const WrapperTextWhere = () => {
   return (
     <>
-      <OndeEstamosTitle>
-        <p>Onde estamos</p>
-      </OndeEstamosTitle>
+      <WhereAreWeTitle>Onde estamos</WhereAreWeTitle>
 
-      <OndeEstamosSubTitle1>
-        <p>Sede</p>
-      </OndeEstamosSubTitle1>
+      <WhereAreWeSubTitle1>Sede</WhereAreWeSubTitle1>
 
-      <OndeEstamosSubTitle2>
-        <p>Saúde da Rua - SP</p>
-      </OndeEstamosSubTitle2>
-      <TextWhere>
-        <p>Filiais </p>
-        <p>
-          Saúde da Rua Campinas - SP
-          <br></br>
-          Saúde da Rua Itajaí - SC
-          <br></br>
-          Saúde da Rua São Carlos - SP
-          <br></br>
-          Saúde da Rua São José do Rio Preto - SP
-        </p>
-      </TextWhere>
+      <WhereAreWeSubTitle2>Saúde da Rua - SP</WhereAreWeSubTitle2>
+      <TextWhereAreWe>
+        Filiais
+        <br></br>
+        Saúde da Rua Campinas - SP
+        <br></br>
+        Saúde da Rua São José do Rio Preto - SP
+        <br></br>
+        Saúde da Rua São Carlos - SP
+        <br></br>
+        Saúde da Rua Sorocaba - SP
+        <br></br>
+        Saúde da Rua Itajaí - SC
+        <br></br>
+      </TextWhereAreWe>
     </>
   );
-}
+};
 
 export default WrapperTextWhere;

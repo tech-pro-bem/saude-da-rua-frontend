@@ -1,54 +1,44 @@
 import styled from 'styled-components';
 
 ///** TODO:
-// utilizar variaveis do tema para cores
-// se foi setado globalmente a tipografia, não é necessário coloca-la aqui de novo
-// consistencia de linguagem
+// utilizar variaveis do tema para cores ok
+// se foi setado globalmente a tipografia, não é necessário coloca-la aqui de novo ok
+// consistencia de linguagem ok
 
-export const OndeEstamosTitle = styled.p`
-  width: 298px;
-  height: 60px;
-
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 60px;
-
-  color: #e9e9e9;
+export const WhereAreWeTitle = styled.h2`
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left: -64px; //-20
+  margin-top: -320px;
+  color: ${(props) => props.theme.colors.primary_light};
 `;
 
-export const OndeEstamosSubTitle1 = styled.p`
-  width: 61px;
-  height: 36px;
+export const WhereAreWeSubTitle1 = styled.p`
+  display: block;
+  width: 100%; //61px
+  height: 50%; //36px
+  margin-top: -100px;
+  margin-left: -500px;
+  position: relative;
 
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-
-  color: #e9e9e9;
+  color: ${(props) => props.theme.colors.primary_light};
 `;
-export const OndeEstamosSubTitle2 = styled.p`
-  width: 223px;
-  height: 36px;
-
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 36px;
-
-  color: #0095f6;
+export const WhereAreWeSubTitle2 = styled.p`
+  display: block;
+  width: 100%; //223px
+  height: 50%; //36px
+  position: relative;
+  margin-left: -480px;
+  color: ${(props) => props.theme.colors.primary};
 `;
 
-export const TextWhere = styled.p`
-  width: 485px;
-  height: 35px;
-
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 36px;
-  color: #e9e9e9;
+export const TextWhereAreWe = styled.p`
+  display: block;
+  width: 100%; //485px
+  height: 50%; //35px
+  margin-top: 250px;
+  margin-left: -480px;
+  position: relative;
+  color: ${(props) => props.theme.colors.primary_light};
 `;
