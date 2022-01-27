@@ -1,34 +1,29 @@
 import styled from 'styled-components';
 ///** TODO:
-// - utilizar variaveis de cor do theme
-// - utilizar a variavel de fonte que vem do theme
+// - utilizar variaveis de cor do theme ok
+// - utilizar a variavel de fonte que vem do theme ok
 
-export const Button = styled.button`
+export const Button = styled.p`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 0px;
+  margin-left: -160px;
+  margin-top: -10px;
 
   width: 280px;
   height: 57px;
 
-  color: #0095f6;
-  font-family: Verdana, Poppins, Geneva, Tahoma, sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 140%;
-
+  color: ${(props) => props.theme.colors.primary};
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 0px 9px;
 
-  border: 2px solid #0095f6;
+  border: 2px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;
   border-radius: 40px;
-  background-color: black;
+  background-color: ${(props) => props.theme.colors.blackUI};
 
   cursor: pointer;
   pointer-events: auto;
@@ -37,10 +32,10 @@ export const Button = styled.button`
 
   &:hover,
   &:focus {
-    color: #0095f6;
+    color: ${(props) => props.theme.colors.primary};
   }
   &:active {
-    color: white;
-    background-color: #0095f6;
+    color: ${(props) => props.theme.colors.primary_light};
+    background-color: ${(props) => props.theme.colors.primary};
   }
 `;
