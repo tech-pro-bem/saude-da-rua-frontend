@@ -51,6 +51,9 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     cursor: pointer;
+    line-height: auto;
+    font-size: 1rem;
+    font-weight: 400;
   }
 
 

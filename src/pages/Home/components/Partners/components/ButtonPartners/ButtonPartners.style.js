@@ -3,7 +3,7 @@ import styled from 'styled-components';
 // - utilizar variaveis de cor do theme ok
 // - utilizar a variavel de fonte que vem do theme ok
 
-export const Button = styled.p`
+export const Button = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;

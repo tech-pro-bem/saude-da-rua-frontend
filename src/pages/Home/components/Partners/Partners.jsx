@@ -1,5 +1,5 @@
 import { ButtonPartners, PhotoPartners } from './components';
-import { PartnersText, SpanColor, ContainerPartners } from './Partners.style';
+import { PartnersText, ContainerPartners } from './Partners.style';
 
 ///** TODO:
 // - refatorar function para function component ok
@@ -10,7 +10,7 @@ const Partners = () => {
   return (
     <ContainerPartners>
       <PartnersText>
-        Empresas que nos <SpanColor>apoiam</SpanColor>
+        Empresas que nos <span>apoiam</span>
       </PartnersText>
 
       <PhotoPartners />
