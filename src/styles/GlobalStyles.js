@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.primary_light};
   }
 
-  h2{
+  h2 {
     font-weight: 600;
     line-height: auto;
     font-size: 2.5rem;
@@ -54,7 +54,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
 
-  a{
+  a {
       text-decoration: none;
       outline: none;
   }

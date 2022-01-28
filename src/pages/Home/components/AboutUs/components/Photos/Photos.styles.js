@@ -14,6 +14,7 @@ export const WrapperPhoto = styled.div`
   position: absolute;
   left: 0;
   top: 0;
+  margin-top: 51.1rem;
 `;
 
 export const Img1 = styled.img`
