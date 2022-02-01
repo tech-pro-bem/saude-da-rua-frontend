@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Carousel.style';
+import { ellipse1, ellipse2, slideArrow } from '../../../../../assets/index';
 
 export const CarouselItem = ({ children, width }) => {
   return (
@@ -52,14 +53,6 @@ const Carousel = ({ children }) => {
         })}
       </div>
       <div className="indicators">
-        {/* <button
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
-        >
-         Prev
-        </button> */}
-
         {React.Children.map(children, (child, index) => {
           return (
             <button
@@ -79,6 +72,7 @@ const Carousel = ({ children }) => {
           }}
         >
           Next
+          {/* <img src={slideArrow} alt="" className="arrow"/> */}
         </button>
       </div>
     </div>

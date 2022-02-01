@@ -12,9 +12,8 @@ export const Container = styled.div`
 
   .carousel-item {
     display: inline-flex;
-    height: 300px;
-    color: ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.dark};
+    height: 500px;
+    background: ${(props) => props.theme.colors.black};
   }
 
   .indicators {
@@ -28,5 +27,50 @@ export const Container = styled.div`
 
   .indicators > button.active {
     background: ${(props) => props.theme.colors.dark};
+  }
+
+  img {
+    display: block;
+    margin-top: -170px;
+    width: 403px;
+    height: 397px;
+    margin-left: 600px;
+  }
+
+  span {
+    color: ${(props) => props.theme.colors.dark};
+  }
+
+  h2 {
+    color: ${(props) => props.theme.colors.primary_light};
+    padding: 5px;
+    margin-left: 140px;
+  }
+
+  #content {
+    margin-left: 150px;
+    text-align: justify;
+    margin-top: -170px;
+    color: ${(props) => props.theme.colors.primary_light};
+  }
+
+  #year {
+    color: ${(props) => props.theme.colors.light};
+    font-size: 24px;
+    weight: 700px;
+    margin-top: 62px;
+    margin-left: 150px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-itens: center;
+    margin-left: 50px;
+  }
+
+  .buttonSlide {
+    width: 12px;
+    height: 12px;
   }
 `;
