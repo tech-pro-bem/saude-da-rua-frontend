@@ -68,9 +68,11 @@ export const Container = styled.div`
     align-itens: center;
     margin-left: 50px;
   }
+`;
 
-  .buttonSlide {
-    width: 12px;
-    height: 12px;
-  }
+export const FrameImg1 = styled.div`
+  width: 402px;
+  height: 397px;
+  border: 2px solid ${(props) => props.theme.colors.primary};
+  border-radius: 12px;
 `;
