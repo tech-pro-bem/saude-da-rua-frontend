@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Home } from './pages/index';
-import { Structure } from './shared/components/';
+import { Footer, Structure } from './shared/components/';
 import GlobalStyle from './styles/GlobalStyles';
 import theme from './styles/theme';
 import { Header } from './shared/components/index';
@@ -22,6 +22,7 @@ const App = () => {
           <Structure>
             <Home />
           </Structure>
+          <Footer />
         </BrowserRouter>
       </ThemeProvider>
     </>
