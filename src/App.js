@@ -5,6 +5,7 @@ import { Structure } from './shared/components/';
 import GlobalStyle from './styles/GlobalStyles';
 import theme from './styles/theme';
 import Header from './shared/components/Header/components/Header';
+import Footer from './shared/components/Footer/components/Footer';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Structure>
             <Home />
           </Structure>
+          <Footer />
         </BrowserRouter>
       </ThemeProvider>
     </>
