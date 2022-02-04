@@ -7,6 +7,10 @@ import banner from './voluntary.png';
 import EllipseBco from './EllipseBco.png';
 import EllipseBlue from './EllipseBlue.png';
 
+import social1 from './WhatsApp.svg';
+import social2 from './Email.svg';
+import social3 from './Instagram.svg';
+
 export {
   imag1,
   imag2,
@@ -16,4 +20,7 @@ export {
   banner,
   EllipseBco,
   EllipseBlue,
+  social1,
+  social2,
+  social3,
 };
