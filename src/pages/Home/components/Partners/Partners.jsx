@@ -1,25 +1,23 @@
 import { ButtonPartners, PhotoPartners } from './components';
-import { PartnersText, SpanColor, DivPartners } from './Partners.style';
+import { PartnersText, ContainerPartners } from './Partners.style';
 
 ///** TODO:
-// - refatorar function para function component
+// - refatorar function para function component ok
 // - mesma utilização errada do styled-component aqui, um p dentro de outro p
-// - renomear o component DIV PARTNERS
+// - renomear o component DIV PARTNERS ok
 
-function Partners() {
+const Partners = () => {
   return (
-    <DivPartners>
+    <ContainerPartners>
       <PartnersText>
-        <p>
-          Empresas que nos <SpanColor>apoiam</SpanColor>
-        </p>
+        Empresas que nos <span>apoiam</span>
       </PartnersText>
 
       <PhotoPartners />
 
       <ButtonPartners />
-    </DivPartners>
+    </ContainerPartners>
   );
-}
+};
 
 export default Partners;
