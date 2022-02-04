@@ -3,5 +3,15 @@ import imag2 from './H21.png';
 import imag3 from './H61.png';
 import MapImagStyle from './mapa.png';
 import partnersLogo from './partners.png';
+import EllipseBco from './EllipseBco.png';
+import EllipseBlue from './EllipseBlue.png';
 
-export { imag1, imag2, imag3, MapImagStyle, partnersLogo };
+export {
+  imag1,
+  imag2,
+  imag3,
+  MapImagStyle,
+  partnersLogo,
+  EllipseBco,
+  EllipseBlue,
+};

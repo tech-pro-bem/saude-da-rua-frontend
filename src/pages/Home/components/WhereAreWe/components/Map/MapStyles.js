@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const MapImagStyle = styled.img`
-  display: flex;
-  margin-top: 44px;
-  width: 100%;
-  height: 530px;
-  margin-left: 169px;
+  display: block;
+  margin-top: -1100px; //-2700
+  margin-left: 590px; //169 52.8
+  width: 559px;
+  height: 546.27px;
 `;
