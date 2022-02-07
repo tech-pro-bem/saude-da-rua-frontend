@@ -1,55 +1,22 @@
 import styled from 'styled-components';
 
 export const TextWhereAreWe = styled.div`
-  /*
-  display: flex;
-  width: 488px;//100%
-  height: 489px;//50%
-  margin-top: 250px;
-  margin-left: -129px;//480px -64vh
-  position: relative;
-
-  */
-
   width: 488px;
   height: 489.45px;
   padding-left: 1px;
   padding-top: 10px;
-  margin-left: -100px;
+  margin-left: -40px;
 `;
 
 export const WhereAreWeTitle = styled.h2`
-  /*
- display: flex;
-  width: 100%;
-  height: 100%;
-  margin-left: -132px;//64
-  margin-top: -440px;
-
-  */
-
   margin-bottom: 43px;
 `;
 
 export const WhereAreWeSubTitle1 = styled.p`
-  /*
-  display: flex;
-  width: 100%;
-  height: 50%;
-  margin-top: -100px;
-  margin-left: -400px;
-  position: relative;
-  */
   margin-bottom: 10px;
 `;
 
 export const Sede = styled.p`
-  /* display: flex;
-  width: 100%;
-  height: 50%;
-  position: relative;
-  margin-left: -63vh;//-500px
-  */
   margin-bottom: 46px;
 
   color: ${(props) =>
@@ -198,20 +165,14 @@ export const Circle = styled.div`
 `;
 
 //circle  Modelo SEDE
+
 export const CircleSede = styled.div`
-  /* display: grid;
-    width: 25px;
-    height: 10px;
-    border-radius: 50%;
-    margin-left: 0px ;
-*/
-  //display: grid;
   display: block;
-  width: 17px; //25
-  height: 17px; //10
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   margin-left: 850px;
-  margin-top: -1px;
+  margin-top: 0px;
 
   background-color: ${(props) =>
     props.sede ? props.theme.colors.primary : props.theme.colors.primary_light};
@@ -223,8 +184,8 @@ export const CircleSede = styled.div`
 //cada Filial terá um ------ CIRCULOS herdando da sede
 export const CircleCampinas = styled.div`
   display: block;
-  width: 17px; //25
-  height: 17px; //10
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   margin-left: 840px;
   margin-top: -180px;
@@ -233,56 +194,75 @@ export const CircleCampinas = styled.div`
     props.campinas
       ? props.theme.colors.primary
       : props.theme.colors.primary_light};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 export const CircleRioPreto = styled.div`
   display: block;
-  width: 17px; //25
-  height: 17px; //10
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   margin-left: 850px;
   margin-top: -70px;
+
   background-color: ${(props) =>
     props.rioPreto
       ? props.theme.colors.primary
       : props.theme.colors.primary_light};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 export const CircleSaoCarlos = styled.p`
   display: block;
-  width: 17px; //25
-  height: 17px; //10
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   margin-left: 860px;
   margin-top: 25px;
+
   background-color: ${(props) =>
     props.saoCarlos
       ? props.theme.colors.primary
       : props.theme.colors.primary_light};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 export const CircleSorocaba = styled.div`
   display: block;
-  width: 17px; //25
-  height: 17px; //10
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   margin-left: 860px;
   margin-top: 0px;
+
   background-color: ${(props) =>
     props.sorocaba
       ? props.theme.colors.primary
       : props.theme.colors.primary_light};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 export const CircleItajai = styled.div`
   display: block;
-  width: 17px; //25
-  height: 17px; //10
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   margin-left: 815px;
-  margin-top: 100px;
+  margin-top: 50px;
+
   background-color: ${(props) =>
     props.itajai
       ? props.theme.colors.primary
       : props.theme.colors.primary_light};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
 `;

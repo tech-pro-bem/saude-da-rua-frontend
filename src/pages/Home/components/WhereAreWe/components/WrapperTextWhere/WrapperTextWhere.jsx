@@ -117,7 +117,6 @@ const WrapperTextWhere = () => {
       {/*bolinhas referentes a cada filial */}
 
       <Circle>
-        <CircleSede sede={sede} onClick={() => setSede(!sede)}></CircleSede>
         <CircleCampinas
           campinas={campinas}
           onClick={() => setCampinas(!campinas)}
@@ -134,6 +133,8 @@ const WrapperTextWhere = () => {
           sorocaba={sorocaba}
           onClick={() => setSorocaba(!sorocaba)}
         ></CircleSorocaba>
+        <CircleSede sede={sede} onClick={() => setSede(!sede)}></CircleSede>
+
         <CircleItajai
           itajai={itajai}
           onClick={() => setItajai(!itajai)}
