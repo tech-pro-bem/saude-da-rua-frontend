@@ -1,11 +1,12 @@
 import styled from 'styled-components';
 
 export const TextWhereAreWe = styled.div`
-  width: 488px;
+  width: 100%;
   height: 489.45px;
-  padding-left: 1px;
   padding-top: 10px;
-  margin-left: -40px;
+  margin-left: 30px;
+  align-content: center;
+  justify-content: center;
 `;
 
 export const WhereAreWeTitle = styled.h2`
@@ -160,7 +161,6 @@ export const Itajai = styled.p`
 //componente geral
 export const Circle = styled.div`
   display: block;
-  width: 1439px;
   height: 647px;
 `;
 
