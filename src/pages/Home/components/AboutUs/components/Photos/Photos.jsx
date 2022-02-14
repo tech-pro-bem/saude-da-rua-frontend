@@ -11,30 +11,25 @@ import {
   WrapperPhoto,
 } from './Photos.styles';
 
-// TODO:
-// - alterar para function component
-// - o alt deve descrever a imagem que está sendo exibida e não o nome da imagem
-// lembrete: alterar titulo dos arquivos de imagem
-
-function Photos() {
+const Photos = () => {
   return (
     <Container>
       <WrapperPhoto>
         <FrameImg2 />
-        <Img2 src={imag2} alt="H21" />
+        <Img2 src={imag2} alt="Fotos dos voluntários" />
       </WrapperPhoto>
 
       <WrapperPhoto>
         <FrameImg3 />
-        <Img3 src={imag3} alt="H61" />
+        <Img3 src={imag3} alt="Fotos dos voluntários" />
       </WrapperPhoto>
 
       <WrapperPhoto>
         <FrameImg1 />
-        <Img1 src={imag1} alt="DSC_0182" />
+        <Img1 src={imag1} alt="Fotos dos voluntários" />
       </WrapperPhoto>
     </Container>
   );
-}
+};
 
 export default Photos;
