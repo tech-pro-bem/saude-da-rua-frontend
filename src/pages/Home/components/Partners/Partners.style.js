@@ -11,7 +11,7 @@ export const PartnersText = styled.h3`
 
   span {
     display: block;
-    width: 50%; //379px
+    width: 50%;
     height: 42px;
     margin-left: 270px;
     margin-top: -42px;
@@ -22,9 +22,7 @@ export const PartnersText = styled.h3`
 
 export const ContainerPartners = styled.div`
   display: block;
-  //width: 100%;//1439px
-
-  height: 458px; //458px
+  height: 458px;
   align-items: center;
   align-content: center;
   justify-content: center;
