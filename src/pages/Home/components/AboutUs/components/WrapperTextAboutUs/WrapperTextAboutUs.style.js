@@ -17,7 +17,7 @@ export const AboutText = styled.p`
   font-feature-settings: 'pnum' on, 'onum' on;
   color: ${(props) => props.theme.colors.primary_light};
   margin-top: 50px;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
   width: 477px;
   height: 530px;
   margin-left: 500px;
