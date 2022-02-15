@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: auto;
     font-size: 1rem;
+    color: ${(props) => props.theme.colors.primary_light};
   }
 
   h1 {
@@ -39,12 +40,20 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 600;
     line-height: auto;
     font-size: 2.5rem;
+    color: ${(props) => props.theme.colors.primary_light};
   }
 
   h3 {
     font-weight: 500;
     line-height: auto;
     font-size: 1.75rem;
+  }
+
+  h4 {
+    font-weight: 400;
+    line-height: auto;
+    font-size: 1rem;
+    color: ${(props) => props.theme.colors.primary};
   }
 
   button {
