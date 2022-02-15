@@ -36,7 +36,7 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.primary_light};
   }
 
-  h2{
+  h2 {
     font-weight: 600;
     line-height: auto;
     font-size: 2.5rem;
@@ -60,10 +60,23 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     cursor: pointer;
+    line-height: auto;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  Link {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    line-height: auto;
+    font-size: 1rem;
+    font-weight: 400;
+
   }
 
 
-  a{
+  a {
       text-decoration: none;
       outline: none;
   }
