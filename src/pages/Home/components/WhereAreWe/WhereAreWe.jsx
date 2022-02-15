@@ -1,17 +1,18 @@
 import { WrapperTextWhere } from './components';
-import { DivWhere, MapImag } from './WhereAreWe.style';
+import PhotoMap from './components/Map/PhotoMap';
+import { ContainerWhereAreWe } from './WhereAreWe.style';
 
 ///** TODO:
-// - refatorar function para function component
-// - renomear DIVWHERE
+// - refatorar function para function component ok
+// - renomear DIVWHERE ok
 
-function WhereAreWe() {
+const WhereAreWe = () => {
   return (
-    <DivWhere>
+    <ContainerWhereAreWe>
       <WrapperTextWhere />
-      <MapImag />
-    </DivWhere>
+      <PhotoMap />
+    </ContainerWhereAreWe>
   );
-}
+};
 
 export default WhereAreWe;
