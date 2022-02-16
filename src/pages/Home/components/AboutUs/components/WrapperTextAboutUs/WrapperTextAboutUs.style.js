@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AboutTitle = styled.p`
+export const AboutTitle = styled.div`
   line-height: 60px;
   color: ${(props) => props.theme.colors.primary_light};
   width: 100%;
@@ -12,7 +12,7 @@ export const AboutTitle = styled.p`
   flex-wrap: wrap;
 `;
 
-export const AboutText = styled.p`
+export const AboutText = styled.div`
   line-height: 32px;
   font-feature-settings: 'pnum' on, 'onum' on;
   color: ${(props) => props.theme.colors.primary_light};
