@@ -5,13 +5,14 @@ export const Container = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+
+  margin-top: -800px;
 `;
 
 export const WrapperPhoto = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex: 1;
   gap: 16px;
   position: static;
@@ -22,7 +23,7 @@ export const WrapperPhoto = styled.div`
 
 export const Img1 = styled.img`
   display: flex;
-  margin-top: 5px;
+  margin-top: -2880px;
   width: 617px;
   height: 374px;
   margin-left: -615px;
@@ -35,9 +36,8 @@ export const FrameImg1 = styled.div`
   border: 2px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;
   border-radius: 12px;
-
   margin-left: -920px;
-  margin-top: 30px;
+  margin-top: -2860px; //30px 3230
 `;
 
 export const Img2 = styled.img`
@@ -66,10 +66,9 @@ export const Img3 = styled.img`
   display: flex;
   width: 420px;
   height: 280px;
-
   margin-right: auto;
   margin-left: -445px;
-  margin-top: -285px;
+  margin-top: -1915px; //-285
 `;
 
 export const FrameImg3 = styled.div`
@@ -79,7 +78,6 @@ export const FrameImg3 = styled.div`
   border: 2px solid ${(props) => props.theme.colors.primary};
   box-sizing: border-box;
   border-radius: 12px;
-
   margin-left: 8px;
-  margin-top: -310px;
+  margin-top: -1940px; //-310
 `;
