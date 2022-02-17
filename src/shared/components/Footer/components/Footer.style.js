@@ -8,6 +8,7 @@ export const Container = styled.div`
   .ft-main {
     display: flex;
     margin-bottom: 7.5rem;
+    justify-content: center;
   }
 
   hr {
