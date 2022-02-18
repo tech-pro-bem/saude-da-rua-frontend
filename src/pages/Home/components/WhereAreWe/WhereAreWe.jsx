@@ -1,5 +1,5 @@
 import { WrapperTextWhere } from './components';
-import PhotoMap from './components/Map/PhotoMap';
+// import PhotoMap from './components/Map/PhotoMap';
 import { ContainerWhereAreWe } from './WhereAreWe.style';
 
 ///** TODO:
@@ -10,7 +10,7 @@ const WhereAreWe = () => {
   return (
     <ContainerWhereAreWe>
       <WrapperTextWhere />
-      <PhotoMap />
+      {/* <PhotoMap /> */}
     </ContainerWhereAreWe>
   );
 };
