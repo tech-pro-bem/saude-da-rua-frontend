@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import img from '../../../../../assets/voluntary.png';
 
 export const BannerContainer = styled.div`
-  background-image: url(${img});
-  background-size: 100% 100%;
-  height: 39rem;
-  width: 120vw;
+  .bannerPhoto {
+    height: 39rem;
+    width: 100%;
+    position: absolute;
+    opacity: 0.4;
+  }
 `;
 
 export const Text = styled.h1`
@@ -13,6 +14,8 @@ export const Text = styled.h1`
   p,
   h4 {
     padding-left: 8.5rem;
+    position: relative;
+    z-index: 2;
   }
 
   h1 {
@@ -33,10 +36,14 @@ export const Text = styled.h1`
   h4 {
     font-size: 1.5rem;
     padding-top: 2.5rem;
+    font-weight: 700;
+    color: ${(props) => props.theme.colors.primary_light};
   }
 `;
 
 export const Button = styled.div`
   margin-top: 3.125rem;
   margin-left: 8.5rem;
+  position: relative;
+  z-index: 2;
 `;
