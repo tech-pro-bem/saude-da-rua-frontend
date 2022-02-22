@@ -6,6 +6,7 @@ import GlobalStyle from './styles/GlobalStyles';
 import theme from './styles/theme';
 import { Header } from './shared/components/index';
 import { Banner } from './pages/Home/components';
+import ExemploApi from './pages/Home/ExemploApi/ExemploApi';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
 
           <Structure>
             <Home />
+            <ExemploApi />
           </Structure>
           <Footer />
         </BrowserRouter>
