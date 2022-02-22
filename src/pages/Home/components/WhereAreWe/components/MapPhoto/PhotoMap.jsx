@@ -1,6 +1,6 @@
 import mapa from '../../../../../../assets/mapa.png';
 
-import { MapImagStyle } from './MapStyles';
+import { MapImagStyle } from './PhotoMap.Styles';
 
 const PhotoMap = () => {
   return <MapImagStyle src={mapa} alt="Mapa com as filiais" />;
