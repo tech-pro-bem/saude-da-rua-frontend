@@ -4,12 +4,13 @@ export const BannerContainer = styled.div`
   .bannerPhoto {
     height: 39rem;
     width: 100%;
+    max-width: 90rem;
     position: absolute;
     opacity: 0.4;
   }
 `;
 
-export const Text = styled.h1`
+export const Text = styled.div`
   h1,
   p,
   h4 {
