@@ -1,10 +1,6 @@
 import { WrapperTextWhere } from './components';
-import PhotoMap from './components/Map/PhotoMap';
+import PhotoMap from './components/PhotoMap/PhotoMap';
 import { ContainerWhereAreWe } from './WhereAreWe.style';
-
-///** TODO:
-// - refatorar function para function component ok
-// - renomear DIVWHERE ok
 
 const WhereAreWe = () => {
   return (
