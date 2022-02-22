@@ -7,6 +7,7 @@ export const BannerContainer = styled.div`
     max-width: 90rem;
     position: absolute;
     opacity: 0.4;
+    object-fit: cover;
   }
 `;
 
