@@ -5,7 +5,6 @@ import { Structure } from './shared/components/';
 import GlobalStyle from './styles/GlobalStyles';
 import theme from './styles/theme';
 import { Header } from './shared/components/index';
-import { Banner } from './pages/Home/components';
 
 const App = () => {
   return (
@@ -17,7 +16,6 @@ const App = () => {
           OBS: Elementos que ocupam mais de 1140px de largura devem estar FORA da estrutura
        */}
           <Header />
-          <Banner />
 
           <Structure>
             <Routes>
