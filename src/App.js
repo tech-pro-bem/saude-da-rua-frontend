@@ -1,4 +1,4 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { Home } from './pages/index';
 import { Structure } from './shared/components/';
@@ -20,7 +20,10 @@ const App = () => {
           <Banner />
 
           <Structure>
-            <Home />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/donation" element={() => <div></div>} />
+            </Routes>
           </Structure>
         </BrowserRouter>
       </ThemeProvider>
