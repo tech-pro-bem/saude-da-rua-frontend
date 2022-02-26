@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { Layout } from '../shared/components';
-import { Home } from '../pages';
+import { Home, Donation } from '../pages';
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<Layout />}>
       <Route index element={<Home />} />
-      <Route path="doacao" element={() => <div></div>} />
+      <Route path="doacao" element={<Donation />} />
     </Route>
   </Routes>
 );
