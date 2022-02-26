@@ -12,4 +12,9 @@ export const Container = styled.span`
   padding: 8px 16px;
   border-radius: 80px;
   cursor: pointer;
+  :hover {
+    background-color: ${({ theme }) => theme.colors.light};
+    color: ${({ theme }) => theme.colors.dark};
+    border-color: transparent;
+  }
 `;
