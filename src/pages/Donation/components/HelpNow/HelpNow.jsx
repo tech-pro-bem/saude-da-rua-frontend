@@ -5,7 +5,7 @@ import {
   HelpInfoContainer,
   ChipsContainer,
 } from './HelpNow.style';
-import { Highlight } from '../../../../shared/components';
+import { Highlight, Chip } from '../../../../shared/components';
 
 const HelpNow = () => {
   return (
@@ -14,12 +14,12 @@ const HelpNow = () => {
         <Highlight>Ajude</Highlight> agora mesmo
       </h1>
       <ChipsContainer>
-        <p>R$15</p>
-        <p>R$30</p>
-        <p>R$50</p>
-        <p>R$100</p>
-        <p>R$200</p>
-        <p>Qualquer valor</p>
+        <Chip>R$ 15</Chip>
+        <Chip>R$ 30</Chip>
+        <Chip>R$ 50</Chip>
+        <Chip>R$ 100</Chip>
+        <Chip>R$ 200</Chip>
+        <Chip selected>Qualquer valor</Chip>
       </ChipsContainer>
       <HelpInfoContainer>
         <p style={{ fontWeight: 'bold' }}>
