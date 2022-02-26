@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {
   Container,
   HelpOption,
@@ -8,18 +9,36 @@ import {
 import { Highlight, Chip } from '../../../../shared/components';
 
 const HelpNow = () => {
+  const defaultSelection = 'Qualquer valor';
+  const values = [
+    'R$ 15',
+    'R$ 30',
+    'R$ 50',
+    'R$ 100',
+    'R$ 200',
+    defaultSelection,
+  ];
+  const [selectedValue, setSelectedValue] = useState(defaultSelection);
+
+  const handleSelection = (value) => {
+    setSelectedValue(value);
+  };
+
   return (
     <Container>
       <h1>
         <Highlight>Ajude</Highlight> agora mesmo
       </h1>
       <ChipsContainer>
-        <Chip>R$ 15</Chip>
-        <Chip>R$ 30</Chip>
-        <Chip>R$ 50</Chip>
-        <Chip>R$ 100</Chip>
-        <Chip>R$ 200</Chip>
-        <Chip selected>Qualquer valor</Chip>
+        {values.map((v) => (
+          <Chip
+            key={v}
+            onClick={() => handleSelection(v)}
+            selected={selectedValue === v}
+          >
+            {v}
+          </Chip>
+        ))}
       </ChipsContainer>
       <HelpInfoContainer>
         <p style={{ fontWeight: 'bold' }}>
