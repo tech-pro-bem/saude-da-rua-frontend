@@ -1,4 +1,4 @@
-import { Container, Author } from './Quote.style';
+import { Container, Author } from './Quotation.style';
 
 const QuotationComponent = ({ text, author, margin, width, maxWidth }) => {
   return (
