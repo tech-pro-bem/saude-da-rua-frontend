@@ -1,25 +1,25 @@
 import React from 'react';
 
-import { Container } from './Footer.style.js';
+import { Contacts } from './Footer.style.js';
 
-import { social1, social2, social3 } from '../../../../assets/index.js';
+import { social1, social2, social3 } from '../../../../assets';
 
 const Footer = () => (
-  <Container>
+  <Contacts>
     <hr />
     <div className="ft-main">
-      <div className="ft-main-item">
-        <h2 className="ft-title">Saúde da Rua</h2>
+      <div className="ft-main-item-one">
+        <h2 className="ft-titleOne">Saúde da Rua</h2>
         <p className="big">
-          {' '}
-          O Saúde da Rua nasceu em julho de 2020 com a missão<br></br>de
-          <strong>levar atendimento médico humanizado e recorrente </strong>
-          <br></br>às camadas mais vulneráveis da sociedade.
+          O Saúde da Rua nasceu em julho de 2020 com a missão<br></br> de
+          <strong> levar atendimento médico humanizado e recorrente </strong>
+          <br></br>
+          às camadas mais vulneráveis da sociedade.
         </p>
       </div>
 
-      <div className="ft-main-item">
-        <h2 className="ft-title">Onde estamos</h2>
+      <div className="ft-main-item-two">
+        <h2 className="ft-titleTwo">Onde estamos</h2>
         <ul className="locations">
           <li>São Paulo - SP</li>
           <li>Campinas - SP</li>
@@ -29,8 +29,8 @@ const Footer = () => (
         </ul>
       </div>
 
-      <div className="ft-main-item">
-        <h2 className="ft-title3">Contato</h2>
+      <div className="ft-main-item-three">
+        <h2 className="ft-titleThree">Contato</h2>
         <ul className="midia">
           <li>
             <a href="#">
@@ -39,7 +39,7 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="mailto:saudedarua@gmail.com">
               <img src={social2} alt="E-mail" className="logo" />
               saudedarua@gmail.com
             </a>
@@ -71,7 +71,7 @@ const Footer = () => (
         </li>
       </ul>
     </div>
-  </Container>
+  </Contacts>
 );
 
 export default Footer;
