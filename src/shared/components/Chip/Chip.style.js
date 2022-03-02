@@ -13,8 +13,8 @@ export const Container = styled.span`
   border-radius: 80px;
   cursor: pointer;
   :hover {
-    background-color: ${({ theme }) => theme.colors.light};
-    color: ${({ theme }) => theme.colors.dark};
+    background-color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary_light};
     border-color: transparent;
   }
 `;
