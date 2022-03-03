@@ -4,5 +4,14 @@ import ButtonDonation from './Button/Button';
 import Layout from './Layout/Layout';
 import Highlight from './Highlight/Highlight';
 import Chip from './Chip/Chip';
+import Quotation from './Quotation/Quotation';
 
-export { Layout, Structure, Header, ButtonDonation, Highlight, Chip };
+export {
+  Layout,
+  Structure,
+  Header,
+  ButtonDonation,
+  Highlight,
+  Chip,
+  Quotation,
+};
