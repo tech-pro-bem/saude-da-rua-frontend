@@ -1,9 +1,16 @@
 import React from 'react';
-import { AboutUs, WhereAreWe, Partners, SliderData } from './components/index';
+import {
+  AboutUs,
+  WhereAreWe,
+  Partners,
+  Banner,
+  SliderData,
+} from './components/index';
 
 const Home = () => {
   return (
     <>
+      <Banner />
       <AboutUs />
 
       <SliderData />

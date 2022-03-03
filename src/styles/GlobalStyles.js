@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: auto;
     font-size: 1rem;
+    color: ${(props) => props.theme.colors.primary_light};
   }
 
   h1 {
@@ -35,10 +36,11 @@ const GlobalStyle = createGlobalStyle`
     color: ${(props) => props.theme.colors.primary_light};
   }
 
-  h2{
+  h2 {
     font-weight: 600;
     line-height: auto;
     font-size: 2.5rem;
+    color: ${(props) => props.theme.colors.primary_light};
   }
 
   h3 {
@@ -47,14 +49,34 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.75rem;
   }
 
+  h4 {
+    font-weight: 400;
+    line-height: auto;
+    font-size: 1rem;
+    color: ${(props) => props.theme.colors.primary};
+  }
+
   button {
     border: none;
     outline: none;
     cursor: pointer;
+    line-height: auto;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  Link {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    line-height: auto;
+    font-size: 1rem;
+    font-weight: 400;
+
   }
 
 
-  a{
+  a {
       text-decoration: none;
       outline: none;
   }

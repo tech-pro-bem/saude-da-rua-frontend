@@ -1,6 +1,7 @@
-import imag1 from './DSC_0182.png';
-import imag2 from './H21.png';
-import imag3 from './H61.png';
+import imag1 from './volunter1.png';
+import imag2 from './volunter2.png';
+import imag3 from './volunter3.png';
+import mapImag from './mapa.png';
 import partnersLogo from './partners.png';
 import action2021 from './action2021.png';
 import action2020 from './action2020.png';
@@ -8,6 +9,9 @@ import humanDay from './humanDay.png';
 import slideArrow from './arrow.png';
 import ellipse1 from './ellipse1.png';
 import ellipse2 from './ellipse2.png';
+import banner from './voluntary.png';
+import EllipseBco from './EllipseBco.png';
+import EllipseBlue from './EllipseBlue.png';
 
 export {
   imag1,
@@ -20,4 +24,8 @@ export {
   slideArrow,
   ellipse1,
   ellipse2,
+  mapImag,
+  banner,
+  EllipseBco,
+  EllipseBlue,
 };
