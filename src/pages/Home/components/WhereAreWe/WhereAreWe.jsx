@@ -6,7 +6,7 @@ const WhereAreWe = () => {
   return (
     <ContainerWhereAreWe>
       <WrapperTextWhere />
-      <PhotoMap />
+      {/* <PhotoMap /> */}
     </ContainerWhereAreWe>
   );
 };

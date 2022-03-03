@@ -1,10 +1,14 @@
 import React from 'react';
 import { BannerContainer, Text, Button } from './Banner.style';
 import { ButtonDonation } from '../../../../../shared/components/index';
+import { banner } from '../../../../../assets/index';
 
 const Banner_voluntary = () => (
   <BannerContainer>
-    <div className="banner">
+    <div className="imageBanner">
+      <img className="bannerPhoto" src={banner} alt="Foto dos volutários" />
+    </div>
+    <div>
       <Text>
         <h1>
           Doe e <span>ajude</span> pessoas em situação de rua
@@ -15,6 +19,7 @@ const Banner_voluntary = () => (
         </p>
         <h4>Faça parte dessa ação!</h4>
       </Text>
+
       <Button>
         <ButtonDonation />
       </Button>
