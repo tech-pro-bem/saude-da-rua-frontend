@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import { accountabilityBackgroundImage } from '../../../../assets/donationPage';
 
 export const Container = styled.div`
+  max-width: 1440px;
   height: 30vw;
-  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
   margin: 40px auto;
   position: relative;
@@ -19,7 +23,7 @@ export const Container = styled.div`
     background-color: rgba(32, 32, 32, 0.7);
     background-image: url(${accountabilityBackgroundImage});
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: left left;
     background-blend-mode: overlay;
     filter: blur(2px);
     z-index: -1;
