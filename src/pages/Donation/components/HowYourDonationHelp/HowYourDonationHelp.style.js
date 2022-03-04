@@ -2,14 +2,14 @@ import styled from 'styled-components';
 import { accountabilityBackgroundImage } from '../../../../assets/donationPage';
 
 export const Container = styled.div`
-  max-width: 1440px;
-  height: 30vw;
+  min-height: 525px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 40px auto;
+  margin: 96px auto;
+  padding: 16px;
   position: relative;
   z-index: 0;
 
@@ -23,15 +23,17 @@ export const Container = styled.div`
     background-color: rgba(32, 32, 32, 0.7);
     background-image: url(${accountabilityBackgroundImage});
     background-repeat: no-repeat;
-    background-position: left left;
+    background-position: center;
     background-blend-mode: overlay;
-    filter: blur(2px);
+    filter: blur(4px);
     z-index: -1;
   }
 `;
 
 export const AccountabilityContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: 32px auto;
 `;
 
