@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { accountabilityBackgroundImage } from '../../../../assets/donationPage';
 
 export const Container = styled.div`
-  min-height: 525px;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 660px;
   display: flex;
   justify-content: center;
   align-items: center;
