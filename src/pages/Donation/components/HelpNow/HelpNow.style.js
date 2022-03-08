@@ -32,3 +32,23 @@ export const HelpInfoContainer = styled.div`
     margin: 32px 0;
   }
 `;
+
+export const PIXDonationContainer = styled.div`
+  display: flex;
+  margin: 0 auto;
+  padding: 24px;
+  justify-content: space-around;
+`;
+
+export const PIXInstructionsContainer = styled.div`
+  text-align: left;
+
+  ul {
+    list-style-position: inside;
+    margin: 24px 0;
+  }
+
+  ul > li {
+    color: ${({ theme }) => theme.colors.primary_light};
+  }
+`;
