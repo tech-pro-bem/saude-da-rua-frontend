@@ -10,6 +10,8 @@ const OutlinedImage = ({
   topOffset,
   bottomOffset,
   imgBorderRadius,
+  style,
+  className,
   ...rest
 }) => {
   return (
@@ -22,6 +24,8 @@ const OutlinedImage = ({
       rightOffset={rightOffset}
       topOffset={topOffset}
       bottomOffset={bottomOffset}
+      style={style}
+      className={className}
     >
       <StyledImage imgBorderRadius={imgBorderRadius} {...rest} />
     </Box>
