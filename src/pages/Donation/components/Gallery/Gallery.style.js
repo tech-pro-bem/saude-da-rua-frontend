@@ -1,15 +1,18 @@
 import styled from 'styled-components';
+import { OutlinedImage } from '../../../../shared/components';
 
 export const Container = styled.div`
-  position: relative;
-  min-height: 420px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 16px;
+  align-items: center;
+  justify-items: center;
 `;
 
-export const PostionedOutlinedImage = styled.img`
-  position: absolute;
-  transform: ${({ transform = 'none' }) => transform};
-  left: ${({ left = 'auto' }) => left};
-  right: ${({ right = 'auto' }) => right};
-  top: ${({ top = 'auto' }) => top};
-  bottom: ${({ bottom = 'auto' }) => bottom};
+export const PostionedOutlinedImage = styled(OutlinedImage)`
+  grid-row: ${({ gridRow = 'auto' }) => gridRow};
+  grid-column: ${({ gridColumn = 'auto' }) => gridColumn};
+  align-self: ${({ align = 'auto' }) => align};
+  justify-self: ${({ justify = 'auto' }) => justify};
 `;
