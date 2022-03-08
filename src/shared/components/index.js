@@ -5,6 +5,7 @@ import Layout from './Layout/Layout';
 import Highlight from './Highlight/Highlight';
 import Chip from './Chip/Chip';
 import Quotation from './Quotation/Quotation';
+import OutlinedImage from './OutlinedImage/OutlinedImage';
 
 export {
   Layout,
@@ -14,4 +15,5 @@ export {
   Highlight,
   Chip,
   Quotation,
+  OutlinedImage,
 };
