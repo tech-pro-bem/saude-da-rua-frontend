@@ -1,6 +1,8 @@
 import { Structure } from '../../shared/components';
 import HelpNow from './components/HelpNow/HelpNow';
+import Gallery from './components/Gallery/Gallery';
 import HowYourDonationHelp from './components/HowYourDonationHelp/HowYourDonationHelp';
+
 
 const Donation = () => {
   return (
@@ -9,6 +11,9 @@ const Donation = () => {
         <HelpNow />
       </Structure>
       <HowYourDonationHelp />
+      <Structure>
+        <Gallery />
+      </Structure>
     </>
   );
 };
