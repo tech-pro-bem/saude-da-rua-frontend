@@ -4,6 +4,7 @@ import ButtonDonation from './Button/Button';
 import Layout from './Layout/Layout';
 import Highlight from './Highlight/Highlight';
 import Chip from './Chip/Chip';
+import Quotation from './Quotation/Quotation';
 import OutlinedImage from './OutlinedImage/OutlinedImage';
 
 export {
@@ -13,5 +14,6 @@ export {
   ButtonDonation,
   Highlight,
   Chip,
+  Quotation,
   OutlinedImage,
 };
