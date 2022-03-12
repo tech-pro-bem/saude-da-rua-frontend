@@ -13,7 +13,7 @@ export const Contacts = styled.div`
   .ft-main {
     display: flex;
     justify-content: center;
-    margin-bottom: 7.5rem;
+    margin-bottom: 6.5rem;
     margin-top: 3.75rem
   }
 
@@ -26,8 +26,13 @@ export const Contacts = styled.div`
     margin-right: 100px;
   }
 
-  .ft-main-item-three{
-    text-decoration: underline
+  .ft-titleThree{
+    text-decoration: none;
+  }
+
+
+  .midia{
+    text-decoration: underline;
   }
 
   .ft-titleOne, .ft-titleTwo, .ft-titleThree {
@@ -41,15 +46,16 @@ export const Contacts = styled.div`
     margin: 0 auto;
   }
 
-
   .ft-legal-list {
     display: flex;
     justify-content: center;
+
   }
 
   .ft-legal-list > li {
     margin-right: 2.5rem;
     margin-bottom: 1.56rem;
+
   }
 
 
@@ -58,7 +64,19 @@ export const Contacts = styled.div`
   }
 
   .logo {
-    margin-top: 0.62rem;
-    margin-right: 0.5rem;
+    margin-right: 1.25rem;
+    vertical-align: middle;
   }
+
+  .midia > li {
+    margin-bottom: 1.375rem;
+  }
+
+
+
+
+
+
+
+
 `;

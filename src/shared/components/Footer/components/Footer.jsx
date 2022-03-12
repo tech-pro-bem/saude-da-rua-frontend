@@ -33,7 +33,11 @@ const Footer = () => (
         <h2 className="ft-titleThree">Contato</h2>
         <ul className="midia">
           <li>
-            <a href="#">
+            <a
+              href="https://wa.me/5511985914817"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <img src={social1} alt="WhatsApp" className="logo" />
               WhatsApp
             </a>
