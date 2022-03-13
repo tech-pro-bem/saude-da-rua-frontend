@@ -5,8 +5,8 @@ import { ButtonLink } from './ButtonPartners.style';
 // - refatorar function para function component
 // - refatorar botão para que ele seja um componente reutilizável
 
-function ButtonPartners() {
+const ButtonPartners = () => {
   return <ButtonLink to="">Seja nosso parceiro</ButtonLink>;
-}
+};
 
 export default ButtonPartners;
