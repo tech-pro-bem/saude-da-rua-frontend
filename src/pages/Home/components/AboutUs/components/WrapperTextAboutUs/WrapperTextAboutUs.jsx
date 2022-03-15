@@ -1,16 +1,4 @@
-import {
-  QuemSomosTitle,
-  AboutText,
-  Container,
-} from './WrapperTextAboutUs.style';
-
-///** TODO:
-// - refatorar function para function component
-// - manter padrão da linguagem (ou PT ou EN)
-// - por que foi utilizado um Fragment aqui?
-// A utilização de uma div estilizada facilitaria a organização de estilo
-// - rodar o console log para ver os erros que indicam aqui
-// - um p não pode existir dentro de outro p (QuemSomosTitle)
+import { Container } from './WrapperTextAboutUs.style';
 
 function WrapperTextAboutUs() {
   return (
