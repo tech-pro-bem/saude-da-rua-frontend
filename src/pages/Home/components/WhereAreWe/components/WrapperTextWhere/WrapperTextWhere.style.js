@@ -1,20 +1,25 @@
 import styled from 'styled-components';
 
+export const Container = styled.section`
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-size: 24px;
+    color: ${(props) => props.theme.colors.primary_light};
+  }
+`;
+
 export const TextWhereAreWe = styled.div`
   width: 100%;
   height: 489.45px;
   padding-top: 10px;
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
   align-content: center;
   justify-content: center;
-`;
-
-export const WhereAreWeTitle = styled.h2`
-  margin-bottom: 43px;
-`;
-
-export const WhereAreWeSubTitle1 = styled.p`
-  margin-bottom: 10px;
 `;
 
 export const Sede = styled.p`
@@ -43,7 +48,8 @@ export const Sede = styled.p`
 `;
 
 //componentes das filiais
-export const Campinas = styled.p`
+export const City = styled.p`
+  margin-bottom: 8px;
   color: ${(props) =>
     props.campinas
       ? props.theme.colors.primary
@@ -159,7 +165,7 @@ export const Itajai = styled.p`
 `;
 
 //componente geral
-export const Circle = styled.div`
+export const WrapCircles = styled.div`
   display: block;
   height: 647px;
 `;
