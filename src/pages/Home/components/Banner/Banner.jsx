@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container } from './Banner.styles';
-import { LinkButton } from '../../../../shared/components';
+import { Highlight, LinkButton } from '../../../../shared/components';
 
 export const Banner = () => {
   return (
     <Container>
       <div>
         <h1>
-          Doe e <em>ajude</em> pessoas em situação de rua
+          Doe e <Highlight>ajude</Highlight> pessoas em situação de rua
         </h1>
         <p>
           Nos ajude a levar atendimento médico <br />
