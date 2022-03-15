@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from './Banner.styles';
+import { LinkButton } from '../../../../shared/components';
 
 export const Banner = () => {
   return (
@@ -14,6 +15,8 @@ export const Banner = () => {
         </p>
 
         <h4>Faça parte dessa ação!</h4>
+
+        <LinkButton text="Doe qualquer valor" route="doacao" />
       </div>
     </Container>
   );

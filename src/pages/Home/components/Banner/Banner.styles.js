@@ -36,6 +36,8 @@ export const Container = styled.div`
       font-size: 24px;
       line-height: 36px;
       color: ${(props) => props.theme.colors.primary_light};
+
+      margin-bottom: 47px;
     }
   }
 `;
