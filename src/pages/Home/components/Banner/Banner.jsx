@@ -16,7 +16,7 @@ export const Banner = () => {
 
         <h4>Faça parte dessa ação!</h4>
 
-        <LinkButton text="Doe qualquer valor" route="doacao" />
+        <LinkButton text="Doe qualquer valor" route="/doacao" />
       </div>
     </Container>
   );
