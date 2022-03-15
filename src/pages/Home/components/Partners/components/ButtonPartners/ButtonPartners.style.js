@@ -1,41 +1,24 @@
 import styled from 'styled-components';
-///** TODO:
-// - utilizar variaveis de cor do theme ok
-// - utilizar a variavel de fonte que vem do theme ok
 
-export const ButtonLink = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  margin-left: -160px;
-  margin-top: -10px;
+export const Container = styled.button`
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 280px;
 
-  width: 280px;
-  height: 57px;
+  font-size: 1.12rem;
+  font-weight: 600;
 
   color: ${(props) => props.theme.colors.primary};
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 
-  border: 2px solid ${(props) => props.theme.colors.primary};
-  box-sizing: border-box;
+  background-color: transparent;
+  border: 2px solid;
   border-radius: 40px;
-  background-color: ${(props) => props.theme.colors.blackUI};
 
-  cursor: pointer;
-  pointer-events: auto;
+  transition: 0.2s all;
 
-  transition: all 0.3s;
-
-  &:hover,
-  &:focus {
-    color: ${(props) => props.theme.colors.primary};
-  }
-  &:active {
-    color: ${(props) => props.theme.colors.primary_light};
+  &:hover {
     background-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary_light};
+    border-color: ${(props) => props.theme.colors.primary};
   }
 `;
