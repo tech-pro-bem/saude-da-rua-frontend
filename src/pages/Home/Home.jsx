@@ -1,12 +1,11 @@
 import React from 'react';
 import { Structure } from '../../shared/components';
-import { AboutUs, WhereAreWe, Partners, Banner } from './components';
+import { AboutUs, WhereAreWe, Partners } from './components';
 
 const Home = () => {
   return (
     <>
       <Structure>
-        <Banner />
         <AboutUs />
         <WhereAreWe />
         <Partners />
