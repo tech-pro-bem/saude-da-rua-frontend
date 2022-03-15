@@ -5,7 +5,7 @@ import mapImag from './mapa.png';
 import partnersLogo from './partners.png';
 import EllipseBco from './EllipseBco.png';
 import EllipseBlue from './EllipseBlue.png';
-import banner from './voluntary.jpg';
+import banner from './banner-home.png';
 
 export {
   imag1,

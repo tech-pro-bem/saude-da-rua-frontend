@@ -5,8 +5,8 @@ import { AboutUs, WhereAreWe, Partners, Banner } from './components';
 const Home = () => {
   return (
     <>
+      <Banner />
       <Structure>
-        <Banner />
         <AboutUs />
         <WhereAreWe />
         <Partners />
