@@ -75,7 +75,11 @@ const WrapperTextWhere = () => {
   const [itajai, setItajai] = useState(false);
 
   const places = [
-    { key: 1, city: 'Saúde da Rua Campinas - SP', fn: ativarCampinas },
+    {
+      key: 1,
+      city: 'Saúde da Rua Campinas - SP',
+      fn: ativarCampinas,
+    },
     {
       key: 2,
       city: 'Saúde da Rua São José do Rio Preto - SP',
@@ -104,42 +108,38 @@ const WrapperTextWhere = () => {
         <h2>Onde estamos</h2>
 
         <h3>Sede</h3>
-        <Sede sede={sede} onClick={ativarSede}>
+        <Sede sede={sede} onMouseOver={ativarSede}>
           Saúde da Rua - SP
         </Sede>
 
         <h3>Filiais</h3>
         {places.map((place) => (
-          <City onClick={place.fn} key={place.key}>
+          <City key={place.key} onMouseOver={place.fn}>
             {place.city}
           </City>
         ))}
       </TextWhereAreWe>
 
-      {/*bolinhas referentes a cada filial */}
       <WrapCircles>
         <CircleCampinas
           campinas={campinas}
-          onClick={() => setCampinas(!campinas)}
+          onMouseOver={ativarCampinas}
         ></CircleCampinas>
         <CircleRioPreto
           rioPreto={rioPreto}
-          onClick={() => setCampinas(!rioPreto)}
+          onMouseOver={ativarRioPreto}
         ></CircleRioPreto>
         <CircleSaoCarlos
           saoCarlos={saoCarlos}
-          onClick={() => setSaoCarlos(!saoCarlos)}
+          onMouseOver={ativarSaoCarlos}
         ></CircleSaoCarlos>
         <CircleSorocaba
           sorocaba={sorocaba}
-          onClick={() => setSorocaba(!sorocaba)}
+          onMouseOver={ativarSorocaba}
         ></CircleSorocaba>
-        <CircleSede sede={sede} onClick={() => setSede(!sede)}></CircleSede>
+        <CircleSede sede={sede} onMouseOver={ativarSorocaba}></CircleSede>
 
-        <CircleItajai
-          itajai={itajai}
-          onClick={() => setItajai(!itajai)}
-        ></CircleItajai>
+        <CircleItajai itajai={itajai} onMouseOver={ativarItajai}></CircleItajai>
       </WrapCircles>
     </Container>
   );
