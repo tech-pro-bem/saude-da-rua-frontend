@@ -20,6 +20,19 @@ export const InstagramItemsContainer = styled.div`
   margin: 24px 0;
 `;
 
+export const IgPictureCard = styled.div`
+  max-width: 320px;
+  margin: 12px;
+
+  > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+`;
+
 export const ButtonLinkInstagram = styled.button`
   padding: 8px 16px;
   color: ${(props) => props.theme.colors.primary};
