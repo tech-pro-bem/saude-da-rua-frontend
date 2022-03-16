@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const Contacts = styled.div`
   * {
     color: ${(props) => props.theme.colors.primary_light};
-    np
   }
 
   h2 {
@@ -14,29 +13,31 @@ export const Contacts = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 6.5rem;
-    margin-top: 3.75rem
+    margin-top: 3.75rem;
   }
 
   .ft-main-item-one {
     margin-right: 100px;
-
+    width: 100%;
+    max-width: 470px;
   }
 
-  .ft-main-item-two{
+  .ft-main-item-two {
     margin-right: 100px;
   }
 
-  .ft-titleThree{
+  .ft-titleThree {
     text-decoration: none;
   }
 
-
-  .midia{
+  .midia {
     text-decoration: underline;
   }
 
-  .ft-titleOne, .ft-titleTwo, .ft-titleThree {
-   margin-bottom: 36px;
+  .ft-titleOne,
+  .ft-titleTwo,
+  .ft-titleThree {
+    margin-bottom: 36px;
   }
 
   hr {
@@ -49,15 +50,12 @@ export const Contacts = styled.div`
   .ft-legal-list {
     display: flex;
     justify-content: center;
-
   }
 
   .ft-legal-list > li {
     margin-right: 2.5rem;
     margin-bottom: 1.56rem;
-
   }
-
 
   ul {
     list-style-type: none;
@@ -71,12 +69,4 @@ export const Contacts = styled.div`
   .midia > li {
     margin-bottom: 1.375rem;
   }
-
-
-
-
-
-
-
-
 `;

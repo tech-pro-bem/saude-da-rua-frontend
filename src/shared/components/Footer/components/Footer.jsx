@@ -10,10 +10,11 @@ const Footer = () => (
     <div className="ft-main">
       <div className="ft-main-item-one">
         <h2 className="ft-titleOne">Saúde da Rua</h2>
-        <p className="big">
-          O Saúde da Rua nasceu em julho de 2020 com a missão<br></br> de
+        <p>
+          O Saúde da Rua nasceu em julho de 2020 com a missão
+          <br /> de
           <strong> levar atendimento médico humanizado e recorrente </strong>
-          <br></br>
+          <br />
           às camadas mais vulneráveis da sociedade.
         </p>
       </div>
