@@ -7,6 +7,17 @@ const DEFAULT_FIELDS = ['id', 'media_type', 'media_url'];
 export default class InstagramClient {
   static client = axios.create({ baseURL });
 
+  static async getSelfUser() {
+    const params = {
+      access_token: REACT_APP_IG_TOKEN,
+      fields: 'account_type,id,media_count,username',
+    };
+
+    const { data: user } = await this.client.get('/me', params);
+
+    return user;
+  }
+
   static async getLastMedia(n, fields = DEFAULT_FIELDS) {
     const fieldsStringfied = fields.join(',');
 
