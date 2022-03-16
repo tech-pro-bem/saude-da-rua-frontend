@@ -13,7 +13,7 @@ export default class InstagramClient {
       fields: 'account_type,id,media_count,username',
     };
 
-    const { data: user } = await this.client.get('/me', params);
+    const { data: user } = await this.client.get('/me', { params });
 
     return user;
   }
