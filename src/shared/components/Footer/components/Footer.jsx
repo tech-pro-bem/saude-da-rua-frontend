@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Contacts } from './Footer.style.js';
 
-import { social1, social2, social3 } from '../../../../assets';
+import { social1, social2, social3 } from '../../../../assets/index';
 
 const Footer = () => (
   <Contacts>
