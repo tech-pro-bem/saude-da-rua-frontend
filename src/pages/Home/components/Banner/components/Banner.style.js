@@ -1,42 +1,35 @@
 import styled from 'styled-components';
-import img from '../../../../../assets/voluntary.png';
+import { banner } from '../../../../../assets';
 
-export const BannerContainer = styled.div`
-  background-image: url(${img});
-  background-size: 100% 100%;
-  height: 39rem;
-  width: 120vw;
-`;
+export const Container = styled.div`
+  width: 100%;
+  max-width: 1140px;
+  height: 624px;
+  margin-left: 0 auto;
+  background: url(${banner}) no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 94px 136px;
 
-export const Text = styled.h1`
-  h1,
-  p,
-  h4 {
-    padding-left: 8.5rem;
+  div {
+    width: 545px;
+    h1 {
+      margin-bottom: 40px;
+      em {
+        font-style: normal;
+        color: ${(props) => props.theme.colors.primary};
+      }
+    }
+    p {
+      margin-bottom: 40px;
+    }
+    h4 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      color: ${(props) => props.theme.colors.primary_light};
+      margin-bottom: 47px;
+    }
   }
-
-  h1 {
-    width: 46.8rem;
-    height: 9.7rem;
-    padding-top: 5.9rem;
-  }
-
-  span {
-    color: ${(props) => props.theme.colors.primary};
-  }
-
-  p {
-    width: 44rem;
-    padding-top: 8.1rem;
-  }
-
-  h4 {
-    font-size: 1.5rem;
-    padding-top: 2.5rem;
-  }
-`;
-
-export const Button = styled.div`
-  margin-top: 3.125rem;
-  margin-left: 8.5rem;
 `;

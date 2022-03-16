@@ -1,25 +1,25 @@
 import React from 'react';
-import { BannerContainer, Text, Button } from './Banner.style';
-import { ButtonDonation } from '../../../../../shared/components/index';
+import { Container } from './Banner.style';
+import { Highlight, LinkButton } from '../../../../../shared/components';
 
-const Banner_voluntary = () => (
-  <BannerContainer>
-    <div className="banner">
-      <Text>
+export const Banner = () => {
+  return (
+    <Container>
+      <div>
         <h1>
-          Doe e <span>ajude</span> pessoas em situação de rua
+          Doe e <Highlight>ajude</Highlight> pessoas em situação de rua
         </h1>
-        <p className="big">
-          Nos ajude a levar atendimento médico humanizado e recorrente à
-          população vulnerável.
+        <p>
+          Nos ajude a levar atendimento médico <br />
+          humanizado e recorrente à população vulnerável.
         </p>
-        <h4>Faça parte dessa ação!</h4>
-      </Text>
-      <Button>
-        <ButtonDonation />
-      </Button>
-    </div>
-  </BannerContainer>
-);
 
-export default Banner_voluntary;
+        <h4>Faça parte dessa ação!</h4>
+
+        <LinkButton text="Doe qualquer valor" route="/doacao" />
+      </div>
+    </Container>
+  );
+};
+
+export default Banner;

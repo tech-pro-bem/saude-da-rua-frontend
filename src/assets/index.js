@@ -3,9 +3,9 @@ import imag2 from './volunter2.png';
 import imag3 from './volunter3.png';
 import mapImag from './mapa.png';
 import partnersLogo from './partners.png';
-import banner from './voluntary.png';
 import EllipseBco from './EllipseBco.png';
 import EllipseBlue from './EllipseBlue.png';
+import banner from './banner-home.png';
 
 export {
   imag1,

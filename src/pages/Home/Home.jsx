@@ -1,15 +1,15 @@
 import React from 'react';
-import { AboutUs, WhereAreWe, Partners, Banner } from './components/index';
+import { Structure } from '../../shared/components';
+import { WhereAreWe, Partners, Banner } from './components';
 
 const Home = () => {
   return (
     <>
       <Banner />
-      <AboutUs />
-
-      <WhereAreWe />
-
-      <Partners />
+      <Structure>
+        <WhereAreWe />
+        <Partners />
+      </Structure>
     </>
   );
 };
