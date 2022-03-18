@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Carousel.style';
-import { ellipse1, ellipse2, slideArrow } from '../../../../../assets/index';
+import { Arrow } from '../../../../../assets/index';
 
 export const CarouselItem = ({ children, width }) => {
   return (
@@ -60,19 +60,20 @@ const Carousel = ({ children }) => {
               onClick={() => {
                 updateIndex(index);
               }}
-            >
-              {index + 1}
-            </button>
+            ></button>
           );
         })}
+      </div>
 
+      <div>
         <button
+          type="button"
+          id="slide"
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
         >
-          Next
-          {/* <img src={slideArrow} alt="" className="arrow"/> */}
+          <img src={Arrow} alt="arrow" className="arrow" />
         </button>
       </div>
     </div>

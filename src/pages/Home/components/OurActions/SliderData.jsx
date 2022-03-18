@@ -1,39 +1,36 @@
-import Carousel, { CarouselItem } from './Carousel';
-import { Container, FrameImg1 } from './Carousel.style';
+import Carousel, { CarouselItem } from './components/Carousel';
+import { Container, FrameImg1 } from './components/Carousel.style';
 import {
   action2020,
   action2021,
   humanDay,
-  slideArrow,
-} from '../../../../../assets/index';
+  Arrow,
+} from '../../../../../src/assets/index';
 
 const SliderData = () => (
   <Container>
     <Carousel>
       <CarouselItem>
-        <FrameImg1>
-          <div className="text">
-            <h2>
-              Veja nossas <span> ações</span>
-            </h2>
-            <p id="year">2021</p>
-
+        <div className="text">
+          <h2>
+            Veja nossas <span> ações</span>
+          </h2>
+          <p id="year">2021</p>
+          <FrameImg1>
             <img src={action2021} alt="Action 2021" className="action" />
-
-            <p id="content">
-              Foram realizados <strong>891 atendimentos</strong> em{' '}
-              <strong>
-                19 <br></br>ações
-              </strong>{' '}
-              sociais na cidade de São Paulo.<br></br>
-              Ampliamos nossa atuação e passamos a <br></br>atuar nas
-              comunidades Esmaga Sapo (SP),<br></br>
-              Anchieta (Grajaú/SP) e Parque Viana <br></br>(Baurueri/SP). Também
-              abrimos mais uma filial <br></br>em{' '}
-              <strong> São Carlos/SP.</strong>
-            </p>
-          </div>
-        </FrameImg1>
+          </FrameImg1>
+          <p id="content">
+            Foram realizados <strong>891 atendimentos</strong> em{' '}
+            <strong>
+              19 <br></br>ações
+            </strong>{' '}
+            sociais na cidade de São Paulo.<br></br>
+            Ampliamos nossa atuação e passamos a <br></br>atuar nas comunidades
+            Esmaga Sapo (SP),<br></br>
+            Anchieta (Grajaú/SP) e Parque Viana <br></br>(Baurueri/SP). Também
+            abrimos mais uma filial <br></br>em <strong> São Carlos/SP.</strong>
+          </p>
+        </div>
       </CarouselItem>
 
       <CarouselItem>
@@ -42,7 +39,9 @@ const SliderData = () => (
             Veja nossas <span>ações</span>
           </h2>
           <p id="year">2020</p>
-          <img src={action2020} alt="Action 2020" className="action" />
+          <FrameImg1>
+            <img src={action2020} alt="Action 2020" className="action" />
+          </FrameImg1>
           <p id="content">
             Nos primeiro semestre de atuação do Saúde <br></br>da Rua, foram
             realizadas{' '}
@@ -66,7 +65,9 @@ const SliderData = () => (
             Veja nossas <span>ações</span>
           </h2>
           <p id="year">Human Day</p>
-          <img src={humanDay} alt="Human Day" className="action" />
+          <FrameImg1>
+            <img src={humanDay} alt="Human Day" className="action" />
+          </FrameImg1>
           <p id="content">
             O Human Day é realizado com o objetivo de<br></br> disponibilizar um
             <strong>dia de serviços gratuitos.</strong>

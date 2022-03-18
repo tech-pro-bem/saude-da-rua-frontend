@@ -12,6 +12,7 @@ import ellipse2 from './ellipse2.png';
 import banner from './voluntary.png';
 import EllipseBco from './EllipseBco.png';
 import EllipseBlue from './EllipseBlue.png';
+import Arrow from './arrow.png';
 
 export {
   imag1,
@@ -28,4 +29,5 @@ export {
   banner,
   EllipseBco,
   EllipseBlue,
+  Arrow,
 };
