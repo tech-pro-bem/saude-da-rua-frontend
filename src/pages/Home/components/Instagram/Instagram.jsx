@@ -23,9 +23,31 @@ const Instagram = () => {
 
   const igMediaFields = ['id', 'media_url', 'caption', 'permalink'];
 
-  const { data: igPictures, isLoading } = useQuery('igLastPosts', () =>
+  const {
+    data: igPictures,
+    isLoading,
+    isLoadingError,
+  } = useQuery('igLastPosts', () =>
     InstagramClient.getLastPictures(3, igMediaFields)
   );
+
+  if (isLoadingError) {
+    return (
+      <InstagramText style={{ margin: '32px 0' }}>
+        Acompanhe-nos no{' '}
+        <a
+          href={`https://www.instagram.com/${user.username}`}
+          target="_blank"
+          rel="noreferrer"
+          style={{ alignSelf: 'flex-end' }}
+        >
+          <Highlight style={{ textDecoration: 'underline' }}>
+            Instagram
+          </Highlight>
+        </a>
+      </InstagramText>
+    );
+  }
 
   return (
     <ContainerInstagram>
