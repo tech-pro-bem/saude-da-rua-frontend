@@ -10,7 +10,10 @@ const queryClient = new QueryClient();
 
 const App = () => {
   return (
-    <SkeletonTheme baseColor={'#282828'} highlightColor={'#262626'}>
+    <SkeletonTheme
+      baseColor={theme.colors.skeleton_base}
+      highlightColor={theme.colors.skeleton_highlight}
+    >
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
