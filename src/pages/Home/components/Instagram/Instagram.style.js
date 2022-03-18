@@ -21,6 +21,7 @@ export const InstagramItemsContainer = styled.div`
 `;
 
 export const IgPictureCard = styled.div`
+  width: 100%;
   max-width: 320px;
   margin: 12px;
 

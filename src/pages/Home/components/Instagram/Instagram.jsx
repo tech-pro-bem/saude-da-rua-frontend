@@ -1,4 +1,6 @@
 import { useQuery } from 'react-query';
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import { Highlight, OutlinedImage } from '../../../../shared/components';
 import { InstagramClient } from '../../../../shared/services';
 import {
@@ -16,7 +18,7 @@ const Instagram = () => {
   const { data: user } = useQuery(
     'ig/me',
     () => InstagramClient.getSelfUser(),
-    { placeholderData: IG_USER_DEFAULT }
+    { placeholderData: IG_USER_DEFAULT, enabled: false }
   );
 
   const igMediaFields = ['id', 'media_url', 'caption', 'permalink'];
@@ -31,30 +33,43 @@ const Instagram = () => {
         Acompanhe-nos no <Highlight>Instagram</Highlight>
       </InstagramText>
 
-      {isLoading ? <></> : <></>}
-
       <InstagramItemsContainer>
-        {igPictures &&
-          igPictures.map((pic) => (
-            <a
-              key={pic.id}
-              href={pic.permalink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <IgPictureCard style={{ maxWidth: '320px' }}>
-                <OutlinedImage
-                  src={pic.media_url}
-                  imgBorderRadius="8px"
-                  rightOffset="-8px"
-                  topOffset="-8px"
-                  bottomOffset="8px"
-                  leftOffset="8px"
-                />
-                <p>{pic.caption}</p>
-              </IgPictureCard>
-            </a>
-          ))}
+        {isLoading ? (
+          <>
+            {Array(3)
+              .fill(null)
+              .map((_, i) => (
+                <IgPictureCard key={i}>
+                  <Skeleton height={200} />
+                  <Skeleton count={3} />
+                </IgPictureCard>
+              ))}
+          </>
+        ) : (
+          <>
+            {igPictures &&
+              igPictures.map((pic) => (
+                <a
+                  key={pic.id}
+                  href={pic.permalink}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <IgPictureCard>
+                    <OutlinedImage
+                      src={pic.media_url}
+                      imgBorderRadius="8px"
+                      rightOffset="-8px"
+                      topOffset="-8px"
+                      bottomOffset="8px"
+                      leftOffset="8px"
+                    />
+                    <p>{pic.caption}</p>
+                  </IgPictureCard>
+                </a>
+              ))}
+          </>
+        )}
       </InstagramItemsContainer>
 
       <a
