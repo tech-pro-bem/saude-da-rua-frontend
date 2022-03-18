@@ -1,11 +1,7 @@
 import { MdArrowForward } from 'react-icons/md';
-import { Highlight, OutlinedImage } from '../../../../shared/components';
-import {
-  StoreRootContainer,
-  Showcase,
-  Button,
-  ShowcaseItem,
-} from './Store.style';
+import ShowcaseItem from './components/ShowcaseItem';
+import { Highlight } from '../../../../shared/components';
+import { StoreRootContainer, Showcase, Button } from './Store.style';
 import { store1, store2, store3 } from '../../../../assets/donationPage';
 
 const Store = () => {
@@ -19,45 +15,9 @@ const Store = () => {
         disponíveis no nosso Instagram e, para comprar, mande-nos uma mensagem:
       </p>
       <Showcase>
-        <ShowcaseItem>
-          <OutlinedImage
-            src={store1}
-            imgBorderRadius="8px"
-            leftOffset="-8px"
-            topOffset="-8px"
-            bottomOffset="12px"
-            rightOffset="8px"
-            width="162px"
-            height="170px"
-          />
-          <p>Camisetas</p>
-        </ShowcaseItem>
-        <ShowcaseItem>
-          <OutlinedImage
-            src={store2}
-            imgBorderRadius="8px"
-            leftOffset="-8px"
-            topOffset="-8px"
-            bottomOffset="12px"
-            rightOffset="8px"
-            width="162px"
-            height="170px"
-          />
-          <p>Agendas</p>
-        </ShowcaseItem>
-        <ShowcaseItem>
-          <OutlinedImage
-            src={store3}
-            imgBorderRadius="8px"
-            leftOffset="-8px"
-            topOffset="-8px"
-            bottomOffset="12px"
-            rightOffset="8px"
-            width="162px"
-            height="170px"
-          />
-          <p>Tirantes</p>
-        </ShowcaseItem>
+        <ShowcaseItem src={store1} identifier="Camisetas" />
+        <ShowcaseItem src={store2} identifier="Agendas" />
+        <ShowcaseItem src={store3} identifier="Tirantes" />
       </Showcase>
       <Button
         target="_blank"

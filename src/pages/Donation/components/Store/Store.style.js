@@ -15,11 +15,6 @@ export const Showcase = styled.div`
   margin-bottom: 32px;
 `;
 
-export const ShowcaseItem = styled.div`
-  text-align: center;
-  margin: 16px;
-`;
-
 export const Button = styled.a`
   display: flex;
   align-items: center;
