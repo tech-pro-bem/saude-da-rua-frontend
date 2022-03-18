@@ -21,12 +21,15 @@ export const PartnersText = styled.h3`
 `;
 
 export const ContainerPartners = styled.div`
-  display: block;
-  height: 458px;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-
   margin-top: 100px;
-  margin-left: 536px;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    color: ${(props) => props.theme.colors.primary_light};
+    margin-bottom: 64px;
+  }
 `;

@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 
+export const Container = styled.section`
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  h3 {
+    font-size: 24px;
+    color: ${(props) => props.theme.colors.primary_light};
+  }
+`;
+
 export const TextWhereAreWe = styled.div`
   width: 100%;
-  height: 489.45px;
-  padding-top: 10px;
-  margin-left: 30px;
-  align-content: center;
+  padding-top: 50px;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-`;
-
-export const WhereAreWeTitle = styled.h2`
-  margin-bottom: 43px;
-`;
-
-export const WhereAreWeSubTitle1 = styled.p`
-  margin-bottom: 10px;
 `;
 
 export const Sede = styled.p`
@@ -22,149 +25,37 @@ export const Sede = styled.p`
 
   color: ${(props) =>
     props.sede ? props.theme.colors.primary : props.theme.colors.primary_light};
-
-  //Efeito hover
   cursor: pointer;
-  transition: all 0.3s;
+
   &:hover {
     color: ${(props) =>
       props.sede
         ? props.theme.colors.primary
         : props.theme.colors.primary_light};
   }
-  &:active {
-    color: ${(props) =>
-      props.sede
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-    filter: box-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-  }
+
+  transition: all 0.3s;
 `;
 
-//componentes das filiais
-export const Campinas = styled.p`
+export const City = styled.p`
+  margin-bottom: 8px;
   color: ${(props) =>
-    props.campinas
+    props.active
       ? props.theme.colors.primary
       : props.theme.colors.primary_light};
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+
   cursor: pointer;
   transition: all 0.3s;
-  &:hover {
-    color: ${(props) =>
-      props.campinas
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-  }
-  &:active {
-    color: ${(props) =>
-      props.campinas
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-    filter: box-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-  }
 `;
 
-export const RioPreto = styled.p`
-  color: ${(props) =>
-    props.rioPreto
-      ? props.theme.colors.primary
-      : props.theme.colors.primary_light};
-  cursor: pointer;
-  transition: all 0.3s;
-  &:hover {
-    color: ${(props) =>
-      props.rioPreto
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-  }
-  &:active {
-    color: ${(props) =>
-      props.rioPreto
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-    filter: box-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-  }
-`;
-
-export const SaoCarlos = styled.p`
-  color: ${(props) =>
-    props.saoCarlos
-      ? props.theme.colors.primary
-      : props.theme.colors.primary_light};
-  cursor: pointer;
-  transition: all 0.3s;
-  &:hover {
-    color: ${(props) =>
-      props.saoCarlos
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-  }
-  &:active {
-    color: ${(props) =>
-      props.saoCarlos
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-    filter: box-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-  }
-`;
-
-export const Sorocaba = styled.p`
-  color: ${(props) =>
-    props.sorocaba
-      ? props.theme.colors.primary
-      : props.theme.colors.primary_light};
-  cursor: pointer;
-  transition: all 0.3s;
-  &:hover {
-    color: ${(props) =>
-      props.sorocaba
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-  }
-  &:active {
-    color: ${(props) =>
-      props.sorocaba
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-    filter: box-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-  }
-`;
-
-export const Itajai = styled.p`
-  color: ${(props) =>
-    props.itajai
-      ? props.theme.colors.primary
-      : props.theme.colors.primary_light};
-  cursor: pointer;
-  transition: all 0.3s;
-  &:hover {
-    color: ${(props) =>
-      props.itajai
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-  }
-  &:active {
-    color: ${(props) =>
-      props.itajai
-        ? props.theme.colors.primary
-        : props.theme.colors.primary_light};
-    -webkit-filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-    filter: box-shadow(15px 10px 5px rgba(0, 0, 0, 0.5));
-  }
-`;
-
-//componente geral
-export const Circle = styled.div`
+export const WrapCircles = styled.div`
   display: block;
   height: 647px;
 `;
-
-//circle  Modelo SEDE
 
 export const CircleSede = styled.div`
   display: block;
@@ -181,7 +72,6 @@ export const CircleSede = styled.div`
   }
 `;
 
-//cada Filial terá um ------ CIRCULOS herdando da sede
 export const CircleCampinas = styled.div`
   display: block;
   width: 17px;
@@ -199,11 +89,7 @@ export const CircleCampinas = styled.div`
   }
 `;
 
-export const CircleRioPreto = styled.div`
-  display: block;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
+export const CircleRioPreto = styled(CircleCampinas)`
   margin-left: 850px;
   margin-top: -70px;
 
@@ -216,11 +102,7 @@ export const CircleRioPreto = styled.div`
   }
 `;
 
-export const CircleSaoCarlos = styled.p`
-  display: block;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
+export const CircleSaoCarlos = styled(CircleCampinas)`
   margin-left: 860px;
   margin-top: 25px;
 
@@ -233,11 +115,7 @@ export const CircleSaoCarlos = styled.p`
   }
 `;
 
-export const CircleSorocaba = styled.div`
-  display: block;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
+export const CircleSorocaba = styled(CircleCampinas)`
   margin-left: 860px;
   margin-top: 0px;
 
@@ -250,11 +128,7 @@ export const CircleSorocaba = styled.div`
   }
 `;
 
-export const CircleItajai = styled.div`
-  display: block;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
+export const CircleItajai = styled(CircleCampinas)`
   margin-left: 815px;
   margin-top: 50px;
 

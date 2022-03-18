@@ -1,12 +1,14 @@
 import { ButtonPartners, PhotoPartners } from './components';
-import { PartnersText, ContainerPartners } from './Partners.style';
+import { ContainerPartners } from './Partners.style';
+
+import { Highlight } from '../../../../shared/components';
 
 const Partners = () => {
   return (
     <ContainerPartners>
-      <PartnersText>
-        Empresas que nos <span>apoiam</span>
-      </PartnersText>
+      <h3>
+        Empresas que nos <Highlight>apoiam</Highlight>
+      </h3>
 
       <PhotoPartners />
 

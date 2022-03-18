@@ -1,83 +1,107 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 705px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-
-  margin-top: -800px;
+  width: 636px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `;
 
-export const WrapperPhoto = styled.div`
+export const WrapperSmallPhotos = styled.div`
+  height: 50%;
+  width: 100%;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  flex: 1;
+
+  position: relative;
+
+  margin-top: 32px;
+`;
+
+export const WrapperBorders = styled.div`
+  display: flex;
   flex: 1;
   gap: 16px;
-  position: static;
+
+  position: absolute;
   left: 0;
   top: 0;
-  margin-top: 51.1rem;
 `;
 
-export const Img1 = styled.img`
+export const WrapperPhotos = styled.div`
   display: flex;
-  margin-top: -2880px;
-  width: 617px;
-  height: 374px;
-  margin-left: -615px;
-`;
+  flex: 1;
+  gap: 16px;
 
-export const FrameImg1 = styled.div`
-  display: flex;
-  width: 609px;
-  height: 366px;
-  border: 2px solid ${(props) => props.theme.colors.primary};
-  box-sizing: border-box;
-  border-radius: 12px;
-  margin-left: -920px;
-  margin-top: -2860px; //30px 3230
+  z-index: 9;
+  margin-top: 8px;
+  margin-left: 8px;
 `;
 
 export const Img2 = styled.img`
-  display: flex;
-  margin-right: auto;
-  width: 100%;
-  max-width: 189px;
-  margin-left: -195px;
+  display: block;
+
   width: 197px;
   height: 280px;
-  margin-top: 100px;
 `;
 
 export const FrameImg2 = styled.div`
-  display: flex;
-  width: 189px;
-  height: 272px;
-  border: 2px solid ${(props) => props.theme.colors.primary};
-  box-sizing: border-box;
+  display: block;
+  width: 197px;
+  height: 280px;
+  background: ${(props) => props.theme.colors.blackUI};
+  backdrop-filter: blur(0px);
+  vertical-align: bottom;
+
   border-radius: 12px;
-  margin-left: -220px;
-  margin-top: 75px;
+  border: 2px solid ${(props) => props.theme.colors.primary};
 `;
 
 export const Img3 = styled.img`
-  display: flex;
-  width: 420px;
+  display: block;
+
+  width: 412px;
   height: 280px;
-  margin-right: auto;
-  margin-left: -445px;
-  margin-top: -1915px; //-285
 `;
 
 export const FrameImg3 = styled.div`
-  display: flex;
   width: 412px;
-  height: 272px;
+  height: 280px;
+
   border: 2px solid ${(props) => props.theme.colors.primary};
-  box-sizing: border-box;
   border-radius: 12px;
+`;
+
+export const HorizontalPhoto = styled.div`
+  height: 50%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  position: relative;
+  margin-top: 16px;
+`;
+
+export const Img1 = styled.img`
+  display: block;
+  width: 99%;
+
+  z-index: 9;
   margin-left: 8px;
-  margin-top: -1940px; //-310
+`;
+
+export const FrameImg1 = styled.div`
+  width: 630px;
+  height: 380px;
+
+  border: 2px solid ${(props) => props.theme.colors.primary};
+  border-radius: 12px;
+
+  position: absolute;
+  top: 8px;
+  left: 0;
 `;
