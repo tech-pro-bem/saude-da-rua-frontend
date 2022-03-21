@@ -18,7 +18,7 @@ export default class InstagramClient {
     return user;
   }
 
-  static async getLastMedia(n, fields = DEFAULT_FIELDS) {
+  static async getLastMedia(limit, fields = DEFAULT_FIELDS) {
     const fieldsStringfied = fields.join(',');
 
     const params = {
@@ -30,16 +30,16 @@ export default class InstagramClient {
       data: { data: lastPics },
     } = await this.client.get('/me/media', { params });
 
-    return n ? lastPics.slice(0, n) : lastPics;
+    return limit ? lastPics.slice(0, limit) : lastPics;
   }
 
-  static async getLastPictures(n, fields = DEFAULT_FIELDS) {
+  static async getLastPictures(limit, fields = DEFAULT_FIELDS) {
     const pictureFields = fields.includes('media_type')
       ? fields
       : [...fields, 'media_type'];
     const lastMedia = await this.getLastMedia(null, pictureFields);
     const lastPictures = lastMedia.filter((m) => m.media_type === 'IMAGE');
 
-    return n ? lastPictures.slice(0, n) : lastPictures;
+    return limit ? lastPictures.slice(0, limit) : lastPictures;
   }
 }
