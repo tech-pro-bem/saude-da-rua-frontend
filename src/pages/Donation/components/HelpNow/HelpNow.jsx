@@ -18,6 +18,7 @@ const HelpNow = () => {
     value: null,
     qrCode: null,
   };
+
   const values = [
     { key: 1, displayValue: 'R$ 15', value: 15, qrCode: 'BRL15' },
     { key: 2, displayValue: 'R$ 30', value: 30, qrCode: 'BRL30' },
@@ -26,6 +27,7 @@ const HelpNow = () => {
     { key: 5, displayValue: 'R$ 200', value: 200, qrCode: 'BRL200' },
     defaultSelection,
   ];
+
   const [selectedValue, setSelectedValue] = useState(defaultSelection);
 
   const handleSelection = (value) => {
@@ -50,7 +52,7 @@ const HelpNow = () => {
       </ChipsContainer>
       {selectedValue.key === defaultSelection.key ? (
         <HelpInfoContainer>
-          <p style={{ fontWeight: 'bold' }}>
+          <p className="big" style={{ fontWeight: 'bold' }}>
             Para <Highlight>ajudar</Highlight> com qualquer valor é fácil:
           </p>
           <HelpOptionsContainer>
