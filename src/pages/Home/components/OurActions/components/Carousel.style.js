@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   .carousel {
     overflow: hidden;
+    position: relative;
   }
 
   .inner {
@@ -25,8 +26,6 @@ export const Container = styled.div`
     height: 12px;
     border-radius: 50%;
     margin: 6px;
-    // border-radius: 16px;
-    // padding: 1px 5px;
     background: #8e8e8e;
   }
 
@@ -35,15 +34,9 @@ export const Container = styled.div`
   }
 
   img {
-    // position: relative;
-    // margin-top: -1px;
     width: 403px;
     height: 397px;
-    // margin-left: 600px;
     margin-right: -100px;
-    // border: 2px solid ${(props) => props.theme.colors.primary};
-    // border-radius: 12px;
-    // border-left: 500px;
   }
 
   .arrow {
@@ -51,10 +44,19 @@ export const Container = styled.div`
     height: 36px;
   }
 
-  #slide {
+  .slide {
     position: absolute;
-    margin-left: 1050px;
-    top: 1750px;
+    top: 180px;
+    z-index: 2;
+  }
+
+  .slide-right {
+    right: 70px;
+  }
+
+  .slide-left {
+    left: 70px;
+    transform: rotate(180deg);
   }
 
   span {

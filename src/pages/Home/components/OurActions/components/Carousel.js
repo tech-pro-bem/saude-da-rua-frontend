@@ -14,6 +14,8 @@ const Carousel = ({ children }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [paused, setPaused] = useState(false);
 
+  const isFirstSlide = activeIndex === 0;
+  const isLastSlide = activeIndex === React.Children.count(children) - 1;
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = React.Children.count(children) - 1;
@@ -44,38 +46,53 @@ const Carousel = ({ children }) => {
       onMouseEnter={() => setPaused(true)}
       onmouseleave={() => setPaused(false)}
     >
-      <div
-        className="inner"
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
-      >
-        {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: '100%' });
-        })}
-      </div>
-      <div className="indicators">
-        {React.Children.map(children, (child, index) => {
-          return (
-            <button
-              className={`${index === activeIndex ? 'active' : ''} `}
-              onClick={() => {
-                updateIndex(index);
-              }}
-            ></button>
-          );
-        })}
-      </div>
-
-      <div>
+      {!isFirstSlide && (
         <button
           type="button"
-          id="slide"
+          className="slide slide-left"
           onClick={() => {
             updateIndex(activeIndex + 1);
           }}
         >
           <img src={Arrow} alt="arrow" className="arrow" />
         </button>
+      )}
+
+      <div>
+        <div
+          className="inner"
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {React.Children.map(children, (child) => {
+            return React.cloneElement(child, { width: '100%' });
+          })}
+        </div>
+
+        <div className="indicators">
+          {React.Children.map(children, (_, index) => {
+            return (
+              <button
+                className={`${index === activeIndex ? 'active' : ''} `}
+                onClick={() => {
+                  updateIndex(index);
+                }}
+              ></button>
+            );
+          })}
+        </div>
       </div>
+
+      {!isLastSlide && (
+        <button
+          type="button"
+          className="slide slide-right"
+          onClick={() => {
+            updateIndex(activeIndex + 1);
+          }}
+        >
+          <img src={Arrow} alt="arrow" className="arrow" />
+        </button>
+      )}
     </div>
   );
 };
