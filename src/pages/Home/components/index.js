@@ -3,4 +3,6 @@ import Partners from './Partners/Partners';
 import WhereAreWe from './WhereAreWe/WhereAreWe';
 import SliderData from './OurActions/SliderData';
 import Instagram from './Instagram/Instagram';
-export { AboutUs, Partners, WhereAreWe, Instagram, SliderData };
+import Banner from './Banner/Banner';
+
+export { AboutUs, Partners, WhereAreWe, SliderData, Instagram, Banner };

@@ -1,10 +1,8 @@
 import React from 'react';
 import { Container } from './Button.style.js';
 
-const ButtonDonation = () => (
-  <Container>
-    <a href="#">Doe qualquer valor</a>
-  </Container>
+export const Button = ({ text, clickFn }) => (
+  <Container onClick={clickFn}>{text}</Container>
 );
 
-export default ButtonDonation;
+export default Button;
