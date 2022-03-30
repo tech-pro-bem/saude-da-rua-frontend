@@ -4,6 +4,8 @@ export const Container = styled.div`
   .carousel {
     overflow: hidden;
     position: relative;
+    padding: 16px 0;
+    margin: 100px 0;
   }
 
   .inner {
@@ -25,7 +27,7 @@ export const Container = styled.div`
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin: 6px;
+    margin: 0 6px;
     background: #8e8e8e;
   }
 
@@ -96,15 +98,4 @@ export const Container = styled.div`
     align-itens: center;
     margin-left: 50px;
   }
-`;
-
-export const FrameImg1 = styled.div`
-  width: 403px;
-  height: 397px;
-  border: 3px solid ${(props) => props.theme.colors.primary};
-  border-radius: 12px;
-  z-index: 1;
-  margin-left: 600px;
-  padding-left: -10px;
-  padding-top: 8px;
 `;

@@ -1,6 +1,7 @@
 import Carousel, { CarouselItem } from './components/Carousel';
-import { Container, FrameImg1 } from './components/Carousel.style';
+import { Container } from './components/Carousel.style';
 import { action2020, action2021, humanDay } from '../../../../../src/assets';
+import { OutlinedImage } from '../../../../shared/components';
 
 const SliderData = () => (
   <Container>
@@ -11,9 +12,18 @@ const SliderData = () => (
             Veja nossas <span> ações</span>
           </h2>
           <p id="year">2021</p>
-          <FrameImg1>
-            <img src={action2021} alt="Action 2021" className="action" />
-          </FrameImg1>
+          <OutlinedImage
+            width={'403px'}
+            height={'397px'}
+            style={{ marginLeft: '600px' }}
+            leftOffset="-8px"
+            rightOffset="8px"
+            topOffset="-8px"
+            bottomOffset="8px"
+            src={action2021}
+            alt="Action 2021"
+            className="action"
+          />
           <p id="content">
             Foram realizados <strong>891 atendimentos</strong> em{' '}
             <strong>
@@ -34,9 +44,17 @@ const SliderData = () => (
             Veja nossas <span>ações</span>
           </h2>
           <p id="year">2020</p>
-          <FrameImg1>
-            <img src={action2020} alt="Action 2020" className="action" />
-          </FrameImg1>
+          <OutlinedImage
+            width={'403px'}
+            height={'397px'}
+            style={{ marginLeft: '600px' }}
+            leftOffset="-8px"
+            rightOffset="8px"
+            topOffset="-8px"
+            bottomOffset="8px"
+            src={action2020}
+            alt="Action 2020"
+          />
           <p id="content">
             Nos primeiro semestre de atuação do Saúde <br></br>da Rua, foram
             realizadas{' '}
@@ -60,9 +78,18 @@ const SliderData = () => (
             Veja nossas <span>ações</span>
           </h2>
           <p id="year">Human Day</p>
-          <FrameImg1>
-            <img src={humanDay} alt="Human Day" className="action" />
-          </FrameImg1>
+          <OutlinedImage
+            width={'403px'}
+            height={'397px'}
+            style={{ marginLeft: '600px' }}
+            leftOffset="-8px"
+            rightOffset="8px"
+            topOffset="-8px"
+            bottomOffset="8px"
+            src={humanDay}
+            alt="Human Day"
+            className="action"
+          />
           <p id="content">
             O Human Day é realizado com o objetivo de<br></br> disponibilizar um
             <strong>dia de serviços gratuitos.</strong>

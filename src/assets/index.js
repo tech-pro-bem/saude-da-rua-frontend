@@ -6,7 +6,7 @@ import partnersLogo from './partners.png';
 import action2021 from './action2021.png';
 import action2020 from './action2020.png';
 import humanDay from './humanDay.png';
-import banner from './voluntary.png';
+// import banner from './voluntary.png';
 import Arrow from './arrow.png';
 import Logo from './Logo_saude_da_rua.png';
 import social1 from './WhatsApp.svg';
@@ -22,7 +22,7 @@ export {
   action2020,
   humanDay,
   mapImag,
-  banner,
+  // banner,
   Arrow,
   Logo,
   social1,
