@@ -6,9 +6,12 @@ import partnersLogo from './partners.png';
 import action2021 from './action2021.png';
 import action2020 from './action2020.png';
 import humanDay from './humanDay.png';
-import slideArrow from './arrow.png';
 import banner from './voluntary.png';
 import Arrow from './arrow.png';
+import Logo from './Logo_saude_da_rua.png';
+import social1 from './WhatsApp.svg';
+import social2 from './Email.svg';
+import social3 from './Instagram.svg';
 
 export {
   imag1,
@@ -18,8 +21,11 @@ export {
   action2021,
   action2020,
   humanDay,
-  slideArrow,
   mapImag,
   banner,
   Arrow,
+  Logo,
+  social1,
+  social2,
+  social3,
 };

@@ -1,9 +1,17 @@
-import HelpNow from './components/HelpNow/HelpNow';
+import { Structure } from '../../shared/components';
+import { Gallery, HelpNow, HowYourDonationHelp, Store } from './components';
 
 const Donation = () => {
   return (
     <>
-      <HelpNow />
+      <Structure>
+        <HelpNow />
+      </Structure>
+      <HowYourDonationHelp />
+      <Structure>
+        <Gallery />
+        <Store />
+      </Structure>
     </>
   );
 };

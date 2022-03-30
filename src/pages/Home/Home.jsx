@@ -1,23 +1,23 @@
 import React from 'react';
+import { Structure } from '../../shared/components';
 import {
   AboutUs,
   WhereAreWe,
   Partners,
-  Banner,
+  Instagram,
   SliderData,
-} from './components/index';
+} from './components';
 
 const Home = () => {
   return (
     <>
-      <Banner />
-      <AboutUs />
-
-      <SliderData />
-
-      <WhereAreWe />
-
-      <Partners />
+      <Structure>
+        <AboutUs />
+        <SliderData />
+        <WhereAreWe />
+        <Instagram />
+        <Partners />
+      </Structure>
     </>
   );
 };

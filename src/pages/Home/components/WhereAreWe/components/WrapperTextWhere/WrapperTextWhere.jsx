@@ -1,22 +1,19 @@
 import { useState } from 'react';
 import {
-  WhereAreWeTitle,
-  WhereAreWeSubTitle1,
+  Container,
   Sede,
   TextWhereAreWe,
-  Circle,
+  WrapCircles,
   CircleSede,
-  Campinas,
+  City,
   CircleCampinas,
   CircleRioPreto,
-  RioPreto,
   CircleSaoCarlos,
-  SaoCarlos,
   CircleSorocaba,
-  Sorocaba,
   CircleItajai,
-  Itajai,
 } from './WrapperTextWhere.style';
+
+// TODO: refatorar para apenas uma função que recebe o paramentro de qual cidade foi selecionada
 
 const WrapperTextWhere = () => {
   //uma função para cada
@@ -28,7 +25,6 @@ const WrapperTextWhere = () => {
     setSorocaba(false);
     setItajai(false);
   }
-
   function ativarCampinas() {
     setCampinas(true);
     setSede(false);
@@ -78,68 +74,74 @@ const WrapperTextWhere = () => {
   const [sorocaba, setSorocaba] = useState(false);
   const [itajai, setItajai] = useState(false);
 
+  const places = [
+    {
+      key: 1,
+      city: 'Saúde da Rua Campinas - SP',
+      fn: ativarCampinas,
+    },
+    {
+      key: 2,
+      city: 'Saúde da Rua São José do Rio Preto - SP',
+      fn: ativarRioPreto,
+    },
+    {
+      key: 3,
+      city: 'Saúde da Rua São Carlos - SP',
+      fn: ativarSaoCarlos,
+    },
+    {
+      key: 4,
+      city: 'Saúde da Rua Sorocaba - SP',
+      fn: ativarSorocaba,
+    },
+    {
+      key: 5,
+      city: 'Saúde da Rua Itajaí - SC',
+      fn: ativarItajai,
+    },
+  ];
+
   return (
-    <>
+    <Container>
       <TextWhereAreWe>
-        <WhereAreWeTitle>Onde estamos</WhereAreWeTitle>
+        <h2>Onde estamos</h2>
 
-        <WhereAreWeSubTitle1>Sede</WhereAreWeSubTitle1>
-
-        <Sede sede={sede} onClick={ativarSede}>
+        <h3>Sede</h3>
+        <Sede sede={sede} onMouseOver={ativarSede}>
           Saúde da Rua - SP
         </Sede>
 
-        <p>Filiais</p>
-        <br></br>
-        <Campinas campinas={campinas} onClick={ativarCampinas}>
-          Saúde da Rua Campinas - SP
-        </Campinas>
-        <br></br>
-        <RioPreto rioPreto={rioPreto} onClick={ativarRioPreto}>
-          Saúde da Rua São José do Rio Preto - SP
-        </RioPreto>
-        <br></br>
-        <SaoCarlos saoCarlos={saoCarlos} onClick={ativarSaoCarlos}>
-          Saúde da Rua São Carlos - SP
-        </SaoCarlos>
-        <br></br>
-        <Sorocaba sorocaba={sorocaba} onClick={ativarSorocaba}>
-          Saúde da Rua Sorocaba - SP
-        </Sorocaba>
-        <br></br>
-        <Itajai itajai={itajai} onClick={ativarItajai}>
-          Saúde da Rua Itajaí - SC
-        </Itajai>
-        <br></br>
+        <h3>Filiais</h3>
+        {places.map((place) => (
+          <City key={place.key} onMouseOver={place.fn}>
+            {place.city}
+          </City>
+        ))}
       </TextWhereAreWe>
 
-      {/*bolinhas referentes a cada filial */}
-
-      <Circle>
+      <WrapCircles>
         <CircleCampinas
           campinas={campinas}
-          onClick={() => setCampinas(!campinas)}
+          onMouseOver={ativarCampinas}
         ></CircleCampinas>
         <CircleRioPreto
           rioPreto={rioPreto}
-          onClick={() => setCampinas(!rioPreto)}
+          onMouseOver={ativarRioPreto}
         ></CircleRioPreto>
         <CircleSaoCarlos
           saoCarlos={saoCarlos}
-          onClick={() => setSaoCarlos(!saoCarlos)}
+          onMouseOver={ativarSaoCarlos}
         ></CircleSaoCarlos>
         <CircleSorocaba
           sorocaba={sorocaba}
-          onClick={() => setSorocaba(!sorocaba)}
+          onMouseOver={ativarSorocaba}
         ></CircleSorocaba>
-        <CircleSede sede={sede} onClick={() => setSede(!sede)}></CircleSede>
+        <CircleSede sede={sede} onMouseOver={ativarSorocaba}></CircleSede>
 
-        <CircleItajai
-          itajai={itajai}
-          onClick={() => setItajai(!itajai)}
-        ></CircleItajai>
-      </Circle>
-    </>
+        <CircleItajai itajai={itajai} onMouseOver={ativarItajai}></CircleItajai>
+      </WrapCircles>
+    </Container>
   );
 };
 
