@@ -1,11 +1,6 @@
 import Carousel, { CarouselItem } from './components/Carousel';
 import { Container, FrameImg1 } from './components/Carousel.style';
-import {
-  action2020,
-  action2021,
-  humanDay,
-  Arrow,
-} from '../../../../../src/assets/index';
+import { action2020, action2021, humanDay } from '../../../../../src/assets';
 
 const SliderData = () => (
   <Container>
