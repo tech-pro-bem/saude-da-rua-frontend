@@ -5,6 +5,7 @@ import mapImag from './mapa.png';
 import partnersLogo from './partners.png';
 import EllipseBco from './EllipseBco.png';
 import EllipseBlue from './EllipseBlue.png';
+import banner from './banner-home.png';
 import Logo from './Logo_saude_da_rua.png';
 import social1 from './WhatsApp.svg';
 import social2 from './Email.svg';
@@ -18,6 +19,7 @@ export {
   partnersLogo,
   EllipseBco,
   EllipseBlue,
+  banner,
   Logo,
   social1,
   social2,
