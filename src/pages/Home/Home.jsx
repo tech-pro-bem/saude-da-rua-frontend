@@ -1,6 +1,6 @@
 import React from 'react';
 import { Structure } from '../../shared/components';
-import { AboutUs, WhereAreWe, Partners, Banner } from './components';
+import { AboutUs, WhereAreWe, Partners, Instagram, Banner } from './components';
 
 const Home = () => {
   return (
@@ -9,6 +9,7 @@ const Home = () => {
       <Structure>
         <AboutUs />
         <WhereAreWe />
+        <Instagram />
         <Partners />
       </Structure>
     </>

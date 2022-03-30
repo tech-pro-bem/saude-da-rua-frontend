@@ -5,7 +5,10 @@ import mapImag from './mapa.png';
 import partnersLogo from './partners.png';
 import EllipseBco from './EllipseBco.png';
 import EllipseBlue from './EllipseBlue.png';
-import banner from './banner-home.png';
+import Logo from './Logo_saude_da_rua.png';
+import social1 from './WhatsApp.svg';
+import social2 from './Email.svg';
+import social3 from './Instagram.svg';
 
 export {
   imag1,
@@ -13,7 +16,10 @@ export {
   imag3,
   mapImag,
   partnersLogo,
-  banner,
   EllipseBco,
   EllipseBlue,
+  Logo,
+  social1,
+  social2,
+  social3,
 };

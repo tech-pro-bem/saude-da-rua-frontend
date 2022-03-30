@@ -22,6 +22,7 @@ export const PartnersText = styled.h3`
 
 export const ContainerPartners = styled.div`
   margin-top: 100px;
+  margin-bottom: 100px;
 
   display: flex;
   flex-direction: column;

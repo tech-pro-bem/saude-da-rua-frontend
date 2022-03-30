@@ -1,8 +1,5 @@
 import { Structure } from '../../shared/components';
-import HelpNow from './components/HelpNow/HelpNow';
-import Gallery from './components/Gallery/Gallery';
-import HowYourDonationHelp from './components/HowYourDonationHelp/HowYourDonationHelp';
-
+import { Gallery, HelpNow, HowYourDonationHelp, Store } from './components';
 
 const Donation = () => {
   return (
@@ -13,6 +10,7 @@ const Donation = () => {
       <HowYourDonationHelp />
       <Structure>
         <Gallery />
+        <Store />
       </Structure>
     </>
   );
