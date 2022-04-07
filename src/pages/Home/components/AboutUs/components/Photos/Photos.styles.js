@@ -16,8 +16,6 @@ export const WrapperSmallPhotos = styled.div`
   flex: 1;
 
   position: relative;
-
-  margin-top: 32px;
 `;
 
 export const WrapperBorders = styled.div`
