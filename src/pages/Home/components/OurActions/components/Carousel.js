@@ -44,7 +44,7 @@ const Carousel = ({ children }) => {
     <div
       className="carousel"
       onMouseEnter={() => setPaused(true)}
-      onmouseleave={() => setPaused(false)}
+      onMouseLeave={() => setPaused(false)}
     >
       {!isFirstSlide && (
         <button

@@ -1,7 +1,7 @@
 import Carousel, { CarouselItem } from './components/Carousel';
 import { Container } from './components/Carousel.style';
 import { action2020, action2021, humanDay } from '../../../../../src/assets';
-import { OutlinedImage } from '../../../../shared/components';
+import { Highlight, OutlinedImage } from '../../../../shared/components';
 
 const SliderData = () => (
   <Container>
@@ -9,22 +9,11 @@ const SliderData = () => (
       <CarouselItem>
         <div className="text">
           <h2>
-            Veja nossas <span> ações</span>
+            Veja nossas <Highlight>ações</Highlight>
           </h2>
           <p id="year">2021</p>
-          <OutlinedImage
-            width={'403px'}
-            height={'397px'}
-            style={{ marginLeft: '600px' }}
-            leftOffset="-8px"
-            rightOffset="8px"
-            topOffset="-8px"
-            bottomOffset="8px"
-            src={action2021}
-            alt="Action 2021"
-            className="action"
-          />
-          <p id="content">
+
+          <p className="big" id="content">
             Foram realizados <strong>891 atendimentos</strong> em{' '}
             <strong>
               19 <br></br>ações
@@ -36,6 +25,19 @@ const SliderData = () => (
             abrimos mais uma filial <br></br>em <strong> São Carlos/SP.</strong>
           </p>
         </div>
+
+        <OutlinedImage
+          width={'403px'}
+          height={'397px'}
+          // style={{ marginLeft: '600px' }}
+          leftOffset="-8px"
+          rightOffset="8px"
+          topOffset="-8px"
+          bottomOffset="8px"
+          src={action2021}
+          alt="Action 2021"
+          className="action"
+        />
       </CarouselItem>
 
       <CarouselItem>
@@ -55,7 +57,7 @@ const SliderData = () => (
             src={action2020}
             alt="Action 2020"
           />
-          <p id="content">
+          <p className="big" id="content">
             Nos primeiro semestre de atuação do Saúde <br></br>da Rua, foram
             realizadas{' '}
             <strong>
@@ -90,7 +92,7 @@ const SliderData = () => (
             alt="Human Day"
             className="action"
           />
-          <p id="content">
+          <p className="big" id="content">
             O Human Day é realizado com o objetivo de<br></br> disponibilizar um
             <strong>dia de serviços gratuitos.</strong>
             <br></br>
