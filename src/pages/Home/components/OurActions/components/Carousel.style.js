@@ -16,6 +16,7 @@ export const Container = styled.div`
     display: inline-flex;
     height: 500px;
     background: ${(props) => props.theme.colors.black};
+    gap: 32px;
   }
 
   .indicators {
@@ -63,39 +64,5 @@ export const Container = styled.div`
 
   span {
     color: ${(props) => props.theme.colors.dark};
-  }
-
-  h2 {
-    position: absolute;
-    color: ${(props) => props.theme.colors.primary_light};
-    padding: 5px;
-    margin-left: 80px;
-    margin-top: 10px;
-    font-size: 40px;
-  }
-
-  #content {
-    margin-left: 90px;
-    text-align: justify;
-    margin-top: -180px;
-    color: ${(props) => props.theme.colors.primary_light};
-  }
-
-  #year {
-    position: absolute;
-    display: inline -block;
-    color: ${(props) => props.theme.colors.light};
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: 700px;
-    margin-top: 160px;
-    margin-left: 100px;
-  }
-
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-itens: center;
-    margin-left: 50px;
   }
 `;
