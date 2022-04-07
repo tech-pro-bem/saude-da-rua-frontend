@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 100%;
   max-width: 1440px;
   height: 624px;
-  margin: 0 auto;
+  margin: 0 auto 116px auto;
   background: url(${banner}) no-repeat;
   background-size: cover;
   display: flex;
