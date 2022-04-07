@@ -9,7 +9,7 @@ export const Banner = () => {
         <h1>
           Doe e <Highlight>ajude</Highlight> pessoas em situação de rua
         </h1>
-        <p>
+        <p className="big">
           Nos ajude a levar atendimento médico <br />
           humanizado e recorrente à população vulnerável.
         </p>
