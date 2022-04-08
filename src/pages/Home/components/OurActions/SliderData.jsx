@@ -46,17 +46,7 @@ const SliderData = () => (
             Veja nossas <span>ações</span>
           </h2>
           <p id="year">2020</p>
-          <OutlinedImage
-            width={'403px'}
-            height={'397px'}
-            style={{ marginLeft: '600px' }}
-            leftOffset="-8px"
-            rightOffset="8px"
-            topOffset="-8px"
-            bottomOffset="8px"
-            src={action2020}
-            alt="Action 2020"
-          />
+
           <p className="big" id="content">
             Nos primeiro semestre de atuação do Saúde <br></br>da Rua, foram
             realizadas{' '}
@@ -72,6 +62,18 @@ const SliderData = () => (
             <br></br>nos permitiram expandir nossa atuação.
           </p>
         </div>
+
+        <OutlinedImage
+          width={'403px'}
+          height={'397px'}
+          // style={{ marginLeft: '600px' }}
+          leftOffset="-8px"
+          rightOffset="8px"
+          topOffset="-8px"
+          bottomOffset="8px"
+          src={action2020}
+          alt="Action 2020"
+        />
       </CarouselItem>
 
       <CarouselItem>
@@ -80,18 +82,7 @@ const SliderData = () => (
             Veja nossas <span>ações</span>
           </h2>
           <p id="year">Human Day</p>
-          <OutlinedImage
-            width={'403px'}
-            height={'397px'}
-            style={{ marginLeft: '600px' }}
-            leftOffset="-8px"
-            rightOffset="8px"
-            topOffset="-8px"
-            bottomOffset="8px"
-            src={humanDay}
-            alt="Human Day"
-            className="action"
-          />
+
           <p className="big" id="content">
             O Human Day é realizado com o objetivo de<br></br> disponibilizar um
             <strong>dia de serviços gratuitos.</strong>
@@ -106,6 +97,19 @@ const SliderData = () => (
             </strong>
           </p>
         </div>
+
+        <OutlinedImage
+          width={'403px'}
+          height={'397px'}
+          // style={{ marginLeft: '600px' }}
+          leftOffset="-8px"
+          rightOffset="8px"
+          topOffset="-8px"
+          bottomOffset="8px"
+          src={humanDay}
+          alt="Human Day"
+          className="action"
+        />
       </CarouselItem>
     </Carousel>
   </Container>
