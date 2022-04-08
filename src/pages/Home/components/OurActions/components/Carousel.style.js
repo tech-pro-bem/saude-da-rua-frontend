@@ -17,6 +17,7 @@ export const Container = styled.div`
     height: 500px;
     background: ${(props) => props.theme.colors.black};
     gap: 32px;
+    padding: 0 60px;
   }
 
   .indicators {
