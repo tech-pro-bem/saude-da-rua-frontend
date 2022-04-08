@@ -51,7 +51,7 @@ const Carousel = ({ children }) => {
           type="button"
           className="slide slide-left"
           onClick={() => {
-            updateIndex(activeIndex + 1);
+            updateIndex(activeIndex - 1);
           }}
         >
           <img src={Arrow} alt="arrow" className="arrow" />
