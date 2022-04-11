@@ -84,6 +84,7 @@ const HelpNow = () => {
                 <strong>financeiro.saudedarua@gmail.com</strong> indicando o
                 valor da doação.
               </p>
+              <br />
               <p>Iremos te responder com o boleto para pagamento!</p>
             </HelpOption>
           </HelpOptionsContainer>
