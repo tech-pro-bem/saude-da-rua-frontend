@@ -43,6 +43,9 @@ const HelpNow = () => {
         {values.map((v) => (
           <Chip
             key={v.key}
+            width="140px"
+            height="59px"
+            padding="16px 47px"
             onClick={() => handleSelection(v)}
             selected={selectedValue.key === v.key}
           >
