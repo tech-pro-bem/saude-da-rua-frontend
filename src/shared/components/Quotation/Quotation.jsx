@@ -1,9 +1,9 @@
-import { Container, Author } from './Quotation.style';
+import { Container, Author, Quote } from './Quotation.style';
 
 const QuotationComponent = ({ text, author, margin, width, maxWidth }) => {
   return (
     <Container margin={margin} width={width} maxWidth={maxWidth}>
-      <p className="big">{text}</p>
+      <Quote>{text}</Quote>
       <Author>{author}</Author>
     </Container>
   );

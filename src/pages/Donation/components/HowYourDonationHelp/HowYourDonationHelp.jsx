@@ -56,7 +56,7 @@ const HowYourDonationHelp = () => {
       <Quotation
         author="Albert Pine"
         text="O que fazemos para nós, morre conosco. O que fazemos pelos outros e pelo mundo, continua e é imortal."
-        maxWidth="600px"
+        maxWidth="760px"
         margin="40px auto"
       />
     </>
