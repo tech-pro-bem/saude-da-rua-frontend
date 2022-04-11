@@ -15,7 +15,7 @@ const HowYourDonationHelp = () => {
     <>
       <Container>
         <h2>
-          Como sua doação nos <Highlight>ajuda</Highlight>
+          Como a sua doação nos <Highlight>ajuda</Highlight>
         </h2>
         <AccountabilityContainer>
           <AccountabilityItem>
