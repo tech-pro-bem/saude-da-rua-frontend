@@ -23,7 +23,7 @@ const HowYourDonationHelp = () => {
               src={supportIcon}
               alt="ícone de pessoa ao lado de um coração"
             />
-            <p className="big">Acolhimento</p>
+            <h3>Acolhimento</h3>
             <p>
               Acolhimento das pessoas em situação de rua, usuários de drogas e
               crianças em situação de risco.
@@ -34,7 +34,7 @@ const HowYourDonationHelp = () => {
               src={assistanceIcon}
               alt="Ícone de duas mãos abertas e um sinal de cruz da medicina"
             />
-            <p className="big">Atendimento</p>
+            <h3>Atendimento</h3>
             <p>
               Triagem e atendimento médico humanizado adulto e pediátrico,
               respeitando os princípios da equidade.
@@ -45,7 +45,7 @@ const HowYourDonationHelp = () => {
               src={healthcareIcon}
               alt="ícone de cuidados médicos com itens medicinais"
             />
-            <p className="big">Tratamentos</p>
+            <h3>Tratamentos</h3>
             <p>
               Medicamentos, testes rápidos (glicemia, Hepatite B, C, HIV,
               Sífilis e Covid-19) e aferição da pressão arterial.
