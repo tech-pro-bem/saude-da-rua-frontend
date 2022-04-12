@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: auto;
     font-size: 1rem;
+
     color: ${(props) => props.theme.colors.primary_light};
   }
 
@@ -61,8 +62,10 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     cursor: pointer;
     line-height: auto;
-    font-size: 1rem;
+    font-size:16px;
+    // font-size: 1rem;
     font-weight: 400;
+    font-weight: bold;
   }
 
   Link {
