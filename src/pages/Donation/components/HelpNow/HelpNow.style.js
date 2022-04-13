@@ -5,6 +5,7 @@ export const Container = styled.div`
 
   > p {
     font-weight: bold;
+    font-size: 24px;
   }
 `;
 
