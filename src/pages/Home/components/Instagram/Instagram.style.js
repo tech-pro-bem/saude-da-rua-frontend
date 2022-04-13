@@ -37,8 +37,15 @@ export const IgPictureCard = styled.div`
 `;
 
 export const ButtonLinkInstagram = styled.button`
-  padding: 8px 16px;
+  padding: 8px 32px;
   color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 314px;
+  height: 59px;
+  font-size: 18px;
+  font-weight: 500;
 
   border: 2px solid ${(props) => props.theme.colors.primary};
   border-radius: 40px;
