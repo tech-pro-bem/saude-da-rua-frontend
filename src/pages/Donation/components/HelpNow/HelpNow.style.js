@@ -4,7 +4,7 @@ export const Container = styled.div`
   text-align: center;
 
   > p {
-    font-weight: bold;
+    font-weight: 700;
     font-size: 24px;
   }
 `;
