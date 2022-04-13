@@ -47,7 +47,7 @@ const SliderData = () => (
         <ContainerStyle>
           <div className="text">
             <h2>
-              Veja nossas <span>ações</span>
+              Veja nossas <Highlight>ações</Highlight>
             </h2>
             <p id="year">2020</p>
 
@@ -85,7 +85,7 @@ const SliderData = () => (
         <ContainerStyle>
           <div className="text">
             <h2>
-              Veja nossas <span>ações</span>
+              Veja nossas <Highlight>ações</Highlight>
             </h2>
             <p id="year">Human Day</p>
 
