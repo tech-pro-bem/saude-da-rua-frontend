@@ -14,9 +14,8 @@ export const ContainerStyle = styled.div`
     #year {
       color: ${(props) => props.theme.colors.light};
       font-size: 24px;
-      font-weight: bold;
       line-height: 36px;
-      font-weight: 700px;
+      font-weight: 700;
       margin-bottom: 22px;
     }
   }
