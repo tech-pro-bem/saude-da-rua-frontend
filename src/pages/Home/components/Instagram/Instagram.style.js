@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerInstagram = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 32px 0;
+  margin: 116px 0;
   align-items: stretch;
 `;
 
@@ -26,6 +26,8 @@ export const IgPictureCard = styled.div`
   margin: 12px;
 
   > p {
+    font-size: 22px;
+    font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
