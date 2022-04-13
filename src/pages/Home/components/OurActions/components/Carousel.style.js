@@ -16,7 +16,7 @@ export const Container = styled.div`
     display: inline-flex;
     height: 500px;
     background: ${(props) => props.theme.colors.black};
-    gap: 32px;
+    gap: 82px;
     padding: 0 60px;
   }
 
@@ -29,8 +29,9 @@ export const Container = styled.div`
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin: 0 6px;
+    margin-right: 16px;
     background: #8e8e8e;
+    margin-bottom: 66px;
   }
 
   .indicators > button.active {
@@ -45,7 +46,7 @@ export const Container = styled.div`
 
   .arrow {
     width: 18px;
-    height: 36px;
+    height: 36.43px;
   }
 
   .slide {
