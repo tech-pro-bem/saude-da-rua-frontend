@@ -37,4 +37,5 @@ export const Author = styled.p`
   text-align: right;
   margin-top: 32px;
   font-size: 20px;
+  font-style: italic;
 `;

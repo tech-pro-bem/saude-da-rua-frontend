@@ -37,7 +37,7 @@ const HelpNow = () => {
   return (
     <Container>
       <h1>
-        <Highlight>Ajude</Highlight> agora mesmo
+        <Highlight>Contribua</Highlight> agora mesmo
       </h1>
       <ChipsContainer>
         {values.map((v) => (
@@ -56,7 +56,7 @@ const HelpNow = () => {
       {selectedValue.key === defaultSelection.key ? (
         <HelpInfoContainer>
           <p className="big" style={{ fontWeight: 'bold' }}>
-            Para <Highlight>ajudar</Highlight> com qualquer valor é fácil:
+            Para <Highlight>doar</Highlight> com qualquer valor é fácil:
           </p>
           <HelpOptionsContainer>
             <HelpOption>
