@@ -4,7 +4,8 @@ export const Container = styled.div`
   text-align: center;
 
   > p {
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 24px;
   }
 `;
 
@@ -13,6 +14,7 @@ export const ChipsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 64px 0;
+  gap: 16px;
 `;
 
 export const HelpOptionsContainer = styled.div`

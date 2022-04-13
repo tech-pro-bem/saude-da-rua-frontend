@@ -1,4 +1,5 @@
 import { useQuery } from 'react-query';
+import { MdEast } from 'react-icons/md';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { Highlight, OutlinedImage } from '../../../../shared/components';
@@ -100,7 +101,9 @@ const Instagram = () => {
         rel="noreferrer"
         style={{ alignSelf: 'flex-end' }}
       >
-        <ButtonLinkInstagram>Veja mais no Instagram</ButtonLinkInstagram>
+        <ButtonLinkInstagram>
+          Veja mais no Instagram <MdEast />{' '}
+        </ButtonLinkInstagram>
       </a>
     </ContainerInstagram>
   );

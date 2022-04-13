@@ -37,12 +37,15 @@ const HelpNow = () => {
   return (
     <Container>
       <h1>
-        <Highlight>Ajude</Highlight> agora mesmo
+        <Highlight>Contribua</Highlight> agora mesmo
       </h1>
       <ChipsContainer>
         {values.map((v) => (
           <Chip
             key={v.key}
+            width="140px"
+            height="59px"
+            padding="16px 47px"
             onClick={() => handleSelection(v)}
             selected={selectedValue.key === v.key}
           >
@@ -53,7 +56,7 @@ const HelpNow = () => {
       {selectedValue.key === defaultSelection.key ? (
         <HelpInfoContainer>
           <p className="big" style={{ fontWeight: 'bold' }}>
-            Para <Highlight>ajudar</Highlight> com qualquer valor é fácil:
+            Para <Highlight>doar</Highlight> com qualquer valor é fácil:
           </p>
           <HelpOptionsContainer>
             <HelpOption>
@@ -81,6 +84,7 @@ const HelpNow = () => {
                 <strong>financeiro.saudedarua@gmail.com</strong> indicando o
                 valor da doação.
               </p>
+              <br />
               <p>Iremos te responder com o boleto para pagamento!</p>
             </HelpOption>
           </HelpOptionsContainer>

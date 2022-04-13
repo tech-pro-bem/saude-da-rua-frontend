@@ -37,6 +37,7 @@ export const AccountabilityContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 32px auto;
+  gap: 64px;
 `;
 
 export const AccountabilityItem = styled.div`
@@ -45,5 +46,16 @@ export const AccountabilityItem = styled.div`
   > img {
     width: 120px;
     height: 120px;
+  }
+
+  > h3 {
+    font-size: 28px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.primary_light};
+    margin: 33.75px auto 26.9px;
+  }
+
+  > p {
+    font-size: 22px;
   }
 `;
