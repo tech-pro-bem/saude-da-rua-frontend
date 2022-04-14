@@ -56,7 +56,7 @@ const HelpNow = () => {
       {selectedValue.key === defaultSelection.key ? (
         <HelpInfoContainer>
           <p className="big" style={{ fontWeight: 'bold' }}>
-            Para <Highlight>doar</Highlight> com qualquer valor é fácil:
+            Para <Highlight>doar</Highlight> qualquer valor é fácil:
           </p>
           <HelpOptionsContainer>
             <HelpOption>
