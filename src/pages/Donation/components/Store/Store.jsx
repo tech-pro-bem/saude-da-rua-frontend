@@ -10,7 +10,7 @@ const Store = () => {
       <h2 style={{ marginBottom: '53px' }}>
         Conheça também a nossa <Highlight>lojinha</Highlight>
       </h2>
-      <p style={{ fontSize: '22px' }}>
+      <p className="big">
         Apoie o Saúde da Rua adquirindo os nossos produtos! Confira os itens
         disponíveis no nosso Instagram e, para comprar, mande-nos uma mensagem:
       </p>

@@ -35,7 +35,7 @@ export const Container = styled.div`
   }
 
   .indicators > button.active {
-    background: ${(props) => props.theme.colors.dark};
+    background: ${(props) => props.theme.colors.primary};
   }
 
   img {
@@ -62,9 +62,5 @@ export const Container = styled.div`
   .slide-left {
     left: 70px;
     transform: rotate(180deg);
-  }
-
-  span {
-    color: ${(props) => props.theme.colors.dark};
   }
 `;

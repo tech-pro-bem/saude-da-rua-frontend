@@ -67,7 +67,7 @@ const WrapperTextWhere = () => {
     setCampinas(false);
   }
 
-  const [sede, setSede] = useState(false);
+  const [sede, setSede] = useState(true);
   const [campinas, setCampinas] = useState(false);
   const [rioPreto, setRioPreto] = useState(false);
   const [saoCarlos, setSaoCarlos] = useState(false);
