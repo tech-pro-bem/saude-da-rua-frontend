@@ -29,7 +29,13 @@ export const Container = styled.div`
   }
 `;
 
+export const Quote = styled.p`
+  font-size: 28px;
+`;
+
 export const Author = styled.p`
   text-align: right;
   margin-top: 32px;
+  font-size: 20px;
+  font-style: italic;
 `;

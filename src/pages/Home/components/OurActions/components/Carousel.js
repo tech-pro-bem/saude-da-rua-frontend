@@ -44,14 +44,14 @@ const Carousel = ({ children }) => {
     <div
       className="carousel"
       onMouseEnter={() => setPaused(true)}
-      onmouseleave={() => setPaused(false)}
+      onMouseLeave={() => setPaused(false)}
     >
       {!isFirstSlide && (
         <button
           type="button"
           className="slide slide-left"
           onClick={() => {
-            updateIndex(activeIndex + 1);
+            updateIndex(activeIndex - 1);
           }}
         >
           <img src={Arrow} alt="arrow" className="arrow" />

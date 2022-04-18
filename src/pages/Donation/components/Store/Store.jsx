@@ -7,10 +7,10 @@ import { store1, store2, store3 } from '../../../../assets/donationPage';
 const Store = () => {
   return (
     <StoreRootContainer>
-      <h2 style={{ marginBottom: '16px' }}>
+      <h2 style={{ marginBottom: '53px' }}>
         Conheça também a nossa <Highlight>lojinha</Highlight>
       </h2>
-      <p>
+      <p className="big">
         Apoie o Saúde da Rua adquirindo os nossos produtos! Confira os itens
         disponíveis no nosso Instagram e, para comprar, mande-nos uma mensagem:
       </p>

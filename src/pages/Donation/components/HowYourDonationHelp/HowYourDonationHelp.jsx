@@ -15,7 +15,7 @@ const HowYourDonationHelp = () => {
     <>
       <Container>
         <h2>
-          Como sua doação nos <Highlight>ajuda</Highlight>
+          Como a sua doação nos <Highlight>ajuda</Highlight>
         </h2>
         <AccountabilityContainer>
           <AccountabilityItem>
@@ -23,7 +23,7 @@ const HowYourDonationHelp = () => {
               src={supportIcon}
               alt="ícone de pessoa ao lado de um coração"
             />
-            <p className="big">Acolhimento</p>
+            <h3>Acolhimento</h3>
             <p>
               Acolhimento das pessoas em situação de rua, usuários de drogas e
               crianças em situação de risco.
@@ -34,7 +34,7 @@ const HowYourDonationHelp = () => {
               src={assistanceIcon}
               alt="Ícone de duas mãos abertas e um sinal de cruz da medicina"
             />
-            <p className="big">Atendimento</p>
+            <h3>Atendimento</h3>
             <p>
               Triagem e atendimento médico humanizado adulto e pediátrico,
               respeitando os princípios da equidade.
@@ -45,7 +45,7 @@ const HowYourDonationHelp = () => {
               src={healthcareIcon}
               alt="ícone de cuidados médicos com itens medicinais"
             />
-            <p className="big">Tratamentos</p>
+            <h3>Tratamentos</h3>
             <p>
               Medicamentos, testes rápidos (glicemia, Hepatite B, C, HIV,
               Sífilis e Covid-19) e aferição da pressão arterial.
@@ -56,7 +56,7 @@ const HowYourDonationHelp = () => {
       <Quotation
         author="Albert Pine"
         text="O que fazemos para nós, morre conosco. O que fazemos pelos outros e pelo mundo, continua e é imortal."
-        maxWidth="600px"
+        maxWidth="760px"
         margin="40px auto"
       />
     </>

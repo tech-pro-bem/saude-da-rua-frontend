@@ -17,14 +17,12 @@ const GlobalStyle = createGlobalStyle`
 
   p.big {
     font-weight: 400;
-    line-height: auto;
     font-size: 1.375rem;
   }
 
 
   p {
     font-weight: 400;
-    line-height: auto;
     font-size: 1rem;
 
     color: ${(props) => props.theme.colors.primary_light};
@@ -32,27 +30,23 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-weight: 700;
-    line-height: auto;
     font-size: 3.25rem;
     color: ${(props) => props.theme.colors.primary_light};
   }
 
   h2 {
     font-weight: 600;
-    line-height: auto;
     font-size: 2.5rem;
     color: ${(props) => props.theme.colors.primary_light};
   }
 
   h3 {
     font-weight: 500;
-    line-height: auto;
     font-size: 1.75rem;
   }
 
   h4 {
     font-weight: 400;
-    line-height: auto;
     font-size: 1rem;
     color: ${(props) => props.theme.colors.primary};
   }
@@ -72,7 +66,6 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     cursor: pointer;
-    line-height: auto;
     font-size: 1rem;
     font-weight: 400;
 

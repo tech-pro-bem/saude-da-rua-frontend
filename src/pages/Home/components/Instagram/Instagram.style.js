@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ContainerInstagram = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 32px 0;
+  margin: 116px 0;
   align-items: stretch;
 `;
 
@@ -26,6 +26,8 @@ export const IgPictureCard = styled.div`
   margin: 12px;
 
   > p {
+    font-size: 22px;
+    font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -35,8 +37,15 @@ export const IgPictureCard = styled.div`
 `;
 
 export const ButtonLinkInstagram = styled.button`
-  padding: 8px 16px;
+  padding: 8px 32px;
   color: ${(props) => props.theme.colors.primary};
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 314px;
+  height: 59px;
+  font-size: 18px;
+  font-weight: 500;
 
   border: 2px solid ${(props) => props.theme.colors.primary};
   border-radius: 40px;

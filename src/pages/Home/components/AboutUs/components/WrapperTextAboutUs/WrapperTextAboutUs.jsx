@@ -5,7 +5,7 @@ function WrapperTextAboutUs() {
     <Container>
       <h2>Quem somos</h2>
 
-      <p className="big">
+      <p className="big" id="first">
         O Saúde da Rua nasceu em julho de 2020, em meio à pandemia do Covid-19,
         com a missão de <strong> levar atendimento médico humanizado </strong>e
         recorrente às camadas mais vulneráveis da sociedade.

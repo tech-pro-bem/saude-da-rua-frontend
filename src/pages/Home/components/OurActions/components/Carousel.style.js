@@ -16,6 +16,8 @@ export const Container = styled.div`
     display: inline-flex;
     height: 500px;
     background: ${(props) => props.theme.colors.black};
+    gap: 82px;
+    padding: 0 60px;
   }
 
   .indicators {
@@ -27,12 +29,13 @@ export const Container = styled.div`
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin: 0 6px;
+    margin-right: 16px;
     background: #8e8e8e;
+    margin-bottom: 66px;
   }
 
   .indicators > button.active {
-    background: ${(props) => props.theme.colors.dark};
+    background: ${(props) => props.theme.colors.primary};
   }
 
   img {
@@ -43,7 +46,7 @@ export const Container = styled.div`
 
   .arrow {
     width: 18px;
-    height: 36px;
+    height: 36.43px;
   }
 
   .slide {
@@ -59,43 +62,5 @@ export const Container = styled.div`
   .slide-left {
     left: 70px;
     transform: rotate(180deg);
-  }
-
-  span {
-    color: ${(props) => props.theme.colors.dark};
-  }
-
-  h2 {
-    position: absolute;
-    color: ${(props) => props.theme.colors.primary_light};
-    padding: 5px;
-    margin-left: 80px;
-    margin-top: 10px;
-    font-size: 40px;
-  }
-
-  #content {
-    margin-left: 90px;
-    text-align: justify;
-    margin-top: -180px;
-    color: ${(props) => props.theme.colors.primary_light};
-  }
-
-  #year {
-    position: absolute;
-    display: inline -block;
-    color: ${(props) => props.theme.colors.light};
-    font-size: 24px;
-    line-height: 36px;
-    font-weight: 700px;
-    margin-top: 160px;
-    margin-left: 100px;
-  }
-
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-itens: center;
-    margin-left: 50px;
   }
 `;
