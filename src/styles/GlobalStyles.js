@@ -55,10 +55,8 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
     cursor: pointer;
-    line-height: auto;
-    font-size:16px;
-    // font-size: 1rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 700;
     font-weight: bold;
   }
 
