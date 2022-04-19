@@ -62,8 +62,8 @@ export const CircleSede = styled.div`
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  margin-left: 850px;
-  margin-top: 0px;
+  margin-left: 790px;
+  margin-top: -15px;
 
   background-color: ${(props) =>
     props.sede ? props.theme.colors.primary : props.theme.colors.primary_light};
@@ -77,7 +77,7 @@ export const CircleCampinas = styled.div`
   width: 17px;
   height: 17px;
   border-radius: 50%;
-  margin-left: 840px;
+  margin-left: 740px;
   margin-top: -180px;
 
   background-color: ${(props) =>
@@ -90,7 +90,7 @@ export const CircleCampinas = styled.div`
 `;
 
 export const CircleRioPreto = styled(CircleCampinas)`
-  margin-left: 850px;
+  margin-left: 750px;
   margin-top: -70px;
 
   background-color: ${(props) =>
@@ -103,7 +103,7 @@ export const CircleRioPreto = styled(CircleCampinas)`
 `;
 
 export const CircleSaoCarlos = styled(CircleCampinas)`
-  margin-left: 860px;
+  margin-left: 760px;
   margin-top: 25px;
 
   background-color: ${(props) =>
@@ -116,7 +116,7 @@ export const CircleSaoCarlos = styled(CircleCampinas)`
 `;
 
 export const CircleSorocaba = styled(CircleCampinas)`
-  margin-left: 860px;
+  margin-left: 760px;
   margin-top: 0px;
 
   background-color: ${(props) =>
@@ -129,8 +129,8 @@ export const CircleSorocaba = styled(CircleCampinas)`
 `;
 
 export const CircleItajai = styled(CircleCampinas)`
-  margin-left: 815px;
-  margin-top: 50px;
+  margin-left: 735px;
+  margin-top: 85px;
 
   background-color: ${(props) =>
     props.itajai

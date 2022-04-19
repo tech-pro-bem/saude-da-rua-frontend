@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-weight: 400;
     font-size: 1rem;
+
     color: ${(props) => props.theme.colors.primary_light};
   }
 
@@ -55,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
   }
 
   Link {
