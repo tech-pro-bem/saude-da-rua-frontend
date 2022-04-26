@@ -1,4 +1,6 @@
 import Home from './Home/Home';
 import Donation from './Donation/Donation';
 
-export { Home, Donation };
+import Volunteers from './Volunteers/Volunteers';
+
+export { Home, Donation, Volunteers };
