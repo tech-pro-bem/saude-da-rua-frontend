@@ -11,6 +11,10 @@ const Header = () => (
     <LinksContainer>
       <Link to="doacao">Doações</Link>
     </LinksContainer>
+    {/* link para testar a página de voluntários*/}
+    <LinksContainer>
+      <Link to="voluntario">Seja Voluntário</Link>
+    </LinksContainer>
     <DonationButton text="Doe agora" route="/doacao" />
   </Container>
 );

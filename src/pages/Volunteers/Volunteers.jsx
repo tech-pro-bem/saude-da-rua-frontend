@@ -1,7 +1,12 @@
 import { Structure } from '../../shared/components';
+import InformationContact from './components/InformationsContact/InformationContact';
 
 const Volunteers = () => {
-  return <Structure></Structure>;
+  return (
+    <Structure>
+      <InformationContact />
+    </Structure>
+  );
 };
 
 export default Volunteers;
