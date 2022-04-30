@@ -4,14 +4,14 @@ const InputDate = () => {
   const { register } = useForm();
 
   return (
-    <label>
+    <InputDate>
       <input
         id="inputDate"
         type="date"
-        {...register('dataNascimento')}
+        {...'dataNascimento'}
         placeholder="dd/mm/aaaa"
       />
-    </label>
+    </InputDate>
   );
 };
 export default InputDate;
