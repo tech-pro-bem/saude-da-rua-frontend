@@ -3,9 +3,10 @@ import { Headline } from './components';
 
 const Volunteers = () => {
   return (
-    <Structure>
+    <>
       <Headline />
-    </Structure>
+      <Structure></Structure>
+    </>
   );
 };
 
