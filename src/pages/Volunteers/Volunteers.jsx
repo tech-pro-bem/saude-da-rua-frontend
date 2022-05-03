@@ -1,7 +1,13 @@
 import { Structure } from '../../shared/components';
+import { Headline } from './components';
 
 const Volunteers = () => {
-  return <Structure></Structure>;
+  return (
+    <>
+      <Headline />
+      <Structure></Structure>
+    </>
+  );
 };
 
 export default Volunteers;
