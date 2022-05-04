@@ -1,18 +1,16 @@
 import { useForm } from 'react-hook-form';
-import { InputDateBirth } from './InputDateBirth.style';
+import { InputDateStyle } from './InputDateBirth.style';
 
-export const InputDate = (props) => {
+export const InputDate = ({ registerValue, placeholder, id }) => {
   const { register } = useForm();
 
   return (
-    <InputDateBirth>
-      <input
-        id="inputDate"
-        type="date"
-        {...register(props.dataNascimento)}
-        placeholder="dd/mm/aaaa"
-      />
-    </InputDateBirth>
+    <InputDateStyle
+      id={id}
+      type="date"
+      {...register(registerValue)}
+      placeholder={placeholder}
+    />
   );
 };
 export default InputDate;
