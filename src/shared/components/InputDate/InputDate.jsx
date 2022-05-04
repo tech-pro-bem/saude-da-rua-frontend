@@ -1,17 +1,18 @@
 import { useForm } from 'react-hook-form';
+import { InputDateBirth } from './InputDateBirth.style';
 
-const InputDate = () => {
+export const InputDate = (props) => {
   const { register } = useForm();
 
   return (
-    <InputDate>
+    <InputDateBirth>
       <input
         id="inputDate"
         type="date"
-        {...'dataNascimento'}
+        {...register(props.dataNascimento)}
         placeholder="dd/mm/aaaa"
       />
-    </InputDate>
+    </InputDateBirth>
   );
 };
 export default InputDate;
