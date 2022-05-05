@@ -7,17 +7,7 @@ const Volunteers = () => {
     <>
       <Headline />
       <Structure>
-        <InputDate
-          id="inputBirthday"
-          placeholder="dd/aa/mm"
-          registerValue="dataNacimento"
-        />
-
-        <InputDate
-          id="inputMerrid"
-          placeholder="dd/mm/aa"
-          registerValue="dataCasamento"
-        />
+        <InputDate id="inputBirthday" registerValue="dataNacimento" />
       </Structure>
     </>
   );
