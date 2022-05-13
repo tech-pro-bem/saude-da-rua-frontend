@@ -1,5 +1,13 @@
 {
   "name": "saude_da_rua",
+  "description": "Site da ONG Saúde da Rua",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leandrosax10/saudeDaRua"
+  },
+  "bugs": {
+    "url": "https://github.com/leandrosax10/saudeDaRua/issues"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
