@@ -64,7 +64,7 @@ const HelpNow = () => {
                 <Highlight>Pix</Highlight>
               </strong>
               <p>A nossa chave pix é:</p>
-              <p>443.198.918-80</p>
+              <p>saudedarua@gmail.com</p>
             </HelpOption>
             <HelpOption>
               <strong>
