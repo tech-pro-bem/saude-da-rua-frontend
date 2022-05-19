@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { dropdownArrow } from '../../../assets';
 
 export const SelectStyle = styled.select`
   display: flex;
@@ -14,5 +15,9 @@ export const SelectStyle = styled.select`
   box-sizing: border-box;
   font-size: 18px;
   color: ${(props) => props.theme.colors.primary_light};
-  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(${dropdownArrow}) no-repeat center right 20px;
+  background-color: ${(props) => props.theme.colors.blackUI};
 `;

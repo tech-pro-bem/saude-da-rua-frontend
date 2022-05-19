@@ -7,6 +7,7 @@ import action2021 from './action2021.png';
 import action2020 from './action2020.png';
 import humanDay from './humanDay.png';
 import Arrow from './arrow.png';
+import dropdownArrow from './dropdown-arrow.png';
 import banner from './banner-home.png';
 import Logo from './Logo_saude_da_rua.png';
 import social1 from './WhatsApp.svg';
@@ -28,4 +29,5 @@ export {
   social1,
   social2,
   social3,
+  dropdownArrow,
 };
