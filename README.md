@@ -2,8 +2,8 @@
 
 > Site da ONG Saúde da Rua
 
-![GitHub last commit](https://img.shields.io/github/last-commit/leandrosax10/saudeDaRua)
-![GitHub repo size](https://img.shields.io/github/repo-size/leandrosax10/saudeDaRua)
+![GitHub last commit](https://img.shields.io/github/last-commit/tech-pro-bem/saude-da-rua-frontend)
+![GitHub repo size](https://img.shields.io/github/repo-size/tech-pro-bem/saude-da-rua-frontend)
 
 ## :telescope: Visão Geral
 
@@ -24,8 +24,8 @@ O website está sendo desenvolvido pela [Tech Pro Bem](https://techprobem.com.br
 ## :wrench: Pré-requisitos e como rodar a aplicação
 
 - [x] Antes de começar, você vai precisar ter instalado o [Node.js](https://nodejs.org/en/) na versão 14
-- [x] Clone o projet com `git clone https://github.com/leandrosax10/saudeDaRua.git`
-  - Caso não tenha ou não queira usar o `git`, faça o download do código fonte [aqui](https://github.com/leandrosax10/saudeDaRua/archive/refs/heads/master.zip) e descompacte.
+- [x] Clone o projet com `git clone https://github.com/tech-pro-bem/saude-da-rua-frontend.git`
+  - Caso não tenha ou não queira usar o `git`, faça o download do código fonte [aqui](https://github.com/tech-pro-bem/saude-da-rua-frontend/archive/refs/heads/master.zip) e descompacte.
 - [x] Instale as dependências: `npm install`
 - [x] Execute a aplicação em modo de desenvolvimento: `npm start`
 
@@ -54,9 +54,70 @@ Contribuições são bem vindas!
 - ⭐️ Favorite o repo
 - 🐛 Abra uma issue caso encontre algum problema
 
-Veja a [página de issues](https://github.com/leandrosax10/saudeDaRua/issues).
+Veja a [página de issues](https://github.com/tech-pro-bem/saude-da-rua-frontend/issues).
 
 <!-- You can also take a look at the contributing guide. -->
+
+### :white_check_mark: Padrão de commits, PR e branchs:
+
+- Commit curto (short):
+
+```
+[TBP-XXXX] <TYPE>: <MESSAGE>
+```
+
+- Commit longo (long):
+
+```
+[TPB-XXXX] <TYPE>:
+
+- <MESSAGE>
+- <MESSAGE>
+
+...
+```
+
+- Título do PR:
+
+```
+[OMS-TPB] <TYPE>:<SHORT DESCRIPTION>
+```
+
+- Nome das branches:
+
+```
+TPB-XXXX
+```
+
+<br/>
+<hr/>
+<br/>
+
+#### Types
+
+```
+feat - Commits do tipo feat indicam que seu trecho de código está incluindo um novo recurso (se relaciona com o MINOR do versionamento semântico).
+
+fix - Commits do tipo fix indicam que seu trecho de código commitado está solucionando um problema (bug fix), (se relaciona com o PATCH do versionamento semântico).
+
+docs - Commits do tipo docs indicam que houveram mudanças na documentação, como por exemplo no Readme do seu repositório. (Não inclui alterações em código).
+
+test - Commits do tipo test são utilizados quando são realizadas alterações em testes, seja criando, alterando ou excluindo testes unitários. (Não inclui alterações em código)
+
+build - Commits do tipo build são utilizados quando são realizadas modificações em arquivos de build e dependências.
+
+perf - Commits do tipo perf servem para identificar quaisquer alterações de código que estejam relacionadas a performance.
+
+style - Commits do tipo style indicam que houveram alterações referentes a formatações de código, semicolons, trailing spaces, lint... (Não inclui alterações em código).
+
+refactor - Commits do tipo refactor referem-se a mudanças devido a refatorações que não alterem sua funcionalidade, como por exemplo, uma alteração no formato como é processada determinada parte da tela, mas que manteve a mesma funcionalidade, ou melhorias de performance devido a um code review.
+
+chore - Commits do tipo chore indicam atualizações de tarefas de build, configurações de administrador, pacotes... como por exemplo adicionar um pacote no gitignore. (Não inclui alterações em código)
+
+ci - Commits do tipo ci indicam mudanças relacionadas a integração contínua (continuous integration).
+```
+
+Mais infos [aqui](https://github.com/iuricode/padroes-de-commits#:~:text=%F0%9F%93%84-,Padr%C3%B5es%20de%20commits,a%20cria%C3%A7%C3%A3o%20de%20ferramentas%20automatizadas.).
 
 ---
 
