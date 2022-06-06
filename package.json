@@ -3,10 +3,10 @@
   "description": "Site da ONG Saúde da Rua",
   "repository": {
     "type": "git",
-    "url": "https://github.com/leandrosax10/saudeDaRua"
+    "url": "https://github.com/tech-pro-bem/saude-da-rua-frontend"
   },
   "bugs": {
-    "url": "https://github.com/leandrosax10/saudeDaRua/issues"
+    "url": "https://github.com/tech-pro-bem/saude-da-rua-frontend/issues"
   },
   "version": "0.1.0",
   "private": true,
