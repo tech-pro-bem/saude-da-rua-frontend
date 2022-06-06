@@ -80,7 +80,7 @@ Veja a [página de issues](https://github.com/tech-pro-bem/saude-da-rua-frontend
 - Título do PR:
 
 ```
-[OMS-TPB] <TYPE>:<SHORT DESCRIPTION>
+[TPB-XXXX] <TYPE>:<SHORT DESCRIPTION>
 ```
 
 - Nome das branches:
