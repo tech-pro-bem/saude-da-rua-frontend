@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import { Layout } from '../shared/components';
-import { Home, Donation, Volunteers } from '../pages';
+import { Layout } from '@components';
+import { Home, Donation, Volunteers } from '@pages';
 
 const AppRoutes = () => (
   <Routes>

@@ -1,5 +1,5 @@
-import { Structure } from '../../shared/components';
-import { Gallery, HelpNow, HowYourDonationHelp, Store } from './components';
+import { Structure } from '@components';
+import { Gallery, HelpNow, HowYourDonationHelp, Store } from './containers';
 
 const Donation = () => {
   return (

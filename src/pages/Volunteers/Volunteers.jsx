@@ -1,5 +1,5 @@
-import { Structure } from '../../shared/components';
-import { Headline } from './components';
+import { Structure } from '@components';
+import { Headline } from './containers';
 
 const Volunteers = () => {
   return (

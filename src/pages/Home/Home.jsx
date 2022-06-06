@@ -1,5 +1,5 @@
 import React from 'react';
-import { Structure } from '../../shared/components';
+import { Structure } from '@components';
 
 import {
   AboutUs,
@@ -7,8 +7,8 @@ import {
   Partners,
   Instagram,
   SliderData,
-  Banner
-} from './components';
+  Banner,
+} from './containers';
 
 const Home = () => {
   return (
