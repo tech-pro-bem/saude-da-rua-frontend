@@ -63,13 +63,13 @@ Veja a [página de issues](https://github.com/tech-pro-bem/saude-da-rua-frontend
 - Commit curto (short):
 
 ```
-[TBP-XXXX] <TYPE>: <MESSAGE>
+<TYPE>: <MESSAGE>
 ```
 
 - Commit longo (long):
 
 ```
-[TPB-XXXX] <TYPE>:
+<TYPE>:
 
 - <MESSAGE>
 - <MESSAGE>
