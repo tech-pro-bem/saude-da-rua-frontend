@@ -39,7 +39,6 @@ const Carousel = ({ children }) => {
       }
     };
   });
-
   return (
     <div
       className="carousel"

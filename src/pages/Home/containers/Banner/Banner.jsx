@@ -13,9 +13,7 @@ export const Banner = () => {
           Nos ajude a levar atendimento médico <br />
           humanizado e recorrente à população vulnerável.
         </p>
-
         <h4>Faça parte dessa ação!</h4>
-
         <LinkButton text="Doe qualquer valor" route="/doacao" />
       </div>
     </Container>

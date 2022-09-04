@@ -11,7 +11,6 @@ const Partners = () => {
       </h3>
 
       <PhotoPartners />
-
       <ButtonPartners />
     </ContainerPartners>
   );

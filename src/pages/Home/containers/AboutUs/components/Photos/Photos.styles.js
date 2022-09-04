@@ -51,7 +51,6 @@ export const FrameImg2 = styled.div`
   height: 280px;
   background: ${(props) => props.theme.colors.blackUI};
   backdrop-filter: blur(0px);
-  vertical-align: bottom;
 
   border-radius: 12px;
   border: 2px solid ${(props) => props.theme.colors.primary};

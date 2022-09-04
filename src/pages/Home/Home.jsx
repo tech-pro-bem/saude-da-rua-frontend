@@ -1,22 +1,24 @@
 import React from 'react';
 import { Structure } from '@components';
-
 import {
   AboutUs,
   WhereAreWe,
   Partners,
-  Instagram,
+  Slide,
   SliderData,
+  Instagram,
   Banner,
 } from './containers';
+import useMedia from '../../Hooks/useMedia';
 
 const Home = () => {
+  const mobile = useMedia('(max-width:960px)');
   return (
     <>
       <Banner />
       <Structure>
         <AboutUs />
-        <SliderData />
+        {mobile ? <Slide /> : <SliderData />}
         <WhereAreWe />
         <Instagram />
         <Partners />

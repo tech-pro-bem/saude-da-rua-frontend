@@ -71,7 +71,6 @@ const SliderData = () => (
         <OutlinedImage
           width={'403px'}
           height={'397px'}
-          // style={{ marginLeft: '600px' }}
           leftOffset="-8px"
           rightOffset="8px"
           topOffset="-8px"
