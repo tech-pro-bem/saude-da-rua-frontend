@@ -1,8 +1,24 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+const ScaleUp = keyframes`
+to {
+  opacity: initial;
+    transform: initial;
+}
+`;
 
 export const Wrapper = styled.section`
   margin: 3rem 0 0 0;
   padding: 0.6rem;
+
+  .splide__slide {
+    transform: scale(0.98);
+    transition: 0.2s;
+    opacity: 50%;
+  }
+
+  .splide__slide.is-active {
+    animation: ${ScaleUp} 0.3s forwards;
+  }
 
   #year {
     color: ${(props) => props.theme.colors.light};

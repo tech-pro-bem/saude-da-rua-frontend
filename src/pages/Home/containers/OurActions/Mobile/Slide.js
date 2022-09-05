@@ -27,6 +27,8 @@ const Slide = () => {
         aria-label="Beautiful Images"
         options={{
           arrows: false,
+          type: 'loop',
+          padding: '5%',
           classes: {
             pagination: 'splide__pagination listOfSplideSlide',
             page: 'splide__pagination__page button_tab_nav',
