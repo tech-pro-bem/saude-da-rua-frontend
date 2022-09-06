@@ -4,8 +4,8 @@ import {
   AboutUs,
   WhereAreWe,
   Partners,
-  Slide,
-  SliderData,
+  SlideMobile,
+  SliderDesktop,
   Instagram,
   Banner,
 } from './containers';
@@ -18,7 +18,7 @@ const Home = () => {
       <Banner />
       <Structure>
         <AboutUs />
-        {mobile ? <Slide /> : <SliderData />}
+        {mobile ? <SlideMobile /> : <SliderDesktop />}
         <WhereAreWe />
         <Instagram />
         <Partners />

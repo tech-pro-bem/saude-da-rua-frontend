@@ -1,10 +1,10 @@
-import Carousel, { CarouselItem } from './components/Carousel';
-import { Container } from './components/Carousel.style';
-import { ContainerStyle } from './SliderData.style';
+import Carousel, { CarouselItem } from './Carousel/Carousel';
+import { Container } from './Carousel/Carousel.style';
+import { ContainerStyle } from './SliderDesktop.style';
 import { action2020, action2021, humanDay } from '@assets';
 import { Highlight, OutlinedImage } from '@components';
 
-const SliderData = () => (
+const SliderDesktop = () => (
   <Container>
     <Carousel>
       <CarouselItem>
@@ -32,7 +32,6 @@ const SliderData = () => (
         <OutlinedImage
           width={'403px'}
           height={'397px'}
-          // style={{ marginLeft: '600px' }}
           leftOffset="-8px"
           rightOffset="8px"
           topOffset="-8px"
@@ -108,7 +107,6 @@ const SliderData = () => (
         <OutlinedImage
           width={'403px'}
           height={'397px'}
-          // style={{ marginLeft: '600px' }}
           leftOffset="-8px"
           rightOffset="8px"
           topOffset="-8px"
@@ -122,4 +120,4 @@ const SliderData = () => (
   </Container>
 );
 
-export default SliderData;
+export default SliderDesktop;

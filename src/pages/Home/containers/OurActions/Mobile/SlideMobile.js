@@ -1,11 +1,11 @@
 import React from 'react';
 import { Highlight } from '@components';
 import { CarouselItemMobile, Wrapper } from './style';
-import { ContainerStyle } from '../Desktop/SliderData.style';
+import { ContainerStyle } from '../Desktop/SliderDesktop.style';
 import { action2020, action2021, humanDay } from '@assets';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 
-const Slide = () => {
+const SlideMobile = () => {
   React.useEffect(() => {
     const buttons = document.querySelectorAll('.button_tab_nav');
     const years = [2020, 2021, 2022];
@@ -116,4 +116,4 @@ const Slide = () => {
   );
 };
 
-export default Slide;
+export default SlideMobile;
