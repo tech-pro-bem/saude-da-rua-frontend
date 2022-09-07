@@ -18,6 +18,14 @@ export const Box = styled.div`
     border: ${({ borderWidth = '2px' }) => borderWidth} solid
       ${({ theme }) => theme.colors.primary};
     z-index: -1;
+
+    @media screen and (max-width: 520px) {
+      border-radius: 12px;
+      left: 7px;
+      right: -7px;
+      bottom: 14px;
+      top: -7px;
+    }
   }
 `;
 
@@ -27,4 +35,12 @@ export const StyledImage = styled.img`
   max-width: 100%;
   max-height: 100%;
   border-radius: ${({ imgBorderRadius = 0 }) => imgBorderRadius};
+
+  @media screen and (max-width: 520px) {
+    width: 321px;
+    height: 216px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+  }
 `;
