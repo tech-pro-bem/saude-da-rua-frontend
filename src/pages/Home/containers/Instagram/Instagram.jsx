@@ -10,6 +10,7 @@ import {
   ButtonLinkInstagram,
   InstagramItemsContainer,
   IgPictureCard,
+  LinkInstagram,
 } from './Instagram.style';
 
 const IG_USER_DEFAULT = { username: 'saudedarua' };
@@ -35,7 +36,7 @@ const Instagram = () => {
   if (isLoadingError) {
     return (
       <InstagramText style={{ margin: '32px 0' }}>
-        Acompanhe-nos no{' '}
+        Siga o{' '}
         <a
           href={`https://www.instagram.com/${user.username}`}
           target="_blank"
@@ -43,7 +44,7 @@ const Instagram = () => {
           style={{ alignSelf: 'flex-end' }}
         >
           <Highlight style={{ textDecoration: 'underline' }}>
-            Instagram
+            @saudedarua
           </Highlight>
         </a>
       </InstagramText>
@@ -53,7 +54,7 @@ const Instagram = () => {
   return (
     <ContainerInstagram>
       <InstagramText>
-        Acompanhe-nos no <Highlight>Instagram</Highlight>
+        Siga o <Highlight>@saudedarua</Highlight>
       </InstagramText>
 
       <InstagramItemsContainer>
@@ -95,16 +96,15 @@ const Instagram = () => {
         )}
       </InstagramItemsContainer>
 
-      <a
+      <LinkInstagram
         href={`https://www.instagram.com/${user.username}`}
         target="_blank"
         rel="noreferrer"
-        style={{ alignSelf: 'flex-end' }}
       >
         <ButtonLinkInstagram>
-          Veja mais no Instagram <MdEast />{' '}
+          Veja mais no Instagram <MdEast size={20} />{' '}
         </ButtonLinkInstagram>
-      </a>
+      </LinkInstagram>
     </ContainerInstagram>
   );
 };
