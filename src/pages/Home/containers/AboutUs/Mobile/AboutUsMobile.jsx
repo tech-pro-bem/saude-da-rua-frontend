@@ -1,11 +1,13 @@
-import { Container } from './AboutUsMobile.style';
-import { Photos, WrapperTextAboutUs } from './components';
+import { Container, Title } from './AboutUsMobile.style';
+import { FirstPhoto, SecondPhoto, WrapperTextAboutUs } from './components';
 
 const AboutUsMobile = () => {
   return (
     <Container>
-      <Photos />
+      <Title>Quem somos</Title>
+      <FirstPhoto />
       <WrapperTextAboutUs />
+      <SecondPhoto />
     </Container>
   );
 };

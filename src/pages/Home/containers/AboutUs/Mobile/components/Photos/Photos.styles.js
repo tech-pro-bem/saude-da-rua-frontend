@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 636px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -60,13 +59,13 @@ export const FrameImg2 = styled.div`
 export const Img3 = styled.img`
   display: block;
 
-  width: 412px;
-  height: 280px;
+  width: 320px;
+  height: 216px;
 `;
 
 export const FrameImg3 = styled.div`
-  width: 412px;
-  height: 280px;
+  width: 320px;
+  height: 216px;
 
   border: 2px solid ${(props) => props.theme.colors.primary};
   border-radius: 12px;
@@ -86,15 +85,16 @@ export const HorizontalPhoto = styled.div`
 
 export const Img1 = styled.img`
   display: block;
-  width: 99%;
+  width: 320px;
+  height: 216px;
 
   z-index: 9;
   margin-left: 8px;
 `;
 
 export const FrameImg1 = styled.div`
-  width: 630px;
-  height: 380px;
+  width: 320px;
+  height: 216px;
 
   border: 2px solid ${(props) => props.theme.colors.primary};
   border-radius: 12px;

@@ -2,6 +2,7 @@ import React from 'react';
 import { Structure } from '@components';
 import {
   AboutUs,
+  AboutUsMobile,
   WhereAreWe,
   Partners,
   SlideMobile,
@@ -16,9 +17,9 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <Structure>
-        <AboutUs />
-        {mobile ? <SlideMobile /> : <SlideDesktop />}
+      <Structure>        
+        {mobile ? <AboutUsMobile /> : <AboutUs />} 
+        {mobile ? <SlideMobile /> : <SlideDesktop />}  
         <WhereAreWe />
         <Instagram />
         <Partners />

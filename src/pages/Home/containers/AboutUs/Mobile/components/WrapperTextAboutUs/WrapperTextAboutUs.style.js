@@ -1,25 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 705px;
-
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 33px;
+  flex-direction: column;
 
-  h2 {
-    line-height: 60px;
-    // margin-bottom: 41px;
-    height: 60px;
-  }
-
-  p {
+  .big {
     line-height: 33px;
-    font-size: 21px;
-  }
-
-  #first {
-    margin-top: -100px;
-    height: 159px;
+    font-size: 16px;
+    margin-bottom: 24px;
   }
 `;
