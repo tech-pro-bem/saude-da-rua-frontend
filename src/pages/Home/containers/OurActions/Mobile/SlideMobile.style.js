@@ -83,7 +83,7 @@ export const CarouselItemMobile = styled.div`
   #year {
     text-align: center !important;
   }
-  @media (min-width: 40rem) {
+  @media (min-width: 640px) {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
