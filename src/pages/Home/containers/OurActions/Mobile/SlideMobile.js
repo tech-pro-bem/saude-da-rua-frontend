@@ -1,7 +1,7 @@
 import React from 'react';
 import { Highlight } from '@components';
-import { CarouselItemMobile, Wrapper } from './style';
-import { ContainerStyle } from '../Desktop/SliderDesktop.style';
+import { CarouselItemMobile, Wrapper } from './SlideMobile.style';
+import { ContainerStyle } from '../Desktop/SlideDesktop.style';
 import { action2020, action2021, humanDay } from '@assets';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 

@@ -5,11 +5,11 @@ import {
   WhereAreWe,
   Partners,
   SlideMobile,
-  SliderDesktop,
+  SlideDesktop,
   Instagram,
   Banner,
 } from './containers';
-import useMedia from '../../Hooks/useMedia';
+import { useMedia } from '../../hooks';
 
 const Home = () => {
   const mobile = useMedia('(max-width:960px)');
@@ -18,7 +18,7 @@ const Home = () => {
       <Banner />
       <Structure>
         <AboutUs />
-        {mobile ? <SlideMobile /> : <SliderDesktop />}
+        {mobile ? <SlideMobile /> : <SlideDesktop />}
         <WhereAreWe />
         <Instagram />
         <Partners />

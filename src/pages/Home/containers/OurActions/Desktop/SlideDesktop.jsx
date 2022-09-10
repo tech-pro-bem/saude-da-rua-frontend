@@ -1,6 +1,6 @@
 import Carousel, { CarouselItem } from './Carousel/Carousel';
 import { Container } from './Carousel/Carousel.style';
-import { ContainerStyle } from './SliderDesktop.style';
+import { ContainerStyle } from './SlideDesktop.style';
 import { action2020, action2021, humanDay } from '@assets';
 import { Highlight, OutlinedImage } from '@components';
 
