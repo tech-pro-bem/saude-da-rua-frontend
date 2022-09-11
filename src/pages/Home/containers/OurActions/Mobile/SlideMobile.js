@@ -5,14 +5,20 @@ import { ContainerStyle } from '../Desktop/SlideDesktop.style';
 import { action2020, action2021, humanDay } from '@assets';
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 
-const SlideMobile = () => {
-  React.useEffect(() => {
-    const buttons = document.querySelectorAll('.button_tab_nav');
-    const years = [2020, 2021, 2022];
+function insertYearsForButtons() {
+  const buttons = document.querySelectorAll('.button_tab_nav');
+  const years = [2020, 2021, 2022];
+  if (buttons && years) {
     buttons.forEach((btn, index) => {
       btn.style.color = '#ffff';
       btn.innerHTML = `${years[index]}`;
     });
+  }
+}
+
+const SlideMobile = () => {
+  React.useEffect(() => {
+    insertYearsForButtons(); // Quando a lista de buttons for gerada dinamicamente - inserir o conteudo dentro deles.
   }, []);
 
   return (
