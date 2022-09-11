@@ -1,18 +1,34 @@
+import Logo from '@assets/Logo_saude_da_rua.png';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import logo from '@assets/Logo_saude_da_rua.png';
-import { Container, DonationButton, LinksContainer } from './Header.style.js';
 
-const Header = () => (
-  <Container>
-    <Link to="/">
-      <img src={logo} alt="Logo Saúde da Rua" className="logo" />
-    </Link>
-    <LinksContainer>
-      <Link to="doacao">Doações</Link>
-    </LinksContainer>
-    <DonationButton text="Doe agora" route="/doacao" />
-  </Container>
-);
+import {
+  Container,
+  Content,
+  DonationButton,
+  LinksContainer,
+  NavLinkHeader,
+} from './Header.style.js';
+
+const Header = () => {
+  return (
+    <>
+      <Container>
+        <Content>
+          <NavLinkHeader to="/">
+            <img src={Logo} alt="Logo Saúde da Rua" className="logo" />
+          </NavLinkHeader>
+        </Content>
+
+        <LinksContainer>
+          <NavLinkHeader to="doacao">Doações</NavLinkHeader>
+          <NavLinkHeader to="seja-voluntario">Seja voluntário</NavLinkHeader>
+          <NavLinkHeader to="/">Medicamentos</NavLinkHeader>
+          <NavLinkHeader to="sobre">Sobre e Ações</NavLinkHeader>
+          <DonationButton text="Doe agora" route="/doacao" />
+        </LinksContainer>
+      </Container>
+    </>
+  );
+};
 
 export default Header;
