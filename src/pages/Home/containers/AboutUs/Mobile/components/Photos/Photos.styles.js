@@ -4,9 +4,10 @@ export const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 24px;
 `;
 
-export const WrapperSmallPhotos = styled.div`
+export const WrapperFirstPhotos = styled.div`
   height: 50%;
   width: 100%;
 
@@ -23,18 +24,18 @@ export const WrapperBorders = styled.div`
   gap: 16px;
 
   position: absolute;
-  left: 0;
+  left: 8px;
   top: 0;
 `;
 
-export const WrapperPhotos = styled.div`
+export const WrapperPhoto = styled.div`
   display: flex;
   flex: 1;
   gap: 16px;
 
   z-index: 9;
   margin-top: 8px;
-  margin-left: 8px;
+  margin-right: 8px;
 `;
 
 export const Img2 = styled.img`
@@ -80,7 +81,7 @@ export const HorizontalPhoto = styled.div`
   flex: 1;
 
   position: relative;
-  margin-top: 16px;
+  margin-top: 24px;
 `;
 
 export const Img1 = styled.img`

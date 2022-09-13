@@ -3,7 +3,7 @@ import { Container } from './WrapperTextAboutUs.style';
 function WrapperTextAboutUs() {
   return (
     <Container>
-      <p className="big">
+      <p className="first">
         O Saúde da Rua nasceu em 2020, em <br />
         meio à pandemia do Covid-19, com a <br />
         missão de{' '}
@@ -17,7 +17,7 @@ function WrapperTextAboutUs() {
         vulneráveis da sociedade.
         <br />
       </p>
-      <p className="big">
+      <p className="second">
         De lá pra cá, com o apoio de cerca de <br />
         500 pessoas voluntárias, nossas ações <br />
         promoveram{' '}
