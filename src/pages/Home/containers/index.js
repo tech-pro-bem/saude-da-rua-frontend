@@ -1,4 +1,4 @@
-import AboutUs from './AboutUs/Desktop/AboutUs';
+import AboutUsDesktop from './AboutUs/Desktop/AboutUsDesktop';
 import AboutUsMobile from './AboutUs/Mobile/AboutUsMobile';
 import Partners from './Partners/Partners';
 import WhereAreWe from './WhereAreWe/WhereAreWe';
@@ -8,11 +8,9 @@ import Instagram from './Instagram/Instagram';
 import Banner from './Banner/Banner';
 
 export {
-  AboutUs,
-  Partners,
-  WhereAreWe,
   SlideDesktop,
   SlideMobile,
+  AboutUsDesktop,
   AboutUsMobile,
   Partners,
   WhereAreWe,

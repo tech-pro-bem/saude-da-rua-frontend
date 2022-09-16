@@ -5,8 +5,6 @@ export const Container = styled.div`
   flex-direction: column;
   padding: 0 16px;
   margin: 0 auto;
-  max-width: 360px;
-  min-height: 950px;
 `;
 
 export const Title = styled.h2`

@@ -4,29 +4,15 @@ function WrapperTextAboutUs() {
   return (
     <Container>
       <p className="first">
-        O Saúde da Rua nasceu em 2020, em <br />
-        meio à pandemia do Covid-19, com a <br />
-        missão de{' '}
-        <strong>
-          levar atendimento médico
-          <br />
-          humanizado
-        </strong>{' '}
-        às populações mais
-        <br />
-        vulneráveis da sociedade.
-        <br />
+        O Saúde da Rua nasceu em 2020, em meio à pandemia do Covid-19, com a
+        missão de <strong>levar atendimento médico humanizado</strong> às
+        populações mais vulneráveis da sociedade.
       </p>
       <p className="second">
-        De lá pra cá, com o apoio de cerca de <br />
-        500 pessoas voluntárias, nossas ações <br />
-        promoveram{' '}
-        <strong>
-          assistência profissional e <br />
-          individualizada{' '}
-        </strong>
-        com foco nas reais <br />
-        necessidades do paciente. <br />
+        De lá pra cá, com o apoio de cerca de 500 pessoas voluntárias, nossas
+        ações promoveram{' '}
+        <strong>assistência profissional e individualizada </strong>
+        com foco nas reais necessidades do paciente.
       </p>
     </Container>
   );
