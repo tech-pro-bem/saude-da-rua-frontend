@@ -14,14 +14,13 @@ export const Container = styled.section`
 
   h3 {
     font-size: 24px;
-    color: ${(props) => props.theme.colors.primary_light};
+    color: ${(props) => props.theme.colors.light};
 
     @media screen and (max-width: 520px) {
       font-size: 1.375rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       line-height: 33px;
-      color: ${(props) => props.theme.colors.light};
     }
   }
 `;
@@ -55,8 +54,9 @@ export const Sede = styled.p`
 
   transition: all 0.3s;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 768px) {
     margin-bottom: 1.5rem;
+    color: ${(props) => props.theme.primary_light};
   }
 `;
 
@@ -85,7 +85,7 @@ export const WrapCircles = styled.div`
   display: block;
   height: 647px;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;

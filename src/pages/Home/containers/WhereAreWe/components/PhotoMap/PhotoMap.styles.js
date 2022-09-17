@@ -7,7 +7,7 @@ export const MapImagStyle = styled.img`
   width: 559px;
   height: 546.27px;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
