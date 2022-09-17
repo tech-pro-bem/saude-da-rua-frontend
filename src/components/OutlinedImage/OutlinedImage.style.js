@@ -19,10 +19,10 @@ export const Box = styled.div`
       ${({ theme }) => theme.colors.primary};
     z-index: -1;
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 768px) {
       border-radius: 12px;
       left: 7px;
-      right: -7px;
+      right: 0;
       bottom: 14px;
       top: -7px;
     }
@@ -36,11 +36,7 @@ export const StyledImage = styled.img`
   max-height: 100%;
   border-radius: ${({ imgBorderRadius = 0 }) => imgBorderRadius};
 
-  @media screen and (max-width: 520px) {
-    width: 321px;
-    height: 216px;
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 12px;
+  @media screen and (max-width: 768px) {
+    max-width: 98%;
   }
 `;

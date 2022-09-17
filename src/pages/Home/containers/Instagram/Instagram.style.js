@@ -6,7 +6,7 @@ export const ContainerInstagram = styled.div`
   margin: 116px 0;
   align-items: stretch;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 768px) {
     margin: 64px 0;
   }
 `;
@@ -16,7 +16,7 @@ export const InstagramText = styled.h3`
   margin-bottom: 8px;
   color: ${(props) => props.theme.colors.primary_light};
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 768px) {
     text-align: start;
     font-size: 26px;
     font-weight: 700;
@@ -30,7 +30,7 @@ export const InstagramItemsContainer = styled.div`
   justify-content: space-around;
   margin: 24px 0;
 
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 768px) {
     a + a {
       display: none;
     }
@@ -42,6 +42,10 @@ export const IgPictureCard = styled.div`
   max-width: 320px;
   margin: 12px;
 
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
+
   > p {
     font-size: 22px;
     font-weight: 400;
@@ -51,7 +55,7 @@ export const IgPictureCard = styled.div`
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 
-    @media screen and (max-width: 520px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
   }
@@ -87,12 +91,14 @@ export const ButtonLinkInstagram = styled.button`
     color: ${(props) => props.theme.colors.primary_light};
   }
 
-  @media screen and (max-width: 520px) {
-    font-size: 18px;
-    line-height: 27px;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.3;
     font-weight: 600;
-    gap: 20px;
-    padding: 8px 31px;
-    width: 327px;
+    gap: 1rem;
+    padding: 0.3rem 1.5rem;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
   }
 `;
