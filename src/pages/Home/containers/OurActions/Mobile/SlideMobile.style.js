@@ -1,24 +1,8 @@
-import styled, { keyframes } from 'styled-components';
-const ScaleUp = keyframes`
-to {
-  opacity: initial;
-    transform: initial;
-}
-`;
+import styled from 'styled-components';
 
 export const Wrapper = styled.section`
   margin: 3rem 0 0 0;
   padding: 0.6rem;
-
-  .splide__slide {
-    transform: scale(0.98);
-    transition: 0.2s;
-    opacity: 50%;
-  }
-
-  .splide__slide.is-active {
-    animation: ${ScaleUp} 0.3s forwards;
-  }
 
   #year {
     color: ${(props) => props.theme.colors.light};
@@ -44,19 +28,12 @@ export const Wrapper = styled.section`
     margin-bottom: 2rem;
     padding: 0;
     margin: 0 0.6rem 2rem 0.6rem;
-
-    li {
-      flex: 1;
-      width: 100%;
-      button {
-        display: none;
-        width: 100%;
-        cursor: pointer;
-        padding: 1rem;
-      }
-    }
   }
   .button_tab_nav {
+    width: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    color: white;
     display: flex !important;
     align-items: center;
     justify-content: center;
@@ -65,7 +42,7 @@ export const Wrapper = styled.section`
     border-bottom: 2px solid whitesmoke;
     transition: 0.3s;
     height: 2.6rem;
-    &.is-active {
+    &.active {
       font-size: 1.625rem;
       color: #0095f6 !important;
       border-bottom: 2px solid #0095f6;
