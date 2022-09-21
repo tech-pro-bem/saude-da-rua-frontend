@@ -28,18 +28,16 @@ export const ImgWrapperFirst = styled.div`
         height: 0px;
       }
 
-      95% {
+      100% {
         border: 2px solid ${(props) => props.theme.colors.primary};
         width: 100%;
         height: 100%;
-      }
-      100% {
-        border: 0px;
       }
     }
   }
 `;
 export const Border = styled.div``;
+
 export const Img = styled.img`
   border-radius: 12px;
   z-index: 2;
@@ -74,14 +72,14 @@ export const ImgWrapperSecond = styled.div`
         height: 0px;
       }
 
-      75% {
+      100% {
         border: 2px solid ${(props) => props.theme.colors.primary};
         width: 100%;
         height: 100%;
       }
-      100% {
+      /* 100% {
         border: 0px;
-      }
+      } */
     }
   }
 `;
