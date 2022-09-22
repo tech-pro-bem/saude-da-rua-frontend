@@ -115,7 +115,12 @@ const Footer = () => (
       <li>|</li>
 
       <li>
-        Feito com amor pela <strong>Tech Pro Bem </strong>
+        Feito com amor pela{' '}
+        <strong>
+          <a href="https://techprobem.com.br/" target="_blank" rel="noreferrer">
+            Tech Pro Bem
+          </a>
+        </strong>
       </li>
     </Copyright>
 
@@ -124,7 +129,12 @@ const Footer = () => (
         <strong>Política de privacidade</strong>
       </li>
       <li>
-        Feito com amor pela <strong>Tech Pro Bem </strong>
+        Feito com amor pela{' '}
+        <strong>
+          <a href="https://techprobem.com.br/" target="_blank" rel="noreferrer">
+            Tech Pro Bem
+          </a>
+        </strong>
       </li>
       <li>
         Copyright©2021, Saúde da Rua.
