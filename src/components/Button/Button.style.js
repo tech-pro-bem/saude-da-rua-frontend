@@ -6,7 +6,7 @@ export const Container = styled.button`
   background: ${(props) => props.theme.colors.primary};
   border-radius: 2.5rem;
 
-  &: hover {
+  &:hover {
     background: ${(props) => props.theme.colors.dark};
   }
 

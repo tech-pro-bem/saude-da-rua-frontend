@@ -17,6 +17,7 @@
     "eslint-config-prettier": "^8.3.0",
     "jquery": "^3.6.0",
     "json-server": "^0.17.0",
+    "keen-slider": "^6.8.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.0",
     "react-dom": "^17.0.2",
