@@ -21,4 +21,12 @@ export const Container = styled.button`
     color: ${(props) => props.theme.colors.primary_light};
     border-color: ${(props) => props.theme.colors.primary};
   }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 327px;
+    background-color: ${(props) => props.theme.colors.primary};
+    color: #fff;
+    border: 0;
+  }
 `;
