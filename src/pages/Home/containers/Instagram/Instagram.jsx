@@ -87,6 +87,14 @@ const Instagram = () => {
                       topOffset="-8px"
                       bottomOffset="8px"
                       leftOffset="8px"
+                      responsive={{
+                        maxWidth: '768px',
+                        borderRadius: '12px',
+                        left: '7px',
+                        right: '-7px',
+                        bottom: '14px',
+                        top: '-7px',
+                      }}
                     />
                     <p>{pic.caption}</p>
                   </IgPictureCard>

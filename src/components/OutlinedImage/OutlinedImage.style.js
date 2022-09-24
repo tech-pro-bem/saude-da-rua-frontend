@@ -19,12 +19,12 @@ export const Box = styled.div`
       ${({ theme }) => theme.colors.primary};
     z-index: -1;
 
-    @media screen and (max-width: 768px) {
-      border-radius: 12px;
-      left: 7px;
-      right: 0;
-      bottom: 14px;
-      top: -7px;
+    @media screen and (max-width: ${({ responsive }) => responsive.maxWidth}) {
+      border-radius: ${({ responsive }) => responsive.borderRadius};
+      left: ${({ responsive }) => responsive.left};
+      right: ${({ responsive }) => responsive.right};
+      bottom: ${({ responsive }) => responsive.bottom};
+      top: ${({ responsive }) => responsive.top};
     }
   }
 `;
@@ -35,8 +35,4 @@ export const StyledImage = styled.img`
   max-width: 100%;
   max-height: 100%;
   border-radius: ${({ imgBorderRadius = 0 }) => imgBorderRadius};
-
-  @media screen and (max-width: 768px) {
-    max-width: 98%;
-  }
 `;
