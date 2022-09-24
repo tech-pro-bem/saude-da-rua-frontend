@@ -17,10 +17,9 @@ const Home = () => {
   return (
     <>
       <Banner />
-      <Structure>        
-        {mobile ? <AboutUsMobile /> : <AboutUs />} 
-        {mobile ? <SlideMobile /> : <SlideDesktop />}        
-        <SliderData />
+      <Structure>
+        {mobile ? <AboutUsMobile /> : <AboutUsDesktop />}
+        {mobile ? <SlideMobile /> : <SlideDesktop />}
         <WhereAreWe />
         <Instagram />
         <Partners />

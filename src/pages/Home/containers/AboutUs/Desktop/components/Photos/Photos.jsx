@@ -1,34 +1,55 @@
 import { imag1, imag2, imag3 } from '@assets';
+import { OutlinedImageAnimation } from '@components';
+import { useInView } from 'react-intersection-observer';
 import {
   Container,
-  WrapperBorders,
   WrapperSmallPhotos,
-  FrameImg1,
-  FrameImg2,
-  FrameImg3,
-  WrapperPhotos,
   HorizontalPhoto,
-  Img1,
-  Img2,
-  Img3,
 } from './Photos.styles';
 
 const Photos = () => {
+  const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <Container>
       <WrapperSmallPhotos>
-        <WrapperBorders>
-          <FrameImg2 />
-          <FrameImg3 />
-        </WrapperBorders>
-        <WrapperPhotos>
-          <Img2 src={imag2} alt="H21" />
-          <Img3 src={imag3} alt="H61" />
-        </WrapperPhotos>
+        <OutlinedImageAnimation
+          outlineBorderRadius={'12px'}
+          rightOffset={'none'}
+          topOffset={'-8px'}
+          leftOffset={'-8px'}
+          bottomOffset={'none'}
+          src={imag2}
+          imgBorderRadius={'12px'}
+          myRef={ref}
+          inView={inView}
+          animation={inView}
+        />
+        <OutlinedImageAnimation
+          outlineBorderRadius={'12px'}
+          rightOffset={'none'}
+          topOffset={'-8px'}
+          leftOffset={'-8px'}
+          bottomOffset={'none'}
+          src={imag3}
+          imgBorderRadius={'12px'}
+          myRef={ref}
+          inView={inView}
+          animation={inView}
+        />
       </WrapperSmallPhotos>
       <HorizontalPhoto>
-        <FrameImg1 />
-        <Img1 src={imag1} alt="H21" />
+        <OutlinedImageAnimation
+          outlineBorderRadius={'12px'}
+          rightOffset={'none'}
+          topOffset={'none'}
+          leftOffset={'-8px'}
+          bottomOffset={'-8px'}
+          src={imag1}
+          imgBorderRadius={'12px'}
+          myRef={ref}
+          inView={inView}
+          animation={inView}
+        />
       </HorizontalPhoto>{' '}
     </Container>
   );
