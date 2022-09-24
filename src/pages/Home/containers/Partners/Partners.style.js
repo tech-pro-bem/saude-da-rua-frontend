@@ -11,5 +11,12 @@ export const ContainerPartners = styled.div`
   h3 {
     color: ${(props) => props.theme.colors.primary_light};
     margin-bottom: 64px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 26px;
+      font-weight: 700;
+      max-width: 14ch;
+      align-self: flex-start;
+    }
   }
 `;
