@@ -11,7 +11,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@splidejs/react-splide": "^0.7.8",
     "axios": "^0.26.1",
     "carousel": "0.0.3",
     "eslint-config-prettier": "^8.3.0",
