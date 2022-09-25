@@ -8,6 +8,16 @@ export const Container = styled.div`
   grid-gap: 16px;
   align-items: center;
   justify-items: center;
+
+  @media (max-width: 640px) {
+    margin: 2rem auto;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const PostionedOutlinedImage = styled(OutlinedImage)`

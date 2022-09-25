@@ -1,5 +1,6 @@
 import { Structure } from '@components';
-import { Gallery, HelpNow, HowYourDonationHelp, Store } from './containers';
+import { HelpNow, HowYourDonationHelp, Store } from './containers';
+import GalleryAndQuantation from './containers/GalleryAndQuantation';
 
 const Donation = () => {
   return (
@@ -8,8 +9,8 @@ const Donation = () => {
         <HelpNow />
       </Structure>
       <HowYourDonationHelp />
+      <GalleryAndQuantation />
       <Structure>
-        <Gallery />
         <Store />
       </Structure>
     </>
