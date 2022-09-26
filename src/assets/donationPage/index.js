@@ -8,6 +8,7 @@ import store1 from './store-1.png';
 import store2 from './store-2.png';
 import store3 from './store-3.png';
 import CopyToClip from './copy-to-clip.svg';
+import helpImage from './helpImage.svg';
 
 export {
   accountabilityBackgroundImage,
@@ -16,6 +17,7 @@ export {
   galleryImg3,
   galleryImg4,
   galleryImg5,
+  helpImage,
   store1,
   store2,
   store3,

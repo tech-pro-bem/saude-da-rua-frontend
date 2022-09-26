@@ -9,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 96px auto;
+  margin: 0 auto;
   padding: 16px;
   position: relative;
   z-index: 0;

@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import HelpNowHero from './containers/HelpNowHero';
 import HowHelpContent from './containers/HowHelpContent';
+
 const HelpInformation = {
   key: 'saudedarua@gmail.com',
   pix: {
@@ -19,19 +19,19 @@ const HelpInformation = {
     Nome: 'Gustavo Zaborowsky Graicer',
   },
   boleto: {
-    1: 'Envie um e-mail para financeiro.saudedarua@gmail.com indicando o valor da doação;',
-    2: 'Aguarde nossa resposta, enviaremos o boleto no valor solicitado.',
+    first:
+      'Envie um e-mail para <strong>financeiro.saudedarua@gmail.com</strong> indicando o valor da doação;',
+    second: 'Aguarde nossa resposta, enviaremos o boleto no valor solicitado.',
   },
 };
-
-const Main = styled.main``;
-
 const HelpNowMobile = () => {
   return (
-    <Main>
+    <>
       <HelpNowHero />
-      <HowHelpContent HelpInformation={HelpInformation} />
-    </Main>
+      <div style={{ padding: '0 15px' }}>
+        <HowHelpContent HelpInformation={HelpInformation} />
+      </div>
+    </>
   );
 };
 

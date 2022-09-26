@@ -12,7 +12,6 @@ import Logo from './Logo_saude_da_rua.png';
 import social1 from './WhatsApp.svg';
 import social2 from './Email.svg';
 import social3 from './Instagram.svg';
-import { CopyToClip } from './donationPage';
 
 export {
   imag1,
@@ -29,5 +28,4 @@ export {
   social1,
   social2,
   social3,
-  CopyToClip,
 };

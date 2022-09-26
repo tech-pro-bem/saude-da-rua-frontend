@@ -8,10 +8,12 @@ import Highlight from './Highlight/Highlight';
 import Chip from './Chip/Chip';
 import Quotation from './Quotation/Quotation';
 import OutlinedImage from './OutlinedImage/OutlinedImage';
+import ImageWithFrame from './ImageWithFrame/ImageWithFrame';
 
 export {
   Layout,
   Structure,
+  ImageWithFrame,
   Header,
   Button,
   LinkButton,

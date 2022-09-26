@@ -29,7 +29,7 @@ const Photos = () => {
       <HorizontalPhoto>
         <FrameImg1 />
         <Img1 src={imag1} alt="H21" />
-      </HorizontalPhoto>{' '}
+      </HorizontalPhoto>
     </Container>
   );
 };

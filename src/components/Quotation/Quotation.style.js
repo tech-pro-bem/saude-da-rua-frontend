@@ -27,10 +27,18 @@ export const Container = styled.div`
     bottom: -8px;
     right: -16px;
   }
+
+  @media (max-width: 640px) {
+    padding: 3px 30px 8px 32px;
+  }
 `;
 
 export const Quote = styled.p`
   font-size: 28px;
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
 `;
 
 export const Author = styled.p`

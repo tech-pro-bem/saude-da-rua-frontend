@@ -5,14 +5,20 @@ import {
   HelpNowMobile,
   HowYourDonationHelp,
   Store,
+  GalleryAndQuantation,
 } from './containers';
-import GalleryAndQuantation from './containers/GalleryAndQuantation';
 
 const Donation = () => {
   const mobile = useMedia('(max-width: 768px)');
   return (
     <>
-      <Structure>{mobile ? <HelpNowMobile /> : <HelpNowDesktop />}</Structure>
+      {mobile ? (
+        <HelpNowMobile />
+      ) : (
+        <Structure>
+          <HelpNowDesktop />
+        </Structure>
+      )}
       <HowYourDonationHelp />
       <GalleryAndQuantation />
       <Structure>

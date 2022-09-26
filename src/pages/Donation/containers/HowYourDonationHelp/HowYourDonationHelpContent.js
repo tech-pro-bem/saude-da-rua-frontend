@@ -1,10 +1,10 @@
-import { assistanceIcon, healthcareIcon, supportIcon } from '@assets/svg';
+import { assistanceIcon, healthcareIcon, healthPeople } from '@assets/svg';
 
 export const accountabilityItemContent = [
   {
     img: {
       order: 1,
-      src: supportIcon,
+      src: healthPeople,
       alt: 'ícone de pessoa ao lado de um coração',
     },
     content: {
