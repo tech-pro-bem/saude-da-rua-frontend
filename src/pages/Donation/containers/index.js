@@ -1,6 +1,13 @@
-import HelpNow from './HelpNow/HelpNow';
+import HelpNowDesktop from './HelpNow/Desktop/HelpNowDesktop';
+import HelpNowMobile from './HelpNow/Mobile/HelpNowMobile';
 import GalleryAndQuantation from './GalleryAndQuantation';
 import HowYourDonationHelp from './HowYourDonationHelp/HowYourDonationHelp';
 import Store from './Store/Store';
 
-export { HelpNow, HowYourDonationHelp, Store, GalleryAndQuantation };
+export {
+  HelpNowDesktop,
+  HelpNowMobile,
+  HowYourDonationHelp,
+  Store,
+  GalleryAndQuantation,
+};
