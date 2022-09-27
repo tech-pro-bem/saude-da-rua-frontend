@@ -6,7 +6,6 @@ import { SkeletonTheme } from 'react-loading-skeleton';
 import AppRoutes from './routes/AppRoutes';
 import GlobalStyle from './styles/GlobalStyles';
 import theme from './styles/theme';
-import '@splidejs/react-splide/css/core';
 
 const gtmId = process.env.REACT_APP_GTM_ID;
 const tagManagerArgs = { gtmId };
