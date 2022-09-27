@@ -10,6 +10,8 @@ const OutlinedImage = ({
   topOffset,
   bottomOffset,
   imgBorderRadius,
+  imgWidth,
+  imgHeight,
   style,
   className,
   ...rest
@@ -27,7 +29,12 @@ const OutlinedImage = ({
       style={style}
       className={className}
     >
-      <StyledImage imgBorderRadius={imgBorderRadius} {...rest} />
+      <StyledImage
+        imgWidth={imgWidth}
+        imgHeight={imgHeight}
+        imgBorderRadius={imgBorderRadius}
+        {...rest}
+      />
     </Box>
   );
 };
