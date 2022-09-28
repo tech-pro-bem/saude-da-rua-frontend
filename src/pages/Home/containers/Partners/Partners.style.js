@@ -17,6 +17,7 @@ export const ContainerPartners = styled.div`
       font-weight: 700;
       max-width: 14ch;
       align-self: flex-start;
+      margin-bottom: 24px;
     }
   }
 `;
