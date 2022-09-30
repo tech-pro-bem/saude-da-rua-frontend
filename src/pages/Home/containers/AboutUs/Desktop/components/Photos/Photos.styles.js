@@ -13,7 +13,6 @@ export const WrapperSmallPhotos = styled.div`
   flex-direction: row;
   justify-content: space-between;
   flex: 1;
-
   position: relative;
 `;
 
