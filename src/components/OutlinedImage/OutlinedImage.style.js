@@ -18,6 +18,14 @@ export const Box = styled.div`
     border: ${({ borderWidth = '2px' }) => borderWidth} solid
       ${({ theme }) => theme.colors.primary};
     z-index: -1;
+
+    @media screen and (max-width: ${({ responsive }) => responsive.maxWidth}) {
+      border-radius: ${({ responsive }) => responsive.borderRadius};
+      left: ${({ responsive }) => responsive.left};
+      right: ${({ responsive }) => responsive.right};
+      bottom: ${({ responsive }) => responsive.bottom};
+      top: ${({ responsive }) => responsive.top};
+    }
   }
 `;
 

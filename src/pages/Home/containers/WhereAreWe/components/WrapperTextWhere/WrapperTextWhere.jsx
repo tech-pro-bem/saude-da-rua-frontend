@@ -77,27 +77,27 @@ const WrapperTextWhere = () => {
   const places = [
     {
       key: 1,
-      city: 'Saúde da Rua Campinas - SP',
+      city: 'Campinas - SP',
       fn: ativarCampinas,
     },
     {
       key: 2,
-      city: 'Saúde da Rua São José do Rio Preto - SP',
+      city: 'São José do Rio Preto - SP',
       fn: ativarRioPreto,
     },
     {
       key: 3,
-      city: 'Saúde da Rua São Carlos - SP',
+      city: 'São Carlos - SP',
       fn: ativarSaoCarlos,
     },
     {
       key: 4,
-      city: 'Saúde da Rua Sorocaba - SP',
+      city: 'Sorocaba - SP',
       fn: ativarSorocaba,
     },
     {
       key: 5,
-      city: 'Saúde da Rua Itajaí - SC',
+      city: 'Itajaí - SC',
       fn: ativarItajai,
     },
   ];
@@ -109,7 +109,7 @@ const WrapperTextWhere = () => {
 
         <h3>Sede</h3>
         <Sede sede={sede} onMouseOver={ativarSede}>
-          Saúde da Rua - SP
+          São Paulo - SP
         </Sede>
 
         <h3>Filiais</h3>
