@@ -4,9 +4,9 @@ import { Header, Footer } from '..';
 const Layout = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
