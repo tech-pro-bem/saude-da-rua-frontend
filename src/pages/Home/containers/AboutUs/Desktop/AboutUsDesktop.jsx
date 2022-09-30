@@ -1,7 +1,7 @@
-import { Container } from './AboutUs.style';
+import { Container } from './AboutUsDesktop.style';
 import { Photos, WrapperTextAboutUs } from './components';
 
-const AboutUs = () => {
+const AboutUsDesktop = () => {
   return (
     <Container>
       <Photos />
@@ -10,4 +10,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default AboutUsDesktop;
