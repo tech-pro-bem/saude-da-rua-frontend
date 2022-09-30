@@ -12,6 +12,7 @@ const OutlinedImage = ({
   imgBorderRadius,
   imgWidth,
   imgHeight,
+  responsive,
   style,
   className,
   ...rest
@@ -26,6 +27,7 @@ const OutlinedImage = ({
       rightOffset={rightOffset}
       topOffset={topOffset}
       bottomOffset={bottomOffset}
+      responsive={{ ...responsive }}
       style={style}
       className={className}
     >

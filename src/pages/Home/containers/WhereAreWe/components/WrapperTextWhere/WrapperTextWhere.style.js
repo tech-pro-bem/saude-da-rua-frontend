@@ -3,11 +3,25 @@ import styled from 'styled-components';
 export const Container = styled.section`
   h2 {
     margin-bottom: 50px;
+
+    @media screen and (max-width: 520px) {
+      font-size: 1.625rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 39px;
+    }
   }
 
   h3 {
     font-size: 24px;
-    color: ${(props) => props.theme.colors.primary_light};
+    color: ${(props) => props.theme.colors.light};
+
+    @media screen and (max-width: 520px) {
+      font-size: 1.375rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      line-height: 33px;
+    }
   }
 `;
 
@@ -18,6 +32,10 @@ export const TextWhereAreWe = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 520px) {
+    padding-top: 0;
+  }
 `;
 
 export const Sede = styled.p`
@@ -35,6 +53,11 @@ export const Sede = styled.p`
   }
 
   transition: all 0.3s;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1.5rem;
+    color: ${(props) => props.theme.primary_light};
+  }
 `;
 
 export const City = styled.p`
@@ -50,11 +73,21 @@ export const City = styled.p`
 
   cursor: pointer;
   transition: all 0.3s;
+
+  @media screen and (max-width: 520px) {
+    line-height: 24px;
+    margin-bottom: 0;
+    font-size: 1rem;
+  }
 `;
 
 export const WrapCircles = styled.div`
   display: block;
   height: 647px;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const CircleSede = styled.div`

@@ -14,4 +14,11 @@ export const Container = styled(Link)`
   &:hover {
     background: ${(props) => props.theme.colors.dark};
   }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 `;

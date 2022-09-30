@@ -1,7 +1,8 @@
 import React from 'react';
 import { Structure } from '@components';
 import {
-  AboutUs,
+  AboutUsDesktop,
+  AboutUsMobile,
   WhereAreWe,
   Partners,
   SlideMobile,
@@ -17,7 +18,7 @@ const Home = () => {
     <>
       <Banner />
       <Structure>
-        <AboutUs />
+        {mobile ? <AboutUsMobile /> : <AboutUsDesktop />}
         {mobile ? <SlideMobile /> : <SlideDesktop />}
         <WhereAreWe />
         <Instagram />
