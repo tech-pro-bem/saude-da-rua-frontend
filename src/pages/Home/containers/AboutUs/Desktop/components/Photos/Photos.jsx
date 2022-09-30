@@ -20,6 +20,7 @@ const Photos = () => {
           bottomOffset={'none'}
           src={imag2}
           imgBorderRadius={'12px'}
+          marginBottom={'24px'}
           myRef={ref}
           inView={inView}
           animation={inView}
@@ -32,6 +33,7 @@ const Photos = () => {
           bottomOffset={'none'}
           src={imag3}
           imgBorderRadius={'12px'}
+          marginBottom={'24px'}
           myRef={ref}
           inView={inView}
           animation={inView}
