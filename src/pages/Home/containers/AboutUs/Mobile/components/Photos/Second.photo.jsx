@@ -1,26 +1,23 @@
 import { imag1 } from '@assets';
-import { Container, FrameImg1, HorizontalPhoto, Img1 } from './Photos.styles';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
+import {
+  ContainerSecond,
+  ImgWrapperSecond,
+  Border,
+  Img,
+} from './Photos.styles';
 
 const SecondPhoto = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <Container>
-      <HorizontalPhoto>
-        <FrameImg1
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="100"
-          data-aos-offset="0"
-        />
-        <Img1 src={imag1} alt="H21" />
-      </HorizontalPhoto>{' '}
-    </Container>
+    <ContainerSecond>
+      <ImgWrapperSecond>
+        <Img src={imag1} alt="H61" />
+        <Border ref={ref} className={inView ? 'animate' : ''} />
+      </ImgWrapperSecond>
+    </ContainerSecond>
   );
 };
 

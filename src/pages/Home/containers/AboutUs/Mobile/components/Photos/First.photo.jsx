@@ -1,38 +1,17 @@
 import { imag3 } from '@assets';
-import {
-  Container,
-  WrapperBorders,
-  WrapperFirstPhotos,
-  FrameImg3,
-  WrapperPhoto,
-  Img3,
-} from './Photos.styles';
-
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+import { ContainerFirst, ImgWrapperFirst, Border, Img } from './Photos.styles';
 
 const FirstPhoto = () => {
-  useEffect(() => {
-    Aos.init({ duration: 2000 });
-  }, []);
+  const { ref, inView } = useInView({ triggerOnce: true });
 
   return (
-    <Container>
-      <WrapperFirstPhotos>
-        <WrapperBorders
-          data-aos="fade-zoom-in"
-          data-aos-easing="ease-in-back"
-          data-aos-delay="100"
-          data-aos-offset="0"
-        >
-          <FrameImg3 />
-        </WrapperBorders>
-        <WrapperPhoto>
-          <Img3 src={imag3} alt="H61" />
-        </WrapperPhoto>
-      </WrapperFirstPhotos>
-    </Container>
+    <ContainerFirst>
+      <ImgWrapperFirst>
+        <Img src={imag3} alt="H61" />
+        <Border ref={ref} className={inView ? 'animate' : ''} />
+      </ImgWrapperFirst>
+    </ContainerFirst>
   );
 };
 
