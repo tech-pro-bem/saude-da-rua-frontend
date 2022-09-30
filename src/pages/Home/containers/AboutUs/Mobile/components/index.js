@@ -1,5 +1,5 @@
-import FirstPhoto from './Photos/First.photo';
-import SecondPhoto from './Photos/Second.photo';
 import WrapperTextAboutUs from './WrapperTextAboutUs/WrapperTextAboutUs';
+import FirstPhoto from './Photos/FirstPhoto';
+import SecondPhoto from './Photos/SecondPhoto';
 
-export { FirstPhoto, WrapperTextAboutUs, SecondPhoto };
+export { WrapperTextAboutUs, FirstPhoto, SecondPhoto };

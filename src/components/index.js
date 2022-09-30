@@ -8,6 +8,7 @@ import { LinkButton } from './LinkButton/LinkButton.jsx';
 import OutlinedImage from './OutlinedImage/OutlinedImage';
 import Quotation from './Quotation/Quotation';
 import Structure from './Structure/Structure';
+import OutlinedImageAnimation from './OutlinedImageAnimation/OutlinedImageAnimation';
 
 export {
   Layout,
@@ -19,5 +20,6 @@ export {
   Chip,
   Quotation,
   OutlinedImage,
+  OutlinedImageAnimation,
   Footer,
 };

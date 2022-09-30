@@ -1,5 +1,5 @@
 import { Container, Title } from './AboutUsMobile.style';
-import { FirstPhoto, SecondPhoto, WrapperTextAboutUs } from './components';
+import { WrapperTextAboutUs, FirstPhoto, SecondPhoto } from './components';
 
 const AboutUsMobile = () => {
   return (
