@@ -10,6 +10,5 @@ export const Container = styled.div`
 export const Title = styled.h2`
   line-height: 60px;
   font-size: 26px;
-  margin-top: 64px;
   margin-bottom: 16px;
 `;

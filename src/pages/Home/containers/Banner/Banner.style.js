@@ -12,8 +12,13 @@ export const Container = styled.div`
   align-items: center;
   padding: 94px 136px;
 
+  @media screen and (min-width: 960px) {
+    margin: 93px auto 64px auto;
+  }
+
   @media screen and (max-width: 768px) {
     height: 396px;
+    margin: 0 auto 64px auto;
     padding: 0px 0px 0px 0px;
     align-items: flex-end;
     background-position: 60%;

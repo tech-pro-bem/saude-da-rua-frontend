@@ -20,6 +20,5 @@ export const Container = styled(Link)`
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 327px;
   }
 `;
