@@ -1,10 +1,10 @@
 import { Structure } from '@components';
-import { Headline } from './containers';
+import { Banner } from './containers';
 
 const Volunteers = () => {
   return (
     <>
-      <Headline />
+      <Banner />
       <Structure></Structure>
     </>
   );
