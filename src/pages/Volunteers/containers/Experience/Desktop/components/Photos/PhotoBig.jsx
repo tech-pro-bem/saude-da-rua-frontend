@@ -1,8 +1,8 @@
-import { experience } from '@assets/volunteerPage';
+import { experience2 } from '@assets/volunteerPage';
 import { OutlinedImageAnimation } from '@components';
 import { useInView } from 'react-intersection-observer';
 
-const Photo = () => {
+const PhotoBig = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <OutlinedImageAnimation
@@ -12,7 +12,7 @@ const Photo = () => {
       topOffset={'-8px'}
       leftOffset={'none'}
       bottomOffset={'none'}
-      src={experience}
+      src={experience2}
       imgBorderRadius={'12px'}
       myRef={ref}
       inView={inView}
@@ -21,4 +21,4 @@ const Photo = () => {
   );
 };
 
-export default Photo;
+export default PhotoBig;

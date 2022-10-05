@@ -12,7 +12,6 @@ import imag1 from './volunter1.png';
 import imag2 from './volunter2.png';
 import imag3 from './volunter3.png';
 import WhatsApp from './WhatsApp.svg';
-import experience from './experience.png';
 
 export {
   imag1,
@@ -29,5 +28,4 @@ export {
   WhatsApp,
   Email,
   Instagram,
-  experience,
 };

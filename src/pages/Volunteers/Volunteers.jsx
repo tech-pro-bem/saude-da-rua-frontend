@@ -1,11 +1,13 @@
 import { Structure } from '@components';
-import { Headline, ExperienceMobile } from './containers';
+import { Headline, ExperienceMobile, ExperienceDesktop } from './containers';
+import { useMedia } from '../../hooks';
 
 const Volunteers = () => {
+  const mobile = useMedia('(max-width:960px)');
   return (
     <>
       <Structure>
-        <ExperienceMobile />
+        {mobile ? <ExperienceMobile /> : <ExperienceDesktop />}
       </Structure>
     </>
   );
