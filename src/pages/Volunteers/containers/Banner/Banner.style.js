@@ -4,7 +4,7 @@ import banner from '@assets/volunter4.png';
 export const Container = styled.div`
   width: 100%;
   max-width: 1440px;
-  margin-top: 93px;
+  margin: 93px auto 0px auto;
   height: 339px;
   background: url(${banner}) no-repeat;
   background-size: cover;
