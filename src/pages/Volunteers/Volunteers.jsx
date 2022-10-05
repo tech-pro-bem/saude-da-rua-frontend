@@ -1,11 +1,12 @@
 import { Structure } from '@components';
-import { Headline } from './containers';
+import { Headline, ExperienceMobile } from './containers';
 
 const Volunteers = () => {
   return (
     <>
-      <Headline />
-      <Structure></Structure>
+      <Structure>
+        <ExperienceMobile />
+      </Structure>
     </>
   );
 };
