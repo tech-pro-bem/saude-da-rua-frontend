@@ -8,6 +8,7 @@ module.exports = function override(config) {
     '@shared': 'src/shared',
     '@pages': 'src/pages',
     '@assets': 'src/assets',
+    '@hooks': 'src/hooks',
   })(config);
 
   return config;

@@ -15,8 +15,8 @@ const Gallery = () => {
         gridColumn="1/3"
         src={galleryImg1}
         topOffset="-8px"
-        leftOffset="-8px"
-        rightOffset="8px"
+        leftOffset="8px"
+        rightOffset="-8px"
         bottomOffset="16px"
       />
       <PostionedOutlinedImage
@@ -24,8 +24,8 @@ const Gallery = () => {
         gridColumn="3/5"
         src={galleryImg2}
         topOffset="-8px"
-        leftOffset="-8px"
-        rightOffset="8px"
+        leftOffset="8px"
+        rightOffset="-8px"
         bottomOffset="16px"
       />
       <PostionedOutlinedImage
@@ -33,8 +33,8 @@ const Gallery = () => {
         gridColumn="5/7"
         src={galleryImg3}
         topOffset="-8px"
-        leftOffset="-8px"
-        rightOffset="8px"
+        leftOffset="8px"
+        rightOffset="-8px"
         bottomOffset="16px"
       />
       <PostionedOutlinedImage
@@ -42,8 +42,8 @@ const Gallery = () => {
         gridColumn="1/3"
         src={galleryImg4}
         topOffset="8px"
-        leftOffset="8px"
-        rightOffset="-8px"
+        leftOffset="-8px"
+        rightOffset="8px"
         bottomOffset="-4px"
       />
       <PostionedOutlinedImage
@@ -53,8 +53,8 @@ const Gallery = () => {
         align="end"
         src={galleryImg5}
         topOffset="8px"
-        leftOffset="-8px"
-        rightOffset="8px"
+        leftOffset="8px"
+        rightOffset="-8px"
         bottomOffset="8px"
       />
     </Container>
