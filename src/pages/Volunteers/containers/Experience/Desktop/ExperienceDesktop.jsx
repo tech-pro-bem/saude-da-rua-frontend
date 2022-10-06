@@ -9,6 +9,11 @@ const ExperienceDesktop = () => {
         <Highlight>Voluntários</Highlight> em ação
       </h2>
       <PhotoWrapper />
+      <LinkButton
+        style={{ width: '272px', textAlign: 'center' }}
+        text="Inscreva-se"
+        route="/increva-se"
+      />
     </Container>
   );
 };

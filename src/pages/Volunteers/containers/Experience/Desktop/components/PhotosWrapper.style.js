@@ -5,13 +5,16 @@ export const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  height: auto;
+  margin-bottom: 80px;
 `;
 
 export const LeftPhotos = styled.div`
-  background-color: green;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
   height: 529px;
   width: 65%;
+  margin-right: 23px; ;
 `;
 
 export const RightPhoto = styled.div`
