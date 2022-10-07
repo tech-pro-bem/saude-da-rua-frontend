@@ -12,7 +12,7 @@ const ExperienceDesktop = () => {
       <LinkButton
         style={{ width: '272px', textAlign: 'center' }}
         text="Inscreva-se"
-        route="/increva-se"
+        route="/inscreva-se"
       />
     </Container>
   );
