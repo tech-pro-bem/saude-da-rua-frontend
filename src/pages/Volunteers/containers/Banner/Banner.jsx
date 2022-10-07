@@ -13,7 +13,11 @@ export const Banner = () => {
           Se você é estudante ou profissional da área da saúde, venha pra rua
           com a gente!
         </p>
-        <LinkButton text="Inscreva-se" route="/seinscreva" />
+        <LinkButton
+          style={{ width: '272px', textAlign: 'center' }}
+          text="Inscreva-se"
+          route="/inscreva-se"
+        />
       </div>
     </Container>
   );

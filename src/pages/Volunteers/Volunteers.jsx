@@ -1,9 +1,15 @@
 import { Structure } from '@components';
-import { WhoCanVolunteer, Banner } from './containers';
-import { Head } from '@hooks';
+import {
+  WhoCanVolunteer,
+  Banner,
+  ExperienceMobile,
+  ExperienceDesktop,
+} from './containers';
+import { Head, useMedia } from '@hooks';
 import { VolunteersContainer } from './containers/Volunteers.style';
 
 const Volunteers = () => {
+  const mobile = useMedia('(max-width:960px)');
   return (
     <>
       <Banner />
@@ -14,6 +20,7 @@ const Volunteers = () => {
       <VolunteersContainer>
         <Structure>
           <WhoCanVolunteer />
+          {mobile ? <ExperienceMobile /> : <ExperienceDesktop />}
         </Structure>
       </VolunteersContainer>
     </>
