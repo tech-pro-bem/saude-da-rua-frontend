@@ -1,4 +1,5 @@
 import React from 'react';
+import { HelpMobileDivision } from './containers/HelpNow.style';
 import HelpNowHero from './containers/HelpNowHero';
 import HowHelpContent from './containers/HowHelpContent';
 
@@ -28,9 +29,9 @@ const HelpNowMobile = () => {
   return (
     <>
       <HelpNowHero />
-      <div style={{ padding: '0 15px' }}>
+      <HelpMobileDivision>
         <HowHelpContent HelpInformation={HelpInformation} />
-      </div>
+      </HelpMobileDivision>
     </>
   );
 };

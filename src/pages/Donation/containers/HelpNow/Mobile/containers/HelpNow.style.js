@@ -108,3 +108,7 @@ export const ClipBoardWrapper = styled.div`
     outline: none;
   }
 `;
+
+export const HelpMobileDivision = styled.section`
+  padding: 0 15px;
+`;
