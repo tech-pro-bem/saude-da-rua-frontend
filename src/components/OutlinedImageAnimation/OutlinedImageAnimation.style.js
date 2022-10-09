@@ -9,6 +9,8 @@ export const Container = styled.div`
 export const Box = styled.div`
   position: relative;
   display: flex;
+  height: ${({ height = 'none' }) => height};
+  width: ${({ width = 'none' }) => width};
 
   ::after {
     content: '';

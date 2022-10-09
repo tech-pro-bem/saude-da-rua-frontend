@@ -17,7 +17,6 @@ const OutlinedImageAnimation = ({
   myRef,
   inView,
 }) => {
-  console.log('INVIEWDOOUTLINE; ', inView);
   return (
     <Container marginBottom={marginBottom}>
       <Box
