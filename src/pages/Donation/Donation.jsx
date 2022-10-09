@@ -1,5 +1,5 @@
 import { Structure } from '@components';
-import { useMedia } from '../../hooks';
+import { Head, useMedia } from '../../hooks';
 import {
   HelpNowDesktop,
   HelpNowMobile,
@@ -12,6 +12,7 @@ const Donation = () => {
   const mobile = useMedia('(max-width: 768px)');
   return (
     <>
+      <Head title="Doações" description="Doe para Saúde da Rua" />
       {mobile ? (
         <HelpNowMobile />
       ) : (
