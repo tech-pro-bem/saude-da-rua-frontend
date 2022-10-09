@@ -1,7 +1,13 @@
 import React, { useRef, useState } from 'react';
 import { ImageWithFrame } from '@components';
 import { CopyToClip, helpImage } from '@assets/donationPage';
-import { ClipBoardWrapper, HelpContainer } from './HelpNow.style';
+import {
+  ClipBoardWrapper,
+  HaveborderBottom,
+  HelpContainer,
+  HelpHaveImg,
+  TitleHelp,
+} from './HelpNow.style';
 
 const HowHelpContent = ({ HelpInformation }) => {
   const copiedText = HelpInformation?.key || '';
@@ -27,7 +33,7 @@ const HowHelpContent = ({ HelpInformation }) => {
 
   return (
     <HelpContainer>
-      <h2>Chave pix</h2>
+      <TitleHelp>Chave pix</TitleHelp>
       <ClipBoardWrapper>
         <input type="text" value={copiedText} disabled />
         <button onClick={() => Copy(copiedText)}>
@@ -38,15 +44,15 @@ const HowHelpContent = ({ HelpInformation }) => {
           )}
         </button>
       </ClipBoardWrapper>
-      <div className="haveborderBottom">
+      <HaveborderBottom>
         <ol>
           {pixInfo.map((info, index) => {
             return <li key={index}>{info}</li>;
           })}
         </ol>
-      </div>
-      <div className="haveborderBottom">
-        <h2>Transferência bancária</h2>
+      </HaveborderBottom>
+      <HaveborderBottom>
+        <TitleHelp>Transferência bancária</TitleHelp>
         <ul>
           {bankInfo.map((info, index) => {
             return (
@@ -56,17 +62,17 @@ const HowHelpContent = ({ HelpInformation }) => {
             );
           })}
         </ul>
-      </div>
+      </HaveborderBottom>
       <div>
-        <h2>Boleto</h2>
+        <TitleHelp>Boleto</TitleHelp>
         <ol>
           <li dangerouslySetInnerHTML={{ __html: first }} />
           <li dangerouslySetInnerHTML={{ __html: second }} />
         </ol>
       </div>
-      <div className="haveImg">
+      <HelpHaveImg>
         <ImageWithFrame src={helpImage} alt="sd" />
-      </div>
+      </HelpHaveImg>
     </HelpContainer>
   );
 };
