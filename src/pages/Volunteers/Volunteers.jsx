@@ -4,12 +4,16 @@ import {
   WhoCanVolunteer,
   WhatDoWeExpectDesktop,
   WhatDoWeExpectMobile,
+  ExperienceMobile,
+  ExperienceDesktop,
 } from './containers';
 import { Head, useMedia } from '@hooks';
 import { VolunteersContainer } from './containers/Volunteers.style';
 
 const Volunteers = () => {
-  const mobile = useMedia('(max-width:640px)');
+  const smallMobile = useMedia('(max-width:640px)');
+  const mobile = useMedia('(max-width:960px)');
+  
   return (
     <>
       <Banner />
@@ -20,7 +24,8 @@ const Volunteers = () => {
       <VolunteersContainer>
         <Structure>
           <WhoCanVolunteer />
-          {mobile ? <WhatDoWeExpectMobile /> : <WhatDoWeExpectDesktop />}
+          {smallMobile ? <WhatDoWeExpectMobile /> : <WhatDoWeExpectDesktop />}
+          {mobile ? <ExperienceMobile /> : <ExperienceDesktop />}
         </Structure>
       </VolunteersContainer>
     </>
