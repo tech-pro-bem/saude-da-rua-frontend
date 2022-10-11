@@ -8,9 +8,8 @@ const PhotoHowTheExperience = () => {
     <OutlinedImageAnimation
       height={'213px'}
       outlineBorderRadius={'12px'}
-      rightOffset={'-8px'}
       topOffset={'-8px'}
-      leftOffset={'none'}
+      leftOffset={'-15px'}
       bottomOffset={'none'}
       src={howwilltheexpirence}
       imgBorderRadius={'12px'}
