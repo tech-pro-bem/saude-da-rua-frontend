@@ -21,7 +21,11 @@ const HowTheExperienceMobile = () => {
         <strong> atendimentos respeitosos e humanizados</strong> que nos
         orgulham tanto.
       </Paragraph>
-      <LinkButton text="Inscreva-se" route="/inscreva-se" />
+      <LinkButton
+        text="Inscreva-se"
+        route="/inscreva-se"
+        style={{ textAlign: 'center' }}
+      />
     </Container>
   );
 };
