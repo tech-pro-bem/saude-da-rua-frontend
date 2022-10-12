@@ -7,6 +7,7 @@ import {
   HowTheExperienceMobile,
   WhoCanVolunteer,
 } from './containers';
+import HowTheExperienceDesktop from './containers/ HowWillTheExperience/Desktop/HowTheExperienceDesktop';
 import { VolunteersContainer } from './containers/Volunteers.style';
 
 const Volunteers = () => {
@@ -21,7 +22,7 @@ const Volunteers = () => {
       <VolunteersContainer>
         <Structure>
           <WhoCanVolunteer />
-          <HowTheExperienceMobile />
+          {mobile ? <HowTheExperienceMobile /> : <HowTheExperienceDesktop />}
           {mobile ? <ExperienceMobile /> : <ExperienceDesktop />}
         </Structure>
       </VolunteersContainer>
