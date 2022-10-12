@@ -3,6 +3,8 @@ import experience3 from './experience-3.png';
 import experience4 from './experience-4.png';
 import experience5 from './experience-5.png';
 import experience from './experience.png';
+import howwilltheexpirence2 from './howthewillexpirence-2.png';
+import howwilltheexpirence3 from './howthewillexpirence-3.png';
 import howwilltheexpirence from './howwilltheexpirence.png';
 
 export {
@@ -12,4 +14,6 @@ export {
   experience4,
   experience5,
   howwilltheexpirence,
+  howwilltheexpirence2,
+  howwilltheexpirence3,
 };
