@@ -11,7 +11,7 @@ import {
 import { Highlight, Chip, OutlinedImage } from '@components';
 import qrCodes from '@assets/qr-codes';
 
-const HelpNow = () => {
+const HelpNowDesktop = () => {
   const defaultSelection = {
     key: 0,
     displayValue: 'Qualquer valor',
@@ -126,4 +126,4 @@ const HelpNow = () => {
   );
 };
 
-export default HelpNow;
+export default HelpNowDesktop;
