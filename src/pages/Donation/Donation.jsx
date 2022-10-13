@@ -1,15 +1,28 @@
 import { Structure } from '@components';
-import { Gallery, HelpNow, HowYourDonationHelp, Store } from './containers';
+import { Head, useMedia } from '../../hooks';
+import {
+  HelpNowDesktop,
+  HelpNowMobile,
+  HowYourDonationHelp,
+  Store,
+  GalleryAndQuantation,
+} from './containers';
 
 const Donation = () => {
+  const mobile = useMedia('(max-width: 768px)');
   return (
     <>
-      <Structure>
-        <HelpNow />
-      </Structure>
+      <Head title="Doações" description="Doe para Saúde da Rua" />
+      {mobile ? (
+        <HelpNowMobile />
+      ) : (
+        <Structure>
+          <HelpNowDesktop />
+        </Structure>
+      )}
       <HowYourDonationHelp />
+      <GalleryAndQuantation />
       <Structure>
-        <Gallery />
         <Store />
       </Structure>
     </>

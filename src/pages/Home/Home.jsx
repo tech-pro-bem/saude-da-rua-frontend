@@ -10,12 +10,16 @@ import {
   Instagram,
   Banner,
 } from './containers';
-import { useMedia } from '../../hooks';
+import { Head, useMedia } from '../../hooks';
 
 const Home = () => {
   const mobile = useMedia('(max-width:960px)');
   return (
     <>
+      <Head
+        title="Pagina inicial"
+        description="Se você é profissional ou estudante da área da saúde, participe das ações do Saúde da Rua"
+      />
       <Banner />
       <Structure>
         {mobile ? <AboutUsMobile /> : <AboutUsDesktop />}

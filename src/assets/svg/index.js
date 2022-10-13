@@ -1,6 +1,7 @@
 import assistanceIcon from './assistance.svg';
 import healthcareIcon from './healthcare.svg';
 import supportIcon from './support.svg';
+import healthPeople from './Helth.svg';
 import Icone_Estudantes from './A_Estudantes.svg';
 import Icone_Medicos from './B_Médicos.svg';
 import Icone_Enfermeiros from './C_Enfermeiros.svg';
@@ -12,6 +13,7 @@ import Icone_Odontologia from './nurse.svg';
 
 export {
   assistanceIcon,
+  healthPeople,
   healthcareIcon,
   supportIcon,
   Icone_Estudantes,
