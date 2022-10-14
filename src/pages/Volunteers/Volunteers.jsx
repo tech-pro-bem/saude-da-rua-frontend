@@ -2,6 +2,8 @@ import { Structure } from '@components';
 import { Head, useMedia } from '@hooks';
 import {
   Banner,
+  WhatDoWeExpectDesktop,
+  WhatDoWeExpectMobile,
   ExperienceDesktop,
   ExperienceMobile,
   HowTheExperienceMobile,
@@ -11,7 +13,9 @@ import HowTheExperienceDesktop from './containers/ HowWillTheExperience/Desktop/
 import { VolunteersContainer } from './containers/Volunteers.style';
 
 const Volunteers = () => {
+  const smallMobile = useMedia('(max-width:640px)');
   const mobile = useMedia('(max-width:960px)');
+  
   return (
     <>
       <Banner />
@@ -22,6 +26,7 @@ const Volunteers = () => {
       <VolunteersContainer>
         <Structure>
           <WhoCanVolunteer />
+          {smallMobile ? <WhatDoWeExpectMobile /> : <WhatDoWeExpectDesktop />}
           {mobile ? <HowTheExperienceMobile /> : <HowTheExperienceDesktop />}
           {mobile ? <ExperienceMobile /> : <ExperienceDesktop />}
         </Structure>
