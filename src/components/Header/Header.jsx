@@ -26,11 +26,11 @@ const Header = () => {
       text: 'Doações',
     },
 
-    {
-      id: 2,
-      to: '/',
-      text: 'Medicamentos',
-    },
+    // {
+    //   id: 2,
+    //   to: '/',
+    //   text: 'Medicamentos',
+    // },
     {
       ìd: 3,
       to: 'seja-voluntario',

@@ -65,7 +65,7 @@ const HowHelpContent = ({ HelpInformation }) => {
       </HaveborderBottom>
       <div>
         <TitleHelp>Boleto</TitleHelp>
-        <ol>
+        <ol style={{ color: 'white', padding: '15px' }}>
           <li dangerouslySetInnerHTML={{ __html: first }} />
           <li dangerouslySetInnerHTML={{ __html: second }} />
         </ol>
