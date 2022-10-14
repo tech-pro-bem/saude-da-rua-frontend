@@ -14,7 +14,7 @@ export const Banner = () => {
           com a gente!
         </p>
         <LinkButton
-          style={{ width: '272px', textAlign: 'center' }}
+          style={{ minWidth: '272px', textAlign: 'center' }}
           text="Inscreva-se"
           route="/inscreva-se"
         />

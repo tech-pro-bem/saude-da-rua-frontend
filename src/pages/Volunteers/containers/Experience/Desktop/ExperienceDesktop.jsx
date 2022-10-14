@@ -10,7 +10,7 @@ const ExperienceDesktop = () => {
       </h2>
       <PhotoWrapper />
       <LinkButton
-        style={{ width: '272px', textAlign: 'center' }}
+        style={{ width: '272px', textAlign: 'center', marginBottom: '80px' }}
         text="Inscreva-se"
         route="/inscreva-se"
       />
