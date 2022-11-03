@@ -55,7 +55,7 @@ const WhoCanVolunteer = () => {
     <WhoCanVolunteerMain>
       <div className="whocanHeader">
         <h1>
-          Quem pode <span> se voluntariar ?</span>
+          Quem pode <span> se voluntariar?</span>
         </h1>
         <p>Procuramos profissionais voluntários das seguintes áreas:</p>
       </div>
