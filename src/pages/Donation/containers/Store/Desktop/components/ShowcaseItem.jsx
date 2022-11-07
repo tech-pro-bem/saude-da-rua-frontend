@@ -1,10 +1,13 @@
 import { ShowcaseItemContainer } from './ShowcaseItem.style';
-import { OutlinedImage } from '@components';
+import { OutlinedImageLink } from '@components';
 
-const ShowcaseItem = ({ src, identifier }) => (
+const ShowcaseItem = ({ src, identifier, target, href, rel }) => (
   <ShowcaseItemContainer>
-    <OutlinedImage
+    <OutlinedImageLink
       src={src}
+      target={target}
+      href={href}
+      rel={rel}
       imgBorderRadius="8px"
       leftOffset="-8px"
       topOffset="-8px"
