@@ -10,6 +10,7 @@ import ImageWithFrame from './ImageWithFrame/ImageWithFrame';
 import Quotation from './Quotation/Quotation';
 import Structure from './Structure/Structure';
 import OutlinedImageAnimation from './OutlinedImageAnimation/OutlinedImageAnimation';
+import InputText from './InputText/InputText';
 
 export {
   Layout,
@@ -24,4 +25,5 @@ export {
   OutlinedImage,
   OutlinedImageAnimation,
   Footer,
+  InputText,
 };
