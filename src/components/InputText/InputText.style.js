@@ -20,4 +20,11 @@ export const InputTextStyle = styled.input`
     color: ${(props) => props.theme.colors.primary_light};
     font-size: 18px;
   }
+
+  @media screen and (max-width: 520px) {
+    border: 1px solid ${(props) => props.theme.colors.primary_light};
+    width: 100%;
+    height: 48px;
+    outline: none;
+  }
 `;
