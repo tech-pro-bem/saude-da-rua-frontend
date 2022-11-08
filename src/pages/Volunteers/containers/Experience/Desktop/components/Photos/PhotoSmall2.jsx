@@ -6,7 +6,7 @@ const PhotoSmall2 = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <OutlinedImageAnimation
-      style={{ position: 'absolute', bottom: '-10px', left: '30px' }}
+      style={{ position: 'absolute', bottom: '-10px', left: '-15px' }}
       height={'196px'}
       width={'240px'}
       outlineBorderRadius={'12px'}
