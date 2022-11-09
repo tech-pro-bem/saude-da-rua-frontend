@@ -3,7 +3,7 @@ import { InputText } from '@components';
 import { Question } from 'phosphor-react';
 import { useState } from 'react';
 
-export const ContactInfo = () => {
+export const ContactInfo = ({ register }) => {
   const [name, setName] = useState(false);
   const [birthday, setBirthday] = useState(false);
   const [phone, setPhone] = useState(false);
@@ -20,7 +20,7 @@ export const ContactInfo = () => {
         <BoxInput>
           <label htmlFor="name">
             Nome completo
-            <button type="button" onClick={(e) => setName(!name)}>
+            <button type="button" onClick={() => setName(!name)}>
               {name ? (
                 <Question size={20} weight="fill" />
               ) : (
@@ -39,6 +39,7 @@ export const ContactInfo = () => {
           )}
           <InputText
             type="text"
+            register={register}
             registerValue="name"
             id="name"
             placeholder="Digite seu nome completo"
@@ -48,7 +49,7 @@ export const ContactInfo = () => {
         <BoxInput>
           <label htmlFor="birthday">
             Data de nascimento
-            <button type="button" onClick={(e) => setBirthday(!birthday)}>
+            <button type="button" onClick={() => setBirthday(!birthday)}>
               {birthday ? (
                 <Question size={20} weight="fill" />
               ) : (
@@ -67,6 +68,7 @@ export const ContactInfo = () => {
           )}
           <InputText
             type="text"
+            register={register}
             registerValue="birthday"
             id="birthday"
             placeholder="dd/mm/aa"
@@ -95,6 +97,7 @@ export const ContactInfo = () => {
           )}
           <InputText
             type="text"
+            register={register}
             registerValue="phone"
             id="phone"
             placeholder="(81) 98888-8888"
@@ -123,6 +126,7 @@ export const ContactInfo = () => {
           )}
           <InputText
             type="email"
+            register={register}
             registerValue="email"
             id="email"
             placeholder="Informe o seu e-mail principal"
