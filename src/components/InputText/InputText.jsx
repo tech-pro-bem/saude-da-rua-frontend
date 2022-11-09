@@ -10,6 +10,7 @@ export const InputText = ({
   return (
     <InputTextStyle
       placeholder={placeholder}
+      autoComplete="off"
       id={id}
       type={type}
       {...register(registerValue)}
