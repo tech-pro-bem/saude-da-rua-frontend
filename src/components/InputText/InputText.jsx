@@ -6,6 +6,7 @@ export const InputText = ({
   id,
   placeholder,
   type,
+  mask,
 }) => {
   return (
     <InputTextStyle
@@ -13,6 +14,7 @@ export const InputText = ({
       autoComplete="off"
       id={id}
       type={type}
+      mask={mask}
       {...register(registerValue)}
     />
   );

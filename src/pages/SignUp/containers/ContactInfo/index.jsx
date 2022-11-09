@@ -71,6 +71,7 @@ export const ContactInfo = ({ register }) => {
             register={register}
             registerValue="birthday"
             id="birthday"
+            mask="99/99/9999"
             placeholder="dd/mm/aa"
           />
         </BoxInput>
@@ -100,6 +101,7 @@ export const ContactInfo = ({ register }) => {
             register={register}
             registerValue="phone"
             id="phone"
+            mask="(99) 99999-9999"
             placeholder="(81) 98888-8888"
           />
         </BoxInput>
