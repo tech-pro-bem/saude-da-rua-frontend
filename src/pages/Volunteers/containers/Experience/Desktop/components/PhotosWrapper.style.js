@@ -14,7 +14,7 @@ export const LeftPhotos = styled.div`
   flex-wrap: wrap;
   height: 529px;
   width: 65%;
-  margin-right: 23px; ;
+  margin-right: 31px; ;
 `;
 
 export const RightPhoto = styled.div`

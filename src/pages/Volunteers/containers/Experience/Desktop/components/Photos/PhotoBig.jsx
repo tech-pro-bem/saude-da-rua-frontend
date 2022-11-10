@@ -6,7 +6,8 @@ const PhotoBig = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <OutlinedImageAnimation
-      height={'530px'}
+      height={'529.33px'}
+      width={'397px'}
       outlineBorderRadius={'12px'}
       rightOffset={'-8px'}
       topOffset={'-8px'}
