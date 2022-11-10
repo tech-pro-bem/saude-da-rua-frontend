@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import banner from '@assets/volunter4.png';
+import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
@@ -10,7 +10,7 @@ export const Container = styled.div`
   background-size: cover;
   display: flex;
   align-items: center;
-  padding-left: 134px;
+  padding-left: 9.4%;
 
   @media screen and (max-width: 873px) {
     margin-top: 0px;

@@ -7,7 +7,8 @@ export const HeaderWrapper = styled.header``;
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0 9.4%;
   position: fixed;
   z-index: 999;
   width: 100%;
