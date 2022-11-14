@@ -1,6 +1,6 @@
 import React from 'react';
 import { Highlight } from '@components';
-import { CarouselItemMobile, Wrapper } from './SlideMobile.style';
+import { CarouselItemMobile, H2Title, Wrapper } from './SlideMobile.style';
 import { ContainerStyle } from '../Desktop/SlideDesktop.style';
 import { action2020, action2021, humanDay } from '@assets';
 import { useKeenSlider } from 'keen-slider/react';
@@ -73,16 +73,17 @@ const SlideMobile = () => {
                   <div className="text">
                     <ul>
                       <li>
-                        Nos primeiro semestre de atuação do Saúde da Rua, foram
-                        realizadas 17 ações.
+                        No primeiro semestre de atuação da Saúde da Rua, foram
+                        realizadas <strong>17 ações</strong>
                       </li>
                       <li>
-                        Fizemos 800 atendimentos médicos e 714 testes rápidos e
-                        em São Paulo.
+                        Fizemos <strong>800 atendimentos médicos</strong> e{' '}
+                        <strong>714 testes rápidos</strong> e em São Paulo
                       </li>
                       <li>
-                        Abrimos 3 filiais e foi início de e incríveis parcerias
-                        que nos permitiram expandir nossa atuação.
+                        Abrimos <strong>3 filiais</strong> e foi início de
+                        incríveis parcerias que nos permitiram expandir nossa
+                        atuação
                       </li>
                     </ul>
                   </div>
@@ -90,6 +91,7 @@ const SlideMobile = () => {
               </CarouselItemMobile>
             </div>
             <div className="keen-slider__slide number-slide2">
+              <H2Title>Human Day</H2Title>
               <CarouselItemMobile style={scaleStyle(1)}>
                 <img src={action2021} alt="Action 2021" />
                 <ContainerStyle>
@@ -97,16 +99,17 @@ const SlideMobile = () => {
                     <p className="big" id="content"></p>
                     <ul>
                       <li>
-                        Chegamos a 3 novas comunidades: Esmaga Sapo (SP) e
-                        Anchieta, em Sao Paulo, e parque Viana, em Barueri.
+                        <strong>891 atendimentos em 19 ações </strong> <br />{' '}
+                        sociais na cidade de São Paulo
                       </li>
                       <li>
-                        <strong>891 atendimentos</strong> em
-                        <strong> ações </strong> sociais na cidade de São Paulo.
+                        Chegamos a <strong>3 novas comunidades</strong>: <br />
+                        Esmaga Sapo e Anchieta, em São Paulo, e Parque Viana, em
+                        Barueri
                       </li>
-                      <li> Anchieta (Grajaú/SP)</li>
-                      <li> Parque Viana</li>
-                      <li>Abrimos uma filial em São Carlos - SP.</li>
+                      <li>
+                        Abrimos uma filial em <strong>São Carlos - SP</strong>
+                      </li>
                     </ul>
                   </div>
                 </ContainerStyle>
@@ -118,17 +121,17 @@ const SlideMobile = () => {
                 <ContainerStyle>
                   <div className="text">
                     <ul>
-                      <li>Disponibilizar um dia de serviços gratuitos.</li>
+                      <li>Disponibilizar um dia de serviços gratuitos</li>
                       <li>
                         Nesse projeto atuam{' '}
                         <strong>
                           {' '}
-                          voluntários, coletivos OSCS, poder público e empresas.
+                          voluntários, coletivos OSCS, poder público e empresas
                         </strong>
                       </li>
                       <li>
                         Fazemos parte dessa ação, oferecendo atendimento médico
-                        humanizado.
+                        humanizado
                       </li>
                     </ul>
                   </div>
