@@ -14,7 +14,7 @@ export const InputText = ({
       autoComplete="off"
       id={id}
       type={type}
-      mask={mask}
+      mask={mask ? mask : null}
       {...register(registerValue)}
     />
   );

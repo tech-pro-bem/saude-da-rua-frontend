@@ -47,11 +47,10 @@ export const ContactInfo = ({ register, Controller, control }) => {
               </p>
             </Tooltip>
           )}
-          <InputText
+          <input
             type="text"
-            register={register}
-            registerValue="name"
             id="name"
+            {...register('name')}
             placeholder="Digite seu nome completo"
           />
         </BoxInput>
@@ -143,11 +142,10 @@ export const ContactInfo = ({ register, Controller, control }) => {
               </p>
             </Tooltip>
           )}
-          <InputText
+          <input
             type="email"
-            register={register}
-            registerValue="email"
             id="email"
+            {...register('email')}
             placeholder="Informe o seu e-mail principal"
           />
         </BoxInput>
