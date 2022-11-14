@@ -42,9 +42,8 @@ No arquivo `.env` que você acabou de copiar, coloque os valores das variáveis 
 
 ## :bomb: Próximos Passos
 
-- [ ] Versão Mobile (Responsividade)
+- [x] Versão Mobile (Responsividade)
 - [ ] Formulário de Inscrição de Voluntários
-- [ ] Páginas administrativas
 - [ ] Melhorar a documentação
 
 ## :star2: Contribuições
