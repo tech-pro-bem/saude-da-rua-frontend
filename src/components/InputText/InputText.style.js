@@ -1,18 +1,19 @@
 import styled from 'styled-components';
+import InputMask from 'react-input-mask';
 
-export const InputTextStyle = styled.input`
+export const InputTextStyle = styled(InputMask)`
   display: flex;
   align-items: flex-start;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
+  outline: none;
 
-  width: 270px;
-  height: 45px;
+  width: 100%;
+  height: 3rem;
 
-  border: 1px solid;
-  border-color: ${(props) => props.theme.colors.border_input};
+  border: 1px solid ${(props) => props.theme.colors.primary_light};
   border-radius: 5px;
   box-sizing: border-box;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: ${(props) => props.theme.colors.primary_light};
   background-color: transparent;
 
