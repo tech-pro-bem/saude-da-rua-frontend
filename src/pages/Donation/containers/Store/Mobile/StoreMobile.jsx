@@ -23,9 +23,33 @@ const StoreMobile = () => {
         <strong> Leve o Saúde da Rua com você!</strong>
       </p>
       <Showcase>
-        <ShowcaseItemMobile src={store1} identifier="Camisetas" />
-        <ShowcaseItemMobile src={store2} identifier="Agendas" />
-        <ShowcaseItemMobile src={store3} identifier="Tirantes" />
+        <ShowcaseItemMobile
+          src={store1}
+          identifier="Camisetas"
+          target={'_blank'}
+          href={
+            'https://www.instagram.com/stories/highlights/17881146947177690/'
+          }
+          rel={'noreferrer'}
+        />
+        <ShowcaseItemMobile
+          src={store2}
+          identifier="Agendas"
+          target={'_blank'}
+          href={
+            'https://www.instagram.com/stories/highlights/17881146947177690/'
+          }
+          rel={'noreferrer'}
+        />
+        <ShowcaseItemMobile
+          src={store3}
+          identifier="Tirantes"
+          target={'_blank'}
+          href={
+            'https://www.instagram.com/stories/highlights/17881146947177690/'
+          }
+          rel={'noreferrer'}
+        />
       </Showcase>
       <Button
         target="_blank"

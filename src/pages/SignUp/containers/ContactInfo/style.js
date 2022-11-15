@@ -37,7 +37,7 @@ export const Step = styled.div`
   }
 `;
 
-export const FormStyle = styled.form`
+export const FormStyle = styled.div`
   max-width: 571px;
   margin: 0 auto;
 `;
@@ -59,6 +59,28 @@ export const BoxInput = styled.div`
   @media screen and (min-width: 768px) {
     margin-bottom: 1.52rem;
     min-width: 270px;
+  }
+
+  & > input {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem 1.5rem;
+    outline: none;
+
+    width: 100%;
+    height: 3rem;
+
+    border: 1px solid ${(props) => props.theme.colors.primary_light};
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+    color: ${(props) => props.theme.colors.primary_light};
+    background-color: transparent;
+
+    ::placeholder {
+      color: ${(props) => props.theme.colors.primary_light};
+      font-size: 18px;
+    }
   }
 
   & > label {

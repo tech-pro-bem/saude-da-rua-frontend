@@ -15,9 +15,33 @@ const StoreDesktop = () => {
         disponíveis no nosso Instagram e, para comprar, mande-nos uma mensagem:
       </p>
       <Showcase>
-        <ShowcaseItem src={store1} identifier="Camisetas" />
-        <ShowcaseItem src={store2} identifier="Agendas" />
-        <ShowcaseItem src={store3} identifier="Tirantes" />
+        <ShowcaseItem
+          src={store1}
+          identifier="Camisetas"
+          target={'_blank'}
+          href={
+            'https://www.instagram.com/stories/highlights/17881146947177690/'
+          }
+          rel={'noreferrer'}
+        />
+        <ShowcaseItem
+          src={store2}
+          identifier="Agendas"
+          target={'_blank'}
+          href={
+            'https://www.instagram.com/stories/highlights/17881146947177690/'
+          }
+          rel={'noreferrer'}
+        />
+        <ShowcaseItem
+          src={store3}
+          identifier="Tirantes"
+          target={'_blank'}
+          href={
+            'https://www.instagram.com/stories/highlights/17881146947177690/'
+          }
+          rel={'noreferrer'}
+        />
       </Showcase>
       <Button
         target="_blank"

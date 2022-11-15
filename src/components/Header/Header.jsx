@@ -32,7 +32,7 @@ const Header = () => {
     //   text: 'Medicamentos',
     // },
     {
-      ìd: 3,
+      id: 3,
       to: 'seja-voluntario',
       text: 'Voluntários',
     },
@@ -82,8 +82,11 @@ const Header = () => {
                   />
                 ))}
               </div>
-
-              <DonationButton text="Doe agora" route="/doacao" />
+              <DonationButton
+                text="Doe agora"
+                route="/doacao"
+                onClick={() => setToggle(!toggle)}
+              />
             </NavLinkMenu>
           )}
         </NavMenuMobile>

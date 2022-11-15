@@ -7,7 +7,7 @@ const PhotoBigHowTheExperience = () => {
   return (
     <OutlinedImageAnimation
       height={'379px'}
-      width={'539px'}
+      width={'585px'}
       outlineBorderRadius={'12px'}
       leftOffset={'-8px'}
       topOffset={'5px'}

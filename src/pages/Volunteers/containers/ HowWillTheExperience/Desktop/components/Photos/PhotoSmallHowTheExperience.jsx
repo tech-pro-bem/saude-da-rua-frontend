@@ -7,7 +7,7 @@ const PhotoSmallHowTheExperience = () => {
   return (
     <OutlinedImageAnimation
       height={'278px'}
-      width={'139px'}
+      width={'189px'}
       outlineBorderRadius={'12px'}
       topOffset={'-8px'}
       leftOffset={'-12px'}

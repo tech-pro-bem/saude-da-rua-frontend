@@ -86,42 +86,15 @@ export const Contact = styled.div`
   }
 `;
 
-export const SocialMedia = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 1.375rem;
-`;
-
-export const Logo = styled.img`
-  margin-right: 1.25rem;
-  vertical-align: middle;
-`;
-
-export const SocialMediaMobileContainer = styled.ul`
+export const ContactMobile = styled.ul`
   display: none;
   @media (max-width: 873px) {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 1.625rem 0 4.75rem 0;
+    margin: 1.625rem 0;
 
     gap: 1rem;
-  }
-`;
-
-export const SocialMediaMobile = styled.div`
-  display: flex;
-  gap: 4rem;
-`;
-
-export const LogoMobile = styled.img`
-  display: none;
-  @media (max-width: 873px) {
-    display: flex;
-    gap: 1.375rem;
-    justify-content: center;
-    width: 37px;
-    height: 37px;
   }
 `;
 
@@ -152,4 +125,8 @@ export const CopyrightMobile = styled.div`
     padding: 1.456rem 0 3.125rem 1.63rem;
     gap: 10px;
   }
+`;
+
+export const Link = styled.a`
+  text-decoration: underline;
 `;
