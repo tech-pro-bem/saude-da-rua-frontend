@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import caretDown from '../../../../assets/svg/caret_down.svg';
-import caretUp from '../../../../assets/svg/caret_up.svg';
 import { Listbox } from '@headlessui/react';
+
+import { CaretDown, CaretUp } from '../../../../assets/svg';
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -64,7 +64,7 @@ export const ListboxButton = styled(Listbox.Button)`
 
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url(${caretDown});
+  background-image: url(${CaretDown});
   background-repeat: no-repeat;
   background-position-x: calc(100% - 1.25rem);
   background-position-y: 1.125rem;
@@ -72,7 +72,7 @@ export const ListboxButton = styled(Listbox.Button)`
   transition: all 0.1s;
 
   &[aria-expanded='true'] {
-    background-image: url(${caretUp});
+    background-image: url(${CaretUp});
   }
 `;
 
