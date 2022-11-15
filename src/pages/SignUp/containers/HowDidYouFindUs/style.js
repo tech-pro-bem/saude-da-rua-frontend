@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import caretDown from '../../../../assets/svg/caret_down.svg';
+import caretUp from '../../../../assets/svg/caret_up.svg';
+import { Listbox } from '@headlessui/react';
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -14,22 +16,79 @@ export const Container = styled.div`
     margin-bottom: 1rem;
   }
 
-  select {
-    width: 100%;
-    height: 48px;
-    border-radius: 5px;
-    background: transparent;
-    border: 1px solid ${(props) => props.theme.colors.primary_light};
+  & > input {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.75rem 1.5rem;
     outline: none;
-    padding: 12px 24px;
-    color: ${(props) => props.theme.colors.primary_light};
-    font-size: 1rem;
+    margin-top: 1rem;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url(${caretDown});
-    background-repeat: no-repeat;
-    background-position-x: calc(100% - 20px);
-    background-position-y: 18px;
+    width: 100%;
+    height: 3rem;
+
+    border: 1px solid ${(props) => props.theme.colors.primary_light};
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.125rem;
+    color: ${(props) => props.theme.colors.primary_light};
+    background-color: transparent;
+
+    ::placeholder {
+      color: ${(props) => props.theme.colors.border_input};
+      font-size: 18px;
+    }
   }
+`;
+
+export const CustomSelect = styled.div`
+  width: 100%;
+
+  & > div {
+    position: relative;
+    margin-top: 4px;
+  }
+`;
+
+export const ListboxButton = styled(Listbox.Button)`
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid ${(props) => props.theme.colors.primary_light};
+  color: ${(props) => props.theme.colors.primary_light};
+  font-size: 1rem;
+  height: 3rem;
+  outline: none;
+  padding: 0.75rem 1.125rem;
+  position: relative;
+  width: 100%;
+  text-align: left;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(${caretDown});
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 1.25rem);
+  background-position-y: 1.125rem;
+
+  transition: all 0.1s;
+
+  &[aria-expanded='true'] {
+    background-image: url(${caretUp});
+  }
+`;
+
+export const ListboxOptions = styled(Listbox.Options)`
+  position: absolute;
+  max-height: 336px;
+  width: 100%;
+  overflow: auto;
+  border-radius: 5px;
+  background: ${(props) => props.theme.colors.blackUI};
+  color: ${(props) => props.theme.colors.primary_light};
+  z-index: 10;
+`;
+
+export const ListboxOption = styled(Listbox.Option)`
+  position: relative;
+  cursor: pointer;
+  padding: 1rem 1.125rem;
 `;
