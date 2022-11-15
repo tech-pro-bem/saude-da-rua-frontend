@@ -12,7 +12,11 @@ import {
 import { WhoCanVolunteerMain } from './WhoCanVolunteer.style';
 
 const data = [
-  { id: 1, src: Icone_Estudantes, altText: 'Estudantes da área da Saúde' },
+  {
+    id: 1,
+    src: Icone_Estudantes,
+    altText: 'Estudantes da <br/> área da Saúde',
+  },
   {
     id: 2,
     src: Icone_Medicos,
@@ -41,7 +45,7 @@ const data = [
   {
     id: 7,
     src: Icone_Assistente_social,
-    altText: 'Assistência Social e Psicologia',
+    altText: 'Assistência Social<br/> e Psicologia',
   },
   {
     id: 8,
@@ -55,7 +59,7 @@ const WhoCanVolunteer = () => {
     <WhoCanVolunteerMain>
       <div className="whocanHeader">
         <h1>
-          Quem pode <span> se voluntariar?</span>
+          Quem pode <span> se voluntariar</span>?
         </h1>
         <p>Procuramos profissionais voluntários das seguintes áreas:</p>
       </div>
@@ -64,7 +68,7 @@ const WhoCanVolunteer = () => {
           return (
             <div key={id} className="whocanBodyChildren">
               <img src={src} alt={`Icone de ${altText}`} />
-              <h4>{altText}</h4>
+              <h4 dangerouslySetInnerHTML={{ __html: altText }} />
             </div>
           );
         })}
