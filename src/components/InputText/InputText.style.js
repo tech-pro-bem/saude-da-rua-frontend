@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import InputMask from 'react-input-mask';
 
-export const InputTextStyle = styled(InputMask)`
+export const InputTextStyle = styled.input`
   display: flex;
   align-items: flex-start;
   padding: 0.75rem 1.5rem;

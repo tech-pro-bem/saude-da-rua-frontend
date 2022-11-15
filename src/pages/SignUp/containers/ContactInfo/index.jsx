@@ -1,3 +1,7 @@
+import { Question } from 'phosphor-react';
+import { useState } from 'react';
+import InputMask from 'react-input-mask';
+
 import {
   BoxInput,
   Container,
@@ -7,9 +11,6 @@ import {
   Divider,
   FormStyle,
 } from './style';
-import { InputText } from '@components';
-import { Question } from 'phosphor-react';
-import { useState } from 'react';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -47,11 +48,10 @@ export const ContactInfo = ({ register, Controller, control }) => {
               </p>
             </Tooltip>
           )}
-          <InputText
+          <input
             type="text"
-            register={register}
-            registerValue="name"
             id="name"
+            {...register('name', { required: true })}
             placeholder="Digite seu nome completo"
           />
         </BoxInput>
@@ -80,13 +80,14 @@ export const ContactInfo = ({ register, Controller, control }) => {
             <Controller
               control={control}
               name="birthday"
-              render={({ field: { onChange, onBlur, value, ref } }) => (
+              render={({ field: { onChange, onBlur, value } }) => (
                 <DatePickerStyle
                   onChange={onChange}
                   onBlur={onBlur}
                   selected={value}
                   dateFormat={'dd/MM/yyyy'}
                   placeholderText="dd/mm/aaaa"
+                  required
                 />
               )}
             />
@@ -95,7 +96,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
           <BoxInput>
             <label htmlFor="phone">
               Celular
-              <button type="button" onClick={(e) => setPhone(!phone)}>
+              <button type="button" onClick={() => setPhone(!phone)}>
                 {phone ? (
                   <Question size={20} weight="fill" />
                 ) : (
@@ -112,13 +113,12 @@ export const ContactInfo = ({ register, Controller, control }) => {
                 </p>
               </Tooltip>
             )}
-            <InputText
+            <InputMask
               type="text"
-              register={register}
-              registerValue="phone"
               id="phone"
               mask="(99) 99999-9999"
               placeholder="(81) 98888-8888"
+              {...register('phone', { required: true })}
             />
           </BoxInput>
         </Divider>
@@ -126,7 +126,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
         <BoxInput>
           <label htmlFor="email">
             E-mail
-            <button type="button" onClick={(e) => setEmail(!email)}>
+            <button type="button" onClick={() => setEmail(!email)}>
               {email ? (
                 <Question size={20} weight="fill" />
               ) : (
@@ -143,11 +143,10 @@ export const ContactInfo = ({ register, Controller, control }) => {
               </p>
             </Tooltip>
           )}
-          <InputText
+          <input
             type="email"
-            register={register}
-            registerValue="email"
             id="email"
+            {...register('email', { required: true })}
             placeholder="Informe o seu e-mail principal"
           />
         </BoxInput>
