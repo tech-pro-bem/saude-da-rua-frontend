@@ -10,6 +10,9 @@ import Icone_Farmacia from './E_Farmácia.svg';
 import Icone_Assistente_social from './F_Assistente_Social.svg';
 import Icone_veterinario from './G_Veterinaria.svg';
 import Icone_Odontologia from './nurse.svg';
+import CaretDown from './caret_down.svg';
+import CaretUp from './caret_up.svg';
+import ConfirmIcon from './confirm_icon.svg';
 
 export {
   assistanceIcon,
@@ -24,4 +27,7 @@ export {
   Icone_Farmacia,
   Icone_Assistente_social,
   Icone_veterinario,
+  CaretDown,
+  CaretUp,
+  ConfirmIcon,
 };
