@@ -11,7 +11,8 @@ import {
 import { SubmitStyle } from './style';
 
 const SignUp = () => {
-  const { register, control, handleSubmit } = useForm();
+  const { register, control, handleSubmit, getValues, watch, setValue } =
+    useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -27,9 +28,14 @@ const SignUp = () => {
           control={control}
         />
 
-        <Availability register={register} />
+        <Availability register={register} getValues={getValues} />
 
-        <HowDidYouFindUs register={register} />
+        <HowDidYouFindUs
+          register={register}
+          watch={watch}
+          control={control}
+          setValue={setValue}
+        />
 
         <Agree register={register} />
 

@@ -10,7 +10,12 @@ const daysOfWeek = [
   { id: 7, name: 'Domingo', value: 'sunday' },
 ];
 
-export const Availability = ({ register }) => {
+export const Availability = ({ register, getValues }) => {
+  const atLeastOne = () =>
+    getValues('available').length
+      ? true
+      : 'Por favor, selecione ao menos uma opção.';
+
   return (
     <Container>
       <Step>
@@ -31,7 +36,7 @@ export const Availability = ({ register }) => {
               id={day.value}
               name={day.value}
               value={day.value}
-              {...register('available')}
+              {...register('available', { validate: atLeastOne })}
             />
             <label htmlFor={day.value}>{day.name}</label>
           </div>
