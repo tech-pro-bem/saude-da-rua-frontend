@@ -14,8 +14,15 @@ import { SubmitStyle } from './style';
 
 const SignUp = () => {
   const navigate = useNavigate();
-  const { register, control, handleSubmit, getValues, watch, setValue } =
-    useForm();
+  const {
+    register,
+    control,
+    handleSubmit,
+    getValues,
+    watch,
+    setValue,
+    formState: { errors, isDirty },
+  } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -30,9 +37,14 @@ const SignUp = () => {
           register={register}
           Controller={Controller}
           control={control}
+          errors={errors}
         />
 
-        <Availability register={register} getValues={getValues} />
+        <Availability
+          register={register}
+          getValues={getValues}
+          errors={errors}
+        />
 
         <HowDidYouFindUs
           register={register}
@@ -43,7 +55,11 @@ const SignUp = () => {
 
         <Agree register={register} />
 
-        <SubmitStyle type="submit" value="Finalizar meu cadastro" />
+        <SubmitStyle
+          disabled={!isDirty}
+          type="submit"
+          value="Finalizar meu cadastro"
+        />
       </form>
     </Structure>
   );

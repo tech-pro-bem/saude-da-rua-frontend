@@ -2,6 +2,8 @@ import { Question } from 'phosphor-react';
 import { useState } from 'react';
 import InputMask from 'react-input-mask';
 
+import { ErrorMessage } from '@components';
+
 import {
   BoxInput,
   Container,
@@ -14,7 +16,7 @@ import {
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-export const ContactInfo = ({ register, Controller, control }) => {
+export const ContactInfo = ({ register, Controller, control, errors }) => {
   const [name, setName] = useState(false);
   const [birthday, setBirthday] = useState(false);
   const [phone, setPhone] = useState(false);
@@ -54,6 +56,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
             {...register('name', { required: true })}
             placeholder="Digite seu nome completo"
           />
+          {errors.name && <ErrorMessage message="Campo obrigatório" />}
         </BoxInput>
 
         <Divider>
@@ -91,6 +94,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
                 />
               )}
             />
+            {errors.birthday && <ErrorMessage message="Campo obrigatório" />}
           </BoxInput>
 
           <BoxInput>
@@ -120,6 +124,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
               placeholder="(81) 98888-8888"
               {...register('phone', { required: true })}
             />
+            {errors.phone && <ErrorMessage message="Campo obrigatório" />}
           </BoxInput>
         </Divider>
 
@@ -149,6 +154,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
             {...register('email', { required: true })}
             placeholder="Informe o seu e-mail principal"
           />
+          {errors.email && <ErrorMessage message="Campo obrigatório" />}
         </BoxInput>
       </FormStyle>
     </Container>

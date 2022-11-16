@@ -12,6 +12,7 @@ import Structure from './Structure/Structure';
 import OutlinedImageAnimation from './OutlinedImageAnimation/OutlinedImageAnimation';
 import OutlinedImageLink from './OutlinedImageLink/OutlinedImageLink';
 import InputText from './InputText/InputText';
+import ErrorMessage from './ErrorMessage/ErrorMessage';
 
 export {
   Layout,
@@ -28,4 +29,5 @@ export {
   Footer,
   OutlinedImageLink,
   InputText,
+  ErrorMessage,
 };

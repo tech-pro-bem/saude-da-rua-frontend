@@ -17,6 +17,11 @@ export const SubmitStyle = styled.input`
   align-items: center;
   justify-content: center;
 
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   @media screen and (min-width: 768px) {
     margin-bottom: 94px;
     max-width: 275px;
