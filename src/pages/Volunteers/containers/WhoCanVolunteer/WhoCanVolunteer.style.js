@@ -8,6 +8,7 @@ export const WhoCanVolunteerMain = styled.main`
 
     h1 {
       margin: 1.5rem 0;
+      font-size: 2.5rem;
       span {
         color: #0095f6;
       }
@@ -15,9 +16,9 @@ export const WhoCanVolunteerMain = styled.main`
     @media (max-width: 640px) {
       text-align: initial;
       h1 {
-        span {
-          display: flex;
-        }
+        font-size: 1.625rem;
+        display: block;
+        width: 100%;
       }
     }
   }

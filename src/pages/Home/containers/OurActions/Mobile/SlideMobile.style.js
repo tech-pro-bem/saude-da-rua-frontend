@@ -66,3 +66,20 @@ export const CarouselItemMobile = styled.div`
     grid-template-columns: 1fr 1fr;
   }
 `;
+
+export const H2Title = styled.h2`
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'onum' on;
+  margin-bottom: 1.5rem;
+
+  /* Cores primárias/Light */
+
+  color: #b2dffc;
+`;
