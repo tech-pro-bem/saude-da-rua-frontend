@@ -33,7 +33,11 @@ const SignUp = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    data.howDidKnowOfSDR = types[data.howDidKnowOfSDR];
+    if (data.howDidKnowOfSDR === 'Outros') {
+      data.howDidKnowOfSDR = data.other;
+    } else {
+      data.howDidKnowOfSDR = types[data.howDidKnowOfSDR];
+    }
     data.birthdate = new Date(data.birthdate).toLocaleDateString('pt-BR');
     console.log(data);
     navigate('/inscreva-se/sucesso');
