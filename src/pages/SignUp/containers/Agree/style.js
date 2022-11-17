@@ -20,6 +20,15 @@ export const Check = styled.div`
   label {
     color: ${(props) => props.theme.colors.primary_light};
     flex: 1;
+
+    a {
+      color: ${(props) => props.theme.colors.light};
+      font-weight: 500;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
   }
 
   input {

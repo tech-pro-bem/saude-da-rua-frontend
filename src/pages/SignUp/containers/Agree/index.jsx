@@ -1,5 +1,5 @@
 import { Container, Check } from './style';
-import { Highlight, ErrorMessage } from '@components';
+import { ErrorMessage } from '@components';
 
 export const Agree = ({ register, errors }) => {
   return (
@@ -13,11 +13,7 @@ export const Agree = ({ register, errors }) => {
         <label htmlFor="agree">
           Ao encaminhar as suas informações, você declara que leu e está de
           acordo com o tratamento dos seus dados pelo Saúde da Rua conforme
-          estabelecido na nossa{' '}
-          <a href="/">
-            <Highlight>Política de Privacidade</Highlight>
-          </a>
-          .
+          estabelecido na nossa <a href="/">Política de Privacidade</a>.
         </label>
       </Check>
       {errors.agree && (
