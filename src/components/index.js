@@ -13,6 +13,7 @@ import OutlinedImageAnimation from './OutlinedImageAnimation/OutlinedImageAnimat
 import OutlinedImageLink from './OutlinedImageLink/OutlinedImageLink';
 import InputText from './InputText/InputText';
 import ErrorMessage from './ErrorMessage/ErrorMessage';
+import Select from './Select';
 
 export {
   Layout,
@@ -30,4 +31,5 @@ export {
   OutlinedImageLink,
   InputText,
   ErrorMessage,
+  Select,
 };
