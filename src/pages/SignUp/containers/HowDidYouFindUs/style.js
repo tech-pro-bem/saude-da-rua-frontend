@@ -73,3 +73,30 @@ export const ListboxOption = styled(Listbox.Option)`
   cursor: pointer;
   padding: 1rem 1.125rem;
 `;
+
+export const Input = styled.input`
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  margin-top: 1rem;
+
+  width: 100%;
+  height: 3rem;
+
+  border: 1px solid
+    ${(props) =>
+      props.iserror === 'erro'
+        ? props.theme.colors.error
+        : props.theme.colors.primary_light};
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.125rem;
+  color: ${(props) => props.theme.colors.primary_light};
+  background-color: transparent;
+
+  ::placeholder {
+    color: ${(props) => props.theme.colors.border_input};
+    font-size: 18px;
+  }
+`;

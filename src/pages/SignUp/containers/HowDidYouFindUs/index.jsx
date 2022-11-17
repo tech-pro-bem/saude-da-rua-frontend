@@ -7,6 +7,7 @@ import { ErrorMessage } from '@components';
 import {
   Container,
   CustomSelect,
+  Input,
   ListboxButton,
   ListboxOption,
   ListboxOptions,
@@ -71,7 +72,7 @@ export const HowDidYouFindUs = ({
       {howDidYouFindUs === 'Outros' ? (
         <>
           <label htmlFor="other" />
-          <input
+          <Input
             type="text"
             name="other"
             id="other"
