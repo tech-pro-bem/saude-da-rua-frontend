@@ -9,15 +9,15 @@ import {
   Availability,
   Agree,
   HowDidYouFindUs,
+  Experience,
 } from './containers';
 import { SubmitStyle } from './style';
 
-const types = {
-  Site: 'SITE',
-  Instagram: 'INSTAGRAM',
-  'Posts de amigos': 'POSTS',
-  'Instituições de ensino': 'EDUCATIONAL_INSTITUTIONS',
-  Outros: 'OTHER',
+const typesParticipation = {
+  'Não, nunca participei': 'NOT_PARTICIPATED',
+  'Sim, em uma ação': 'ONE_PARTICIPATION',
+  'Sim, de 2 a 5 ações': 'BETWEEN_TWO_AND_FIVE_PARTICIPATION',
+  'Sim, em mais de 5 ações': 'MORE_THAN_FIVE_PARTICIPATION',
 };
 
 const SignUp = () => {
@@ -35,9 +35,9 @@ const SignUp = () => {
   const onSubmit = (data) => {
     if (data.howDidKnowOfSDR === 'Outros') {
       data.howDidKnowOfSDR = data.other;
-    } else {
-      data.howDidKnowOfSDR = types[data.howDidKnowOfSDR];
     }
+
+    data.howMuchParticipate = typesParticipation[data.howMuchParticipate];
     data.birthdate = new Date(data.birthdate).toLocaleDateString('pt-BR');
     console.log(data);
     navigate('/inscreva-se/sucesso');
@@ -51,6 +51,14 @@ const SignUp = () => {
           register={register}
           Controller={Controller}
           control={control}
+          errors={errors}
+        />
+
+        <Experience
+          register={register}
+          Controller={Controller}
+          control={control}
+          watch={watch}
           errors={errors}
         />
 
