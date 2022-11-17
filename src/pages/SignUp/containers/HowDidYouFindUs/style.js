@@ -15,29 +15,6 @@ export const Container = styled.div`
   p {
     margin-bottom: 1rem;
   }
-
-  & > input {
-    display: flex;
-    align-items: flex-start;
-    padding: 0.75rem 1.5rem;
-    outline: none;
-    margin-top: 1rem;
-
-    width: 100%;
-    height: 3rem;
-
-    border: 1px solid ${(props) => props.theme.colors.primary_light};
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1.125rem;
-    color: ${(props) => props.theme.colors.primary_light};
-    background-color: transparent;
-
-    ::placeholder {
-      color: ${(props) => props.theme.colors.border_input};
-      font-size: 18px;
-    }
-  }
 `;
 
 export const CustomSelect = styled.div`
@@ -52,8 +29,12 @@ export const CustomSelect = styled.div`
 export const ListboxButton = styled(Listbox.Button)`
   background: transparent;
   border-radius: 5px;
-  border: 1px solid ${(props) => props.theme.colors.primary_light};
   color: ${(props) => props.theme.colors.primary_light};
+  border: 1px solid
+    ${(props) =>
+      props.iserror === 'erro'
+        ? props.theme.colors.error
+        : props.theme.colors.primary_light};
   font-size: 1rem;
   height: 3rem;
   outline: none;

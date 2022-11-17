@@ -1,19 +1,28 @@
-import { Container } from './style';
-import { Highlight } from '@components';
+import { Container, Check } from './style';
+import { Highlight, ErrorMessage } from '@components';
 
-export const Agree = ({ register }) => {
+export const Agree = ({ register, errors }) => {
   return (
     <Container>
-      <input
-        id="agree"
-        type="checkbox"
-        {...register('agree', { required: true })}
-      />
-      <label htmlFor="agree">
-        Ao encaminhar as suas informações, você declara que leu e está de acordo
-        com o tratamento dos seus dados pelo Saúde da Rua conforme estabelecido
-        na nossa <Highlight>Política de Privacidade</Highlight>.
-      </label>
+      <Check>
+        <input
+          id="agree"
+          type="checkbox"
+          {...register('agree', { required: true })}
+        />
+        <label htmlFor="agree">
+          Ao encaminhar as suas informações, você declara que leu e está de
+          acordo com o tratamento dos seus dados pelo Saúde da Rua conforme
+          estabelecido na nossa{' '}
+          <a href="/">
+            <Highlight>Política de Privacidade</Highlight>
+          </a>
+          .
+        </label>
+      </Check>
+      {errors.agree && (
+        <ErrorMessage message="Esse campo deve ser preenchido." />
+      )}
     </Container>
   );
 };

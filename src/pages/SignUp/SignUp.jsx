@@ -12,6 +12,14 @@ import {
 } from './containers';
 import { SubmitStyle } from './style';
 
+const types = {
+  Site: 'SITE',
+  Instagram: 'INSTAGRAM',
+  'Posts de amigos': 'POSTS',
+  'Instituições de ensino': 'EDUCATIONAL_INSTITUTIONS',
+  Outros: 'OTHER',
+};
+
 const SignUp = () => {
   const navigate = useNavigate();
   const {
@@ -25,6 +33,8 @@ const SignUp = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    data.howDidKnowOfSDR = types[data.howDidKnowOfSDR];
+    data.birthdate = new Date(data.birthdate).toLocaleDateString('pt-BR');
     console.log(data);
     navigate('/inscreva-se/sucesso');
   };
@@ -51,9 +61,10 @@ const SignUp = () => {
           watch={watch}
           control={control}
           setValue={setValue}
+          errors={errors}
         />
 
-        <Agree register={register} />
+        <Agree register={register} errors={errors} />
 
         <SubmitStyle
           disabled={!isDirty}

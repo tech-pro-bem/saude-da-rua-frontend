@@ -2,6 +2,8 @@ import { Fragment } from 'react';
 import { Controller } from 'react-hook-form';
 import { Listbox, Transition } from '@headlessui/react';
 
+import { ErrorMessage } from '@components';
+
 import {
   Container,
   CustomSelect,
@@ -18,8 +20,14 @@ const options = [
   'Outros',
 ];
 
-export const HowDidYouFindUs = ({ register, watch, control, setValue }) => {
-  const howDidYouFindUs = watch('howDidYouFindUs');
+export const HowDidYouFindUs = ({
+  register,
+  watch,
+  control,
+  setValue,
+  errors,
+}) => {
+  const howDidYouFindUs = watch('howDidKnowOfSDR');
 
   return (
     <Container>
@@ -29,12 +37,12 @@ export const HowDidYouFindUs = ({ register, watch, control, setValue }) => {
         rules={{ required: true }}
         defaultValue=""
         control={control}
-        name="howDidYouFindUs"
+        name="howDidKnowOfSDR"
         render={({ field }) => (
           <CustomSelect>
             <Listbox value={field.value} onChange={field.onChange}>
               <div>
-                <ListboxButton>
+                <ListboxButton iserror={errors.howDidKnowOfSDR ? 'erro' : ''}>
                   {field.value ? field.value : 'Selecione uma opção'}
                 </ListboxButton>
                 <Transition
@@ -56,6 +64,9 @@ export const HowDidYouFindUs = ({ register, watch, control, setValue }) => {
           </CustomSelect>
         )}
       />
+      {errors.howDidKnowOfSDR && (
+        <ErrorMessage message="Esse campo deve ser preenchido." />
+      )}
 
       {howDidYouFindUs === 'Outros' ? (
         <>
@@ -67,6 +78,9 @@ export const HowDidYouFindUs = ({ register, watch, control, setValue }) => {
             placeholder="Informe como ficou sabendo do Saúde da Rua"
             {...register('other', { required: true })}
           />
+          {errors.other && (
+            <ErrorMessage message="Esse campo deve ser preenchido." />
+          )}
         </>
       ) : (
         setValue('other', '')

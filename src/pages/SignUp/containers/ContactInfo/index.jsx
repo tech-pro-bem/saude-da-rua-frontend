@@ -12,6 +12,8 @@ import {
   DatePickerStyle,
   Divider,
   FormStyle,
+  Input,
+  InputWithMask,
 } from './style';
 
 import 'react-datepicker/dist/react-datepicker.css';
@@ -31,7 +33,7 @@ export const ContactInfo = ({ register, Controller, control, errors }) => {
 
       <FormStyle>
         <BoxInput>
-          <label htmlFor="name">
+          <label htmlFor="fullName">
             Nome completo
             <button type="button" onClick={() => setName(!name)}>
               {name ? (
@@ -50,18 +52,19 @@ export const ContactInfo = ({ register, Controller, control, errors }) => {
               </p>
             </Tooltip>
           )}
-          <input
+          <Input
             type="text"
-            id="name"
-            {...register('name', { required: true })}
+            id="fullName"
+            {...register('fullName', { required: true })}
             placeholder="Digite seu nome completo"
+            iserror={errors.fullName ? 'erro' : ''}
           />
-          {errors.name && <ErrorMessage message="Campo obrigatório" />}
+          {errors.fullName && <ErrorMessage message="Esse campo deve ser preenchido." />}
         </BoxInput>
 
         <Divider>
           <BoxInput>
-            <label htmlFor="birthday">
+            <label htmlFor="birthdate">
               Data de nascimento
               <button type="button" onClick={() => setBirthday(!birthday)}>
                 {birthday ? (
@@ -82,7 +85,7 @@ export const ContactInfo = ({ register, Controller, control, errors }) => {
             )}
             <Controller
               control={control}
-              name="birthday"
+              name="birthdate"
               render={({ field: { onChange, onBlur, value } }) => (
                 <DatePickerStyle
                   onChange={onChange}
@@ -90,15 +93,17 @@ export const ContactInfo = ({ register, Controller, control, errors }) => {
                   selected={value}
                   dateFormat={'dd/MM/yyyy'}
                   placeholderText="dd/mm/aaaa"
+                  iserror={errors.birthdate ? 'erro' : ''}
                   required
                 />
               )}
+              rules={{ required: true }}
             />
-            {errors.birthday && <ErrorMessage message="Campo obrigatório" />}
+            {errors.birthdate && <ErrorMessage message="Esse campo deve ser preenchido." />}
           </BoxInput>
 
           <BoxInput>
-            <label htmlFor="phone">
+            <label htmlFor="cellphoneNumberWithDDD">
               Celular
               <button type="button" onClick={() => setPhone(!phone)}>
                 {phone ? (
@@ -117,14 +122,15 @@ export const ContactInfo = ({ register, Controller, control, errors }) => {
                 </p>
               </Tooltip>
             )}
-            <InputMask
+            <InputWithMask
               type="text"
-              id="phone"
+              id="cellphoneNumberWithDDD"
               mask="(99) 99999-9999"
               placeholder="(81) 98888-8888"
-              {...register('phone', { required: true })}
+              {...register('cellphoneNumberWithDDD', { required: true })}
+              iserror={errors.cellphoneNumberWithDDD ? 'erro' : ''}
             />
-            {errors.phone && <ErrorMessage message="Campo obrigatório" />}
+            {errors.cellphoneNumberWithDDD && <ErrorMessage message="Esse campo deve ser preenchido." />}
           </BoxInput>
         </Divider>
 
@@ -148,13 +154,14 @@ export const ContactInfo = ({ register, Controller, control, errors }) => {
               </p>
             </Tooltip>
           )}
-          <input
+          <Input
             type="email"
             id="email"
             {...register('email', { required: true })}
             placeholder="Informe o seu e-mail principal"
+            iserror={errors.email ? 'erro' : ''}
           />
-          {errors.email && <ErrorMessage message="Campo obrigatório" />}
+          {errors.email && <ErrorMessage message="Esse campo deve ser preenchido." />}
         </BoxInput>
       </FormStyle>
     </Container>
