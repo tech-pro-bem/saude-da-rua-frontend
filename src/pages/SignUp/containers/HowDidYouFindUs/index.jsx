@@ -1,17 +1,8 @@
-import { Fragment } from 'react';
 import { Controller } from 'react-hook-form';
-import { Listbox, Transition } from '@headlessui/react';
 
-import { ErrorMessage } from '@components';
+import { ErrorMessage, Select } from '@components';
 
-import {
-  Container,
-  CustomSelect,
-  Input,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-} from './style';
+import { Container, Input } from './style';
 
 const options = [
   'Site',
@@ -40,29 +31,13 @@ export const HowDidYouFindUs = ({
         control={control}
         name="howDidKnowOfSDR"
         render={({ field }) => (
-          <CustomSelect>
-            <Listbox value={field.value} onChange={field.onChange}>
-              <div>
-                <ListboxButton iserror={errors.howDidKnowOfSDR ? 'erro' : ''}>
-                  {field.value ? field.value : 'Selecione uma opção'}
-                </ListboxButton>
-                <Transition
-                  as={Fragment}
-                  leave="transition ease-in duration-100"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
-                >
-                  <ListboxOptions>
-                    {options.map((option, idx) => (
-                      <ListboxOption key={idx} value={option}>
-                        {option}
-                      </ListboxOption>
-                    ))}
-                  </ListboxOptions>
-                </Transition>
-              </div>
-            </Listbox>
-          </CustomSelect>
+          <Select
+            name="howDidKnowOfSDR"
+            value={field.value}
+            onChange={field.onChange}
+            errors={errors}
+            options={options}
+          />
         )}
       />
       {errors.howDidKnowOfSDR && (
