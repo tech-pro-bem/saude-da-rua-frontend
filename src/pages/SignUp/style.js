@@ -18,11 +18,11 @@ export const SubmitStyle = styled.input`
   justify-content: center;
 
   &[disabled] {
-    opacity: 0.5;
     cursor: not-allowed;
+    background: ${(props) => props.theme.colors.border_input};
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 415px) {
     margin-bottom: 94px;
     max-width: 275px;
   }
