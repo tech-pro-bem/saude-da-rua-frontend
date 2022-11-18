@@ -12,10 +12,12 @@ import imag1 from './volunter1.png';
 import imag2 from './volunter2.png';
 import imag3 from './volunter3.png';
 import WhatsApp from './WhatsApp.svg';
-import { MedicineBg } from './MedicinePage';
+import { MedicineBg, Medicine012, Medicine013 } from './MedicinePage';
 
 export {
   MedicineBg,
+  Medicine012,
+  Medicine013,
   imag1,
   imag2,
   imag3,
