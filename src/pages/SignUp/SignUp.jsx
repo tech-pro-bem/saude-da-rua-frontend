@@ -1,5 +1,7 @@
-import { Structure } from '@components';
 import { useForm, Controller } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
+
+import { Structure } from '@components';
 
 import {
   ContactInfo,
@@ -11,11 +13,13 @@ import {
 import { SubmitStyle } from './style';
 
 const SignUp = () => {
+  const navigate = useNavigate();
   const { register, control, handleSubmit, getValues, watch, setValue } =
     useForm();
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/inscreva-se/sucesso');
   };
 
   return (
