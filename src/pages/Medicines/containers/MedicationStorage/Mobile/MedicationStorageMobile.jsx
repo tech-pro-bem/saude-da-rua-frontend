@@ -43,7 +43,7 @@ export function MedicationStorageMobile() {
         </div>
       </Container>
       <LinkButton
-        style={{ margin: '40px 0px 65px 0px' }}
+        style={{ margin: '40px 0px 65px 0px', textAlign: 'center' }}
         text="Quero doar medicamentos"
         route="/formulario-doacao"
       />
