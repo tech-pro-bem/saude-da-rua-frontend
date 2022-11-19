@@ -6,6 +6,7 @@ const PRIMARY_LIGHT = '#E9E9E9';
 const SKELETON_BASE = '#282828';
 const SKELETON_HIGHLIGHT = '#262626';
 const BORDER_INPUT = '#8E8E8E';
+const TOOLTIP_TITLE = '#1C1C1C';
 
 // TODO:
 // - colocar TODAS as cores aqui p/ exportar
@@ -19,6 +20,7 @@ const colors = {
   skeleton_base: SKELETON_BASE,
   skeleton_highlight: SKELETON_HIGHLIGHT,
   border_input: BORDER_INPUT,
+  tooltip_title: TOOLTIP_TITLE,
 };
 
 const theme = {
