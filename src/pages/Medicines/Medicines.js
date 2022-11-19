@@ -5,6 +5,8 @@ import {
   DonateMedication,
   MedicationPathMobile,
   MedicationPathDesktop,
+  MedicationStorageMobile,
+  MedicationStorageDesktop,
 } from './containers';
 
 function Medicines() {
@@ -18,6 +20,7 @@ function Medicines() {
       <DonateMedication />
       <Structure>
         {mobile ? <MedicationPathMobile /> : <MedicationPathDesktop />}
+        {mobile ? <MedicationStorageMobile /> : <MedicationStorageDesktop />}
       </Structure>
     </div>
   );
