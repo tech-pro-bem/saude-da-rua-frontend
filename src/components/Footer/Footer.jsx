@@ -24,7 +24,7 @@ const Footer = () => (
         <Title>Saúde da Rua</Title>
         <Text>
           Criado por estudantes de medicina, o Saúde da Rua leva{' '}
-          <strong>atendimento médico humanizado e recorrente</strong>
+          <strong>atendimento médico humanizado e recorrente </strong>
           às populações mais vulneráveis da sociedade.
         </Text>
       </HeadersFooter>
