@@ -18,6 +18,7 @@ export function MedicationPathDesktop() {
         myRef={ref}
         inView={inView}
         animation={inView}
+        width={'561px'}
       />
       <Data>
         <h2>
