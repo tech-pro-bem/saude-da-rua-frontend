@@ -3,34 +3,53 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-`;
-export const Data = styled.div`
-  width: 60%;
-  margin-left: 32px;
+  justify-content: space-between;
+  margin-top: 80px;
+
   h2 {
     font-weight: 600;
     font-size: 40px;
     line-height: 60px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+  }
+  > :nth-child(1) {
+    margin-right: 25px;
+    width: 50%;
   }
 `;
-
 export const List = styled.ol`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 231px;
+  margin-top: 24px;
 `;
 
-export const Path = styled.div`
+export const Option = styled.div`
   display: flex;
+  align-items: flex-start;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 33px;
-  color: #e9e9e9;
+  font-size: 18px;
+  line-height: 27px;
+  color: ${(props) => props.theme.colors.primary_light};
+  margin-bottom: 24px;
+
   > :nth-child(1) {
-    margin-right: 5px;
+    margin-right: 25px;
+  }
+
+  img {
+    margin-top: 5px;
+  }
+  p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
   }
 `;

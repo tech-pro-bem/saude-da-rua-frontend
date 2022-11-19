@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  margin-top: 65px;
   h2 {
     font-weight: 700;
     font-size: 26px;

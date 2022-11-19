@@ -1,50 +1,66 @@
-import { Highlight, OutlinedImageAnimation } from '@components';
-import { Medicine013 } from '@assets';
+import { Highlight, OutlinedImageAnimation, LinkButton } from '@components';
+import { CheckBox, Medicine4 } from '@assets/MedicinePage';
 import { useInView } from 'react-intersection-observer';
-import { Container, Data, List, Path } from './MedicationStorageDesktop.style';
+import { Container, List, Option } from './MedicationStorageDesktop.style';
 
 export function MedicationStorageDesktop() {
   const { ref, inView } = useInView({ triggerOnce: true });
   return (
-    <Container>
-      <OutlinedImageAnimation
-        outlineBorderRadius={'12px'}
-        rightOffset={'none'}
-        topOffset={'none'}
-        leftOffset={'-8px'}
-        bottomOffset={'-8px'}
-        src={Medicine013}
-        imgBorderRadius={'12px'}
-        myRef={ref}
-        inView={inView}
-        animation={inView}
+    <>
+      <Container>
+        <div>
+          <h2>
+            <Highlight>Armazene corretamente</Highlight> seus medicamentos
+          </h2>
+          <p>
+            Você sabe como guardar remédios de forma correta? Leia as dicas
+            abaixo:
+          </p>
+          <List>
+            <Option>
+              <img alt="checkbox-svg" src={CheckBox}></img>
+              <p>Armazene em locais frescos e secos.</p>
+            </Option>
+            <Option>
+              <img alt="checkbox-svg" src={CheckBox}></img>
+              <p> Mantenha longe do alcance de crianças e pets. </p>
+            </Option>
+            <Option>
+              <img alt="checkbox-svg" src={CheckBox}></img>
+              <p> Não guarde junto de produtos de limpeza ou alimentos.</p>
+            </Option>
+            <Option>
+              <img alt="checkbox-svg" src={CheckBox}></img>
+              <p> Preserve as embalagens originais para checar a validade.</p>
+            </Option>
+            <Option>
+              <img alt="checkbox-svg" src={CheckBox}></img>
+              <p>
+                {' '}
+                Siga a orientação médica para remédios termolábeis (sensíveis à
+                temperatura).
+              </p>
+            </Option>
+          </List>
+        </div>
+        <OutlinedImageAnimation
+          outlineBorderRadius={'12px'}
+          rightOffset={'-8px'}
+          topOffset={'none'}
+          leftOffset={'none'}
+          bottomOffset={'-8px'}
+          src={Medicine4}
+          imgBorderRadius={'12px'}
+          myRef={ref}
+          inView={inView}
+          animation={inView}
+        />
+      </Container>
+      <LinkButton
+        style={{ margin: '64px 0px 80px 0px' }}
+        text="Quero doar medicamentos"
+        route="/formulario-doacao"
       />
-      <Data>
-        <h2>
-          O caminho da <Highlight>sua doação</Highlight>
-        </h2>
-        <List>
-          <Path>
-            <div>1.</div>
-            <div>Fazemos a triagem dos medicamentos doados.</div>
-          </Path>
-          <Path>
-            <div>2.</div>
-            <div>
-              {' '}
-              Levamos os medicamentos para ações nas ruas e em comunidades.{' '}
-            </div>
-          </Path>
-          <Path>
-            <div>3.</div>
-            <div>
-              {' '}
-              Distribuímos os medicamentos conforme a necessidade de cada
-              paciente.
-            </div>
-          </Path>
-        </List>
-      </Data>
-    </Container>
+    </>
   );
 }
