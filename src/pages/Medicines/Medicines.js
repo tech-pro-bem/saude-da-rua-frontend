@@ -21,7 +21,7 @@ function Medicines() {
         title="Doe medicamentos"
         description="Se você é profissional ou estudante da área da saúde, participe das ações do Saúde da Rua"
       />
-      {/* <DonateMedication /> */}
+      <DonateMedication />
       <Structure>
         {mobile ? <InappropriateMedicationMobile /> : null}
         {mobile ? <MedicationPathMobile /> : <MedicationPathDesktop />}
