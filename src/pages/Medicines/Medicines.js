@@ -7,6 +7,10 @@ import {
   MedicationPathDesktop,
   MedicationStorageMobile,
   MedicationStorageDesktop,
+  InappropriateMedicationDesktop,
+  InappropriateMedicationMobile,
+  MedicationDisposalDesktop,
+  MedicationDisposalMobile,
 } from './containers';
 
 function Medicines() {
@@ -17,10 +21,18 @@ function Medicines() {
         title="Doe medicamentos"
         description="Se você é profissional ou estudante da área da saúde, participe das ações do Saúde da Rua"
       />
-      <DonateMedication />
+      {/* <DonateMedication /> */}
       <Structure>
+        {mobile ? <InappropriateMedicationMobile /> : null}
         {mobile ? <MedicationPathMobile /> : <MedicationPathDesktop />}
         {mobile ? <MedicationStorageMobile /> : <MedicationStorageDesktop />}
+        {mobile ? null : (
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <InappropriateMedicationDesktop />
+            <MedicationDisposalDesktop />
+          </div>
+        )}
+        {mobile ? <MedicationDisposalMobile /> : null}
       </Structure>
     </div>
   );
