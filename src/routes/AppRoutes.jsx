@@ -3,9 +3,9 @@ import {
   Donation,
   Home,
   Volunteers,
-  Medicines,
   SignUp,
   SignUpSuccess,
+  Medicines,
 } from '@pages';
 import { Route, Routes } from 'react-router-dom';
 import { Scroll } from '../components/Scroll';
