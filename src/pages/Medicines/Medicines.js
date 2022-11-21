@@ -7,6 +7,10 @@ import {
   MedicationPathDesktop,
   MedicationStorageMobile,
   MedicationStorageDesktop,
+  InappropriateMedicationDesktop,
+  InappropriateMedicationMobile,
+  MedicationDisposalDesktop,
+  MedicationDisposalMobile,
 } from './containers';
 
 // BreackPoint de Mobile podemos usar @media (max-width: 875px)
@@ -20,8 +24,16 @@ function Medicines() {
       />
       <DonateMedication />
       <Structure>
+        {mobile ? <InappropriateMedicationMobile /> : null}
         {mobile ? <MedicationPathMobile /> : <MedicationPathDesktop />}
         {mobile ? <MedicationStorageMobile /> : <MedicationStorageDesktop />}
+        {mobile ? null : (
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <InappropriateMedicationDesktop />
+            <MedicationDisposalDesktop />
+          </div>
+        )}
+        {mobile ? <MedicationDisposalMobile /> : null}
       </Structure>
     </div>
   );
