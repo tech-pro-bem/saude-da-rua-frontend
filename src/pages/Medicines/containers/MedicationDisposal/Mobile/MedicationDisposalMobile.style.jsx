@@ -23,6 +23,18 @@ export const List = styled.ol`
 export const Link = styled.a`
   color: #b2dffc;
   text-decoration: underline;
+
+  :first-of-type {
+    margin-left: 4px;
+  }
+
+  :nth-of-type(2) {
+    margin: 0 4px;
+  }
+
+  :last-of-type {
+    margin: 0 4px;
+  }
 `;
 
 export const Option = styled.div`

@@ -36,7 +36,6 @@ export function MedicationDisposalMobile() {
                 href="http://antigo.anvisa.gov.br/"
                 target="_blank"
                 rel="noreferrer"
-                style={{ marginLeft: '4px' }}
               >
                 Anvisa
               </Link>
@@ -45,7 +44,6 @@ export function MedicationDisposalMobile() {
                 href="https://www.roche.com.br/pt/por-dentro-da-roche/descartes-de-medicamentos.html?cid=googlesearch=institucional-alwayson-roche_institucional_descartemedicamentos_search&gclid=EAIaIQobChMI3afgv7je-gIVEDSRCh2WUA-tEAAYASAAEgJIp_D_BwE"
                 target="_blank"
                 rel="noreferrer"
-                style={{ margin: '0 4px' }}
               >
                 Roche
               </Link>
@@ -54,7 +52,6 @@ export function MedicationDisposalMobile() {
                 href="https://www.logmed.org.br/"
                 target="_blank"
                 rel="noreferrer"
-                style={{ margin: '0 4px' }}
               >
                 Logmed
               </Link>
