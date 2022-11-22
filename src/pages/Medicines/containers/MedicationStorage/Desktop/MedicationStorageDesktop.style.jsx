@@ -53,3 +53,28 @@ export const Option = styled.div`
     line-height: 24px;
   }
 `;
+
+export const WhatMedicinesCanYouDonateImageContainer = styled.div`
+  width: 500px;
+  margin: 0 auto;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+`;
+export const WhatMedicinesCanYouDonate = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+
+  p {
+    margin-top: 1rem;
+  }
+  @media (max-width: 960px) {
+    grid-template-columns: 1fr;
+  }
+`;

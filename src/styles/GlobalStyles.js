@@ -77,6 +77,20 @@ const GlobalStyle = createGlobalStyle`
   ::selection {
     background: ${(props) => props.theme.colors.light};
   }
+
+   .container {
+    width:  100%;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+   }
+
   `;
 
 export default GlobalStyle;
+
+// Extra small   540px
+// Small         720px
+// Medium       960px
+// Large         1140px
+// Extra Large    1320px

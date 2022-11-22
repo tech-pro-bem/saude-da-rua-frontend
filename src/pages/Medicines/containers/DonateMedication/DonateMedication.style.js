@@ -22,13 +22,10 @@ export const MedicineBackground = styled.div`
 
 export const MedicineContent = styled.div`
   grid-area: 1/1;
-  /* border: 1px solid red; */
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: 3rem;
-  padding: 0 9%;
 
   h1 {
     margin-bottom: 32px;
@@ -40,7 +37,7 @@ export const MedicineContent = styled.div`
     max-width: 400px;
   }
 
-  @media (max-width: 875px) {
+  @media (max-width: 720px) {
     margin-bottom: 0;
     h1 {
       font-size: 32px;
