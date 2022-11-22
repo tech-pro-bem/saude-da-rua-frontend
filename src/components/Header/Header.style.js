@@ -2,8 +2,6 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import LinkButton from '../LinkButton/LinkButton';
 
-export const HeaderWrapper = styled.header``;
-
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -14,12 +12,17 @@ export const Container = styled.div`
   width: 100%;
   top: 0;
   background-color: ${(props) => props.theme.colors.blackUI};
+
+  @media (max-width: 995px) {
+    padding: 0 5%;
+  }
 `;
 
 export const Content = styled.div`
   height: 93px;
   display: flex;
   align-items: center;
+
   justify-content: space-between;
 `;
 
@@ -28,7 +31,6 @@ export const NavLinkContent = styled(NavLink)`
   font-weight: 600;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
-  gap: 8px;
 
   &.active {
     text-decoration: underline;
@@ -44,6 +46,7 @@ export const NavLinkContent = styled(NavLink)`
 
     font-size: 1.7rem;
   }
+
   @media (max-width: 520px) {
     display: flex;
     flex-direction: column;
@@ -56,10 +59,10 @@ export const NavLinkContent = styled(NavLink)`
 export const NavMenu = styled.div`
   display: flex;
 
-  padding: 8px;
+  padding: 4px;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
 
   @media (max-width: 873px) {
     display: none;
@@ -72,7 +75,6 @@ export const DonationButton = styled(LinkButton)`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 7.125rem;
     margin-bottom: 7.813rem;
     width: 90%;
     position: absolute;

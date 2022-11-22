@@ -7,7 +7,6 @@ import {
   ContainerMobile,
   Content,
   DonationButton,
-  HeaderWrapper,
   ListNavMenu,
   NavLinkContent,
   NavLinkMenu,
@@ -22,6 +21,11 @@ const Header = () => {
   const NAV_LINKS = [
     {
       id: 1,
+      to: '/',
+      text: 'Início',
+    },
+    {
+      id: 2,
       to: 'doacao',
       text: 'Doações',
     },
@@ -30,6 +34,7 @@ const Header = () => {
       to: 'doe-medicamentos',
       text: 'Medicamentos',
     },
+
     {
       id: 3,
       to: 'seja-voluntario',
@@ -48,7 +53,7 @@ const Header = () => {
   };
 
   return (
-    <HeaderWrapper>
+    <>
       <Container>
         <Content>
           <NavLinkContent to="/">
@@ -90,7 +95,7 @@ const Header = () => {
           )}
         </NavMenuMobile>
       </ContainerMobile>
-    </HeaderWrapper>
+    </>
   );
 };
 

@@ -102,14 +102,14 @@ export const Copyright = styled.div`
   display: grid;
   grid-template-columns: repeat(5, auto);
   text-align: center;
-
+  font-size: 14px;
   list-style: none;
   padding-bottom: 3.688rem;
 
   @media (max-width: 1024px) {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
   }
   @media (max-width: 873px) {
     display: none;

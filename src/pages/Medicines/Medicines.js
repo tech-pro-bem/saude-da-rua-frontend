@@ -1,17 +1,19 @@
-import React from 'react';
-import { Head, useMedia } from '@hooks';
 import { Structure } from '@components';
+import { Head, useMedia } from '@hooks';
+import React from 'react';
 import {
   DonateMedication,
-  MedicationPathMobile,
-  MedicationPathDesktop,
-  MedicationStorageMobile,
-  MedicationStorageDesktop,
   InappropriateMedicationDesktop,
   InappropriateMedicationMobile,
   MedicationDisposalDesktop,
   MedicationDisposalMobile,
   MostUsed,
+  MedicationPathDesktop,
+  MedicationPathMobile,
+  MedicationStorageDesktop,
+  MedicationStorageMobile,
+  WhatToContinueContributedDesktop,
+  WhatToContinueContributedMobile,
 } from './containers';
 
 // BreackPoint de Mobile podemos usar @media (max-width: 875px)
@@ -36,6 +38,12 @@ function Medicines() {
           </div>
         )}
         {mobile ? <MedicationDisposalMobile /> : null}
+
+        {mobile ? (
+          <WhatToContinueContributedMobile />
+        ) : (
+          <WhatToContinueContributedDesktop />
+        )}
       </Structure>
     </div>
   );
