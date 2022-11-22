@@ -32,15 +32,20 @@ function MostUsed() {
             </MostUsedIcon>
           );
         })}
-
-        {mobile && (
-          <LinkButton
-            style={{ minWidth: '300px', textAlign: 'center' }}
-            text="Quero doar medicamentos"
-            route="/formulario-doacao"
-          />
-        )}
       </MostUsedIcones>
+      {mobile && (
+        <LinkButton
+          style={{
+            marginTop: '1rem',
+            width: '100%',
+            fontSize: '1rem',
+            display: 'block',
+            textAlign: 'center',
+          }}
+          text="Quero doar medicamentos"
+          route="/formulario-doacao"
+        />
+      )}
     </MostUsedMedicines>
   );
 }

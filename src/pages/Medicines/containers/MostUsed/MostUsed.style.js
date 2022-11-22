@@ -21,7 +21,7 @@ export const MostUsedIcones = styled.div`
   padding: 5rem 5rem 0 5rem;
 
   @media (max-width: 540px) {
-    padding: 0;
+    padding: 1rem 0;
   }
 `;
 export const MostUsedIcon = styled.div`

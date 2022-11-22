@@ -7,6 +7,7 @@ import {
   OutlinedImageAnimation,
   Paragraphy,
 } from '@components';
+import { useMedia } from '@hooks';
 import {
   ContainerMedicine,
   MedicineBackground,
@@ -21,15 +22,24 @@ import {
 
 const DonateMedication = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
+  const mobile = useMedia('(max-width:540px)');
   return (
     <>
       <ContainerMedicine>
         <MedicineBackground />
         <MedicineContent>
           <div className="container">
-            <Title>
-              Doe <Highlight>medicamentos</Highlight>
-            </Title>
+            {!mobile ? (
+              <Title>
+                Doe <Highlight>medicamentos</Highlight>
+              </Title>
+            ) : (
+              <Title>
+                Doe <br />
+                <Highlight>medicamentos</Highlight>
+              </Title>
+            )}
+
             <Paragraphy className="big">
               Sabe aqueles remédios que você não usa mais? <br />
               Você pode doar pra gente.
