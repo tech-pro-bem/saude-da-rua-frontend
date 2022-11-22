@@ -11,6 +11,7 @@ import {
   InappropriateMedicationMobile,
   MedicationDisposalDesktop,
   MedicationDisposalMobile,
+  MostUsed,
 } from './containers';
 
 // BreackPoint de Mobile podemos usar @media (max-width: 875px)
@@ -25,6 +26,7 @@ function Medicines() {
       <DonateMedication />
       <Structure>
         {mobile ? <InappropriateMedicationMobile /> : null}
+        <MostUsed />
         {mobile ? <MedicationPathMobile /> : <MedicationPathDesktop />}
         {mobile ? <MedicationStorageMobile /> : <MedicationStorageDesktop />}
         {mobile ? null : (

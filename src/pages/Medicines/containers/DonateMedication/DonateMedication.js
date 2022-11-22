@@ -44,34 +44,36 @@ const DonateMedication = () => {
           </div>
         </MedicineContent>
       </ContainerMedicine>
-      <WhatMedicinesCanYouDonate className="container">
-        <div>
-          <SubTitle>
-            <Highlight>Quais remédios </Highlight>
-            você  pode doar?
-          </SubTitle>
-          <Paragraphy>
-            Não há restrições. Nós aceitamos qualquer medicamento ou equipamento
-            de EPI que esteja dentro do prazo de validade e que foi armazenado
-            corretamente.
-          </Paragraphy>
-        </div>
+      <div className="container">
+        <WhatMedicinesCanYouDonate>
+          <div>
+            <SubTitle>
+              <Highlight>Quais remédios </Highlight>
+              você  pode doar?
+            </SubTitle>
+            <Paragraphy>
+              Não há restrições. Nós aceitamos qualquer medicamento ou
+              equipamento de EPI que esteja dentro do prazo de validade e que
+              foi armazenado corretamente.
+            </Paragraphy>
+          </div>
 
-        <WhatMedicinesCanYouDonateImageContainer>
-          <OutlinedImageAnimation
-            outlineBorderRadius={'12px'}
-            rightOffset={'-8px'}
-            topOffset={'none'}
-            leftOffset={'none'}
-            bottomOffset={'-8px'}
-            src={Medicamentos5}
-            imgBorderRadius={'12px'}
-            myRef={ref}
-            inView={inView}
-            animation={inView}
-          />
-        </WhatMedicinesCanYouDonateImageContainer>
-      </WhatMedicinesCanYouDonate>
+          <WhatMedicinesCanYouDonateImageContainer>
+            <OutlinedImageAnimation
+              outlineBorderRadius={'12px'}
+              rightOffset={'-8px'}
+              topOffset={'none'}
+              leftOffset={'none'}
+              bottomOffset={'-8px'}
+              src={Medicamentos5}
+              imgBorderRadius={'12px'}
+              myRef={ref}
+              inView={inView}
+              animation={inView}
+            />
+          </WhatMedicinesCanYouDonateImageContainer>
+        </WhatMedicinesCanYouDonate>
+      </div>
     </>
   );
 };
