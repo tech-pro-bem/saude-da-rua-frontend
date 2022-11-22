@@ -32,7 +32,7 @@ const Header = () => {
 
     {
       id: 3,
-      to: 'medicament',
+      to: 'Medicine',
       text: 'Medicamentos',
     },
 
