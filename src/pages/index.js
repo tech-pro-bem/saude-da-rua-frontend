@@ -1,6 +1,8 @@
 import Donation from './Donation/Donation';
 import Home from './Home/Home';
-import Medicine from './Medicine/Medicine';
+import Medicines from './Medicines/Medicines';
+import SignUp from './SignUp/SignUp';
+import SignUpSuccess from './SignUpSuccess/SignUpSuccess';
 import Volunteers from './Volunteers/Volunteers';
 
-export { Home, Donation, Volunteers, Medicine };
+export { Home, Donation, Volunteers, SignUp, SignUpSuccess, Medicines };

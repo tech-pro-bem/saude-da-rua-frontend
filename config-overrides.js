@@ -9,6 +9,7 @@ module.exports = function override(config) {
     '@pages': 'src/pages',
     '@assets': 'src/assets',
     '@hooks': 'src/hooks',
+    '@styles': 'src/styles',
   })(config);
 
   return config;

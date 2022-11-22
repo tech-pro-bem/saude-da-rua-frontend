@@ -29,15 +29,14 @@ const Header = () => {
       to: 'doacao',
       text: 'Doações',
     },
-
     {
-      id: 3,
-      to: 'Medicine',
+      id: 2,
+      to: 'doe-medicamentos',
       text: 'Medicamentos',
     },
 
     {
-      id: 4,
+      id: 3,
       to: 'seja-voluntario',
       text: 'Voluntários',
     },

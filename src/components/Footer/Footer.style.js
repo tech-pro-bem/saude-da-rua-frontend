@@ -14,7 +14,7 @@ export const FooterContainer = styled.footer`
 `;
 
 export const Divider = styled.hr`
-  width: 90%;
+  width: 100%;
   border: #e9e9e9 solid 0.0625rem;
   opacity: 50%;
   margin: 0 auto;
@@ -34,7 +34,7 @@ export const MainFooter = styled.div`
   column-gap: 5.625rem;
   margin-top: 3.688rem;
   margin-bottom: 4.625rem;
-  padding: 0 5rem;
+  /* padding: 0 5rem; */
   @media (max-width: 1024px) {
     display: grid;
 

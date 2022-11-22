@@ -1,9 +1,20 @@
-import { useForm } from 'react-hook-form';
 import { InputTextStyle } from './InputText.style';
 
-export const InputText = ({ registerValue, id }) => {
-  const { register } = useForm();
-
-  return <InputTextStyle id={id} type="text" {...register(registerValue)} />;
+export const InputText = ({
+  register,
+  registerValue,
+  id,
+  placeholder,
+  type,
+}) => {
+  return (
+    <InputTextStyle
+      placeholder={placeholder}
+      autoComplete="off"
+      id={id}
+      type={type}
+      {...register(registerValue)}
+    />
+  );
 };
 export default InputText;
