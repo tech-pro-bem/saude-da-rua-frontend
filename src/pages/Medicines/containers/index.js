@@ -7,6 +7,7 @@ import { InappropriateMedicationDesktop } from './InappropriateMedication/Deskto
 import { MedicationDisposalDesktop } from './MedicationDisposal/Desktop/MedicationDisposalDesktop';
 import { MedicationDisposalMobile } from './MedicationDisposal/Mobile/MedicationDisposalMobile';
 import { InappropriateMedicationMobile } from './InappropriateMedication/Mobile/InappropriateMedicationMobile';
+import MostUsed from './MostUsed/MostUsed';
 
 export {
   DonateMedication,
@@ -18,4 +19,5 @@ export {
   MedicationDisposalDesktop,
   MedicationDisposalMobile,
   InappropriateMedicationMobile,
+  MostUsed,
 };

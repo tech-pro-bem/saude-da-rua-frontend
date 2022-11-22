@@ -17,7 +17,7 @@ import SocialMediaDesktop from '../SocialMedia/desktop/SocialMediaDesktop.jsx';
 import SocialMediaMobile from '../SocialMedia/mobile/SocialMediaMobile.jsx';
 
 const Footer = () => (
-  <FooterContainer>
+  <FooterContainer className="container">
     <Divider />
     <MainFooter>
       <HeadersFooter>
