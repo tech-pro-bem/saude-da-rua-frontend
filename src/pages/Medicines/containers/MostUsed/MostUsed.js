@@ -1,8 +1,16 @@
 import React from 'react';
-import { SubTitle, Paragraphy, Highlight } from '@components';
+import { SubTitle, Paragraphy, Highlight, LinkButton } from '@components';
 import { MostUsedContent } from './MostUsedContent';
+import {
+  MostUsedMedicines,
+  MostUsedHeader,
+  MostUsedIcones,
+  MostUsedIcon,
+} from './MostUsed.style';
+import { useMedia } from '@hooks';
 
 function MostUsed() {
+  const mobile = useMedia('(max-width:540px)');
   return (
     <MostUsedMedicines>
       <MostUsedHeader>
@@ -20,10 +28,18 @@ function MostUsed() {
           return (
             <MostUsedIcon>
               <img src={item.img.src} alt={item.img.alt} />
-              <p>{item.title}</p>
+              <p dangerouslySetInnerHTML={{ __html: item.title }} />
             </MostUsedIcon>
           );
         })}
+
+        {mobile && (
+          <LinkButton
+            style={{ minWidth: '300px', textAlign: 'center' }}
+            text="Quero doar medicamentos"
+            route="/formulario-doacao"
+          />
+        )}
       </MostUsedIcones>
     </MostUsedMedicines>
   );

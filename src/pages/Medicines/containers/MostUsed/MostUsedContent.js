@@ -6,14 +6,14 @@ export const MostUsedContent = [
       src: Image1,
       alt: 'Antibióticos, anti-inflamatórios e antitérmicos',
     },
-    title: 'Antibióticos, anti-inflamatórios e antitérmicos',
+    title: 'Antibióticos, <br/>anti-inflamatórios<br/> e antitérmicos',
   },
   {
     img: {
       src: Image2,
       alt: 'Fraldas geriátricas e pediátricas',
     },
-    title: 'Fraldas geriátricas e pediátricas',
+    title: 'Fraldas geriátricas<br/> e pediátricas',
   },
   {
     img: {
@@ -27,6 +27,6 @@ export const MostUsedContent = [
       src: Image4,
       alt: 'Materiais para curativos',
     },
-    title: 'Materiais para curativos',
+    title: 'Materiais para <br/>curativos',
   },
 ];

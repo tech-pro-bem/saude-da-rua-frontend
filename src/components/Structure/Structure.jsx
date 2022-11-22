@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Structure = styled.div`
   width: 100%;
-  max-width: 1320px;
+  max-width: 1227px;
   margin: 0 auto;
   padding: 0 15px;
 
