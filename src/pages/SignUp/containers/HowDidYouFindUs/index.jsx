@@ -1,14 +1,8 @@
-import { Fragment } from 'react';
 import { Controller } from 'react-hook-form';
-import { Listbox, Transition } from '@headlessui/react';
 
-import {
-  Container,
-  CustomSelect,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-} from './style';
+import { ErrorMessage, Select } from '@components';
+
+import { Container, Input } from './style';
 
 const options = [
   'Site',
@@ -18,8 +12,14 @@ const options = [
   'Outros',
 ];
 
-export const HowDidYouFindUs = ({ register, watch, control, setValue }) => {
-  const howDidYouFindUs = watch('howDidYouFindUs');
+export const HowDidYouFindUs = ({
+  register,
+  watch,
+  control,
+  setValue,
+  errors,
+}) => {
+  const howDidYouFindUs = watch('howDidKnowOfSDR');
 
   return (
     <Container>
@@ -29,44 +29,34 @@ export const HowDidYouFindUs = ({ register, watch, control, setValue }) => {
         rules={{ required: true }}
         defaultValue=""
         control={control}
-        name="howDidYouFindUs"
+        name="howDidKnowOfSDR"
         render={({ field }) => (
-          <CustomSelect>
-            <Listbox value={field.value} onChange={field.onChange}>
-              <div>
-                <ListboxButton>
-                  {field.value ? field.value : 'Selecione uma opção'}
-                </ListboxButton>
-                <Transition
-                  as={Fragment}
-                  leave="transition ease-in duration-100"
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
-                >
-                  <ListboxOptions>
-                    {options.map((option, idx) => (
-                      <ListboxOption key={idx} value={option}>
-                        {option}
-                      </ListboxOption>
-                    ))}
-                  </ListboxOptions>
-                </Transition>
-              </div>
-            </Listbox>
-          </CustomSelect>
+          <Select
+            name="howDidKnowOfSDR"
+            value={field.value}
+            onChange={field.onChange}
+            errors={errors}
+            options={options}
+          />
         )}
       />
+      {errors.howDidKnowOfSDR && (
+        <ErrorMessage message="Esse campo deve ser preenchido." />
+      )}
 
       {howDidYouFindUs === 'Outros' ? (
         <>
           <label htmlFor="other" />
-          <input
+          <Input
             type="text"
             name="other"
             id="other"
             placeholder="Informe como ficou sabendo do Saúde da Rua"
             {...register('other', { required: true })}
           />
+          {errors.other && (
+            <ErrorMessage message="Esse campo deve ser preenchido." />
+          )}
         </>
       ) : (
         setValue('other', '')
