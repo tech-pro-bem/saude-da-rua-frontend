@@ -1,20 +1,19 @@
+import { ErrorMessage } from '@components';
+
 import { Container, InputsBox, Step } from './style';
 
 const daysOfWeek = [
-  { id: 1, name: 'Segunda-feira', value: 'monday' },
-  { id: 2, name: 'Terça-feira', value: 'tuesday' },
-  { id: 3, name: 'Quarta-feira', value: 'wednesday' },
-  { id: 4, name: 'Quinta-feira', value: 'thursday' },
-  { id: 5, name: 'Sexta-feira', value: 'friday' },
-  { id: 6, name: 'Sábado', value: 'saturday' },
-  { id: 7, name: 'Domingo', value: 'sunday' },
+  { id: 1, name: 'Segunda-feira', value: 'SEGUNDA' },
+  { id: 2, name: 'Terça-feira', value: 'TERCA' },
+  { id: 3, name: 'Quarta-feira', value: 'QUARTA' },
+  { id: 4, name: 'Quinta-feira', value: 'QUINTA' },
+  { id: 5, name: 'Sexta-feira', value: 'SEXTA' },
+  { id: 6, name: 'Sábado', value: 'SABADO' },
+  { id: 7, name: 'Domingo', value: 'DOMINGO' },
 ];
 
-export const Availability = ({ register, getValues }) => {
-  const atLeastOne = () =>
-    getValues('available').length
-      ? true
-      : 'Por favor, selecione ao menos uma opção.';
+export const Availability = ({ register, getValues, errors }) => {
+  const atLeastOne = () => (getValues('listFreeDaysOfWeek').length ? true : '');
 
   return (
     <Container>
@@ -36,11 +35,15 @@ export const Availability = ({ register, getValues }) => {
               id={day.value}
               name={day.value}
               value={day.value}
-              {...register('available', { validate: atLeastOne })}
+              {...register('listFreeDaysOfWeek', { validate: atLeastOne })}
             />
+
             <label htmlFor={day.value}>{day.name}</label>
           </div>
         ))}
+        {errors.listFreeDaysOfWeek && (
+          <ErrorMessage message="Esse campo deve ser preenchido." />
+        )}
       </InputsBox>
     </Container>
   );

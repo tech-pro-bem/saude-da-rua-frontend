@@ -1,6 +1,9 @@
 import { Question } from 'phosphor-react';
 import { useState } from 'react';
-import InputMask from 'react-input-mask';
+import { getYear, getMonth } from 'date-fns';
+import range from 'lodash/range';
+
+import { ErrorMessage } from '@components';
 
 import {
   BoxInput,
@@ -10,15 +13,34 @@ import {
   DatePickerStyle,
   Divider,
   FormStyle,
+  Input,
+  InputWithMask,
+  DatePickerHeader,
 } from './style';
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-export const ContactInfo = ({ register, Controller, control }) => {
+export const ContactInfo = ({ register, Controller, control, errors }) => {
   const [name, setName] = useState(false);
   const [birthday, setBirthday] = useState(false);
   const [phone, setPhone] = useState(false);
   const [email, setEmail] = useState(false);
+
+  const years = range(1900, getYear(new Date()) + 1, 1);
+  const months = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro',
+  ];
 
   return (
     <Container>
@@ -29,7 +51,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
 
       <FormStyle>
         <BoxInput>
-          <label htmlFor="name">
+          <label htmlFor="fullName">
             Nome completo
             <button type="button" onClick={() => setName(!name)}>
               {name ? (
@@ -48,17 +70,21 @@ export const ContactInfo = ({ register, Controller, control }) => {
               </p>
             </Tooltip>
           )}
-          <input
+          <Input
             type="text"
-            id="name"
-            {...register('name', { required: true })}
+            id="fullName"
+            {...register('fullName', { required: true })}
             placeholder="Digite seu nome completo"
+            iserror={errors.fullName ? 'erro' : ''}
           />
+          {errors.fullName && (
+            <ErrorMessage message="Esse campo deve ser preenchido." />
+          )}
         </BoxInput>
 
         <Divider>
           <BoxInput>
-            <label htmlFor="birthday">
+            <label htmlFor="birthdate">
               Data de nascimento
               <button type="button" onClick={() => setBirthday(!birthday)}>
                 {birthday ? (
@@ -79,7 +105,7 @@ export const ContactInfo = ({ register, Controller, control }) => {
             )}
             <Controller
               control={control}
-              name="birthday"
+              name="birthdate"
               render={({ field: { onChange, onBlur, value } }) => (
                 <DatePickerStyle
                   onChange={onChange}
@@ -87,14 +113,64 @@ export const ContactInfo = ({ register, Controller, control }) => {
                   selected={value}
                   dateFormat={'dd/MM/yyyy'}
                   placeholderText="dd/mm/aaaa"
-                  required
+                  iserror={errors.birthdate ? 'erro' : ''}
+                  renderCustomHeader={({
+                    date,
+                    changeYear,
+                    changeMonth,
+                    decreaseMonth,
+                    increaseMonth,
+                    prevMonthButtonDisabled,
+                    nextMonthButtonDisabled,
+                  }) => (
+                    <DatePickerHeader>
+                      <button
+                        onClick={decreaseMonth}
+                        disabled={prevMonthButtonDisabled}
+                      >
+                        {'<'}
+                      </button>
+                      <select
+                        value={getYear(date)}
+                        onChange={({ target: { value } }) => changeYear(value)}
+                      >
+                        {years.map((option) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                      <select
+                        value={months[getMonth(date)]}
+                        onChange={({ target: { value } }) =>
+                          changeMonth(months.indexOf(value))
+                        }
+                      >
+                        {months.map((option) => (
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                      <button
+                        onClick={increaseMonth}
+                        disabled={nextMonthButtonDisabled}
+                      >
+                        {'>'}
+                      </button>
+                    </DatePickerHeader>
+                  )}
                 />
               )}
+              rules={{ required: true }}
             />
+            {errors.birthdate && (
+              <ErrorMessage message="Esse campo deve ser preenchido." />
+            )}
           </BoxInput>
 
           <BoxInput>
-            <label htmlFor="phone">
+            <label htmlFor="cellphoneNumberWithDDD">
               Celular
               <button type="button" onClick={() => setPhone(!phone)}>
                 {phone ? (
@@ -113,13 +189,17 @@ export const ContactInfo = ({ register, Controller, control }) => {
                 </p>
               </Tooltip>
             )}
-            <InputMask
+            <InputWithMask
               type="text"
-              id="phone"
+              id="cellphoneNumberWithDDD"
               mask="(99) 99999-9999"
               placeholder="(81) 98888-8888"
-              {...register('phone', { required: true })}
+              {...register('cellphoneNumberWithDDD', { required: true })}
+              iserror={errors.cellphoneNumberWithDDD ? 'erro' : ''}
             />
+            {errors.cellphoneNumberWithDDD && (
+              <ErrorMessage message="Esse campo deve ser preenchido." />
+            )}
           </BoxInput>
         </Divider>
 
@@ -143,12 +223,16 @@ export const ContactInfo = ({ register, Controller, control }) => {
               </p>
             </Tooltip>
           )}
-          <input
+          <Input
             type="email"
             id="email"
             {...register('email', { required: true })}
             placeholder="Informe o seu e-mail principal"
+            iserror={errors.email ? 'erro' : ''}
           />
+          {errors.email && (
+            <ErrorMessage message="Esse campo deve ser preenchido." />
+          )}
         </BoxInput>
       </FormStyle>
     </Container>

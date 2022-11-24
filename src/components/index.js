@@ -15,6 +15,8 @@ import InputText from './InputText/InputText';
 import Title from './Typography/Title/Title';
 import SubTitle from './Typography/SubTitle/SubTitle';
 import Paragraphy from './Typography/Paragraphy/Paragraphy';
+import ErrorMessage from './ErrorMessage/ErrorMessage';
+import Select from './Select';
 
 export {
   Layout,
@@ -34,4 +36,6 @@ export {
   SubTitle,
   Title,
   Paragraphy,
+  ErrorMessage,
+  Select,
 };

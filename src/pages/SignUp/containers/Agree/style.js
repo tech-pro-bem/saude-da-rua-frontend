@@ -2,19 +2,33 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
+  flex-direction: column;
+  max-width: 571px;
   margin: 0 auto;
   margin-bottom: 18.5px;
-  max-width: 571px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 37px;
   }
+`;
+
+export const Check = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
 
   label {
     color: ${(props) => props.theme.colors.primary_light};
     flex: 1;
+
+    a {
+      color: ${(props) => props.theme.colors.light};
+      font-weight: 500;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
   }
 
   input {
