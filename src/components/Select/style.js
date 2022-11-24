@@ -22,9 +22,9 @@ export const ListboxButton = styled(Listbox.Button)`
         ? props.theme.colors.error
         : props.theme.colors.primary_light};
   font-size: 1rem;
-  height: 3rem;
+  min-height: 3rem;
   outline: none;
-  padding: 0.75rem 1.125rem;
+  padding: 0.75rem 2.5rem 0.75rem 1.125rem;
   position: relative;
   width: 100%;
   text-align: left;
