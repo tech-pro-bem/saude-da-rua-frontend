@@ -17,14 +17,14 @@ import SocialMediaDesktop from '../SocialMedia/desktop/SocialMediaDesktop.jsx';
 import SocialMediaMobile from '../SocialMedia/mobile/SocialMediaMobile.jsx';
 
 const Footer = () => (
-  <FooterContainer>
+  <FooterContainer className="container">
     <Divider />
     <MainFooter>
       <HeadersFooter>
         <Title>Saúde da Rua</Title>
         <Text>
           Criado por estudantes de medicina, o Saúde da Rua leva{' '}
-          <strong>atendimento médico humanizado e recorrente</strong>
+          <strong>atendimento médico humanizado e recorrente </strong>
           às populações mais vulneráveis da sociedade.
         </Text>
       </HeadersFooter>

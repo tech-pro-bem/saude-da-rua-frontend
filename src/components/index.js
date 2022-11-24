@@ -12,6 +12,9 @@ import Structure from './Structure/Structure';
 import OutlinedImageAnimation from './OutlinedImageAnimation/OutlinedImageAnimation';
 import OutlinedImageLink from './OutlinedImageLink/OutlinedImageLink';
 import InputText from './InputText/InputText';
+import Title from './Typography/Title/Title';
+import SubTitle from './Typography/SubTitle/SubTitle';
+import Paragraphy from './Typography/Paragraphy/Paragraphy';
 import ErrorMessage from './ErrorMessage/ErrorMessage';
 import Select from './Select';
 
@@ -30,6 +33,9 @@ export {
   Footer,
   OutlinedImageLink,
   InputText,
+  SubTitle,
+  Title,
+  Paragraphy,
   ErrorMessage,
   Select,
 };
