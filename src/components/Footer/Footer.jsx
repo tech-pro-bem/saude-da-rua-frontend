@@ -56,9 +56,11 @@ const Footer = () => (
     <Copyright>
       <li>Copyright©2021, Saúde da Rua. Todos os direitos reservados</li>
       <li>|</li>
-      <li>
-        <strong>Política de privacidade</strong>
-      </li>
+      <a href="/politica-de-privacidade">
+        <li>
+          <strong>Política de privacidade</strong>
+        </li>
+      </a>
       <li>|</li>
 
       <li>
