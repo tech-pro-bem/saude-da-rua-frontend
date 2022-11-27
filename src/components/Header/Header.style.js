@@ -3,18 +3,23 @@ import styled from 'styled-components';
 import LinkButton from '../LinkButton/LinkButton';
 
 export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 9.4%;
+  padding: 0 30px;
   position: fixed;
   z-index: 999;
   width: 100%;
   top: 0;
   background-color: ${(props) => props.theme.colors.blackUI};
 
-  @media (max-width: 995px) {
-    padding: 0 5%;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1167px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0 15px;
   }
 `;
 
@@ -92,10 +97,6 @@ export const ToggleMenu = styled.button`
     display: flex;
 
     font-size: 25px;
-    margin: 0 1.5rem;
-    width: 30px;
-    height: 30px;
-
     color: ${(props) => props.theme.colors.primary_light};
     background: 0;
   }

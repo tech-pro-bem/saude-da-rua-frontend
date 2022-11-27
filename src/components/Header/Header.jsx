@@ -55,21 +55,23 @@ const Header = () => {
   return (
     <>
       <Container>
-        <Content>
-          <NavLinkContent to="/">
-            <img src={Logo} alt="Logo Saúde da Rua" />
-          </NavLinkContent>
-        </Content>
-        <NavMenu>
-          {NAV_LINKS.map((link, index) => (
-            <NavLinkRender to={link.to} text={link.text} key={index} />
-          ))}
-          <DonationButton text="Doe agora" route="/doacao" />
-        </NavMenu>
+        <div>
+          <Content>
+            <NavLinkContent to="/">
+              <img src={Logo} alt="Logo Saúde da Rua" />
+            </NavLinkContent>
+          </Content>
+          <NavMenu>
+            {NAV_LINKS.map((link, index) => (
+              <NavLinkRender to={link.to} text={link.text} key={index} />
+            ))}
+            <DonationButton text="Doe agora" route="/doacao" />
+          </NavMenu>
 
-        <ToggleMenu onClick={() => setToggle(!toggle)}>
-          {toggle ? <AiOutlineClose /> : <AiOutlineMenu />}
-        </ToggleMenu>
+          <ToggleMenu onClick={() => setToggle(!toggle)}>
+            {toggle ? <AiOutlineClose /> : <AiOutlineMenu />}
+          </ToggleMenu>
+        </div>
       </Container>
 
       <ContainerMobile>
