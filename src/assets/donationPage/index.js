@@ -9,6 +9,12 @@ import store2 from './store-2.png';
 import store3 from './store-3.png';
 import CopyToClip from './copy-to-clip.svg';
 import helpImage from './helpImage.svg';
+import PhotoBig from './PhotoBig.png';
+import PhotoBig2 from './PhotoBig2.png';
+import PhotoSmall from './PhotoSmall.png';
+import PhotoSmall2 from './PhotoSmall2.png';
+import VectorUp from './VectorUp.svg';
+import VectorDown from './VectorDown.svg';
 
 export {
   accountabilityBackgroundImage,
@@ -22,4 +28,10 @@ export {
   store2,
   store3,
   CopyToClip,
+  PhotoBig,
+  PhotoBig2,
+  PhotoSmall,
+  PhotoSmall2,
+  VectorDown,
+  VectorUp,
 };
