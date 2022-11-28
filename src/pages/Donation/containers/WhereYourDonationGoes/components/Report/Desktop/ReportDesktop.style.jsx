@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 30%;
+  display: flex;
+  width: 100%;
+`;
+
+export const ReportWrapper = styled.div`
+  width: 40%;
 `;
 
 export const Title = styled.p`

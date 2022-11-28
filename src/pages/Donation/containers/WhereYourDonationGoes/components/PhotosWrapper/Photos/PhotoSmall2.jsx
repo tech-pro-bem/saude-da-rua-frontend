@@ -1,20 +1,18 @@
-import { PhotoBig } from '@assets/donationPage';
+import { PhotoSmall2 } from '@assets/donationPage';
 import { OutlinedImageAnimation } from '@components';
 import { useInView } from 'react-intersection-observer';
 
-const PhotoBig1 = () => {
+const SecondPhotoSmall = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
   return (
     <OutlinedImageAnimation
-      style={{ position: 'absolute', top: '0px', right: '43px' }}
-      height={'157px'}
-      width={'173px'}
+      style={{ position: 'absolute', top: '220px', right: '-100px' }}
       outlineBorderRadius={'12px'}
-      rightOffset={'-8px'}
-      topOffset={'-8px'}
-      leftOffset={'none'}
-      bottomOffset={'none'}
-      src={PhotoBig}
+      rightOffset={'none'}
+      topOffset={'none'}
+      leftOffset={'-8px'}
+      bottomOffset={'-8px'}
+      src={PhotoSmall2}
       imgBorderRadius={'12px'}
       myRef={ref}
       inView={inView}
@@ -23,4 +21,4 @@ const PhotoBig1 = () => {
   );
 };
 
-export default PhotoBig1;
+export default SecondPhotoSmall;

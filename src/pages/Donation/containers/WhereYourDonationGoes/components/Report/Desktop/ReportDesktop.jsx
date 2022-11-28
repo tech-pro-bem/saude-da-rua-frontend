@@ -1,4 +1,5 @@
 import { VectorDown, VectorUp } from '@assets/donationPage';
+import { PhotosWrapper } from './../../index';
 import { useState } from 'react';
 import {
   OtherReport,
@@ -6,6 +7,7 @@ import {
   Title,
   LoadP,
   OlderReports,
+  ReportWrapper,
 } from './ReportDesktop.style';
 
 const ReportDesktop = () => {
@@ -26,24 +28,27 @@ const ReportDesktop = () => {
   const [isReportOpen, setisReportOpen] = useState(false);
   return (
     <Container>
-      <Title>Relatório anual {Reports[0].year}</Title>
-      <LoadP>baixe aqui</LoadP>
-      <Title>Relatório anual {Reports[1].year}</Title>
-      <LoadP>baixe aqui</LoadP>
-      <OtherReport>
-        <Title>Outros Relatórios</Title>
-        <img
-          onClick={() => setisReportOpen(!isReportOpen)}
-          src={isReportOpen ? VectorUp : VectorDown}
-          alt="icon"
-        ></img>
-      </OtherReport>
-      {isReportOpen ? (
-        <OlderReports>
-          <Title>Relatório anual {Reports[2].year}</Title>
-          <LoadP>baixe aqui</LoadP>
-        </OlderReports>
-      ) : null}
+      <ReportWrapper>
+        <Title>Relatório anual {Reports[0].year}</Title>
+        <LoadP>baixe aqui</LoadP>
+        <Title>Relatório anual {Reports[1].year}</Title>
+        <LoadP>baixe aqui</LoadP>
+        <OtherReport>
+          <Title>Outros Relatórios</Title>
+          <img
+            onClick={() => setisReportOpen(!isReportOpen)}
+            src={isReportOpen ? VectorUp : VectorDown}
+            alt="icon"
+          ></img>
+        </OtherReport>
+        {isReportOpen ? (
+          <OlderReports>
+            <Title>Relatório anual {Reports[2].year}</Title>
+            <LoadP>baixe aqui</LoadP>
+          </OlderReports>
+        ) : null}
+      </ReportWrapper>
+      <PhotosWrapper />
     </Container>
   );
 };

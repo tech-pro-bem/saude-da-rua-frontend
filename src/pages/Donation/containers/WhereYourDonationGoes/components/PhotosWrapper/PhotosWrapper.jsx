@@ -1,21 +1,16 @@
 import { Container, LeftPhotos, RightPhoto } from './PhotosWrapper.style';
-import {
-  PhotoBig1,
-  SecondPhotoBig,
-  PhotoSmall1,
-  SecondPhotoSmall,
-} from '../Photos/index';
+import { Photo1, Photo2, Photo3, Photo4 } from './Photos/index';
 
 const PhotoWrapper = () => {
   return (
     <Container>
       <LeftPhotos>
-        <PhotoBig1 />
-        <PhotoSmall1 />
+        <Photo2 />
+        <Photo4 />
       </LeftPhotos>
       <RightPhoto>
-        <SecondPhotoBig />
-        <SecondPhotoSmall />
+        <Photo1 />
+        <Photo3 />
       </RightPhoto>
     </Container>
   );

@@ -1,5 +1,4 @@
 import { Highlight } from '@components';
-import PhotosWrapper from './components/PhotosWrapper/PhotosWrapper';
 import { ReportDesktop, ReportMobile } from './components';
 import { useMedia } from '@hooks';
 import { Container, Reports, StyledP } from './WhereYourDonationGoes.style';
@@ -17,7 +16,6 @@ const WhereYourDonationGoes = () => {
         valores recebidos em doações.
       </StyledP>
       <Reports>{mobile ? <ReportMobile /> : <ReportDesktop />}</Reports>
-      {/* <PhotosWrapper/> */}
     </Container>
   );
 };
