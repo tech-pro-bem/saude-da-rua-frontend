@@ -22,6 +22,7 @@ export const Container = styled(Structure)`
     font-size: 2rem;
     font-weight: 700;
     line-height: 48px;
+    margin-bottom: 24px;
 
     @media (min-width: 768px) {
       font-weight: 700;
