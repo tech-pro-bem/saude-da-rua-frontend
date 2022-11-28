@@ -6,6 +6,7 @@ import Medicine4 from './Medicamentos4.png';
 import Medicamentos5 from './Medicamentos5.png';
 import DontCheck from './DontCheck.svg';
 import AttentionCheck from './AttentionCheck.svg';
+import CircleCheck from './CircleCheck.svg';
 import Image1 from './img1.svg';
 import Image2 from './img2.svg';
 import Image3 from './img3.svg';
@@ -20,6 +21,7 @@ export {
   Medicine4,
   DontCheck,
   AttentionCheck,
+  CircleCheck,
   Image4,
   Image1,
   Image2,
