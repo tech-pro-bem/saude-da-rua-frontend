@@ -5,6 +5,8 @@ import SignUp from './SignUp/SignUp';
 import SignUpSuccess from './SignUpSuccess/SignUpSuccess';
 import Volunteers from './Volunteers/Volunteers';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
+import MedicineDonationForm from './MedicineDonationForm/MedicineDonationForm';
+import MedicineDonationFormSuccess from './MedicineDonationFormSuccess/MedicineDonationFormSuccess';
 
 export {
   Home,
@@ -14,4 +16,6 @@ export {
   SignUpSuccess,
   Medicines,
   PrivacyPolicy,
+  MedicineDonationForm,
+  MedicineDonationFormSuccess,
 };
