@@ -131,6 +131,7 @@ export const Medicines = ({ register, Controller, control, errors }) => {
           <Input
             type="number"
             id="availableQuantity"
+            min={1}
             {...register('availableQuantity', { required: true })}
             placeholder="N° de comprimidos ou frascos"
             iserror={errors.availableQuantity ? 'erro' : ''}
