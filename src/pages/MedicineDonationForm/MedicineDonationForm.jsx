@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Structure } from '@components';
 
 import { ContactInfo, Headline, Agree, Medicines } from './containers';
-import { SubmitStyle } from './style';
+import { AddMedicineButton, SubmitStyle } from './style';
 
 const MedicineDonationForm = () => {
   const navigate = useNavigate();
@@ -41,6 +41,12 @@ const MedicineDonationForm = () => {
         />
 
         <Agree register={register} errors={errors} />
+
+        {isValid && (
+          <AddMedicineButton type="button">
+            Salvar e adicionar outro
+          </AddMedicineButton>
+        )}
 
         <SubmitStyle
           disabled={!isDirty || !isValid}
