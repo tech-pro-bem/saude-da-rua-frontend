@@ -37,7 +37,7 @@ const HelpNowDesktop = () => {
   return (
     <Container>
       <h1>
-        <Highlight>Contribua</Highlight> agora mesmo
+        <Highlight>Doe</Highlight> agora mesmo
       </h1>
       <ChipsContainer>
         {values.map((v) => (
@@ -56,15 +56,15 @@ const HelpNowDesktop = () => {
       {selectedValue.key === defaultSelection.key ? (
         <HelpInfoContainer>
           <p className="big" style={{ fontWeight: 'bold' }}>
-            Para <Highlight>doar</Highlight> qualquer valor é fácil:
+            Para <Highlight>ajudar</Highlight> com qualquer valor é fácil:
           </p>
           <HelpOptionsContainer>
             <HelpOption>
               <strong>
-                <Highlight>Pix</Highlight>
+                <Highlight>PIX</Highlight>
               </strong>
               <p>A nossa chave pix é:</p>
-              <p>saudedarua@gmail.com</p>
+              <p style={{ fontWeight: 'bold' }}>saudedarua@gmail.com</p>
             </HelpOption>
             <HelpOption>
               <strong>
@@ -118,7 +118,7 @@ const HelpNowDesktop = () => {
           </div>
         </PIXDonationContainer>
       )}
-      <p>
+      <p style={{ marginBottom: '43.5px' }}>
         Obrigado por acreditar em nós.{' '}
         <Highlight>Juntos faremos a diferença!</Highlight>
       </p>
