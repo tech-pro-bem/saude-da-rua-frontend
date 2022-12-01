@@ -175,3 +175,52 @@ export const Tooltip = styled.div`
     margin-bottom: 0.5rem;
   }
 `;
+
+export const DisclosureStyle = styled.div`
+  width: 100%;
+  background: #212933;
+  border-radius: 5px;
+  min-height: 3rem;
+  padding: 12px 24px;
+  margin-bottom: 40px;
+
+  & > button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: ${(props) => props.theme.colors.primary_light};
+    font-weight: 400;
+
+    & > svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  & > div {
+    padding: 24px 0;
+    color: ${(props) => props.theme.colors.primary_light};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+
+    & > :nth-child(2),
+    & > :nth-child(4) {
+      text-align: end;
+    }
+
+    & > button {
+      cursor: pointer;
+      background: transparent;
+      color: ${(props) => props.theme.colors.primary_light};
+      margin-top: 20px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+`;
