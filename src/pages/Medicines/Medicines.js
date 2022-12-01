@@ -16,9 +16,8 @@ import {
   WhatToContinueContributedMobile,
 } from './containers';
 
-// BreackPoint de Mobile podemos usar @media (max-width: 875px)
 function Medicines() {
-  const mobile = useMedia('(max-width:960px)');
+  const mobile = useMedia('(max-width:875px)');
   return (
     <div>
       <Head
