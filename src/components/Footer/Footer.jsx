@@ -17,6 +17,7 @@ import { Structure } from '@components';
 
 import SocialMediaDesktop from '../SocialMedia/desktop/SocialMediaDesktop.jsx';
 import SocialMediaMobile from '../SocialMedia/mobile/SocialMediaMobile.jsx';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => (
   <Structure>
@@ -59,11 +60,11 @@ const Footer = () => (
       <Copyright>
         <li>Copyright©2021, Saúde da Rua. Todos os direitos reservados</li>
         <li>|</li>
-        <a href="/politica-de-privacidade">
+        <NavLink href="/politica-de-privacidade">
           <li>
             <strong>Política de privacidade</strong>
           </li>
-        </a>
+        </NavLink>
         <li>|</li>
 
         <li>
