@@ -20,7 +20,7 @@ const Volunteers = () => {
     <>
       <Head
         title="Seja voluntario"
-        description="Se você é profissional ou estudante da área da saúde, participe das ações do Saúde da Rua"
+        description="Se você é estudante ou profissional da área da Saúde, participe das nossas ações!"
       />
       <Banner />
       <VolunteersContainer>

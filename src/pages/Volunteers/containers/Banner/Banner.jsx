@@ -10,8 +10,8 @@ export const Banner = () => {
           Seja uma pessoa <Highlight>voluntária</Highlight>
         </h1>
         <p className="big">
-          Se você é estudante ou profissional da área da saúde, venha pra rua
-          com a gente!
+          Se você é estudante ou profissional da área da Saúde, participe das
+          nossas ações!
         </p>
         <LinkButton
           style={{ minWidth: '272px', textAlign: 'center' }}
