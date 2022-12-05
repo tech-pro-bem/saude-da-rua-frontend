@@ -15,11 +15,11 @@ export const WhatPersonalDataDoWeCollect = () => {
         <li>Especialidade</li>
         <li>Experiência profissional</li>
       </ul>
-      <p>
+      <strong>
         A coleta destes dados ocorre no momento em que a pessoa interessada em
         se tornar voluntária informa preenche o formulário com os dados para
         contato.
-      </p>
+      </strong>
     </section>
   );
 };
