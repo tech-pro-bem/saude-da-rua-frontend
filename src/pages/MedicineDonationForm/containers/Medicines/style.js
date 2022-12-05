@@ -182,7 +182,9 @@ export const DisclosureStyle = styled.div`
   border-radius: 5px;
   min-height: 3rem;
   padding: 12px 24px;
+  margin: 0 auto;
   margin-bottom: 23px;
+  max-width: 571px;
 
   & > button {
     width: 100%;
@@ -199,7 +201,7 @@ export const DisclosureStyle = styled.div`
     }
   }
 
-  & > div {
+  .disclosure-content {
     padding: 24px 0;
     color: ${(props) => props.theme.colors.primary_light};
     display: grid;
@@ -211,11 +213,24 @@ export const DisclosureStyle = styled.div`
       text-align: end;
     }
 
-    & > button {
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .disclosure-buttons-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
       cursor: pointer;
       background: transparent;
       color: ${(props) => props.theme.colors.primary_light};
-      margin-top: 20px;
+      height: 100%;
 
       display: flex;
       align-items: center;

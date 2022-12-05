@@ -14,6 +14,7 @@ import Image4 from './img9.svg';
 import DeleteIcon from './Delete.svg';
 import EditIcon from './Edit.svg';
 import SaveIcon from './Save.svg';
+import SeparatorIcon from './Separator.svg';
 
 export {
   MedicineBg,
@@ -32,4 +33,5 @@ export {
   DeleteIcon,
   EditIcon,
   SaveIcon,
+  SeparatorIcon,
 };

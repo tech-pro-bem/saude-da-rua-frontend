@@ -7,7 +7,11 @@ import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 
 import { EditMedicines } from './EditMedicines';
 import { ErrorMessage, Select } from '@components';
-import { DeleteIcon, EditIcon } from '../../../../assets/MedicinePage';
+import {
+  DeleteIcon,
+  EditIcon,
+  SeparatorIcon,
+} from '../../../../assets/MedicinePage';
 import {
   BoxInput,
   Container,
@@ -115,20 +119,27 @@ export const Medicines = ({
                   )}
                 </Disclosure.Button>
                 <Disclosure.Panel>
-                  <span>{medicine.drugConcentration}</span>
-                  <span>
-                    {format(new Date(medicine.drugExpirationDate), 'MM/yyyy')}
-                  </span>
-                  <span>{medicine.drugQuantity} unidades</span>
-                  <span>{medicine.drugForm}</span>
-                  <button onClick={() => handleDeleteMedicine(medicine.drugId)}>
-                    <img src={DeleteIcon} alt="" />
-                    Excluir
-                  </button>
-                  <button onClick={() => handleEditMedicine(medicine.drugId)}>
-                    <img src={EditIcon} alt="" />
-                    Editar
-                  </button>
+                  <div className="disclosure-content">
+                    <span>{medicine.drugConcentration}</span>
+                    <span>
+                      {format(new Date(medicine.drugExpirationDate), 'MM/yyyy')}
+                    </span>
+                    <span>{medicine.drugQuantity} unidades</span>
+                    <span>{medicine.drugForm}</span>
+                  </div>
+                  <div className="disclosure-buttons-actions">
+                    <button
+                      onClick={() => handleDeleteMedicine(medicine.drugId)}
+                    >
+                      <img src={DeleteIcon} alt="" />
+                      Excluir
+                    </button>
+                    <img src={SeparatorIcon} alt="" />
+                    <button onClick={() => handleEditMedicine(medicine.drugId)}>
+                      <img src={EditIcon} alt="" />
+                      Editar
+                    </button>
+                  </div>
                 </Disclosure.Panel>
               </DisclosureStyle>
             )}
