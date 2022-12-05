@@ -16,7 +16,7 @@ export const HowDoWeCollectPersonalData = () => {
         </ul>
         <p>
           Quando um usuário e visitante acessa páginas do site{' '}
-          <a href="/">Saúde da Rua</a> as informações sobre interação e acesso
+          <a href="/">Saúde da Rua</a>, as informações sobre interação e acesso
           são coletadas pela empresa para garantir uma melhor experiência ao
           usuário e visitante. Estes dados podem tratar sobre as palavras-chaves
           utilizadas em uma busca, o compartilhamento de um documento
