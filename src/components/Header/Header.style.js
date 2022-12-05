@@ -24,10 +24,9 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  height: 93px;
   display: flex;
   align-items: center;
-
+  height: 93px;
   justify-content: space-between;
 `;
 
@@ -48,7 +47,9 @@ export const NavLinkContent = styled(NavLink)`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 
+  @media (min-height: 873px) {
     font-size: 1.7rem;
   }
 
@@ -66,7 +67,7 @@ export const NavMenu = styled.div`
 
   padding: 4px;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
   gap: 25px;
 
   @media (max-width: 873px) {
@@ -128,7 +129,7 @@ export const NavMenuMobile = styled.nav`
       flex-direction: column;
       gap: 2rem;
 
-      transform: translateY(60%);
+      //transform: translateY(60%);
     }
 
     @media (max-width: 520px) {
