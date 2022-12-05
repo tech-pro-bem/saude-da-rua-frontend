@@ -1,5 +1,6 @@
 import { useForm, Controller } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import { v4 as uuid } from 'uuid';
 
 import { Structure } from '@components';
 
@@ -25,7 +26,7 @@ const MedicineDonationForm = () => {
   const handleAddMedicine = () => {
     const data = getValues();
     const medicine = {
-      drugId: medicines.length + 1,
+      drugId: uuid(),
       drugName: data.medicineName,
       drugForm: data.drugForm,
       drugExpirationDate: data.expirationDate,

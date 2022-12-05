@@ -55,6 +55,10 @@ export const EditMedicines = ({
     setEditMedicine({});
   };
 
+  const handleDeleteEditMedicine = () => {
+    setEditMedicine({});
+  };
+
   return (
     <Disclosure defaultOpen={true}>
       {({ open }) => (
@@ -204,7 +208,7 @@ export const EditMedicines = ({
             </FormStyle>
 
             <Buttons>
-              <button>
+              <button onClick={handleDeleteEditMedicine}>
                 <img src={DeleteIcon} alt="" />
                 Excluir
               </button>

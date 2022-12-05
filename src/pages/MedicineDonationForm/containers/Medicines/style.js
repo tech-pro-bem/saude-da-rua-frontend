@@ -182,7 +182,7 @@ export const DisclosureStyle = styled.div`
   border-radius: 5px;
   min-height: 3rem;
   padding: 12px 24px;
-  margin-bottom: 40px;
+  margin-bottom: 23px;
 
   & > button {
     width: 100%;
