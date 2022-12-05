@@ -30,13 +30,13 @@ const Header = () => {
       text: 'Doações',
     },
     {
-      id: 2,
+      id: 3,
       to: 'doe-medicamentos',
       text: 'Medicamentos',
     },
 
     {
-      id: 3,
+      id: 4,
       to: 'seja-voluntario',
       text: 'Voluntários',
     },
