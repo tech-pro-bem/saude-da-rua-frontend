@@ -1,5 +1,6 @@
 import { useForm, Controller } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 import { Structure } from '@components';
 
@@ -20,6 +21,35 @@ const typesParticipation = {
   'Sim, em mais de 5 ações': 'MORE_THAN_FIVE_PARTICIPATION',
 };
 
+const typesOccupation = {
+  'Médico (a)': 'MEDICO',
+  'Enfermeiro (a)': 'ENFERMEIRO',
+  'Farmacêutico (a)': 'FARMACEUTICO',
+  Estudante: 'ESTUDANTE',
+  'Técnico (a) de enfermagem': 'TECNICO_DE_ENFERMAGEM',
+  'Psicólogo (a)': 'PSICOLOGO',
+  Nutricionista: 'NUTRICIONISTA',
+  'Assistente social': 'ASSISTENTE_SOCIAL',
+  Dentista: 'DENTISTA',
+  'Veterinário (a)': 'VETERINARIO',
+};
+
+const typesSemester = {
+  Primeiro: 'FIRST',
+  Segundo: 'SECOND',
+  Terceiro: 'THIRD',
+  Quarto: 'FOURTH',
+  Quinto: 'FIFTH',
+  Sexto: 'SIXTH',
+  Sétimo: 'SEVENTH',
+  Oitavo: 'EIGHTH',
+  Nono: 'NINTH',
+  Décimo: 'TENTH',
+  'Décimo Primeiro': 'ELEVENTH',
+  'Décimo Segundo': 'TWELFTH',
+  Mais: 'MORE',
+};
+
 const SignUp = () => {
   const navigate = useNavigate();
   const {
@@ -32,15 +62,28 @@ const SignUp = () => {
     formState: { errors, isDirty },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (data.howDidKnowOfSDR === 'Outros') {
       data.howDidKnowOfSDR = data.other;
     }
 
     data.howMuchParticipate = typesParticipation[data.howMuchParticipate];
+    data.occupation = typesOccupation[data.occupation];
+    data.semester = typesSemester[data.semester];
     data.birthdate = new Date(data.birthdate).toLocaleDateString('pt-BR');
-    console.log(data);
-    navigate('/inscreva-se/sucesso');
+    delete data.other;
+    delete data.agree;
+    try {
+      const response = await axios.post(
+        `https://saude.thalles.me/create/volunteer`,
+        data
+      );
+      response.data.message === 'Successfully create volunteer' &&
+        navigate('/inscreva-se/sucesso');
+    } catch (e) {
+      console.log(e);
+      //toastify com mensagem de erro para usuário
+    }
   };
 
   return (
