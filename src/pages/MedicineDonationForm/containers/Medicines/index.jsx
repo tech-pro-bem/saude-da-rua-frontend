@@ -111,7 +111,7 @@ export const Medicines = ({
             {({ open }) => (
               <DisclosureStyle>
                 <Disclosure.Button>
-                  <span>{medicine.drugName}</span>
+                  <span>{medicine.medicineName}</span>
                   {open ? (
                     <ChevronUpIcon size={24} />
                   ) : (
@@ -120,12 +120,12 @@ export const Medicines = ({
                 </Disclosure.Button>
                 <Disclosure.Panel>
                   <div className="disclosure-content">
-                    <span>{medicine.drugConcentration}</span>
+                    <span>{medicine.milligrams}</span>
                     <span>
-                      {format(new Date(medicine.drugExpirationDate), 'MM/yyyy')}
+                      {format(new Date(medicine.expirationDate), 'MM/yyyy')}
                     </span>
-                    <span>{medicine.drugQuantity} unidades</span>
-                    <span>{medicine.drugForm}</span>
+                    <span>{medicine.quantity} unidades</span>
+                    <span>{medicine.pharmaceuticalForm}</span>
                   </div>
                   <div className="disclosure-buttons-actions">
                     <button
@@ -181,17 +181,15 @@ export const Medicines = ({
         </BoxInput>
 
         <BoxInput>
-          <label htmlFor="drugConcentration">
-            Concentração do medicamento*
-          </label>
+          <label htmlFor="milligrams">Concentração do medicamento*</label>
           <Input
             type="text"
-            id="drugConcentration"
-            {...register('drugConcentration', { required: true })}
+            id="milligrams"
+            {...register('milligrams', { required: true })}
             placeholder="Dosagem em mg ou g"
-            iserror={errors.drugConcentration ? 'erro' : ''}
+            iserror={errors.milligrams ? 'erro' : ''}
           />
-          {errors.drugConcentration && (
+          {errors.milligrams && (
             <ErrorMessage message="Esse campo deve ser preenchido." />
           )}
         </BoxInput>
@@ -202,10 +200,10 @@ export const Medicines = ({
             rules={{ required: true }}
             defaultValue=""
             control={control}
-            name="drugForm"
+            name="pharmaceuticalForm"
             render={({ field }) => (
               <Select
-                name="drugForm"
+                name="pharmaceuticalForm"
                 value={field.value}
                 onChange={field.onChange}
                 errors={errors}
@@ -213,22 +211,22 @@ export const Medicines = ({
               />
             )}
           />
-          {errors.drugForm && (
+          {errors.pharmaceuticalForm && (
             <ErrorMessage message="Esse campo deve ser preenchido." />
           )}
         </BoxInput>
 
         <BoxInput>
-          <label htmlFor="availableQuantity">Quantidade disponível*</label>
+          <label htmlFor="quantity">Quantidade disponível*</label>
           <Input
             type="number"
-            id="availableQuantity"
+            id="quantity"
             min={1}
-            {...register('availableQuantity', { required: true })}
+            {...register('quantity', { required: true })}
             placeholder="N° de comprimidos ou frascos"
-            iserror={errors.availableQuantity ? 'erro' : ''}
+            iserror={errors.quantity ? 'erro' : ''}
           />
-          {errors.availableQuantity && (
+          {errors.quantity && (
             <ErrorMessage message="Esse campo deve ser preenchido." />
           )}
         </BoxInput>

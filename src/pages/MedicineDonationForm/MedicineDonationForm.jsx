@@ -10,7 +10,6 @@ import { useState } from 'react';
 
 const MedicineDonationForm = () => {
   const [medicines, setMedicines] = useState([]);
-  console.log(medicines);
 
   const navigate = useNavigate();
   const {
@@ -27,24 +26,45 @@ const MedicineDonationForm = () => {
     const data = getValues();
     const medicine = {
       drugId: uuid(),
-      drugName: data.medicineName,
-      drugForm: data.drugForm,
-      drugExpirationDate: data.expirationDate,
-      drugQuantity: data.availableQuantity,
-      drugConcentration: data.drugConcentration,
+      medicineName: data.medicineName,
+      pharmaceuticalForm: data.pharmaceuticalForm,
+      expirationDate: data.expirationDate,
+      quantity: Number(data.quantity),
+      milligrams: data.milligrams,
     };
 
     setMedicines([...medicines, medicine]);
 
     setValue('medicineName', '');
-    setValue('drugForm', '');
+    setValue('pharmaceuticalForm', '');
     setValue('expirationDate', '');
-    setValue('availableQuantity', '');
-    setValue('drugConcentration', '');
+    setValue('quantity', '');
+    setValue('milligrams', '');
   };
 
   const onSubmit = (data) => {
-    console.log(data);
+    const formContactInfo = {
+      fullName: data.fullName,
+      CEP: data.zipCode,
+      state: data.address,
+      cellPhoneWithDDD: data.cellphoneNumberWithDDD,
+      email: data.email,
+    };
+
+    const medicine = {
+      drugId: uuid(),
+      medicineName: data.medicineName,
+      pharmaceuticalForm: data.pharmaceuticalForm,
+      expirationDate: data.expirationDate,
+      quantity: Number(data.quantity),
+      milligrams: data.milligrams,
+    };
+
+    const formMedicines = [...medicines, medicine];
+
+    const newData = { ...formContactInfo, medicines: formMedicines };
+
+    console.log('newData', newData);
     navigate('/formulario-doacao/sucesso');
   };
 
