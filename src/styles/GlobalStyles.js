@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${(props) => props.theme.colors.blackUI};
     height: 100%;
      -webkit-font-smoothing: antialiased !important;
+     scroll-behavior: smooth;
   }
 
   p.big {
