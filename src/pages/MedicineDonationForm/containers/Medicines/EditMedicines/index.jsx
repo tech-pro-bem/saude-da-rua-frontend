@@ -5,13 +5,14 @@ import { useEffect } from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 
 import { ErrorMessage, Select } from '@components';
-import { DeleteIcon, SaveIcon } from '@assets/MedicinePage';
+import { DeleteIcon, SaveIcon, SeparatorIcon } from '@assets/MedicinePage';
 import {
   BoxInput,
   Buttons,
   DatePickerHeader,
   DatePickerStyle,
   DisclosureEditStyle,
+  Divider,
   FormStyle,
   Input,
 } from './style';
@@ -83,128 +84,134 @@ export const EditMedicines = ({
                 )}
               </BoxInput>
 
-              <BoxInput>
-                <label htmlFor="editDrugConcentration">
-                  Concentração do medicamento*
-                </label>
-                <Input
-                  type="text"
-                  id="editDrugConcentration"
-                  {...register('editDrugConcentration', { required: true })}
-                  placeholder="Dosagem em mg ou g"
-                  iserror={errors.editDrugConcentration ? 'erro' : ''}
-                />
-                {errors.editDrugConcentration && (
-                  <ErrorMessage message="Esse campo deve ser preenchido." />
-                )}
-              </BoxInput>
-
-              <BoxInput>
-                <label>Forma farmacêutica*</label>
-                <Controller
-                  rules={{ required: true }}
-                  defaultValue=""
-                  control={control}
-                  name="editDrugForm"
-                  render={({ field }) => (
-                    <Select
-                      name="editDrugForm"
-                      value={field.value}
-                      onChange={field.onChange}
-                      errors={errors}
-                      options={drugForm}
-                    />
+              <Divider>
+                <BoxInput>
+                  <label htmlFor="editDrugConcentration">
+                    Concentração do medicamento*
+                  </label>
+                  <Input
+                    type="text"
+                    id="editDrugConcentration"
+                    {...register('editDrugConcentration', { required: true })}
+                    placeholder="Dosagem em mg ou g"
+                    iserror={errors.editDrugConcentration ? 'erro' : ''}
+                  />
+                  {errors.editDrugConcentration && (
+                    <ErrorMessage message="Esse campo deve ser preenchido." />
                   )}
-                />
-                {errors.editDrugForm && (
-                  <ErrorMessage message="Esse campo deve ser preenchido." />
-                )}
-              </BoxInput>
+                </BoxInput>
 
-              <BoxInput>
-                <label htmlFor="editDrugQuantity">Quantidade disponível*</label>
-                <Input
-                  type="number"
-                  id="editDrugQuantity"
-                  min={1}
-                  {...register('editDrugQuantity', { required: true })}
-                  placeholder="N° de comprimidos ou frascos"
-                  iserror={errors.editDrugQuantity ? 'erro' : ''}
-                />
-                {errors.editDrugQuantity && (
-                  <ErrorMessage message="Esse campo deve ser preenchido." />
-                )}
-              </BoxInput>
-
-              <BoxInput>
-                <label htmlFor="editDrugExpiration">Prazo de validade*</label>
-                <Controller
-                  control={control}
-                  name="editDrugExpiration"
-                  render={({ field: { onChange, onBlur, value } }) => (
-                    <DatePickerStyle
-                      onChange={onChange}
-                      onBlur={onBlur}
-                      selected={value}
-                      dateFormat={'MM/yy'}
-                      placeholderText="mm/aa"
-                      iserror={errors.editDrugExpiration ? 'erro' : ''}
-                      renderCustomHeader={({
-                        date,
-                        changeYear,
-                        changeMonth,
-                        decreaseMonth,
-                        increaseMonth,
-                        prevMonthButtonDisabled,
-                        nextMonthButtonDisabled,
-                      }) => (
-                        <DatePickerHeader>
-                          <button
-                            onClick={decreaseMonth}
-                            disabled={prevMonthButtonDisabled}
-                          >
-                            {'<'}
-                          </button>
-                          <select
-                            value={getYear(date)}
-                            onChange={({ target: { value } }) =>
-                              changeYear(value)
-                            }
-                          >
-                            {years.map((option) => (
-                              <option key={option} value={option}>
-                                {option}
-                              </option>
-                            ))}
-                          </select>
-                          <select
-                            value={months[getMonth(date)]}
-                            onChange={({ target: { value } }) =>
-                              changeMonth(months.indexOf(value))
-                            }
-                          >
-                            {months.map((option) => (
-                              <option key={option} value={option}>
-                                {option}
-                              </option>
-                            ))}
-                          </select>
-                          <button
-                            onClick={increaseMonth}
-                            disabled={nextMonthButtonDisabled}
-                          >
-                            {'>'}
-                          </button>
-                        </DatePickerHeader>
-                      )}
-                    />
+                <BoxInput>
+                  <label>Forma farmacêutica*</label>
+                  <Controller
+                    rules={{ required: true }}
+                    defaultValue=""
+                    control={control}
+                    name="editDrugForm"
+                    render={({ field }) => (
+                      <Select
+                        name="editDrugForm"
+                        value={field.value}
+                        onChange={field.onChange}
+                        errors={errors}
+                        options={drugForm}
+                      />
+                    )}
+                  />
+                  {errors.editDrugForm && (
+                    <ErrorMessage message="Esse campo deve ser preenchido." />
                   )}
-                  rules={{ required: true }}
-                />
-                {errors.editDrugExpiration && (
-                  <ErrorMessage message="Esse campo deve ser preenchido." />
-                )}
-              </BoxInput>
+                </BoxInput>
+              </Divider>
+
+              <Divider>
+                <BoxInput>
+                  <label htmlFor="editDrugQuantity">
+                    Quantidade disponível*
+                  </label>
+                  <Input
+                    type="number"
+                    id="editDrugQuantity"
+                    min={1}
+                    {...register('editDrugQuantity', { required: true })}
+                    placeholder="N° de comprimidos ou frascos"
+                    iserror={errors.editDrugQuantity ? 'erro' : ''}
+                  />
+                  {errors.editDrugQuantity && (
+                    <ErrorMessage message="Esse campo deve ser preenchido." />
+                  )}
+                </BoxInput>
+
+                <BoxInput>
+                  <label htmlFor="editDrugExpiration">Prazo de validade*</label>
+                  <Controller
+                    control={control}
+                    name="editDrugExpiration"
+                    render={({ field: { onChange, onBlur, value } }) => (
+                      <DatePickerStyle
+                        onChange={onChange}
+                        onBlur={onBlur}
+                        selected={value}
+                        dateFormat={'MM/yy'}
+                        placeholderText="mm/aa"
+                        iserror={errors.editDrugExpiration ? 'erro' : ''}
+                        renderCustomHeader={({
+                          date,
+                          changeYear,
+                          changeMonth,
+                          decreaseMonth,
+                          increaseMonth,
+                          prevMonthButtonDisabled,
+                          nextMonthButtonDisabled,
+                        }) => (
+                          <DatePickerHeader>
+                            <button
+                              onClick={decreaseMonth}
+                              disabled={prevMonthButtonDisabled}
+                            >
+                              {'<'}
+                            </button>
+                            <select
+                              value={getYear(date)}
+                              onChange={({ target: { value } }) =>
+                                changeYear(value)
+                              }
+                            >
+                              {years.map((option) => (
+                                <option key={option} value={option}>
+                                  {option}
+                                </option>
+                              ))}
+                            </select>
+                            <select
+                              value={months[getMonth(date)]}
+                              onChange={({ target: { value } }) =>
+                                changeMonth(months.indexOf(value))
+                              }
+                            >
+                              {months.map((option) => (
+                                <option key={option} value={option}>
+                                  {option}
+                                </option>
+                              ))}
+                            </select>
+                            <button
+                              onClick={increaseMonth}
+                              disabled={nextMonthButtonDisabled}
+                            >
+                              {'>'}
+                            </button>
+                          </DatePickerHeader>
+                        )}
+                      />
+                    )}
+                    rules={{ required: true }}
+                  />
+                  {errors.editDrugExpiration && (
+                    <ErrorMessage message="Esse campo deve ser preenchido." />
+                  )}
+                </BoxInput>
+              </Divider>
             </FormStyle>
 
             <Buttons>
@@ -212,6 +219,7 @@ export const EditMedicines = ({
                 <img src={DeleteIcon} alt="" />
                 Excluir
               </button>
+              <img src={SeparatorIcon} alt="" />
               <button onClick={handleSaveEditMedicine}>
                 <img src={SaveIcon} alt="" />
                 Salvar

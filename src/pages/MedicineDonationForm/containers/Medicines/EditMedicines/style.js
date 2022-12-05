@@ -3,10 +3,12 @@ import DatePicker from 'react-datepicker';
 
 export const DisclosureEditStyle = styled.div`
   width: 100%;
+  max-width: 585px;
   background: #212933;
   border-radius: 5px;
   min-height: 3rem;
-  padding: 12px 24px;
+  padding: 12px 0.8rem;
+  margin: 0 auto;
   margin-bottom: 40px;
 
   & > button {
@@ -25,7 +27,7 @@ export const DisclosureEditStyle = styled.div`
   }
 
   & > div {
-    padding: 24px 0;
+    padding: 24px 0 0;
     color: ${(props) => props.theme.colors.primary_light};
 
     & > button {
@@ -49,13 +51,11 @@ export const Buttons = styled.div`
   cursor: pointer;
   background: transparent;
   color: ${(props) => props.theme.colors.primary_light};
-  margin-top: 20px;
 
   & > button {
     cursor: pointer;
     background: transparent;
     color: ${(props) => props.theme.colors.primary_light};
-    margin-top: 20px;
     width: 50%;
     font-weight: 400;
 
@@ -71,13 +71,24 @@ export const FormStyle = styled.div`
   margin: 0 auto;
 `;
 
+export const Divider = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+`;
+
 export const BoxInput = styled.div`
   margin-bottom: 1.5rem;
   position: relative;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 1.52rem;
-    min-width: 270px;
+    min-width: 267px;
   }
 
   & > label {
