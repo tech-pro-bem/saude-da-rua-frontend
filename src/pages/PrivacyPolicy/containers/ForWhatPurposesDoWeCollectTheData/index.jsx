@@ -6,6 +6,10 @@ export const ForWhatPurposesDoWeCollectTheData = () => {
         Os dados fornecidos por nossos usuários são coletados com a única
         finalidade de analisar os perfis das pessoas interessadas e entrar em
         contato de acordo com a necessidade do <a href="/">Saúde na Rua.</a>
+        Os dados fornecidos por nossos usuários são coletados com a
+        <strong> única finalidade</strong>
+        de analisar os perfis das pessoas interessadas e entrar em contato de
+        acordo com a necessidade do <a href="/">Saúde na Rua.</a>
       </p>
     </section>
   );
