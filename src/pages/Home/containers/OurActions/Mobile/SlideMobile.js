@@ -121,7 +121,7 @@ const SlideMobile = () => {
                       <li>
                         {' '}
                         Em 8 ações, realizamos 335 atendimentos médicos e 63
-                        testes rápidos de covid
+                        testes rápidos de covid-19
                       </li>
                       <li>
                         Nossas duas campanhas de arrecadação levantaram mais de
