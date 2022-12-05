@@ -1,6 +1,6 @@
 export const WhatPersonalDataDoWeCollect = () => {
   return (
-    <div>
+    <section id="secao3">
       <h2>Seção 3 - Quais dados pessoais coletamos?</h2>
       <p>
         Nós coletamos os seguintes dados pessoais que nossos usuários nos
@@ -20,6 +20,6 @@ export const WhatPersonalDataDoWeCollect = () => {
         se tornar voluntária informa preenche o formulário com os dados para
         contato.
       </p>
-    </div>
+    </section>
   );
 };

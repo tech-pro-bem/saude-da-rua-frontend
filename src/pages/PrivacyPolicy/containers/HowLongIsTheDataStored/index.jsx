@@ -1,6 +1,6 @@
 export const HowLongIsTheDataStored = () => {
   return (
-    <div>
+    <section id="secao5">
       <h2>Seção 5 - Por quanto tempo os dados ficam armazenados?</h2>
       <p>
         Os dados pessoais do usuário e visitante são armazenados pela plataforma
@@ -34,6 +34,6 @@ export const HowLongIsTheDataStored = () => {
           desde que anonimizados os dados.
         </li>
       </ol>
-    </div>
+    </section>
   );
 };

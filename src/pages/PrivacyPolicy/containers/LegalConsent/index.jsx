@@ -1,6 +1,6 @@
 export const LegalConsent = () => {
   return (
-    <div>
+    <section id="secao9">
       <h2>Seção 9 - Consentimento legal</h2>
       <p>
         Ao utilizar os serviços e fornecer as informações pessoais na
@@ -19,6 +19,6 @@ export const LegalConsent = () => {
         <a href="mailto:saudedarua@gmail.com">saudedarua@gmail.com</a> ou por
         correio enviado ao seguinte endereço: ________.
       </p>
-    </div>
+    </section>
   );
 };
