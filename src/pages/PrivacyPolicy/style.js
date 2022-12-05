@@ -55,7 +55,6 @@ export const Container = styled(Structure)`
 
   ul {
     margin-bottom: 24px;
-    list-style: none;
   }
 
   ol {
@@ -113,5 +112,12 @@ export const Content = styled.div`
 
   section {
     padding-top: 89px;
+  }
+
+  strong {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #fbfbfb;
   }
 `;
