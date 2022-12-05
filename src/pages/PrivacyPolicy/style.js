@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Structure } from '@components';
+import styled from 'styled-components';
 
 export const Container = styled(Structure)`
   padding-top: 46.57px;
@@ -55,6 +55,7 @@ export const Container = styled(Structure)`
 
   ul {
     margin-bottom: 24px;
+    list-style: none;
   }
 
   ol {
@@ -81,14 +82,36 @@ export const Container = styled(Structure)`
   }
 `;
 
+export const SummaryContent = styled.div`
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
+`;
+
+export const MarginTop = styled.div`
+  margin-top: 80px;
+`;
+
 export const Content = styled.div`
+  display: grid;
+
+  grid-template-columns: repeat(1, 2fr);
   @media (min-width: 768px) {
+    grid-template-rows: repeat(1, 1fr);
     columns: 2;
     column-gap: 2rem;
   }
 
   @media (min-width: 1024px) {
-    height: 2950px;
-    column-fill: auto;
+    column-fill: 2;
+  }
+
+  section {
+    padding-top: 89px;
   }
 `;
