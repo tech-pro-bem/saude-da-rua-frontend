@@ -12,6 +12,7 @@ export const Navigation = styled.nav`
   }
   ul {
     padding-top: 70px;
+    list-style: none;
   }
 `;
 
