@@ -70,6 +70,19 @@ const MedicineDonationForm = () => {
     navigate('/formulario-doacao/sucesso');
   };
 
+  const watchMedicineFields = watch([
+    'medicineName',
+    'pharmaceuticalForm',
+    'expirationDate',
+    'quantity',
+    'milligrams',
+    'agree',
+  ]);
+
+  const isDisabledAddMedicineButton = watchMedicineFields.some(
+    (field) => field === ''
+  );
+
   return (
     <Structure>
       <Headline />
@@ -97,7 +110,11 @@ const MedicineDonationForm = () => {
         <Agree register={register} errors={errors} />
 
         {isValid && (
-          <AddMedicineButton type="button" onClick={handleAddMedicine}>
+          <AddMedicineButton
+            disabled={isDisabledAddMedicineButton}
+            type="button"
+            onClick={handleAddMedicine}
+          >
             Salvar e adicionar outro
           </AddMedicineButton>
         )}
