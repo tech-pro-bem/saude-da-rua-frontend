@@ -96,6 +96,10 @@ export const Copyright = styled.div`
   list-style: none;
   padding-bottom: 3.688rem;
 
+  a {
+    cursor: pointer;
+  }
+
   @media (max-width: 1024px) {
     display: flex;
     justify-content: center;
@@ -108,6 +112,10 @@ export const Copyright = styled.div`
 
 export const CopyrightMobile = styled.div`
   display: none;
+
+  a {
+    cursor: pointer;
+  }
   @media (max-width: 873px) {
     display: flex;
     flex-direction: column;
