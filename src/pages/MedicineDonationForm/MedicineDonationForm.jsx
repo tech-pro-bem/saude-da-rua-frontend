@@ -1,6 +1,7 @@
 import { useForm, Controller } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
+import { DevTool } from '@hookform/devtools';
 
 import { Structure } from '@components';
 
@@ -107,6 +108,8 @@ const MedicineDonationForm = () => {
           value="Finalizar minha doação"
         />
       </form>
+
+      <DevTool control={control} />
     </Structure>
   );
 };
