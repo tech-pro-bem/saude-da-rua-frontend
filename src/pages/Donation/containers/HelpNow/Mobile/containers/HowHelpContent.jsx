@@ -28,7 +28,7 @@ const HowHelpContent = ({ HelpInformation }) => {
     clearInterval(timout.current);
     timout.current = setInterval(() => {
       setIsCopied(false);
-    }, 30 * 1000); // 30 seconds
+    }, 10 * 1000); // 10 seconds
   }
 
   return (

@@ -24,9 +24,9 @@ function MostUsed() {
         </Paragraphy>
       </MostUsedHeader>
       <MostUsedIcones>
-        {MostUsedContent.map((item) => {
+        {MostUsedContent.map((item, i) => {
           return (
-            <MostUsedIcon>
+            <MostUsedIcon key={i}>
               <img src={item.img.src} alt={item.img.alt} />
               <p dangerouslySetInnerHTML={{ __html: item.title }} />
             </MostUsedIcon>
