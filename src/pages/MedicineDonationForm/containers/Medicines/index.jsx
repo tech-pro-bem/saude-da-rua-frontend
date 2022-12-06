@@ -7,11 +7,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@radix-ui/react-icons';
 
 import { EditMedicines } from './EditMedicines';
 import { ErrorMessage, Select } from '@components';
-import {
-  DeleteIcon,
-  EditIcon,
-  SeparatorIcon,
-} from '../../../../assets/MedicinePage';
+import { DeleteIcon, EditIcon, SeparatorIcon } from '@assets/MedicinePage';
 import {
   BoxInput,
   Container,

@@ -40,6 +40,7 @@ const MedicineDonationForm = () => {
     setValue('expirationDate', '');
     setValue('quantity', '');
     setValue('milligrams', '');
+    setValue('agree', '');
   };
 
   const onSubmit = (data) => {

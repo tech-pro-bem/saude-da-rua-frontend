@@ -33,11 +33,11 @@ export const EditMedicines = ({
   getValues,
 }) => {
   useEffect(() => {
-    setValue('editDrugName', editMedicine.drugName);
-    setValue('editDrugConcentration', editMedicine.drugConcentration);
-    setValue('editDrugForm', editMedicine.drugForm);
-    setValue('editDrugExpiration', editMedicine.drugExpirationDate);
-    setValue('editDrugQuantity', editMedicine.drugQuantity);
+    setValue('editDrugName', editMedicine.medicineName);
+    setValue('editDrugConcentration', editMedicine.milligrams);
+    setValue('editDrugForm', editMedicine.pharmaceuticalForm);
+    setValue('editDrugExpiration', editMedicine.expirationDate);
+    setValue('editDrugQuantity', editMedicine.quantity);
   }, []);
 
   const handleSaveEditMedicine = () => {
@@ -45,11 +45,11 @@ export const EditMedicines = ({
 
     const editedMedicine = {
       drugId: editMedicine.drugId,
-      drugName: data.editDrugName,
-      drugConcentration: data.editDrugConcentration,
-      drugForm: data.editDrugForm,
-      drugExpirationDate: data.editDrugExpiration,
-      drugQuantity: data.editDrugQuantity,
+      medicineName: data.editDrugName,
+      milligrams: data.editDrugConcentration,
+      pharmaceuticalForm: data.editDrugForm,
+      expirationDate: data.editDrugExpiration,
+      quantity: Number(data.editDrugQuantity),
     };
 
     setMedicines([...medicines, editedMedicine]);
@@ -65,7 +65,7 @@ export const EditMedicines = ({
       {({ open }) => (
         <DisclosureEditStyle>
           <Disclosure.Button>
-            <span>{editMedicine.drugName}</span>
+            <span>{editMedicine.medicineName}</span>
             {open ? <ChevronUpIcon size={24} /> : <ChevronDownIcon size={24} />}
           </Disclosure.Button>
           <Disclosure.Panel>
