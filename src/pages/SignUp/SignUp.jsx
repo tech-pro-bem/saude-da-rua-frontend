@@ -82,7 +82,7 @@ const SignUp = () => {
         navigate('/inscreva-se/sucesso');
     } catch (e) {
       console.log(e);
-      //toastify com mensagem de erro para usuário
+      navigate('/inscreva-se/falha');
     }
   };
 

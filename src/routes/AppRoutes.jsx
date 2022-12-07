@@ -7,6 +7,7 @@ import {
   SignUpSuccess,
   Volunteers,
   PrivacyPolicy,
+  SignUpFail,
 } from '@pages';
 import { Route, Routes } from 'react-router-dom';
 import { Scroll } from '../components/Scroll';
@@ -22,6 +23,7 @@ const AppRoutes = () => (
         <Route path="inscreva-se" element={<SignUp />} />
         <Route path="inscreva-se/sucesso" element={<SignUpSuccess />} />
         <Route path="politica-de-privacidade" element={<PrivacyPolicy />} />
+        <Route path="inscreva-se/falha" element={<SignUpFail />} />
       </Route>
     </Routes>
   </Scroll>
