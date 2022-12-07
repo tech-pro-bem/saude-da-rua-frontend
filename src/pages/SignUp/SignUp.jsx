@@ -70,7 +70,7 @@ const SignUp = () => {
     data.howMuchParticipate = typesParticipation[data.howMuchParticipate];
     data.occupation = typesOccupation[data.occupation];
     data.semester = typesSemester[data.semester];
-    data.birthdate = new Date(data.birthdate).toLocaleDateString('pt-BR');
+    data.birthdate = new Date(data.birthdate).toLocaleDateString('en-US');
     delete data.other;
     delete data.agree;
     try {
