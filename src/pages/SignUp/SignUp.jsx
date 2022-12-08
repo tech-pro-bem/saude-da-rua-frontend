@@ -1,6 +1,6 @@
 import { useForm, Controller } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import api from './../../services/api';
 
 import { Structure } from '@components';
 
@@ -74,10 +74,7 @@ const SignUp = () => {
     delete data.other;
     delete data.agree;
     try {
-      const response = await axios.post(
-        `https://saude.thalles.me/create/volunteer`,
-        data
-      );
+      const response = await api.post(`/create/volunteer`, data);
       response.data.message === 'Successfully create volunteer' &&
         navigate('/inscreva-se/sucesso');
     } catch (e) {
