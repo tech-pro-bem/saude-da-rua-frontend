@@ -45,7 +45,7 @@ const Header = () => {
   const NavLinkRender = ({ text, to, id }) => {
     return (
       <ListNavMenu>
-        <NavLinkContent to={to} key={id} onClick={() => setToggle(!toggle)}>
+        <NavLinkContent to={to} key={id} onClick={() => setToggle(false)}>
           {text}
         </NavLinkContent>
       </ListNavMenu>
@@ -76,7 +76,7 @@ const Header = () => {
 
       <ContainerMobile>
         <NavMenuMobile isOpened={toggle}>
-          {toggle && (
+          {toggle ? (
             <NavLinkMenu>
               <div>
                 {NAV_LINKS.map((link, index) => (
@@ -94,6 +94,8 @@ const Header = () => {
                 onClick={() => setToggle(!toggle)}
               />
             </NavLinkMenu>
+          ) : (
+            <></>
           )}
         </NavMenuMobile>
       </ContainerMobile>
