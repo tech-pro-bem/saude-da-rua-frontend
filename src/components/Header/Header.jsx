@@ -45,7 +45,7 @@ const Header = () => {
   const NavLinkRender = ({ text, to, id }) => {
     return (
       <ListNavMenu>
-        <NavLinkContent to={to} key={id} onClick={() => setToggle(!toggle)}>
+        <NavLinkContent to={to} key={id} onClick={() => setToggle(false)}>
           {text}
         </NavLinkContent>
       </ListNavMenu>
@@ -84,14 +84,14 @@ const Header = () => {
                     to={link.to}
                     text={link.text}
                     key={index}
-                    onClick={() => setToggle(false)}
+                    onClick={() => setToggle(!toggle)}
                   />
                 ))}
               </div>
               <DonationButton
                 text="Doe agora"
                 route="/doacao"
-                onClick={() => setToggle(false)}
+                onClick={() => setToggle(!toggle)}
               />
             </NavLinkMenu>
           ) : (
