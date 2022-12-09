@@ -6,7 +6,11 @@ const SignUpFail = () => {
     <Structure>
       <Container>
         <Head>
-          <h1>Ocorreu um erro ao efetuar inscrição :( </h1>
+          <h1>
+            Poxa! <br />
+            Tivemos um problema ao carregar seus dados. <br /> Vamos tentar de
+            novo?
+          </h1>
         </Head>
         <TextBox>
           {/* <p>
