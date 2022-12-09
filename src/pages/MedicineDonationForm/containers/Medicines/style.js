@@ -239,3 +239,14 @@ export const DisclosureStyle = styled.div`
     }
   }
 `;
+
+export const Divider = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+`;
