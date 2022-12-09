@@ -16,7 +16,7 @@ const MedicineDonationFormSuccess = () => {
             fazer para entregar a sua doação. Muito obrigado!
           </p>
         </TextBox>
-        <LinkButton route="/doacao" text="Realizar outra doação" />
+        <LinkButton route="/" text="Voltar para o Início" />
       </Container>
     </Structure>
   );
