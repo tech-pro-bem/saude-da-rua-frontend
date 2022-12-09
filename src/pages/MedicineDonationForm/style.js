@@ -47,7 +47,9 @@ export const AddMedicineButton = styled.button`
 
   &[disabled] {
     cursor: not-allowed;
+    border: 0;
     background: ${(props) => props.theme.colors.border_input};
+    color: white;
   }
 
   @media screen and (min-width: 415px) {
