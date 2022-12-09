@@ -46,6 +46,7 @@ export const TextBox = styled.div`
     @media screen and (min-width: 768px) {
       text-align: center;
       margin-bottom: 4.18rem;
+      max-width: 60ch;
     }
   }
 `;
