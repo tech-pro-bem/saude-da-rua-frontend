@@ -6,16 +6,12 @@ const SignUpFail = () => {
     <Structure>
       <Container>
         <Head>
-          <h1>
-            Poxa! <br />
-            Tivemos um problema ao carregar seus dados. <br /> Vamos tentar de
-            novo?
-          </h1>
+          <h1>Poxa!</h1>
         </Head>
         <TextBox>
-          {/* <p>
-
-          </p> */}
+          <p>
+            Tivemos um problema ao carregar seus dados. Vamos tentar de novo?
+          </p>
         </TextBox>
         <LinkButton route="/inscreva-se" text="Tente novamente" />
       </Container>
