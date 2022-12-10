@@ -65,6 +65,7 @@
     ]
   },
   "devDependencies": {
+    "@hookform/devtools": "^4.2.3",
     "babel-plugin-styled-components": "^2.0.7",
     "customize-cra": "^1.0.0",
     "husky": "^7.0.0",
