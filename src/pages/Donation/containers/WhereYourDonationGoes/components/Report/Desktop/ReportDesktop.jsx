@@ -10,42 +10,25 @@ import {
   ReportWrapper,
 } from './ReportDesktop.style';
 
-const ReportDesktop = () => {
-  const lalala = [
-    {
-      id: '32dbab93-9760-447b-a790-05dbd58a3368',
-      fileType: 'PDF',
-      name: 'Relatório Financeiro 2022',
-      label: '2022',
-      url: 'https://saudedarua-aodskodkqwd.s3-sa-east-1.amazonaws.com/32dbab93-9760-447b-a790-05dbd58a3368',
-      createdAt: '2022-11-30T22:20:42.138Z',
-    },
-  ];
-  const Reports = [
-    {
-      year: 2020,
-      link: '',
-    },
-    {
-      year: 2021,
-      link: '',
-    },
-    {
-      year: 2022,
-      link: '',
-    },
-  ];
+const ReportDesktop = ({ reports }) => {
   const [isReportOpen, setisReportOpen] = useState(false);
   return (
     <Container>
       <ReportWrapper>
-        <Title>Relatório anual {Reports[Reports.length - 1].year}</Title>
-        <LoadP>baixe aqui</LoadP>
-        <Title>Relatório anual {Reports[Reports.length - 2].year}</Title>
+        <Title>Relatório anual 2022</Title>
         <LoadP>
           <a
             href="https://saudedarua-aodskodkqwd.s3-sa-east-1.amazonaws.com/55a11174-a27d-4158-abda-27e3d8681438"
-            download={`Relatório anual ${Reports[1].year}`}
+            download={`Relatório anual 2022`}
+          >
+            baixe aqui
+          </a>
+        </LoadP>
+        <Title>Relatório anual 2021</Title>
+        <LoadP>
+          <a
+            href="https://saudedarua-aodskodkqwd.s3-sa-east-1.amazonaws.com/55a11174-a27d-4158-abda-27e3d8681438"
+            download={`Relatório anual 2021`}
           >
             baixe aqui
           </a>
@@ -60,8 +43,15 @@ const ReportDesktop = () => {
         </OtherReport>
         {isReportOpen ? (
           <OlderReports>
-            <Title>Relatório anual {Reports[2].year}</Title>
-            <LoadP>baixe aqui</LoadP>
+            <Title>Relatório anual 2020</Title>
+            <LoadP>
+              <a
+                href="https://saudedarua-aodskodkqwd.s3-sa-east-1.amazonaws.com/55a11174-a27d-4158-abda-27e3d8681438"
+                download={`Relatório anual 2020`}
+              >
+                baixe aqui
+              </a>
+            </LoadP>
           </OlderReports>
         ) : null}
       </ReportWrapper>
