@@ -20,7 +20,7 @@ const MedicineDonationForm = () => {
     watch,
     getValues,
     setValue,
-    formState: { errors, isDirty, isValid },
+    formState: { errors, isValid },
   } = useForm();
 
   const handleAddMedicine = () => {
@@ -41,7 +41,6 @@ const MedicineDonationForm = () => {
     setValue('expirationDate', '');
     setValue('quantity', '');
     setValue('milligrams', '');
-    setValue('agree', '');
   };
 
   const onSubmit = (data) => {
@@ -70,18 +69,42 @@ const MedicineDonationForm = () => {
     navigate('/formulario-doacao/sucesso');
   };
 
+  const watchContactFields = watch([
+    'fullName',
+    'zipCode',
+    'address',
+    'cellphoneNumberWithDDD',
+    'email',
+  ]);
+
   const watchMedicineFields = watch([
     'medicineName',
     'pharmaceuticalForm',
     'expirationDate',
     'quantity',
     'milligrams',
-    'agree',
   ]);
 
   const isDisabledAddMedicineButton = watchMedicineFields.some(
     (field) => field === ''
   );
+
+  const watchContact = watchContactFields.some(
+    (field) => field === '' || field === undefined
+  );
+
+  const watchMedicines = () => {
+    if (medicines.length === 0) {
+      return watchMedicineFields.some(
+        (field) => field === '' || field === undefined
+      );
+    }
+  };
+
+  const watchAgree = watch('agree');
+
+  const isDisabledSubmitButton =
+    watchContact || watchMedicines() || !watchAgree;
 
   return (
     <Structure>
@@ -120,7 +143,7 @@ const MedicineDonationForm = () => {
         )}
 
         <SubmitStyle
-          disabled={!isDirty || !isValid}
+          disabled={isDisabledSubmitButton}
           type="submit"
           value="Finalizar minha doação"
         />
