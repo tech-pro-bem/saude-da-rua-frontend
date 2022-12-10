@@ -1,5 +1,6 @@
 import { Question } from 'phosphor-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import cep from 'cep-promise';
 
 import { ErrorMessage } from '@components';
 
@@ -16,12 +17,22 @@ import {
 
 import 'react-datepicker/dist/react-datepicker.css';
 
-export const ContactInfo = ({ register, Controller, control, errors }) => {
+export const ContactInfo = ({ register, errors, watch, setValue }) => {
   const [name, setName] = useState(false);
   const [phone, setPhone] = useState(false);
   const [zipCode, setZipCode] = useState(false);
   const [address, setAddress] = useState(false);
   const [email, setEmail] = useState(false);
+
+  const code = watch('zipCode');
+
+  useEffect(() => {
+    if (code) {
+      cep(code).then((response) => {
+        setValue('address', `${response.street}`);
+      });
+    }
+  }, [code, setValue]);
 
   return (
     <Container>
