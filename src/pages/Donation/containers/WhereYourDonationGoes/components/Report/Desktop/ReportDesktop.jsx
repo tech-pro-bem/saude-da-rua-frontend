@@ -11,9 +11,19 @@ import {
 } from './ReportDesktop.style';
 
 const ReportDesktop = () => {
+  const lalala = [
+    {
+      id: '32dbab93-9760-447b-a790-05dbd58a3368',
+      fileType: 'PDF',
+      name: 'Relatório Financeiro 2022',
+      label: '2022',
+      url: 'https://saudedarua-aodskodkqwd.s3-sa-east-1.amazonaws.com/32dbab93-9760-447b-a790-05dbd58a3368',
+      createdAt: '2022-11-30T22:20:42.138Z',
+    },
+  ];
   const Reports = [
     {
-      year: 2022,
+      year: 2020,
       link: '',
     },
     {
@@ -21,7 +31,7 @@ const ReportDesktop = () => {
       link: '',
     },
     {
-      year: 2020,
+      year: 2022,
       link: '',
     },
   ];
@@ -29,10 +39,17 @@ const ReportDesktop = () => {
   return (
     <Container>
       <ReportWrapper>
-        <Title>Relatório anual {Reports[0].year}</Title>
+        <Title>Relatório anual {Reports[Reports.length - 1].year}</Title>
         <LoadP>baixe aqui</LoadP>
-        <Title>Relatório anual {Reports[1].year}</Title>
-        <LoadP>baixe aqui</LoadP>
+        <Title>Relatório anual {Reports[Reports.length - 2].year}</Title>
+        <LoadP>
+          <a
+            href="https://saudedarua-aodskodkqwd.s3-sa-east-1.amazonaws.com/55a11174-a27d-4158-abda-27e3d8681438"
+            download={`Relatório anual ${Reports[1].year}`}
+          >
+            baixe aqui
+          </a>
+        </LoadP>
         <OtherReport>
           <Title>Outros Relatórios</Title>
           <img
