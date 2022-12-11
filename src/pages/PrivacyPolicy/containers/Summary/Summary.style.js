@@ -11,8 +11,8 @@ export const Navigation = styled.nav`
     width: 1px;
   }
   ul {
-    padding-top: 70px;
     list-style: none;
+    margin-top: 70px;
   }
 `;
 
