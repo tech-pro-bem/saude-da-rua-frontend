@@ -14,16 +14,15 @@ import {
   WhatPersonalDataDoWeCollect,
 } from './containers';
 
-import { Container, Content, MarginTop, SummaryContent } from './style';
+import { Container, Content, SummaryContent } from './style';
 
 const PrivacyPolicy = () => {
   return (
     <Container>
       <Headline />
       <SummaryContent>
-        <MarginTop>
-          <Summary />
-        </MarginTop>
+        <Summary />
+
         <Content>
           <GeneralInformation />
           <HowDoWeCollectPersonalData />
