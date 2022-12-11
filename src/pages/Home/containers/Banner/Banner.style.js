@@ -3,7 +3,7 @@ import { banner } from '@assets';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   height: 624px;
   margin: 0 auto 116px auto;
   background: url(${banner}) no-repeat;
@@ -25,7 +25,9 @@ export const Container = styled.div`
   }
 
   div {
-    width: 545px;
+    width: 100%;
+    max-width: 1167px;
+    margin: 0 auto;
     @media screen and (max-width: 768px) {
       margin: 62px 16px 0px 16px;
       width: 100%;
