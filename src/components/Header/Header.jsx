@@ -76,7 +76,7 @@ const Header = () => {
 
       <ContainerMobile>
         <NavMenuMobile isOpened={toggle}>
-          {toggle && (
+          {toggle ? (
             <NavLinkMenu>
               <div>
                 {NAV_LINKS.map((link, index) => (
@@ -84,16 +84,18 @@ const Header = () => {
                     to={link.to}
                     text={link.text}
                     key={index}
-                    onClick={() => setToggle(!toggle)}
+                    onClick={() => setToggle(false)}
                   />
                 ))}
               </div>
               <DonationButton
                 text="Doe agora"
                 route="/doacao"
-                onClick={() => setToggle(!toggle)}
+                onClick={() => setToggle(false)}
               />
             </NavLinkMenu>
+          ) : (
+            <></>
           )}
         </NavMenuMobile>
       </ContainerMobile>
