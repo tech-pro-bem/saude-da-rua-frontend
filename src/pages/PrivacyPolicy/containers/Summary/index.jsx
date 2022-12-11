@@ -54,7 +54,7 @@ export const Summary = () => {
             onClick={() => setActiveLink('#secao4')}
             className={activeLink === '#secao4' ? 'active' : ''}
           >
-            <span>Seção 4</span> Quais dados pessoais coletamos?
+            <span>Seção 4</span> Para quais finalidades coletamos dados?
           </Link>
         </List>
 
