@@ -2,8 +2,7 @@ import { Structure } from '@components';
 import styled from 'styled-components';
 
 export const Container = styled(Structure)`
-  padding-top: 46.57px;
-  padding-bottom: 40px;
+  padding: 46.57px 16px 40px 16px;
 
   @media (min-width: 768px) {
     padding-top: 173px;
@@ -92,9 +91,7 @@ export const SummaryContent = styled.div`
   }
 `;
 
-export const MarginTop = styled.div`
-  margin-top: 80px;
-`;
+// export const MarginTop = styled.div``;
 
 export const Content = styled.div`
   display: grid;
@@ -108,10 +105,6 @@ export const Content = styled.div`
 
   @media (min-width: 1024px) {
     column-fill: 2;
-  }
-
-  section {
-    padding-top: 89px;
   }
 
   strong {
