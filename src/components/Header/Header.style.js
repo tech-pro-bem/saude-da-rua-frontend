@@ -64,10 +64,8 @@ export const NavLinkContent = styled(NavLink)`
 
 export const NavMenu = styled.div`
   display: flex;
-
   padding: 4px;
   align-items: center;
-  //justify-content: center;
   gap: 25px;
 
   @media (max-width: 873px) {
@@ -77,17 +75,23 @@ export const NavMenu = styled.div`
 
 export const DonationButton = styled(LinkButton)`
   padding: 13px 29px;
+
   @media (max-width: 873px) {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 7.813rem;
-    width: 90%;
+    width: 40%;
     position: absolute;
     bottom: 0;
     right: 50%;
-
     transform: translateX(50%);
+  }
+  @media (max-width: 520px) {
+    width: 90%;
+  }
+  @media (max-height: 390px) {
+    margin-bottom: 6.3rem;
   }
 `;
 
@@ -105,10 +109,17 @@ export const ToggleMenu = styled.button`
 
 export const ContainerMobile = styled.div`
   display: none;
-
+  z-index: 999;
   @media (max-width: 873px) {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-height: 520px) {
+    max-height: calc(100vh - 80px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 93px;
   }
 `;
 
@@ -127,17 +138,17 @@ export const NavMenuMobile = styled.nav`
     @media (max-width: 873px) {
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1rem;
 
       //transform: translateY(60%);
     }
 
-    @media (max-width: 520px) {
+    /*    @media (max-width: 520px) {
       display: flex;
       flex-direction: column;
       gap: 2rem;
       transform: translateY(0);
-    }
+    } */
   }
 
   @media (max-width: 873px) {
@@ -149,9 +160,8 @@ export const NavLinkMenu = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 1rem;
-
-  color: white;
+  padding-left: 1rem;
+  color: #fff;
 `;
 
 export const ListNavMenu = styled.li`
