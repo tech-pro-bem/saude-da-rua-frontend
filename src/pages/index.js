@@ -7,6 +7,7 @@ import Volunteers from './Volunteers/Volunteers';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 import MedicineDonationForm from './MedicineDonationForm/MedicineDonationForm';
 import MedicineDonationFormSuccess from './MedicineDonationFormSuccess/MedicineDonationFormSuccess';
+import MedicineDonationFormFail from './MedicineDonationFormFail/MedicineDonationFormFail';
 
 export {
   Home,
@@ -18,4 +19,5 @@ export {
   PrivacyPolicy,
   MedicineDonationForm,
   MedicineDonationFormSuccess,
+  MedicineDonationFormFail,
 };
