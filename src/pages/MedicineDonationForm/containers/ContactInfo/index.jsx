@@ -30,6 +30,8 @@ export const ContactInfo = ({ register, errors, watch, setValue }) => {
     if (code) {
       cep(code).then((response) => {
         setValue('address', `${response.street}`);
+        setValue('city', `${response.city}`);
+        setValue('state', `${response.state}`);
       });
     }
   }, [code, setValue]);

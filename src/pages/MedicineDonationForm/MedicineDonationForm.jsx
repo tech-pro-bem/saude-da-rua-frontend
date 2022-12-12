@@ -47,6 +47,8 @@ const MedicineDonationForm = () => {
       fullName: data.fullName,
       CEP: data.zipCode,
       address: data.address,
+      city: data.city,
+      state: data.state,
       cellPhoneWithDDD: data.cellphoneNumberWithDDD,
       email: data.email,
     };
