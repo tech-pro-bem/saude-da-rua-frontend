@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import LinkButton from '../LinkButton/LinkButton';
 
 export const Container = styled.div`
-  padding: 0 30px;
   position: fixed;
+  padding: 0 20px;
   z-index: 999;
   width: 100%;
   top: 0;
@@ -139,16 +139,7 @@ export const NavMenuMobile = styled.nav`
       display: flex;
       flex-direction: column;
       gap: 1rem;
-
-      //transform: translateY(60%);
     }
-
-    /*    @media (max-width: 520px) {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      transform: translateY(0);
-    } */
   }
 
   @media (max-width: 873px) {
