@@ -68,12 +68,12 @@ export const ContactInfo = ({ register, errors, watch, setValue }) => {
           <Input
             type="text"
             id="fullName"
-            {...register('fullName', { required: true })}
+            {...register('fullName')}
             placeholder="Seu nome completo"
             iserror={errors.fullName ? 'erro' : ''}
           />
-          {errors.fullName && (
-            <ErrorMessage message="Esse campo deve ser preenchido." />
+          {errors.fullName?.message && (
+            <ErrorMessage message={errors.fullName.message} />
           )}
         </BoxInput>
 
@@ -103,11 +103,11 @@ export const ContactInfo = ({ register, errors, watch, setValue }) => {
               id="cellphoneNumberWithDDD"
               mask="(99) 99999-9999"
               placeholder="(00) 00000-0000"
-              {...register('cellphoneNumberWithDDD', { required: true })}
+              {...register('cellphoneNumberWithDDD')}
               iserror={errors.cellphoneNumberWithDDD ? 'erro' : ''}
             />
-            {errors.cellphoneNumberWithDDD && (
-              <ErrorMessage message="Esse campo deve ser preenchido." />
+            {errors.cellphoneNumberWithDDD?.message && (
+              <ErrorMessage message={errors.cellphoneNumberWithDDD.message} />
             )}
           </BoxInput>
 
@@ -136,11 +136,11 @@ export const ContactInfo = ({ register, errors, watch, setValue }) => {
               id="zip-code"
               mask="99999-999"
               placeholder="00000-000"
-              {...register('zipCode', { required: true })}
+              {...register('zipCode')}
               iserror={errors.zipCode ? 'erro' : ''}
             />
-            {errors.zipCode && (
-              <ErrorMessage message="Esse campo deve ser preenchido." />
+            {errors.zipCode?.message && (
+              <ErrorMessage message={errors.zipCode.message} />
             )}
           </BoxInput>
         </Divider>
@@ -168,12 +168,12 @@ export const ContactInfo = ({ register, errors, watch, setValue }) => {
           <Input
             type="text"
             id="address"
-            {...register('address', { required: true })}
+            {...register('address')}
             placeholder="Seu endereço"
             iserror={errors.address ? 'erro' : ''}
           />
-          {errors.address && (
-            <ErrorMessage message="Esse campo deve ser preenchido." />
+          {errors.address?.message && (
+            <ErrorMessage message={errors.address.message} />
           )}
         </BoxInput>
 
@@ -200,12 +200,12 @@ export const ContactInfo = ({ register, errors, watch, setValue }) => {
           <Input
             type="email"
             id="email"
-            {...register('email', { required: true })}
+            {...register('email')}
             placeholder="Seu e-mail principal"
             iserror={errors.email ? 'erro' : ''}
           />
-          {errors.email && (
-            <ErrorMessage message="Esse campo deve ser preenchido." />
+          {errors.email?.message && (
+            <ErrorMessage message={errors.email.message} />
           )}
         </BoxInput>
       </FormStyle>

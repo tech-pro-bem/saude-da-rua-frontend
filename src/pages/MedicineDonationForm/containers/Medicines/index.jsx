@@ -30,6 +30,7 @@ const drugForm = [
   'Xarope',
   'Creme',
   'Pomada',
+  'Outros',
 ];
 
 export const Medicines = ({
@@ -89,7 +90,11 @@ export const Medicines = ({
             )}
           </button>
         </h2>
-        <p>Tenha os remédios em mãos para informar os dados corretamente.</p>
+        <p>
+          Tenha os remédios em mãos para informar os dados corretamente.
+          <br />
+          Registre até 20 medicamentos por formulário.
+        </p>
 
         {infoMedicine && (
           <Tooltip>
@@ -117,12 +122,20 @@ export const Medicines = ({
                 </Disclosure.Button>
                 <Disclosure.Panel>
                   <div className="disclosure-content">
-                    <span>{medicine.milligrams}</span>
+                    <span>
+                      {medicine.milligrams
+                        ? medicine.milligrams
+                        : 'Não informado'}
+                    </span>
                     <span>
                       {format(new Date(medicine.expirationDate), 'MM/yyyy')}
                     </span>
                     <span>{medicine.quantity} unidades</span>
-                    <span>{medicine.pharmaceuticalForm}</span>
+                    <span>
+                      {medicine.pharmaceuticalForm
+                        ? medicine.pharmaceuticalForm
+                        : 'Não informado'}
+                    </span>
                   </div>
                   <div className="disclosure-buttons-actions">
                     <button
@@ -172,30 +185,29 @@ export const Medicines = ({
             placeholder="Nome comercial ou princípio ativo"
             iserror={errors.medicineName ? 'erro' : ''}
           />
-          {errors.medicineName && (
-            <ErrorMessage message="Esse campo deve ser preenchido." />
+          {errors.medicineName?.message && (
+            <ErrorMessage message={errors.medicineName.message} />
           )}
         </BoxInput>
 
         <Divider>
           <BoxInput>
-            <label htmlFor="milligrams">Concentração do medicamento*</label>
+            <label htmlFor="milligrams">Concentração do medicamento</label>
             <Input
               type="text"
               id="milligrams"
-              {...register('milligrams', { required: true })}
+              {...register('milligrams')}
               placeholder="Dosagem em mg ou g"
               iserror={errors.milligrams ? 'erro' : ''}
             />
-            {errors.milligrams && (
-              <ErrorMessage message="Esse campo deve ser preenchido." />
+            {errors.milligrams?.message && (
+              <ErrorMessage message={errors.milligrams.message} />
             )}
           </BoxInput>
 
           <BoxInput>
-            <label>Forma farmacêutica*</label>
+            <label>Forma farmacêutica</label>
             <Controller
-              rules={{ required: true }}
               defaultValue=""
               control={control}
               name="pharmaceuticalForm"
@@ -209,8 +221,8 @@ export const Medicines = ({
                 />
               )}
             />
-            {errors.pharmaceuticalForm && (
-              <ErrorMessage message="Esse campo deve ser preenchido." />
+            {errors.pharmaceuticalForm?.message && (
+              <ErrorMessage message={errors.pharmaceuticalForm.message} />
             )}
           </BoxInput>
         </Divider>
@@ -223,11 +235,11 @@ export const Medicines = ({
               id="quantity"
               min={1}
               {...register('quantity', { required: true })}
-              placeholder="Comprimidos ou frascos"
+              placeholder="N° de unidades"
               iserror={errors.quantity ? 'erro' : ''}
             />
-            {errors.quantity && (
-              <ErrorMessage message="Esse campo deve ser preenchido." />
+            {errors.quantity?.message && (
+              <ErrorMessage message={errors.quantity.message} />
             )}
           </BoxInput>
 
@@ -294,8 +306,8 @@ export const Medicines = ({
               )}
               rules={{ required: true }}
             />
-            {errors.expirationDate && (
-              <ErrorMessage message="Esse campo deve ser preenchido." />
+            {errors.expirationDate?.message && (
+              <ErrorMessage message={errors.expirationDate.message} />
             )}
           </BoxInput>
         </Divider>

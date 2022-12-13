@@ -3,11 +3,41 @@ import { useForm, Controller } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { DevTool } from '@hookform/devtools';
+import * as z from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 import api from '../../services/api';
 import { Structure } from '@components';
 import { ContactInfo, Headline, Agree, Medicines } from './containers';
 import { AddMedicineButton, SubmitStyle } from './style';
+
+const cellphoneRegExp = /^\([1-9]{2}\) [9]{1}[0-9]{4}-[0-9]{4}$/;
+const zipcodeRegExp = /^[0-9]{5}-[0-9]{3}$/;
+
+const schema = z.object({
+  fullName: z.string().min(3, 'Nome deve ter no mínimo 3 caracteres'),
+  email: z.string().email('Email inválido'),
+  address: z.string().min(3, 'Endereço deve ter no mínimo 3 caracteres'),
+  cellphoneNumberWithDDD: z
+    .string()
+    .regex(cellphoneRegExp, 'Telefone inválido'),
+  zipCode: z.string().regex(zipcodeRegExp, 'CEP inválido'),
+  medicineName: z
+    .string()
+    .min(3, 'Nome do medicamento deve ter no mínimo 3 caracteres'),
+  pharmaceuticalForm: z.string(),
+  expirationDate: z
+    .date()
+    .min(new Date(), 'Data de validade deve ser maior que a data atual'),
+  quantity: z.string().min(1, 'Quantidade deve ser maior que 0'),
+  milligrams: z.string(),
+  agree: z
+    .boolean()
+    .refine(
+      (value) => value === true,
+      'Você deve concordar com os termos de uso'
+    ),
+});
 
 const MedicineDonationForm = () => {
   const [medicines, setMedicines] = useState([]);
@@ -19,18 +49,22 @@ const MedicineDonationForm = () => {
     watch,
     getValues,
     setValue,
-    formState: { errors, isValid },
-  } = useForm();
+    formState: { errors, isValid, isDirty },
+  } = useForm({
+    resolver: zodResolver(schema),
+  });
 
   const handleAddMedicine = () => {
     const data = getValues();
     const medicine = {
       drugId: uuid(),
       medicineName: data.medicineName,
-      pharmaceuticalForm: data.pharmaceuticalForm,
+      pharmaceuticalForm: data.pharmaceuticalForm
+        ? data.pharmaceuticalForm
+        : 'Não informado',
       expirationDate: data.expirationDate,
       quantity: Number(data.quantity),
-      milligrams: data.milligrams,
+      milligrams: data.milligrams ? data.milligrams : 'Não informado',
     };
 
     setMedicines([...medicines, medicine]);
@@ -56,10 +90,12 @@ const MedicineDonationForm = () => {
     const medicine = {
       drugId: uuid(),
       medicineName: data.medicineName,
-      pharmaceuticalForm: data.pharmaceuticalForm,
+      pharmaceuticalForm: data.pharmaceuticalForm
+        ? data.pharmaceuticalForm
+        : 'Não informado',
       expirationDate: data.expirationDate,
       quantity: Number(data.quantity),
-      milligrams: data.milligrams,
+      milligrams: data.milligrams ? data.milligrams : 'Não informado',
     };
 
     const formMedicines = [...medicines, medicine];
@@ -84,42 +120,41 @@ const MedicineDonationForm = () => {
     }
   };
 
-  const watchContactFields = watch([
-    'fullName',
-    'zipCode',
-    'address',
-    'cellphoneNumberWithDDD',
-    'email',
-  ]);
+  // const watchContactFields = watch([
+  //   'fullName',
+  //   'zipCode',
+  //   'address',
+  //   'cellphoneNumberWithDDD',
+  //   'email',
+  // ]);
 
   const watchMedicineFields = watch([
     'medicineName',
-    'pharmaceuticalForm',
+    // 'pharmaceuticalForm',
     'expirationDate',
     'quantity',
-    'milligrams',
+    // 'milligrams',
   ]);
 
-  const isDisabledAddMedicineButton = watchMedicineFields.some(
-    (field) => field === ''
-  );
+  const isDisabledAddMedicineButton =
+    watchMedicineFields.some((field) => field === '') || medicines.length >= 19;
 
-  const watchContact = watchContactFields.some(
-    (field) => field === '' || field === undefined
-  );
+  // const watchContact = watchContactFields.some(
+  //   (field) => field === '' || field === undefined
+  // );
 
-  const watchMedicines = () => {
-    if (medicines.length === 0) {
-      return watchMedicineFields.some(
-        (field) => field === '' || field === undefined
-      );
-    }
-  };
+  // const watchMedicines = () => {
+  //   if (medicines.length === 0) {
+  //     return watchMedicineFields.some(
+  //       (field) => field === '' || field === undefined
+  //     );
+  //   }
+  // };
 
-  const watchAgree = watch('agree');
+  // const watchAgree = watch('agree');
 
-  const isDisabledSubmitButton =
-    watchContact || watchMedicines() || !watchAgree;
+  // const isDisabledSubmitButton =
+  //   watchContact || watchMedicines() || !watchAgree;
 
   return (
     <Structure>
@@ -160,9 +195,9 @@ const MedicineDonationForm = () => {
         )}
 
         <SubmitStyle
-          disabled={isDisabledSubmitButton}
+          disabled={!isDirty || !isValid}
           type="submit"
-          value="Finalizar minha doação"
+          value="Confirmar minha doação"
         />
       </form>
 
