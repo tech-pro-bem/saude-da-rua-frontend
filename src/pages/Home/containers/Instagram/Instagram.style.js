@@ -3,12 +3,7 @@ import styled from 'styled-components';
 export const ContainerInstagram = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 116px 0;
   align-items: stretch;
-
-  @media screen and (max-width: 768px) {
-    margin: 64px 0;
-  }
 `;
 
 export const InstagramText = styled.h3`

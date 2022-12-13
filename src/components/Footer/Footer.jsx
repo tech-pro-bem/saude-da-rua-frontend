@@ -81,7 +81,7 @@ const Footer = () => (
 
       <CopyrightMobile>
         <NavLink to="/politica-de-privacidade">
-          <li>Política de privacidade</li>
+          <li>Política de Privacidade</li>
         </NavLink>
 
         <li>
