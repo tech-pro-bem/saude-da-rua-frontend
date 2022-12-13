@@ -27,7 +27,7 @@ export const ContactInfo = ({ register, errors, watch, setValue }) => {
   const code = watch('zipCode');
 
   useEffect(() => {
-    if (code) {
+    if (code && code.match(/^[0-9]{5}-[0-9]{3}$/)) {
       cep(code).then((response) => {
         setValue('address', `${response.street}`);
         setValue('city', `${response.city}`);
