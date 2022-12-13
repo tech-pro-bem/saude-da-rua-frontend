@@ -36,12 +36,11 @@ const drugForm = [
 export const Medicines = ({
   register,
   Controller,
-  watch,
   control,
   errors,
   getValues,
   setValue,
-  isValid,
+  userGaveUpAddingMedicines,
   medicines,
   setMedicines,
 }) => {
@@ -174,144 +173,148 @@ export const Medicines = ({
         />
       )}
 
-      <FormStyle>
-        <BoxInput>
-          <label htmlFor="medicineName">Nome do medicamento*</label>
-          <Input
-            type="text"
-            id="medicineName"
-            autoComplete="off"
-            {...register('medicineName', { required: true })}
-            placeholder="Nome comercial ou princípio ativo"
-            iserror={errors.medicineName ? 'erro' : ''}
-          />
-          {errors.medicineName?.message && (
-            <ErrorMessage message={errors.medicineName.message} />
-          )}
-        </BoxInput>
-
-        <Divider>
+      {!userGaveUpAddingMedicines && (
+        <FormStyle>
           <BoxInput>
-            <label htmlFor="milligrams">Concentração do medicamento</label>
+            <label htmlFor="medicineName">Nome do medicamento*</label>
             <Input
               type="text"
-              id="milligrams"
-              {...register('milligrams')}
-              placeholder="Dosagem em mg ou g"
-              iserror={errors.milligrams ? 'erro' : ''}
+              id="medicineName"
+              autoComplete="off"
+              {...register('medicineName', { required: true })}
+              placeholder="Nome comercial ou princípio ativo"
+              iserror={errors.medicineName ? 'erro' : ''}
             />
-            {errors.milligrams?.message && (
-              <ErrorMessage message={errors.milligrams.message} />
+            {errors.medicineName?.message && (
+              <ErrorMessage message={errors.medicineName.message} />
             )}
           </BoxInput>
 
-          <BoxInput>
-            <label>Forma farmacêutica</label>
-            <Controller
-              defaultValue=""
-              control={control}
-              name="pharmaceuticalForm"
-              render={({ field }) => (
-                <Select
-                  name="pharmaceuticalForm"
-                  value={field.value}
-                  onChange={field.onChange}
-                  errors={errors}
-                  options={drugForm}
-                />
+          <Divider>
+            <BoxInput>
+              <label htmlFor="milligrams">Concentração do medicamento</label>
+              <Input
+                type="text"
+                id="milligrams"
+                {...register('milligrams')}
+                placeholder="Dosagem em mg ou g"
+                iserror={errors.milligrams ? 'erro' : ''}
+              />
+              {errors.milligrams?.message && (
+                <ErrorMessage message={errors.milligrams.message} />
               )}
-            />
-            {errors.pharmaceuticalForm?.message && (
-              <ErrorMessage message={errors.pharmaceuticalForm.message} />
-            )}
-          </BoxInput>
-        </Divider>
+            </BoxInput>
 
-        <Divider>
-          <BoxInput>
-            <label htmlFor="quantity">Quantidade disponível*</label>
-            <Input
-              type="number"
-              id="quantity"
-              min={1}
-              {...register('quantity', { required: true })}
-              placeholder="N° de unidades"
-              iserror={errors.quantity ? 'erro' : ''}
-            />
-            {errors.quantity?.message && (
-              <ErrorMessage message={errors.quantity.message} />
-            )}
-          </BoxInput>
-
-          <BoxInput>
-            <label htmlFor="expirationDate">Prazo de validade*</label>
-            <Controller
-              control={control}
-              name="expirationDate"
-              render={({ field: { onChange, onBlur, value } }) => (
-                <DatePickerStyle
-                  onChange={onChange}
-                  onBlur={onBlur}
-                  selected={value}
-                  dateFormat={'MM/yy'}
-                  placeholderText="mm/aa"
-                  iserror={errors.expirationDate ? 'erro' : ''}
-                  renderCustomHeader={({
-                    date,
-                    changeYear,
-                    changeMonth,
-                    decreaseMonth,
-                    increaseMonth,
-                    prevMonthButtonDisabled,
-                    nextMonthButtonDisabled,
-                  }) => (
-                    <DatePickerHeader>
-                      <button
-                        onClick={decreaseMonth}
-                        disabled={prevMonthButtonDisabled}
-                      >
-                        {'<'}
-                      </button>
-                      <select
-                        value={getYear(date)}
-                        onChange={({ target: { value } }) => changeYear(value)}
-                      >
-                        {years.map((option) => (
-                          <option key={option} value={option}>
-                            {option}
-                          </option>
-                        ))}
-                      </select>
-                      <select
-                        value={months[getMonth(date)]}
-                        onChange={({ target: { value } }) =>
-                          changeMonth(months.indexOf(value))
-                        }
-                      >
-                        {months.map((option) => (
-                          <option key={option} value={option}>
-                            {option}
-                          </option>
-                        ))}
-                      </select>
-                      <button
-                        onClick={increaseMonth}
-                        disabled={nextMonthButtonDisabled}
-                      >
-                        {'>'}
-                      </button>
-                    </DatePickerHeader>
-                  )}
-                />
+            <BoxInput>
+              <label>Forma farmacêutica</label>
+              <Controller
+                defaultValue=""
+                control={control}
+                name="pharmaceuticalForm"
+                render={({ field }) => (
+                  <Select
+                    name="pharmaceuticalForm"
+                    value={field.value}
+                    onChange={field.onChange}
+                    errors={errors}
+                    options={drugForm}
+                  />
+                )}
+              />
+              {errors.pharmaceuticalForm?.message && (
+                <ErrorMessage message={errors.pharmaceuticalForm.message} />
               )}
-              rules={{ required: true }}
-            />
-            {errors.expirationDate?.message && (
-              <ErrorMessage message={errors.expirationDate.message} />
-            )}
-          </BoxInput>
-        </Divider>
-      </FormStyle>
+            </BoxInput>
+          </Divider>
+
+          <Divider>
+            <BoxInput>
+              <label htmlFor="quantity">Quantidade disponível*</label>
+              <Input
+                type="number"
+                id="quantity"
+                min={1}
+                {...register('quantity', { required: true })}
+                placeholder="N° de unidades"
+                iserror={errors.quantity ? 'erro' : ''}
+              />
+              {errors.quantity?.message && (
+                <ErrorMessage message={errors.quantity.message} />
+              )}
+            </BoxInput>
+
+            <BoxInput>
+              <label htmlFor="expirationDate">Prazo de validade*</label>
+              <Controller
+                control={control}
+                name="expirationDate"
+                render={({ field: { onChange, onBlur, value } }) => (
+                  <DatePickerStyle
+                    onChange={onChange}
+                    onBlur={onBlur}
+                    selected={value}
+                    dateFormat={'MM/yy'}
+                    placeholderText="mm/aa"
+                    iserror={errors.expirationDate ? 'erro' : ''}
+                    renderCustomHeader={({
+                      date,
+                      changeYear,
+                      changeMonth,
+                      decreaseMonth,
+                      increaseMonth,
+                      prevMonthButtonDisabled,
+                      nextMonthButtonDisabled,
+                    }) => (
+                      <DatePickerHeader>
+                        <button
+                          onClick={decreaseMonth}
+                          disabled={prevMonthButtonDisabled}
+                        >
+                          {'<'}
+                        </button>
+                        <select
+                          value={getYear(date)}
+                          onChange={({ target: { value } }) =>
+                            changeYear(value)
+                          }
+                        >
+                          {years.map((option) => (
+                            <option key={option} value={option}>
+                              {option}
+                            </option>
+                          ))}
+                        </select>
+                        <select
+                          value={months[getMonth(date)]}
+                          onChange={({ target: { value } }) =>
+                            changeMonth(months.indexOf(value))
+                          }
+                        >
+                          {months.map((option) => (
+                            <option key={option} value={option}>
+                              {option}
+                            </option>
+                          ))}
+                        </select>
+                        <button
+                          onClick={increaseMonth}
+                          disabled={nextMonthButtonDisabled}
+                        >
+                          {'>'}
+                        </button>
+                      </DatePickerHeader>
+                    )}
+                  />
+                )}
+                rules={{ required: true }}
+              />
+              {errors.expirationDate?.message && (
+                <ErrorMessage message={errors.expirationDate.message} />
+              )}
+            </BoxInput>
+          </Divider>
+        </FormStyle>
+      )}
     </Container>
   );
 };

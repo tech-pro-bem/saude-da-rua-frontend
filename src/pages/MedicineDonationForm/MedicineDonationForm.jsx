@@ -41,6 +41,9 @@ const schema = z.object({
 
 const MedicineDonationForm = () => {
   const [medicines, setMedicines] = useState([]);
+  const [userGaveUpAddingMedicines, setUserGaveUpAddingMedicines] =
+    useState(false);
+
   const navigate = useNavigate();
   const {
     register,
@@ -58,12 +61,14 @@ const MedicineDonationForm = () => {
     const data = getValues();
     const medicine = {
       drugId: uuid(),
-      medicineName: data.medicineName,
+      medicineName: data.medicineName ? data.medicineName : 'Não informado',
       pharmaceuticalForm: data.pharmaceuticalForm
         ? data.pharmaceuticalForm
         : 'Não informado',
-      expirationDate: data.expirationDate,
-      quantity: Number(data.quantity),
+      expirationDate: data.expirationDate
+        ? data.expirationDate
+        : 'Não informado',
+      quantity: Number(data.quantity) ? Number(data.quantity) : 'Não informado',
       milligrams: data.milligrams ? data.milligrams : 'Não informado',
     };
 
@@ -89,12 +94,14 @@ const MedicineDonationForm = () => {
 
     const medicine = {
       drugId: uuid(),
-      medicineName: data.medicineName,
+      medicineName: data.medicineName ? data.medicineName : 'Não informado',
       pharmaceuticalForm: data.pharmaceuticalForm
         ? data.pharmaceuticalForm
         : 'Não informado',
-      expirationDate: data.expirationDate,
-      quantity: Number(data.quantity),
+      expirationDate: data.expirationDate
+        ? data.expirationDate
+        : 'Não informado',
+      quantity: Number(data.quantity) ? Number(data.quantity) : Number(0),
       milligrams: data.milligrams ? data.milligrams : 'Não informado',
     };
 
@@ -106,7 +113,12 @@ const MedicineDonationForm = () => {
 
     const newData = {
       ...formContactInfo,
-      medicines: formMedicinesWithoutDrugId,
+      medicines: userGaveUpAddingMedicines
+        ? formMedicinesWithoutDrugId.splice(
+            0,
+            formMedicinesWithoutDrugId.length - 1
+          )
+        : formMedicinesWithoutDrugId,
     };
     console.log(newData);
 
@@ -118,6 +130,16 @@ const MedicineDonationForm = () => {
       console.log(error);
       navigate('/formulario-doacao/falha');
     }
+  };
+
+  const handleCancel = () => {
+    setValue('medicineName', 'Não informado');
+    setValue('pharmaceuticalForm', 'Não informado');
+    setValue('expirationDate', new Date());
+    setValue('quantity', 'Não informado');
+    setValue('milligrams', 'Não informado');
+
+    setUserGaveUpAddingMedicines(true);
   };
 
   // const watchContactFields = watch([
@@ -173,14 +195,17 @@ const MedicineDonationForm = () => {
           register={register}
           Controller={Controller}
           control={control}
-          watch={watch}
           errors={errors}
           getValues={getValues}
           setValue={setValue}
-          isValid={isValid}
           medicines={medicines}
           setMedicines={setMedicines}
+          userGaveUpAddingMedicines={userGaveUpAddingMedicines}
         />
+
+        <button type="button" onClick={handleCancel}>
+          Fechar
+        </button>
 
         <Agree register={register} errors={errors} />
 
