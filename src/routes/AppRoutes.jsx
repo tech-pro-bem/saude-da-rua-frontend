@@ -7,8 +7,10 @@ import {
   SignUpSuccess,
   Volunteers,
   PrivacyPolicy,
+  SignUpFail,
   MedicineDonationForm,
   MedicineDonationFormSuccess,
+  MedicineDonationFormFail,
 } from '@pages';
 import { Route, Routes } from 'react-router-dom';
 import { Scroll } from '../components/Scroll';
@@ -26,9 +28,14 @@ const AppRoutes = () => (
           path="formulario-doacao/sucesso"
           element={<MedicineDonationFormSuccess />}
         />
+        <Route
+          path="formulario-doacao/falha"
+          element={<MedicineDonationFormFail />}
+        />
         <Route path="inscreva-se" element={<SignUp />} />
         <Route path="inscreva-se/sucesso" element={<SignUpSuccess />} />
         <Route path="politica-de-privacidade" element={<PrivacyPolicy />} />
+        <Route path="inscreva-se/falha" element={<SignUpFail />} />
       </Route>
     </Routes>
   </Scroll>
