@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  margin-bottom: 5rem;
+  margin-bottom: 80px;
 
   & > h3 {
     margin-bottom: 4rem;

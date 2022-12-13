@@ -1,4 +1,4 @@
-import { LinkButton } from '@components';
+import { LinkButton, Highlight } from '@components';
 import PhotosWrapperHowTheExperience from './components/PhotosWrapperHowTheExperience';
 import {
   Container,
@@ -16,16 +16,20 @@ const HowTheExperienceDesktop = () => {
       </PhotoWrapper>
 
       <Content>
-        <Heading>Como você nos fortalece?</Heading>
+        <Heading>
+          Como será a <Highlight>experiência</Highlight>?
+        </Heading>
 
         <Paragraph>
-          <strong> Os voluntários são os responsáveis pelo acolhimento</strong>{' '}
-          de pacientes durante as ações do Saúde da Rua.
+          Antes de ir pra rua, montamos um time de profissionais inscritos aqui
+          no site. <strong>Fique de olho no WhatsApp</strong> que é por lá que
+          fazemos a convocação!
         </Paragraph>
 
         <Paragraph>
-          <strong> Doar conhecimento e tempo</strong> é uma das formas que
-          profissionais da área da saúde têm de apoiar a nossa causa.
+          Durante a ação, são eles que irão realizar os{' '}
+          <strong>atendimentos respeitosos e humanizados</strong> que nos
+          orgulham tanto.
         </Paragraph>
 
         <LinkButton
