@@ -12,6 +12,19 @@ export const WhoCanVolunteerMain = styled.main`
       span {
         color: #0095f6;
       }
+      @media (max-width: 640px) {
+        span {
+          display: flex;
+        }
+      }
+    }
+
+    p {
+      @media (max-width: 640px) {
+        span {
+          display: flex;
+        }
+      }
     }
     @media (max-width: 640px) {
       text-align: initial;
@@ -25,10 +38,10 @@ export const WhoCanVolunteerMain = styled.main`
 
   .whocanBody {
     width: 100%;
-    margin: 4rem auto;
+    margin: 36px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    gap: 2rem;
 
     .whocanBodyChildren {
       display: grid;

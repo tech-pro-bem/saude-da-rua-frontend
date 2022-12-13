@@ -3,17 +3,16 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1440px;
-  margin: 93px auto 0px auto;
+  margin: 93px auto 64px auto;
   height: 339px;
   background: url(${banner}) no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-  padding-left: 9.4%;
 
   @media screen and (max-width: 873px) {
     margin-top: 0px;
+    margin-bottom: 62px;
     padding-left: 0px;
     width: 100%;
     align-items: flex-end;
@@ -21,9 +20,16 @@ export const Container = styled.div`
   }
 
   div {
-    @media screen and (max-width: 873px) {
-      margin: 62px 16px 0px 16px;
-      width: 100%;
+    margin: 0 auto;
+    max-width: 1167px;
+    width: 100%;
+
+    @media (max-width: 1200px) {
+      padding: 0 25px;
+    }
+
+    @media (max-width: 500px) {
+      padding: 0 10px;
     }
 
     h1 {
