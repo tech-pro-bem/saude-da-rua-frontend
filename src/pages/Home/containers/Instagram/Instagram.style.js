@@ -62,7 +62,7 @@ export const IgPictureCard = styled.div`
 `;
 
 export const LinkInstagram = styled.a`
-  align-self: flex-end;
+  align-self: center;
 
   @media screen and (max-width: 520px) {
     align-self: center;
@@ -75,9 +75,9 @@ export const ButtonLinkInstagram = styled.button`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 314px;
+  width: 350px;
   height: 59px;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
 
   border: 2px solid ${(props) => props.theme.colors.primary};

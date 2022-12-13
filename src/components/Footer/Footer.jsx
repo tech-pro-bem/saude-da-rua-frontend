@@ -27,9 +27,9 @@ const Footer = () => (
         <HeadersFooter>
           <Title>Saúde da Rua</Title>
           <Text>
-            Criado por estudantes de medicina, o Saúde da Rua leva{' '}
-            <strong>atendimento médico humanizado e recorrente </strong>
-            às populações mais vulneráveis da sociedade.
+            Criado por estudantes de Medicina, o Saúde da Rua leva{' '}
+            <strong>atendimento médico humanizado e recorrente</strong> às
+            populações mais vulneráveis da sociedade.
           </Text>
         </HeadersFooter>
 
@@ -61,7 +61,7 @@ const Footer = () => (
         <li>Copyright©2021, Saúde da Rua. Todos os direitos reservados</li>
         <li>|</li>
         <NavLink to="/politica-de-privacidade">
-          <strong>Política de privacidade</strong>
+          <strong>Política de Privacidade</strong>
         </NavLink>
         <li>|</li>
 
@@ -91,6 +91,7 @@ const Footer = () => (
             target="_blank"
             rel="noreferrer"
           >
+            {' '}
             Tech Pro Bem
           </Link>
         </li>
