@@ -5,7 +5,7 @@ export const Container = styled.div`
     overflow: hidden;
     position: relative;
     padding: 16px 0;
-    margin: 100px 0;
+    margin: 100px 0 0 0;
   }
 
   .inner {

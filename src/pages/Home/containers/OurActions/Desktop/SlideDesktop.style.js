@@ -42,7 +42,18 @@ export const ContainerStyle = styled.div`
       padding: 5px;
       margin-top: 10px;
       font-size: 40px;
-      margin-bottom: 62px;
+      margin-bottom: 10px;
+    }
+
+    #year {
+      color: #0095f6;
+      font-size: 28px;
+    }
+
+    #message {
+      font-size: 28px;
+      margin: 1rem 0;
+      color: #b2dffc;
     }
   }
 

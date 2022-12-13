@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: 636px;
+  width: 610px;
   height: 100%;
 `;
 
@@ -25,5 +25,4 @@ export const HorizontalPhoto = styled.div`
   flex: 1;
 
   position: relative;
-  margin-top: 16px;
 `;

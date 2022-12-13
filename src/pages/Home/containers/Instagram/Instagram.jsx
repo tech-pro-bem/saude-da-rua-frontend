@@ -110,7 +110,7 @@ const Instagram = () => {
         rel="noreferrer"
       >
         <ButtonLinkInstagram>
-          Veja mais no Instagram <MdEast size={20} />{' '}
+          Acompanhe nosso Instagram <MdEast size={20} />{' '}
         </ButtonLinkInstagram>
       </LinkInstagram>
     </ContainerInstagram>

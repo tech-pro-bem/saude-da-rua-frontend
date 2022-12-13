@@ -11,21 +11,25 @@ const SliderDesktop = () => (
         <ContainerStyle>
           <div className="text">
             <h2>
-              Veja nossas <Highlight>ações</Highlight>
+              Conheça nossas <Highlight>ações</Highlight>
             </h2>
-            <p id="year">2021</p>
+            <p id="year">2020</p>
+            <p id="message">O início</p>
 
             <p className="big" id="content">
-              Foram realizados <strong>891 atendimentos</strong> em{' '}
-              <strong>
-                19 <br></br>ações
-              </strong>{' '}
-              sociais na cidade de São Paulo.<br></br>
-              Ampliamos nossa atuação e passamos a <br></br>atuar nas
-              comunidades Esmaga Sapo (SP),<br></br>
-              Anchieta (Grajaú/SP) e Parque Viana <br></br>(Baurueri/SP). Também
-              abrimos mais uma filial <br></br>em{' '}
-              <strong> São Carlos/SP.</strong>
+              <li>
+                No ano da nossa estreia, estivemos <br />
+                presentes em 17 ações.
+              </li>
+              <li>
+                800 atendimentos médicos e 714 testes
+                <br /> rápidos de Covid em São Paulo.
+              </li>
+              <li>
+                Abrimos as filiais de Campinas e S. J. do Rio
+                <br /> Preto, em São Paulo, e Itajaí, em Santa
+                <br /> Catarina.
+              </li>
             </p>
           </div>
         </ContainerStyle>
@@ -46,23 +50,26 @@ const SliderDesktop = () => (
         <ContainerStyle>
           <div className="text">
             <h2>
-              Veja nossas <Highlight>ações</Highlight>
+              Conheça nossas <Highlight>ações</Highlight>
             </h2>
-            <p id="year">2020</p>
+            <p id="year">2021</p>
+            <p id="message">Expansão</p>
 
             <p className="big" id="content">
-              Nos primeiro semestre de atuação do Saúde <br></br>da Rua, foram
-              realizadas{' '}
-              <strong>
-                17 ações. Fizemos <br></br>800 atendimentos médicos
-              </strong>{' '}
-              e{' '}
-              <strong>
-                714 testes<br></br> rápidos
-              </strong>{' '}
-              em São Paulo. Abrimos 3 filiais e foi
-              <br></br>início de <strong>incríveis parcerias</strong> que{' '}
-              <br></br>nos permitiram expandir nossa atuação.
+              <li>
+                891 atendimentos em 19 ações sociais
+                <br /> na cidade de São Paulo
+              </li>
+              <li>
+                Chegamos a 3 novas comunidades: <br />
+                Esmaga Sapo e Anchieta, em São
+                <br />
+                Paulo e Parque Viana, em Barueri
+              </li>
+              <li>
+                Abrimos uma filial em
+                <br /> São Carlos - SP
+              </li>
             </p>
           </div>
         </ContainerStyle>
@@ -83,23 +90,25 @@ const SliderDesktop = () => (
         <ContainerStyle>
           <div className="text">
             <h2>
-              Veja nossas <Highlight>ações</Highlight>
+              Conheça nossas <Highlight>ações</Highlight>
             </h2>
-            <p id="year">Human Day</p>
+            <p id="year">2022</p>
+            <p id="message">Visibilidade</p>
 
             <p className="big" id="content">
-              O Human Day é realizado com o objetivo de<br></br> disponibilizar
-              um
-              <strong>dia de serviços gratuitos.</strong>
-              <br></br>
-              Nesse projeto atuam{' '}
-              <strong>
-                voluntários, coletivos/<br></br>OSCS, poder público e empresas.
-              </strong>{' '}
-              Fazemos <br></br>parte dessa ação,
-              <strong>
-                oferecendo atendimento<br></br> médico humanizado.
-              </strong>
+              <li>
+                Em 8 ações, realizamos 335 atendimentos <br />
+                médicos e 63 testes rápidos de covid-19
+              </li>
+              <li>
+                Nossas duas campanhas de arrecadação
+                <br /> levantaram mais de R$ 7 mil, 50 cobertores
+                <br /> e 4 mil fraldas
+              </li>
+              <li>
+                Alcançamos a grande imprensa, com
+                <br /> entrevistas para Folha de S.Paulo e rádio CBN
+              </li>
             </p>
           </div>
         </ContainerStyle>
