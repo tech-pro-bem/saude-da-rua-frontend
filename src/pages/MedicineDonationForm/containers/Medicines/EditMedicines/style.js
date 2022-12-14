@@ -19,6 +19,7 @@ export const DisclosureEditStyle = styled.div`
     background: transparent;
     color: ${(props) => props.theme.colors.primary_light};
     font-weight: 400;
+    padding: 0 18.2px;
 
     & > svg {
       width: 20px;
