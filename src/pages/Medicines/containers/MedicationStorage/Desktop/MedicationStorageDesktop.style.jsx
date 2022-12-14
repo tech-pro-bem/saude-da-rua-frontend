@@ -63,6 +63,9 @@ export const WhatMedicinesCanYouDonateImageContainer = styled.div`
   }
 `;
 export const WhatMedicinesCanYouDonate = styled.div`
+  max-width: 1167px;
+  width: 100%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -76,5 +79,7 @@ export const WhatMedicinesCanYouDonate = styled.div`
   }
   @media (max-width: 960px) {
     grid-template-columns: 1fr;
+    margin-top: 64px;
+    margin-bottom: 64px;
   }
 `;

@@ -13,7 +13,7 @@ const WhatToContinueContributedMobile = () => {
         Ficamos muito felizes com o seu apoio! Para acessar nossas campanhas de
         doação, clique no botão abaixo.
       </Paragraph>
-      <Button text="Ver campanhas de doação" route="/" />
+      <Button text="Ir para Doações" route="/doacao" />
     </Container>
   );
 };
