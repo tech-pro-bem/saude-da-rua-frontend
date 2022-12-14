@@ -4,7 +4,8 @@ import HelpNowHero from './containers/HelpNowHero';
 import HowHelpContent from './containers/HowHelpContent';
 
 const HelpInformation = {
-  key: 'saudedarua@gmail.com',
+  // key: 'saudedarua@gmail.com',
+  key: 'antoniositoe@gmail.com',
   pix: {
     1: 'Copie a chave pix acima',
     2: 'Acesse a área pix no app do seu banco',
@@ -21,11 +22,12 @@ const HelpInformation = {
   },
   boleto: {
     first:
-      'Envie um e-mail para <strong>financeiro.saudedarua@gmail.com</strong> indicando o valor da doação;',
+      'Envie um e-mail para <strong>financeiro.saudedarua@gmail.com</strong> indicando o valor da doação.',
     second: 'Aguarde nossa resposta, enviaremos o boleto no valor solicitado.',
   },
 };
-const HelpNowMobile = () => {
+const HelpNowMobile = ({ data }) => {
+  // HelpInformation.key = data?.key;
   return (
     <>
       <HelpNowHero />
