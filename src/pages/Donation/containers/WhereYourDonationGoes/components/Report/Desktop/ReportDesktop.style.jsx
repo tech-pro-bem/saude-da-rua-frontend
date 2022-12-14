@@ -28,6 +28,7 @@ export const OtherReport = styled.div`
   img {
     margin-bottom: 10px;
     margin-left: 10px;
+    cursor: pointer;
   }
 `;
 

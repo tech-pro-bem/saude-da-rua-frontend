@@ -27,6 +27,7 @@ export const OtherReport = styled.div`
   width: 180px;
   img {
     margin-bottom: 10px;
+    cursor: pointer;
   }
 `;
 
