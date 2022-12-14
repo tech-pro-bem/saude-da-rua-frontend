@@ -13,6 +13,10 @@ export const Container = styled.div`
     font-family: Georgia, serif;
     font-size: 60px;
     color: ${({ theme }) => theme.colors.primary_light};
+
+    @media (max-width: 640px) {
+      font-size: 80px;
+    }
   }
 
   ::before {
@@ -46,4 +50,8 @@ export const Author = styled.p`
   margin-top: 32px;
   font-size: 20px;
   font-style: italic;
+
+  @media (max-width: 640px) {
+    text-align: start;
+  }
 `;
