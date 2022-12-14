@@ -1,9 +1,9 @@
+import { Highlight } from '@components';
 import {
-  Container,
   AccountabilityContainer,
   AccountabilityItem,
+  Container,
 } from './HowYourDonationHelp.style';
-import { Highlight } from '@components';
 import { accountabilityItemContent } from './HowYourDonationHelpContent';
 
 const HowYourDonationHelp = () => {
@@ -11,7 +11,7 @@ const HowYourDonationHelp = () => {
     <>
       <Container>
         <h2>
-          Como a sua <br /> doação nos <Highlight>ajuda</Highlight>
+          Como a sua doação nos <Highlight>ajuda</Highlight>
         </h2>
         <AccountabilityContainer>
           {accountabilityItemContent.map(({ content, img }, index) => {
