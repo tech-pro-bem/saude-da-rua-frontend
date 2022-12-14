@@ -1,6 +1,6 @@
-import React, { useRef, useState } from 'react';
-import { ImageWithFrame } from '@components';
 import { CopyToClip, helpImage } from '@assets/donationPage';
+import { ImageWithFrame } from '@components';
+import React, { useRef, useState } from 'react';
 import {
   ClipBoardWrapper,
   HaveborderBottom,
@@ -33,7 +33,7 @@ const HowHelpContent = ({ HelpInformation }) => {
 
   return (
     <HelpContainer>
-      <TitleHelp>Chave pix</TitleHelp>
+      <TitleHelp>Pix</TitleHelp>
       <ClipBoardWrapper>
         <input type="text" value={copiedText} disabled />
         <button onClick={() => Copy(copiedText)}>
