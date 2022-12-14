@@ -3,6 +3,7 @@ import HelpNowMobile from './HelpNow/Mobile/HelpNowMobile';
 import GalleryAndQuantation from './GalleryAndQuantation';
 import HowYourDonationHelp from './HowYourDonationHelp/HowYourDonationHelp';
 import Store from './Store/Store';
+import WhereYourDonationGoes from './WhereYourDonationGoes/WhereYourDonationGoes';
 
 export {
   HelpNowDesktop,
@@ -10,4 +11,5 @@ export {
   HowYourDonationHelp,
   Store,
   GalleryAndQuantation,
+  WhereYourDonationGoes,
 };
