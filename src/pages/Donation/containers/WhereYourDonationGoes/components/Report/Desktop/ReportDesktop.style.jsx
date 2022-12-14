@@ -15,7 +15,9 @@ export const Title = styled.p`
 `;
 export const LoadP = styled.div`
   margin-bottom: 24px;
-  width: 85px;
+`;
+
+export const LoadA = styled.a`
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;

@@ -12,13 +12,16 @@ export const Title = styled.p`
   line-height: 27px;
 `;
 export const LoadP = styled.div`
-  margin: 0px 0px 24px 5px;
-  width: 85px;
+  margin-bottom: 24px;
+`;
+
+export const LoadA = styled.a`
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: ${(props) => props.theme.colors.primary};
   border-bottom: 2px solid ${(props) => props.theme.colors.dark};
+  margin-left: 4px;
 `;
 
 export const OtherReport = styled.div`
