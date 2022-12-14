@@ -21,11 +21,14 @@ export const MedicineBackground = styled.div`
 `;
 
 export const MedicineContent = styled.div`
+  max-width: 1167px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 3rem;
   grid-area: 1/1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-bottom: 3rem;
 
   h1 {
     margin-bottom: 32px;

@@ -5,14 +5,14 @@ export const Container = styled.div`
     font-weight: 700;
     font-size: 26px;
     line-height: 39px;
-    margin: 65px 0px 30px 0px;
+    margin: 0px 0 30px 0px;
   }
 `;
 export const List = styled.ol`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 24px 0px 40px 0px;
+  /* margin: 24px 0px 40px 0px; */
 `;
 
 export const Option = styled.div`
