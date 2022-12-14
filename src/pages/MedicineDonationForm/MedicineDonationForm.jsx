@@ -220,7 +220,7 @@ const MedicineDonationForm = () => {
         )}
 
         <SubmitStyle
-          disabled={!isDirty || !isValid}
+          // disabled={!isDirty || !isValid}
           type="submit"
           value="Confirmar minha doação"
         />
