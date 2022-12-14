@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { galleryImg3 } from '@assets/donationPage';
+import styled from 'styled-components';
 
 export const HelpNowHeroContainer = styled.section`
   margin: 0;
@@ -97,11 +97,12 @@ export const ClipBoardWrapper = styled.div`
     display: block;
     padding: 1rem;
     width: 100%;
+    height: 40px;
   }
   button {
     border-radius: 0 4px 4px 0;
     color: white;
-    height: 60px;
+
     cursor: pointer;
     border: none;
     background: #0095f6;
