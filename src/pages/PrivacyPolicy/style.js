@@ -91,8 +91,6 @@ export const SummaryContent = styled.div`
   }
 `;
 
-// export const MarginTop = styled.div``;
-
 export const Content = styled.div`
   display: grid;
 
@@ -105,6 +103,9 @@ export const Content = styled.div`
 
   @media (min-width: 1024px) {
     column-fill: 2;
+  }
+  section {
+    padding-top: 90px;
   }
 
   strong {
