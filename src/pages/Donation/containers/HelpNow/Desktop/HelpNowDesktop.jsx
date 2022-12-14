@@ -1,17 +1,17 @@
+import qrCodes from '@assets/qr-codes';
+import { Chip, Highlight, OutlinedImage } from '@components';
 import { useState } from 'react';
 import {
+  ChipsContainer,
   Container,
+  HelpInfoContainer,
   HelpOption,
   HelpOptionsContainer,
-  HelpInfoContainer,
-  ChipsContainer,
   PIXDonationContainer,
   PIXInstructionsContainer,
 } from './HelpNow.style';
-import { Highlight, Chip, OutlinedImage } from '@components';
-import qrCodes from '@assets/qr-codes';
 
-const HelpNowDesktop = () => {
+const HelpNowDesktop = ({ data }) => {
   const defaultSelection = {
     key: 0,
     displayValue: 'Qualquer valor',
@@ -39,6 +39,7 @@ const HelpNowDesktop = () => {
       <h1>
         <Highlight>Doe</Highlight> agora mesmo
       </h1>
+      {/* <QrCodeComponent /> */}
       <ChipsContainer>
         {values.map((v) => (
           <Chip
@@ -60,32 +61,33 @@ const HelpNowDesktop = () => {
           </p>
           <HelpOptionsContainer>
             <HelpOption>
-              <strong>
-                <Highlight>PIX</Highlight>
-              </strong>
+              <span>
+                <Highlight>Pix</Highlight>
+              </span>
               <p>A nossa chave pix é:</p>
-              <p style={{ fontWeight: 'bold' }}>saudedarua@gmail.com</p>
+              <p>saudedarua@gmail.com</p>
             </HelpOption>
             <HelpOption>
-              <strong>
+              <span>
                 <Highlight>Transferência bancária</Highlight>
-              </strong>
+              </span>
               <p>Banco Nu Pagamentos S.A</p>
               <p>Agência 0001</p>
               <p>Conta 20718046-2</p>
               <p>Nome: Gustavo Zaborowsky Graicer</p>
             </HelpOption>
             <HelpOption>
-              <strong>
+              <span>
                 <Highlight>Boleto bancário</Highlight>
-              </strong>
+              </span>
               <p>
-                Envie um e-mail para{' '}
-                <strong>financeiro.saudedarua@gmail.com</strong> indicando o
+                Envie um e-mail para financeiro.saudedarua@gmail.com indicando o
                 valor da doação.
               </p>
               <br />
-              <p>Iremos te responder com o boleto para pagamento!</p>
+              <p>
+                Aguarde nossa resposta, enviaremos o boleto no valor solicitado.
+              </p>
             </HelpOption>
           </HelpOptionsContainer>
         </HelpInfoContainer>
