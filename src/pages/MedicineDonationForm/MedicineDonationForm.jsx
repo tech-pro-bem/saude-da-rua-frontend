@@ -52,7 +52,7 @@ const MedicineDonationForm = () => {
     watch,
     getValues,
     setValue,
-    formState: { errors, isValid, isDirty },
+    formState: { errors, isValid },
   } = useForm({
     resolver: zodResolver(schema),
   });
