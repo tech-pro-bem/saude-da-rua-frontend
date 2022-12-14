@@ -16,6 +16,7 @@
     "@radix-ui/react-icons": "^1.1.1",
     "axios": "^0.26.1",
     "carousel": "0.0.3",
+    "cep-promise": "^4.2.0",
     "eslint-config-prettier": "^8.3.0",
     "keen-slider": "^6.8.1",
     "phosphor-react": "^1.4.1",
@@ -66,6 +67,7 @@
     ]
   },
   "devDependencies": {
+    "@hookform/devtools": "^4.2.3",
     "babel-plugin-styled-components": "^2.0.7",
     "customize-cra": "^1.0.0",
     "husky": "^7.0.0",

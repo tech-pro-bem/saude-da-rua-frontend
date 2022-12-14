@@ -45,7 +45,7 @@ const Header = () => {
   const NavLinkRender = ({ text, to, id }) => {
     return (
       <ListNavMenu>
-        <NavLinkContent to={to} key={id} onClick={() => setToggle(!toggle)}>
+        <NavLinkContent to={to} key={id} onClick={() => setToggle(false)}>
           {text}
         </NavLinkContent>
       </ListNavMenu>

@@ -59,7 +59,7 @@ const DonateMedication = () => {
           <div>
             <SubTitle>
               <Highlight>Quais remédios </Highlight>
-              você  pode doar?
+              você pode doar?
             </SubTitle>
             <Paragraphy>
               Não há restrições. Nós aceitamos qualquer medicamento ou

@@ -15,6 +15,22 @@ const occupations = [
   'Veterinário (a)',
 ];
 
+const semester = [
+  'Primeiro',
+  'Segundo',
+  'Terceiro',
+  'Quarto',
+  'Quinto',
+  'Sexto',
+  'Sétimo',
+  'Oitavo',
+  'Nono',
+  'Décimo',
+  'Décimo Primeiro',
+  'Décimo Segundo',
+  'Mais',
+];
+
 const specialities = [
   'Especialista em Acupuntura',
   'Especialista em Alergia e Imunologia',
@@ -205,12 +221,20 @@ export const Experience = ({
             </BoxInput>
             <BoxInput>
               <label htmlFor="semester">Semestre que está cursando</label>
-              <Input
-                type="text"
+              <Controller
+                rules={{ required: true }}
+                defaultValue=""
+                control={control}
                 name="semester"
-                id="semester"
-                placeholder="Informe seu semestre atual"
-                {...register('semester', { required: true })}
+                render={({ field }) => (
+                  <Select
+                    name="semester"
+                    value={field.value}
+                    onChange={field.onChange}
+                    errors={errors}
+                    options={semester}
+                  />
+                )}
               />
               {errors.semester && (
                 <ErrorMessage message="Esse campo deve ser preenchido." />

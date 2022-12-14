@@ -175,3 +175,78 @@ export const Tooltip = styled.div`
     margin-bottom: 0.5rem;
   }
 `;
+
+export const DisclosureStyle = styled.div`
+  width: 100%;
+  background: #212933;
+  border-radius: 5px;
+  min-height: 3rem;
+  padding: 12px 24px;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  max-width: 571px;
+
+  & > button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    color: ${(props) => props.theme.colors.primary_light};
+    font-weight: 400;
+
+    & > svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .disclosure-content {
+    padding: 24px 0;
+    color: ${(props) => props.theme.colors.primary_light};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 24px;
+
+    & > :nth-child(2),
+    & > :nth-child(4) {
+      text-align: end;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .disclosure-buttons-actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+
+    button {
+      cursor: pointer;
+      background: transparent;
+      color: ${(props) => props.theme.colors.primary_light};
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+`;
+
+export const Divider = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+`;

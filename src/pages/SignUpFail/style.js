@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   margin-top: 2.9rem;
-  margin-bottom: 4.9rem;
+  margin-bottom: 4rem;
 
   @media screen and (min-width: 768px) {
     margin-top: 11rem;
@@ -37,16 +37,23 @@ export const Head = styled.div`
 `;
 
 export const TextBox = styled.div`
-  margin-bottom: 2.4rem;
   p {
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: 1.68rem;
     margin-bottom: 1.2rem;
 
     @media screen and (min-width: 768px) {
       text-align: center;
       margin-bottom: 4.18rem;
-      max-width: 60ch;
+    }
+  }
+
+  span {
+    display: block;
+    margin-top: 1.56rem;
+
+    @media screen and (min-width: 768px) {
+      display: initial;
     }
   }
 `;

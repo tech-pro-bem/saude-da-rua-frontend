@@ -67,23 +67,22 @@ const SlideMobile = () => {
         <div className="navigation-wrapper">
           <div ref={sliderRef} className="keen-slider">
             <div className="keen-slider__slide number-slide1">
+              <H2Title>O início</H2Title>
               <CarouselItemMobile style={scaleStyle(0)}>
                 <img src={action2020} alt="Action 2020" />
                 <ContainerStyle>
                   <div className="text">
                     <ul>
                       <li>
-                        No primeiro semestre de atuação da Saúde da Rua, foram
-                        realizadas <strong>17 ações</strong>
+                        No ano da nossa estreia, estivemos presentes em 17 ações
                       </li>
                       <li>
-                        Fizemos <strong>800 atendimentos médicos</strong> e{' '}
-                        <strong>714 testes rápidos</strong> e em São Paulo
+                        800 atendimentos médicos e 714 testes rápidos de covid
+                        em São Paulo
                       </li>
                       <li>
-                        Abrimos <strong>3 filiais</strong> e foi início de
-                        incríveis parcerias que nos permitiram expandir nossa
-                        atuação
+                        Abrimos as filiais de Campinas e S. J. do Rio Preto, em
+                        São Paulo, e Itajaí, em Santa Catarina
                       </li>
                     </ul>
                   </div>
@@ -91,7 +90,7 @@ const SlideMobile = () => {
               </CarouselItemMobile>
             </div>
             <div className="keen-slider__slide number-slide2">
-              <H2Title>Human Day</H2Title>
+              <H2Title>Expansão</H2Title>
               <CarouselItemMobile style={scaleStyle(1)}>
                 <img src={action2021} alt="Action 2021" />
                 <ContainerStyle>
@@ -99,39 +98,38 @@ const SlideMobile = () => {
                     <p className="big" id="content"></p>
                     <ul>
                       <li>
-                        <strong>891 atendimentos em 19 ações </strong> <br />{' '}
-                        sociais na cidade de São Paulo
+                        891 atendimentos em 19 ações sociais na cidade de São
+                        Paulo
                       </li>
                       <li>
-                        Chegamos a <strong>3 novas comunidades</strong>: <br />
-                        Esmaga Sapo e Anchieta, em São Paulo, e Parque Viana, em
-                        Barueri
+                        Chegamos a 3 novas comunidades: Esmaga Sapo e Anchieta,
+                        em São Paulo e Parque Viana, em Barueri
                       </li>
-                      <li>
-                        Abrimos uma filial em <strong>São Carlos - SP</strong>
-                      </li>
+                      <li>Abrimos uma filial em São Carlos - SP</li>
                     </ul>
                   </div>
                 </ContainerStyle>
               </CarouselItemMobile>
             </div>
             <div className="keen-slider__slide number-slide3">
+              <H2Title>Visibilidade</H2Title>
               <CarouselItemMobile style={scaleStyle(2)}>
                 <img src={humanDay} alt="" />
                 <ContainerStyle>
                   <div className="text">
                     <ul>
-                      <li>Disponibilizar um dia de serviços gratuitos</li>
                       <li>
-                        Nesse projeto atuam{' '}
-                        <strong>
-                          {' '}
-                          voluntários, coletivos OSCS, poder público e empresas
-                        </strong>
+                        {' '}
+                        Em 8 ações, realizamos 335 atendimentos médicos e 63
+                        testes rápidos de covid-19
                       </li>
                       <li>
-                        Fazemos parte dessa ação, oferecendo atendimento médico
-                        humanizado
+                        Nossas duas campanhas de arrecadação levantaram mais de
+                        R$ 7 mil, 50 cobertores e 4 mil fraldas
+                      </li>
+                      <li>
+                        Alcançamos a grande imprensa, com entrevistas para Folha
+                        de S.Paulo e rádio CBN
                       </li>
                     </ul>
                   </div>
