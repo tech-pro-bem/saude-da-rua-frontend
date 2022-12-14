@@ -32,13 +32,21 @@ const ReportDesktop = ({ reportsApi }) => {
       <ReportWrapper>
         <Title>Relatório anual 2022</Title>
         <LoadP>
-          <LoadA download={`Relatório anual 2022`} href={currentYearData?.url}>
+          <LoadA
+            download={`Relatório anual 2022`}
+            target="_blank"
+            href={currentYearData?.url}
+          >
             baixe aqui
           </LoadA>
         </LoadP>
         <Title>Relatório anual 2021</Title>
         <LoadP>
-          <LoadA download={`Relatório anual 2021`} href={lastYearData?.url}>
+          <LoadA
+            download={`Relatório anual 2021`}
+            href={lastYearData?.url}
+            target="_blank"
+          >
             baixe aqui
           </LoadA>
         </LoadP>
@@ -57,6 +65,7 @@ const ReportDesktop = ({ reportsApi }) => {
               <LoadA
                 download={`Relatório anual 2020`}
                 href={olderReportsData?.url}
+                target="_blank"
               >
                 baixe aqui
               </LoadA>

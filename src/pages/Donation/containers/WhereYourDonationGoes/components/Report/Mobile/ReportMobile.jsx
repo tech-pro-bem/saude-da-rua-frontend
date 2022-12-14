@@ -36,6 +36,7 @@ const ReportMobile = ({ reportsApi }) => {
             <LoadA
               download={`Relatório anual 2022`}
               href={currentYearData?.url}
+              target="_blank"
             >
               baixe aqui
             </LoadA>
@@ -46,7 +47,11 @@ const ReportMobile = ({ reportsApi }) => {
         <ReportBox>
           <Title>Relatório anual 2021, </Title>
           <LoadP>
-            <LoadA download={`Relatório anual 2021`} href={lastYearData?.url}>
+            <LoadA
+              download={`Relatório anual 2021`}
+              href={lastYearData?.url}
+              target="_blank"
+            >
               baixe aqui
             </LoadA>
           </LoadP>
@@ -69,6 +74,7 @@ const ReportMobile = ({ reportsApi }) => {
               <LoadA
                 download={`Relatório anual 2020`}
                 href={olderReportsData?.url}
+                target="_blank"
               >
                 baixe aqui
               </LoadA>
