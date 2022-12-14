@@ -9,7 +9,11 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import api from '../../services/api';
 import { Structure } from '@components';
 import { ContactInfo, Headline, Agree, Medicines } from './containers';
-import { AddMedicineButton, SubmitStyle } from './style';
+import {
+  AddMedicineButton,
+  ButtonCancelNewMedicine,
+  SubmitStyle,
+} from './style';
 
 const cellphoneRegExp = /^\([1-9]{2}\) [9]{1}[0-9]{4}-[0-9]{4}$/;
 const zipcodeRegExp = /^[0-9]{5}-[0-9]{3}$/;
@@ -120,11 +124,9 @@ const MedicineDonationForm = () => {
           )
         : formMedicinesWithoutDrugId,
     };
-    console.log(newData);
 
     try {
       const response = await api.post('/medicines', newData);
-      console.log(response);
       response.status === 201 && navigate('/formulario-doacao/sucesso');
     } catch (error) {
       console.log(error);
@@ -142,41 +144,14 @@ const MedicineDonationForm = () => {
     setUserGaveUpAddingMedicines(true);
   };
 
-  // const watchContactFields = watch([
-  //   'fullName',
-  //   'zipCode',
-  //   'address',
-  //   'cellphoneNumberWithDDD',
-  //   'email',
-  // ]);
-
   const watchMedicineFields = watch([
     'medicineName',
-    // 'pharmaceuticalForm',
     'expirationDate',
     'quantity',
-    // 'milligrams',
   ]);
 
   const isDisabledAddMedicineButton =
     watchMedicineFields.some((field) => field === '') || medicines.length >= 19;
-
-  // const watchContact = watchContactFields.some(
-  //   (field) => field === '' || field === undefined
-  // );
-
-  // const watchMedicines = () => {
-  //   if (medicines.length === 0) {
-  //     return watchMedicineFields.some(
-  //       (field) => field === '' || field === undefined
-  //     );
-  //   }
-  // };
-
-  // const watchAgree = watch('agree');
-
-  // const isDisabledSubmitButton =
-  //   watchContact || watchMedicines() || !watchAgree;
 
   return (
     <Structure>
@@ -203,9 +178,9 @@ const MedicineDonationForm = () => {
           userGaveUpAddingMedicines={userGaveUpAddingMedicines}
         />
 
-        <button type="button" onClick={handleCancel}>
-          Fechar
-        </button>
+        <ButtonCancelNewMedicine type="button" onClick={handleCancel}>
+          Cancelar novo medicamento
+        </ButtonCancelNewMedicine>
 
         <Agree register={register} errors={errors} />
 
