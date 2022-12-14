@@ -1,3 +1,4 @@
+import { Highlight } from '@components';
 import { HelpNowHeroContainer } from './HelpNow.style';
 
 const HelpNowHero = () => {
@@ -7,7 +8,7 @@ const HelpNowHero = () => {
 
       <div className="content">
         <h2>
-          <strong>Doe</strong> agora mesmo
+          <Highlight>Doe</Highlight> agora mesmo
         </h2>
         <p>
           Qualquer valor é bem vindo, mas sugerimos doações de{' '}
