@@ -1,23 +1,28 @@
-import { useState } from 'react';
+import { GenerateQrCode } from '@shared/services';
+import QRCode from 'react-qr-code';
 import { useQuery } from 'react-query';
-const baseURL = process.env.REACT_APP_IG_BASE_URL;
 
 export function QrCodeComponent() {
-  const [qrcode, setQrcode] = useState('');
-  const { isLoading, error, data } = useQuery('repoData', () =>
-    fetch(`${{ baseURL }}/pix`)
-      .then((res) => {
-        console.log(res);
-        return res.json();
-      })
-      .then((json) => console.log(json))
-  );
-  console.log(baseURL);
-  return (
-    <div
-    /* style={{ height: 'auto', margin: '0 auto', maxWidth: 64, width: '100%' }} */
-    >
-      {/* <QRCode value={qrcode} /> */}
-    </div>
-  );
+  const { isLoading, error, data } = useQuery('qrCode', async () => {
+    const { key } = await GenerateQrCode();
+    return key;
+  });
+  console.log('CHAVE PIX', data);
+
+  if (isLoading) return <p>Carregando</p>;
+  if (error) return <p>Erro</p>;
+  if (data)
+    return (
+      <div
+        style={{
+          height: 'auto',
+          margin: '0 auto',
+          maxWidth: 64,
+          width: '100%',
+        }}
+      >
+        <QRCode value={data} />
+      </div>
+    );
+  return null;
 }
