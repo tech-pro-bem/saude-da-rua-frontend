@@ -2,12 +2,12 @@ export const GeneralInformation = () => {
   return (
     <section id="secao1">
       <p>
-        Este site é mantido e operado por <a href="/">Saúde na Rua.</a>
+        Este site é mantido e operado por <a href="/">Saúde da Rua.</a>
       </p>
       <h2>Seção 1 - Informações Gerais</h2>
       <p>
         Com sede na cidade de São Paulo e filiais em Campinas, São José do Rio
-        Preto, São Carlos, Sorocaba e Itajaí, o <a href="/">Saúde na Rua</a> tem
+        Preto, São Carlos, Sorocaba e Itajaí, o <a href="/">Saúde da Rua</a> tem
         a missão de levar atendimento humanizado e recorrente às camadas mais
         vulneráveis da sociedade.
       </p>

@@ -10,7 +10,7 @@ export const ChangesToTheCurrentPrivacyPolicy = () => {
       <p>
         No entanto, caso alterações substanciais ocorram, enviaremos um e-mail
         aos cadastrados para renovação do consentimento a fim de manter a
-        transparência do trabalho do <a href="/">Saúde na Rua.</a>
+        transparência do trabalho do <a href="/">Saúde da Rua.</a>
       </p>
     </section>
   );
