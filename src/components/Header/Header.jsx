@@ -30,13 +30,13 @@ const Header = () => {
       text: 'Doações',
     },
     {
-      id: 2,
+      id: 3,
       to: 'doe-medicamentos',
       text: 'Medicamentos',
     },
 
     {
-      id: 3,
+      id: 4,
       to: 'seja-voluntario',
       text: 'Voluntários',
     },
@@ -84,14 +84,14 @@ const Header = () => {
                     to={link.to}
                     text={link.text}
                     key={index}
-                    onClick={() => setToggle(!toggle)}
+                    onClick={() => setToggle(false)}
                   />
                 ))}
               </div>
               <DonationButton
                 text="Doe agora"
                 route="/doacao"
-                onClick={() => setToggle(!toggle)}
+                onClick={() => setToggle(false)}
               />
             </NavLinkMenu>
           ) : (
