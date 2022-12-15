@@ -1,17 +1,19 @@
-import { Headline } from './Headline';
-import { GeneralInformation } from './GeneralInformation';
-import { HowDoWeCollectPersonalData } from './HowDoWeCollectPersonalData';
-import { WhatPersonalDataDoWeCollect } from './WhatPersonalDataDoWeCollect';
-import { ForWhatPurposesDoWeCollectTheData } from './ForWhatPurposesDoWeCollectTheData';
-import { HowLongIsTheDataStored } from './HowLongIsTheDataStored';
-import { SecurityOfData } from './SecurityOfData';
-import { DataSharing } from './DataSharing';
-import { CookiesAndBrowsingData } from './CookiesAndBrowsingData';
-import { LegalConsent } from './LegalConsent';
 import { ChangesToTheCurrentPrivacyPolicy } from './ChangesToTheCurrentPrivacyPolicy';
+import { CookiesAndBrowsingData } from './CookiesAndBrowsingData';
+import { DataSharing } from './DataSharing';
+import { ForWhatPurposesDoWeCollectTheData } from './ForWhatPurposesDoWeCollectTheData';
+import { GeneralInformation } from './GeneralInformation';
+import { Headline } from './Headline';
+import { HowDoWeCollectPersonalData } from './HowDoWeCollectPersonalData';
+import { HowLongIsTheDataStored } from './HowLongIsTheDataStored';
 import { JurisdictionForDisputeResolution } from './JurisdictionForDisputeResolution';
+import { LegalConsent } from './LegalConsent';
+import { SecurityOfData } from './SecurityOfData';
+import { Summary } from './Summary';
+import { WhatPersonalDataDoWeCollect } from './WhatPersonalDataDoWeCollect';
 
 export {
+  Summary,
   Headline,
   GeneralInformation,
   HowDoWeCollectPersonalData,

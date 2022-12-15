@@ -1,6 +1,6 @@
 export const SecurityOfData = () => {
   return (
-    <div>
+    <section id="secao6">
       <h2>Seção 6 - Segurança dos dados coletados e armazenados</h2>
 
       <p>
@@ -22,6 +22,6 @@ export const SecurityOfData = () => {
         pessoais caso sejamos obrigados pela lei para fazê-lo ou se você violar
         nossos Termos de Serviço.
       </p>
-    </div>
+    </section>
   );
 };
