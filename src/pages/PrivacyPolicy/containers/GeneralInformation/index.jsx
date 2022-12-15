@@ -1,10 +1,13 @@
 export const GeneralInformation = () => {
   return (
-    <div>
+    <section id="secao1">
+      <p>
+        Este site é mantido e operado por <a href="/">Saúde da Rua.</a>
+      </p>
       <h2>Seção 1 - Informações Gerais</h2>
       <p>
         Com sede na cidade de São Paulo e filiais em Campinas, São José do Rio
-        Preto, São Carlos, Sorocaba e Itajaí, o <a href="/">Saúde na Rua</a> tem
+        Preto, São Carlos, Sorocaba e Itajaí, o <a href="/">Saúde da Rua</a> tem
         a missão de levar atendimento humanizado e recorrente às camadas mais
         vulneráveis da sociedade.
       </p>
@@ -31,6 +34,6 @@ export const GeneralInformation = () => {
         00.000.000/0000-00, situado em _____ (endereço completo), doravante
         nominada Saúde na Rua.
       </p>
-    </div>
+    </section>
   );
 };
