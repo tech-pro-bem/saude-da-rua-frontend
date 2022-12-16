@@ -5,10 +5,12 @@ export const Container = styled.div`
   display: flex;
   gap: 28px;
   padding: 44px 8px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 
   @media (max-width: 995px) {
     padding: 0px 4px;
-    padding-bottom: 60px;
   }
 `;
 
