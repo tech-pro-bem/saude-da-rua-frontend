@@ -5,10 +5,12 @@ export const Container = styled.div`
   display: flex;
   gap: 28px;
   padding: 44px 8px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 
   @media (max-width: 995px) {
     padding: 0px 4px;
-    padding-bottom: 60px;
   }
 `;
 
@@ -21,20 +23,21 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 26px;
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 24px;
 `;
 
 export const Paragraph = styled.p`
   margin-bottom: 40px;
-  font-size: 24px;
+  font-size: 22px;
 `;
 
 export const Button = styled(LinkButton)`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 328px;
 
   @media (max-width: 1035px) {
     font-size: 14px;
