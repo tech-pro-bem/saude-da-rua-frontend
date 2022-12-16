@@ -6,6 +6,7 @@ import {
   HowYourDonationHelp,
   Store,
   GalleryAndQuantation,
+  WhereYourDonationGoes,
 } from './containers';
 
 const Donation = () => {
@@ -13,6 +14,7 @@ const Donation = () => {
   return (
     <>
       <Head title="Doações" description="Doe para Saúde da Rua" />
+
       {mobile ? (
         <HelpNowMobile />
       ) : (
@@ -24,6 +26,7 @@ const Donation = () => {
       <GalleryAndQuantation />
       <Structure>
         <Store />
+        <WhereYourDonationGoes />
       </Structure>
     </>
   );

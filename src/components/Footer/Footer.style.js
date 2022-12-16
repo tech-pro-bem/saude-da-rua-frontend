@@ -14,37 +14,25 @@ export const FooterContainer = styled.footer`
 `;
 
 export const Divider = styled.hr`
-  width: 90%;
+  width: 100%;
   border: #e9e9e9 solid 0.0625rem;
   opacity: 50%;
   margin: 0 auto;
-
-  @media (max-width: 1024px) {
-    width: 97%;
-  }
-
-  @media (max-width: 873px) {
-    width: 93%;
-  }
 `;
 
 export const MainFooter = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 5.625rem;
-  margin-top: 3.688rem;
+  margin-top: 64px;
   margin-bottom: 4.625rem;
-  padding: 0 5rem;
+
   @media (max-width: 1024px) {
     display: grid;
-
-    padding: 0 17px;
   }
 
   @media (max-width: 894px) {
     display: grid;
-
-    padding: 0 0 0 12px;
   }
 
   @media (max-width: 873px) {
@@ -52,7 +40,7 @@ export const MainFooter = styled.div`
     display: flex;
     direction: flex;
     flex-direction: column;
-    padding: 1.456rem 1.63rem;
+    padding: 1.456rem 0;
   }
 `;
 
@@ -72,6 +60,8 @@ export const Title = styled.h2`
 
 export const Text = styled.p`
   display: inline-block;
+  padding-right: 18px;
+  color: white;
 `;
 
 export const Locations = styled.div`
@@ -102,14 +92,18 @@ export const Copyright = styled.div`
   display: grid;
   grid-template-columns: repeat(5, auto);
   text-align: center;
-
+  font-size: 14px;
   list-style: none;
   padding-bottom: 3.688rem;
+
+  a {
+    cursor: pointer;
+  }
 
   @media (max-width: 1024px) {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 2rem;
   }
   @media (max-width: 873px) {
     display: none;
@@ -118,11 +112,15 @@ export const Copyright = styled.div`
 
 export const CopyrightMobile = styled.div`
   display: none;
+
+  a {
+    cursor: pointer;
+  }
   @media (max-width: 873px) {
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding: 1.456rem 0 3.125rem 1.63rem;
+    padding: 1.456rem 0 3.125rem 0;
     gap: 10px;
   }
 `;

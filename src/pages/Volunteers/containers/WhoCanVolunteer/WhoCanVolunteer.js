@@ -59,9 +59,11 @@ const WhoCanVolunteer = () => {
     <WhoCanVolunteerMain>
       <div className="whocanHeader">
         <h1>
-          Quem pode <span> se voluntariar</span>?
+          Quem pode se <span> voluntariar?</span>
         </h1>
-        <p>Procuramos profissionais voluntários das seguintes áreas:</p>
+        <p>
+          Procuramos profissionais <span>voluntários das seguintes áreas:</span>
+        </p>
       </div>
       <section className="whocanBody">
         {data.map(({ altText, src, id }) => {

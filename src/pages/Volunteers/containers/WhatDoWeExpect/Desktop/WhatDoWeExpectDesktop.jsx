@@ -13,7 +13,7 @@ const values = [
     id: 2,
     trigger: 'Disponibilidade',
     content:
-      'Nós contamos com você durante toda a sua jornada voluntária, desde o momento da aplicação até o seu último dia com a gente.',
+      'Nós contamos com você durante toda a sua jornada voluntária, desde o momento da inscrição até o seu último dia com a gente.',
   },
   {
     id: 3,

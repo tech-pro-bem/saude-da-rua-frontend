@@ -1,15 +1,26 @@
 import axios from 'axios';
 
-const { REACT_APP_IG_TOKEN, REACT_APP_IG_BASE_URL: baseURL } = process.env;
+import api from '../../../services/api';
+
+const baseURL = 'https://graph.instagram.com/v13.0/';
 
 const DEFAULT_FIELDS = ['id', 'media_type', 'media_url'];
 
 export default class InstagramClient {
   static client = axios.create({ baseURL });
 
+  static async getToken() {
+    const {
+      data: { token },
+    } = await api.get('/get/instagram-token');
+    return token;
+  }
+
   static async getSelfUser() {
+    const token = await this.getToken();
+
     const params = {
-      access_token: REACT_APP_IG_TOKEN,
+      access_token: token,
       fields: 'account_type,id,media_count,username',
     };
 
@@ -19,10 +30,12 @@ export default class InstagramClient {
   }
 
   static async getLastMedia(limit, fields = DEFAULT_FIELDS) {
+    const token = await this.getToken();
+
     const fieldsStringfied = fields.join(',');
 
     const params = {
-      access_token: REACT_APP_IG_TOKEN,
+      access_token: token,
       fields: fieldsStringfied,
     };
 

@@ -7,7 +7,6 @@ import {
   ContainerMobile,
   Content,
   DonationButton,
-  HeaderWrapper,
   ListNavMenu,
   NavLinkContent,
   NavLinkMenu,
@@ -22,17 +21,22 @@ const Header = () => {
   const NAV_LINKS = [
     {
       id: 1,
+      to: '/',
+      text: 'Início',
+    },
+    {
+      id: 2,
       to: 'doacao',
       text: 'Doações',
     },
-
-    // {
-    //   id: 2,
-    //   to: '/',
-    //   text: 'Medicamentos',
-    // },
     {
       id: 3,
+      to: 'doe-medicamentos',
+      text: 'Medicamentos',
+    },
+
+    {
+      id: 4,
       to: 'seja-voluntario',
       text: 'Voluntários',
     },
@@ -41,7 +45,7 @@ const Header = () => {
   const NavLinkRender = ({ text, to, id }) => {
     return (
       <ListNavMenu>
-        <NavLinkContent to={to} key={id} onClick={() => setToggle(!toggle)}>
+        <NavLinkContent to={to} key={id} onClick={() => setToggle(false)}>
           {text}
         </NavLinkContent>
       </ListNavMenu>
@@ -49,28 +53,30 @@ const Header = () => {
   };
 
   return (
-    <HeaderWrapper>
+    <>
       <Container>
-        <Content>
-          <NavLinkContent to="/">
-            <img src={Logo} alt="Logo Saúde da Rua" />
-          </NavLinkContent>
-        </Content>
-        <NavMenu>
-          {NAV_LINKS.map((link, index) => (
-            <NavLinkRender to={link.to} text={link.text} key={index} />
-          ))}
-          <DonationButton text="Doe agora" route="/doacao" />
-        </NavMenu>
+        <div>
+          <Content>
+            <NavLinkContent to="/">
+              <img src={Logo} alt="Logo Saúde da Rua" />
+            </NavLinkContent>
+          </Content>
+          <NavMenu>
+            {NAV_LINKS.map((link, index) => (
+              <NavLinkRender to={link.to} text={link.text} key={index} />
+            ))}
+            <DonationButton text="Doe agora" route="/doacao" />
+          </NavMenu>
 
-        <ToggleMenu onClick={() => setToggle(!toggle)}>
-          {toggle ? <AiOutlineClose /> : <AiOutlineMenu />}
-        </ToggleMenu>
+          <ToggleMenu onClick={() => setToggle(!toggle)}>
+            {toggle ? <AiOutlineClose /> : <AiOutlineMenu />}
+          </ToggleMenu>
+        </div>
       </Container>
 
       <ContainerMobile>
         <NavMenuMobile isOpened={toggle}>
-          {toggle && (
+          {toggle ? (
             <NavLinkMenu>
               <div>
                 {NAV_LINKS.map((link, index) => (
@@ -78,20 +84,22 @@ const Header = () => {
                     to={link.to}
                     text={link.text}
                     key={index}
-                    onClick={() => setToggle(!toggle)}
+                    onClick={() => setToggle(false)}
                   />
                 ))}
               </div>
               <DonationButton
                 text="Doe agora"
                 route="/doacao"
-                onClick={() => setToggle(!toggle)}
+                onClick={() => setToggle(false)}
               />
             </NavLinkMenu>
+          ) : (
+            <></>
           )}
         </NavMenuMobile>
       </ContainerMobile>
-    </HeaderWrapper>
+    </>
   );
 };
 

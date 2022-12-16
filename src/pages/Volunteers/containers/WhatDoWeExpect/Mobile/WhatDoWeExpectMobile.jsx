@@ -47,7 +47,7 @@ const WhatDoWeExpectMobile = () => {
   return (
     <Container>
       <h3>
-        O que esperamos de <Highlight>você?</Highlight>
+        O que esperamos de <Highlight> você?</Highlight>
       </h3>
       <Accordion type="single" collapsible>
         {values.map((item) => (
