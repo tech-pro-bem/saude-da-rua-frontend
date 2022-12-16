@@ -49,9 +49,9 @@ export const NavLinkContent = styled(NavLink)`
     align-items: center;
   }
 
-  @media (min-height: 873px) {
+  /* @media (min-height: 873px) {
     font-size: 1.7rem;
-  }
+  } */
 
   @media (max-width: 520px) {
     display: flex;
