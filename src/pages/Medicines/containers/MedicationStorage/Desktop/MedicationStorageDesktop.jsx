@@ -37,8 +37,8 @@ export function MedicationStorageDesktop() {
               <img alt="checkbox-svg" src={CheckBox}></img>
               <p>
                 {' '}
-                Siga a orientação médica para remédios termolábeis (sensíveis à
-                temperatura).
+                Siga a orientação médica para remédios termolábeis <br />
+                (sensíveis à temperatura).
               </p>
             </Option>
           </List>

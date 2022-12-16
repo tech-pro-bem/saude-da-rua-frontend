@@ -18,8 +18,10 @@ const WhatToContinueContributedDesktop = () => {
       <Content>
         <Title>Quer seguir contribuindo?</Title>
         <Paragraph>
-          Ficamos muito felizes com o seu apoio! Para acessar nossas campanhas
-          de doação, clique no botão abaixo.
+          Ficamos muito felizes com o seu <br /> apoio! Para doar qualquer
+          valor,
+          <br /> siga as instruções clicando no
+          <br /> botão abaixo.
         </Paragraph>
         <Button text="Ir para Doações" route="/doacao" />
       </Content>
