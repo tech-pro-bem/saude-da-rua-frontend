@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerPartners = styled.div`
-  margin-top: 100px;
-  margin-bottom: 100px;
-
+  margin: 64px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

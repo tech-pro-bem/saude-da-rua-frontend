@@ -1,6 +1,6 @@
 export const DataSharing = () => {
   return (
-    <div>
+    <section id="secao7">
       <h2>Seção 7 - Compartilhamento de dados</h2>
       <p>
         O compartilhamento de dados ocorre apenas entre os operadores da ONG a
@@ -8,6 +8,6 @@ export const DataSharing = () => {
         realização de transferência de dados a terceiros, salvo disposto
         legalmente.
       </p>
-    </div>
+    </section>
   );
 };

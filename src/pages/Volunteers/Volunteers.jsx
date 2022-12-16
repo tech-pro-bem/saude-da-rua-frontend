@@ -26,8 +26,8 @@ const Volunteers = () => {
       <VolunteersContainer>
         <Structure>
           <WhoCanVolunteer />
-          {smallMobile ? <WhatDoWeExpectMobile /> : <WhatDoWeExpectDesktop />}
           {mobile ? <HowTheExperienceMobile /> : <HowTheExperienceDesktop />}
+          {smallMobile ? <WhatDoWeExpectMobile /> : <WhatDoWeExpectDesktop />}
           {mobile ? <ExperienceMobile /> : <ExperienceDesktop />}
         </Structure>
       </VolunteersContainer>

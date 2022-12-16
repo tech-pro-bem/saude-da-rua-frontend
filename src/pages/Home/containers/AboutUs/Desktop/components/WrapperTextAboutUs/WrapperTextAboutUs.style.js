@@ -1,16 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 705px;
   width: 40%;
-
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 33px;
+  padding-top: 60px;
 
   h2 {
     line-height: 60px;
-    // margin-bottom: 41px;
+    margin-bottom: 41px;
     height: 60px;
   }
 
@@ -20,7 +16,6 @@ export const Container = styled.div`
   }
 
   #first {
-    margin-top: -100px;
-    height: 159px;
+    margin-bottom: 50px;
   }
 `;

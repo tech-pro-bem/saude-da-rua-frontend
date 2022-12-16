@@ -23,12 +23,13 @@ import {
 const DonateMedication = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
   const mobile = useMedia('(max-width:540px)');
+  const maxWidth700 = useMedia('(max-width:1240px)');
   return (
     <>
       <ContainerMedicine>
         <MedicineBackground />
         <MedicineContent>
-          <div className="container">
+          <div className={!maxWidth700 ? '' : 'container'}>
             {!mobile ? (
               <Title>
                 Doe <Highlight>medicamentos</Highlight>
@@ -41,7 +42,8 @@ const DonateMedication = () => {
             )}
 
             <Paragraphy className="big">
-              Sabe aqueles remédios que você não usa mais? <br />
+              Sabe aqueles remédios que você não usa mais?
+              {!mobile ? <br /> : ' '}
               Você pode doar pra gente.
             </Paragraphy>
             <div className="button">

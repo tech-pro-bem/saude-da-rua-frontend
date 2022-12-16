@@ -57,3 +57,18 @@ export const AddMedicineButton = styled.button`
     max-width: 368px;
   }
 `;
+
+export const ButtonCancelNewMedicine = styled.button`
+  background: transparent;
+  color: #0095f6;
+  border-bottom: 1px solid #0095f6;
+  font-weight: 500;
+  margin: 0 auto 40px;
+  display: flex;
+  transition: all 0.2s;
+
+  &:hover {
+    color: #ff4848;
+    border-bottom: 1px solid #ff4848;
+  }
+`;

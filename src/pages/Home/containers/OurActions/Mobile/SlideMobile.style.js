@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
-  margin: 3rem 0 0 0;
+  margin: 0;
   padding: 0.6rem;
 
   #year {
@@ -13,13 +13,12 @@ export const Wrapper = styled.section`
   }
   .title {
     padding: 5px;
-    margin-top: 10px;
     font-size: 40px;
     margin-bottom: 62px;
 
     @media (max-width: 40rem) {
       font-size: 1.625rem;
-      margin: 1.5rem 0;
+      margin: 0 0 1.5rem 0;
     }
   }
   .listOfSplideSlide {

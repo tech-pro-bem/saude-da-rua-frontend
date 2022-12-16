@@ -1,6 +1,6 @@
 export const CookiesAndBrowsingData = () => {
   return (
-    <div>
+    <section id="secao8">
       <h2>Seção 8 - Cookies e Dados de navegação</h2>
       <p>
         Os cookies referem-se a arquivos de texto enviados pelo site ao
@@ -28,6 +28,6 @@ export const CookiesAndBrowsingData = () => {
         alguns recursos do site podem não funcionar corretamente se a capacidade
         de aceitar cookies estiver desabilitada.
       </p>
-    </div>
+    </section>
   );
 };

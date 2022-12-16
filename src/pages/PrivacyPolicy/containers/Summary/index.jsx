@@ -3,6 +3,7 @@ import { Link, List, Navigation } from './Summary.style';
 
 export const Summary = () => {
   const [activeLink, setActiveLink] = useState('#');
+
   return (
     <Navigation>
       <ul>

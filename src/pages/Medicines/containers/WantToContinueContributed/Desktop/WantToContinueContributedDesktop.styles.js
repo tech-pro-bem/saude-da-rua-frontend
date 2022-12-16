@@ -3,10 +3,8 @@ import LinkButton from '../../../../../components/LinkButton/LinkButton';
 
 export const Container = styled.div`
   display: flex;
-
   gap: 28px;
-  padding: 100px 8px;
-  padding-bottom: 60px;
+  padding: 44px 8px;
 
   @media (max-width: 995px) {
     padding: 0px 4px;

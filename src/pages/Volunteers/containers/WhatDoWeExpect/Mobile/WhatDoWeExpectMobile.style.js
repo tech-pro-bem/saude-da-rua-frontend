@@ -20,13 +20,19 @@ const slideUp = keyframes`
 `;
 
 export const Container = styled.div`
-  margin-bottom: 4rem;
+  margin: 3.875rem 0;
 
   & > h3 {
     font-weight: 700;
     font-size: 1.625rem;
     line-height: 1.4;
     color: ${(props) => props.theme.colors.primary_light};
+
+    @media (max-width: 500px) {
+      span {
+        display: flex;
+      }
+    }
   }
 `;
 

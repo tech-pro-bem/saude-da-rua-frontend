@@ -22,7 +22,7 @@ export const H2 = styled.h2`
     font-size: 35px;
   }
   @media (max-width: 720px) {
-    font-size: 24px;
+    font-size: 26px;
   }
 `;
 export const ParagraphyStyle = styled.p`

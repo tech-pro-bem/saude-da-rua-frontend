@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const MostUsedMedicines = styled.div`
   margin: 5rem 0;
+  @media (max-width: 540px) {
+    margin: 64px 0;
+  }
 `;
 export const MostUsedHeader = styled.div`
   text-align: center;

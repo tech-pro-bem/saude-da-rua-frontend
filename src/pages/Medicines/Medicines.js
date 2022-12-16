@@ -19,7 +19,7 @@ import {
 function Medicines() {
   const mobile = useMedia('(max-width:875px)');
   return (
-    <div>
+    <>
       <Head
         title="Doe medicamentos"
         description="Se você é profissional ou estudante da área da saúde, participe das ações do Saúde da Rua"
@@ -44,7 +44,7 @@ function Medicines() {
           <WhatToContinueContributedDesktop />
         )}
       </Structure>
-    </div>
+    </>
   );
 }
 

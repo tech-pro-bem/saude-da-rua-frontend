@@ -20,20 +20,20 @@ const Photos = () => {
           bottomOffset={'none'}
           src={imag2}
           imgBorderRadius={'12px'}
-          marginBottom={'24px'}
+          marginBottom={'8px'}
           myRef={ref}
           inView={inView}
           animation={inView}
         />
         <OutlinedImageAnimation
           outlineBorderRadius={'12px'}
-          rightOffset={'none'}
+          rightOffset={'-8px'}
           topOffset={'-8px'}
-          leftOffset={'-8px'}
+          leftOffset={'none'}
           bottomOffset={'none'}
           src={imag3}
           imgBorderRadius={'12px'}
-          marginBottom={'24px'}
+          marginBottom={'none'}
           myRef={ref}
           inView={inView}
           animation={inView}

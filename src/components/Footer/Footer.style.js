@@ -24,7 +24,7 @@ export const MainFooter = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
   column-gap: 5.625rem;
-  margin-top: 3.688rem;
+  margin-top: 64px;
   margin-bottom: 4.625rem;
 
   @media (max-width: 1024px) {

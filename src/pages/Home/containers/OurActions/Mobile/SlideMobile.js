@@ -40,7 +40,7 @@ const SlideMobile = () => {
   return (
     <Wrapper>
       <h2 className="title">
-        Veja nossas <Highlight>ações</Highlight>
+        Conheça nossas <Highlight>ações</Highlight>
       </h2>
       <>
         {loaded && instanceRef.current && (

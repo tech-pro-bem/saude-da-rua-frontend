@@ -7,10 +7,12 @@ export const Banner = () => {
     <Container>
       <div>
         <h1>
-          Doe e <Highlight>ajude pessoas</Highlight> em situação de rua
+          Doe e <Highlight>ajude pessoas</Highlight>
+          <br /> em situação de rua
         </h1>
         <p className="big">
-          Nos ajude a levar atendimento médico humanizado pra quem mais precisa.
+          Ajude-nos a levar atendimento médico
+          <br /> humanizado pra quem mais precisa.
         </p>
         <h4>Faça parte dessa ação!</h4>
         <LinkButton text="Doe qualquer valor" route="/doacao" />
