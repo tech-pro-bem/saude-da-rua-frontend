@@ -9,7 +9,7 @@ export const Summary = () => {
         <List>
           <Link
             href="#secao1"
-            className={`${activeLink === '#secao1' ? 'active' : ''}`}
+            className={activeLink === '#secao1' ? 'active' : ''}
             onClick={() => setActiveLink('#secao1')}
           >
             <span>Seção 1</span> Informações Gerais
