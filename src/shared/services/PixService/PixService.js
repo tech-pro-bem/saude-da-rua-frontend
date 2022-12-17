@@ -1,6 +1,6 @@
 import api from '../api';
 
-export async function GenerateQrCode() {
+export async function getPixKey() {
   let responseData = {
     key: '',
     error: false,
