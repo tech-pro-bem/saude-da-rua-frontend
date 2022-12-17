@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useQuery } from 'react-query';
 import {
   Container,
   HelpOption,
@@ -9,6 +10,7 @@ import {
   PIXInstructionsContainer,
 } from './HelpNow.style';
 import { Highlight, Chip, OutlinedImage } from '@components';
+import { getPixKey } from '@shared/services';
 import qrCodes from '@assets/qr-codes';
 
 const HelpNowDesktop = () => {
@@ -29,6 +31,12 @@ const HelpNowDesktop = () => {
   ];
 
   const [selectedValue, setSelectedValue] = useState(defaultSelection);
+
+  const { data: pix } = useQuery('pix', () => getPixKey(), {
+    placeholderData: { key: 'saudedarua@gmail.com' },
+    enabled: false,
+  });
+  console.log(pix);
 
   const handleSelection = (value) => {
     setSelectedValue(value);
@@ -64,7 +72,7 @@ const HelpNowDesktop = () => {
                 <Highlight>PIX</Highlight>
               </strong>
               <p>A nossa chave pix é:</p>
-              <p style={{ fontWeight: 'bold' }}>saudedarua@gmail.com</p>
+              <p style={{ fontWeight: 'bold' }}>{pix.key}</p>
             </HelpOption>
             <HelpOption>
               <strong>
