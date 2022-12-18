@@ -17,6 +17,7 @@ import SubTitle from './Typography/SubTitle/SubTitle';
 import Paragraphy from './Typography/Paragraphy/Paragraphy';
 import ErrorMessage from './ErrorMessage/ErrorMessage';
 import Select from './Select';
+import PixQRCode from './PixQRCode/PixQRCode';
 
 export {
   Layout,
@@ -38,4 +39,5 @@ export {
   Paragraphy,
   ErrorMessage,
   Select,
+  PixQRCode,
 };
