@@ -36,7 +36,7 @@ const WhereYourDonationGoes = () => {
         {mobile ? (
           <ReportMobile reports={reportsApi} />
         ) : (
-          <ReportDesktop reportsApi={reportsApi} />
+          <ReportDesktop reports={reportsApi} />
         )}
       </Reports>
     </Container>

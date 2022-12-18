@@ -7,6 +7,7 @@ export const Container = styled.div`
 
 export const ReportWrapper = styled.div`
   width: 40%;
+  padding-right: 8px;
 `;
 
 export const Title = styled.p`
