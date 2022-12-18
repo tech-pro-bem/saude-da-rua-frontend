@@ -33,7 +33,6 @@ const HelpNowDesktop = () => {
 
   const { data: pix } = useQuery('pix', () => getPixKey(), {
     placeholderData: { key: '' },
-    enabled: false,
   });
 
   const handleSelection = (value) => {
@@ -116,7 +115,7 @@ const HelpNowDesktop = () => {
                 recebedor: 'Saude da Rua',
                 valor: selectedValue.value,
                 mensagem: `Doação de ${selectedValue.displayValue} pelo site ^^`,
-                identificador: `SITE:SAUDEDARUA-${
+                identificador: `ONG:SITE:SAUDEDARUA.ORG-${
                   selectedValue.valueCode
                 }@${new Date().toISOString()}`,
               }}

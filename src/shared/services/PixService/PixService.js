@@ -1,6 +1,6 @@
 import api from '../../../services/api';
 
-export async function getPixKey() {
-  const response = await api.get('/pix');
-  return response;
-}
+export const getPixKey = async () => {
+  const { data: pix } = await api.get('/pix');
+  return pix;
+};
