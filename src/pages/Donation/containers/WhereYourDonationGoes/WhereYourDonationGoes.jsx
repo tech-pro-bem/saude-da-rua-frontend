@@ -1,26 +1,17 @@
+// import { useEffect, useState } from 'react';
+import { useQuery } from 'react-query';
 import { Highlight } from '@components';
 import { ReportDesktop, ReportMobile } from './components';
 import { useMedia } from '@hooks';
 import { Container, Reports, StyledP } from './WhereYourDonationGoes.style';
-import api from './../../../../services/api';
-import { useEffect, useState } from 'react';
+import { getReports } from '@shared/services';
 
 const WhereYourDonationGoes = () => {
   const mobile = useMedia('(max-width: 960px)');
-  const [reportsApi, setReportsApi] = useState([]);
 
-  useEffect(() => {
-    fetchReports();
-  }, []);
-
-  async function fetchReports() {
-    try {
-      const { data } = await api.get('/file/PDF', { params: { limit: 20 } });
-      setReportsApi(data);
-    } catch (e) {
-      console.log(e);
-    }
-  }
+  const { data: reports } = useQuery('api/reports', () => getReports(10), {
+    placeholderData: [],
+  });
 
   return (
     <Container>
@@ -34,9 +25,9 @@ const WhereYourDonationGoes = () => {
       </StyledP>
       <Reports>
         {mobile ? (
-          <ReportMobile reports={reportsApi} />
+          <ReportMobile reports={reports} />
         ) : (
-          <ReportDesktop reports={reportsApi} />
+          <ReportDesktop reports={reports} />
         )}
       </Reports>
     </Container>
