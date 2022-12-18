@@ -27,10 +27,13 @@ export const LoadA = styled.a`
 
 export const OtherReport = styled.div`
   display: flex;
+  cursor: pointer;
+  width: fit-content;
+  padding-right: 8px;
+  user-select: none;
   img {
     margin-bottom: 10px;
     margin-left: 10px;
-    cursor: pointer;
   }
 `;
 

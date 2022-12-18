@@ -28,9 +28,9 @@ export const OtherReport = styled.div`
   display: flex;
   justify-content: space-between;
   width: 180px;
+  cursor: pointer;
   img {
     margin-bottom: 10px;
-    cursor: pointer;
   }
 `;
 

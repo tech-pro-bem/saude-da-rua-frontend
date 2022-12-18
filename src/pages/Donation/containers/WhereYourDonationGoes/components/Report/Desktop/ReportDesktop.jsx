@@ -50,13 +50,9 @@ const ReportDesktop = ({ reportsApi }) => {
             baixe aqui
           </LoadA>
         </LoadP>
-        <OtherReport>
+        <OtherReport onClick={() => setisReportOpen(!isReportOpen)}>
           <Title>Outros Relatórios</Title>
-          <img
-            onClick={() => setisReportOpen(!isReportOpen)}
-            src={isReportOpen ? VectorUp : VectorDown}
-            alt="icon"
-          ></img>
+          <img src={isReportOpen ? VectorUp : VectorDown} alt="icon" />
         </OtherReport>
         {isReportOpen ? (
           <OlderReports>

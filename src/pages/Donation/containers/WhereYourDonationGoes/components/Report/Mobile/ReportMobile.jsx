@@ -57,13 +57,9 @@ const ReportMobile = ({ reportsApi }) => {
           </LoadP>
         </ReportBox>
       ) : null}
-      <OtherReport>
+      <OtherReport onClick={() => setisReportOpen(!isReportOpen)}>
         <Title>Outros Relatórios</Title>
-        <img
-          onClick={() => setisReportOpen(!isReportOpen)}
-          src={isReportOpen ? VectorUp : VectorDown}
-          alt="icon-up-down"
-        ></img>
+        <img src={isReportOpen ? VectorUp : VectorDown} alt="icon-up-down" />
       </OtherReport>
 
       {isReportOpen ? (
