@@ -9,34 +9,32 @@ import {
   PIXDonationContainer,
   PIXInstructionsContainer,
 } from './HelpNow.style';
-import { Highlight, Chip, OutlinedImage } from '@components';
+import { Highlight, Chip, PixQRCode } from '@components';
 import { getPixKey } from '@shared/services';
-import qrCodes from '@assets/qr-codes';
 
 const HelpNowDesktop = () => {
   const defaultSelection = {
     key: 0,
     displayValue: 'Qualquer valor',
     value: null,
-    qrCode: null,
+    valueCode: null,
   };
 
   const values = [
-    { key: 1, displayValue: 'R$ 15', value: 15, qrCode: 'BRL15' },
-    { key: 2, displayValue: 'R$ 30', value: 30, qrCode: 'BRL30' },
-    { key: 3, displayValue: 'R$ 50', value: 50, qrCode: 'BRL50' },
-    { key: 4, displayValue: 'R$ 100', value: 100, qrCode: 'BRL100' },
-    { key: 5, displayValue: 'R$ 200', value: 200, qrCode: 'BRL200' },
+    { key: 1, displayValue: 'R$ 15', value: 15, valueCode: 'BRL15' },
+    { key: 2, displayValue: 'R$ 30', value: 30, valueCode: 'BRL30' },
+    { key: 3, displayValue: 'R$ 50', value: 50, valueCode: 'BRL50' },
+    { key: 4, displayValue: 'R$ 100', value: 100, valueCode: 'BRL100' },
+    { key: 5, displayValue: 'R$ 200', value: 200, valueCode: 'BRL200' },
     defaultSelection,
   ];
 
   const [selectedValue, setSelectedValue] = useState(defaultSelection);
 
   const { data: pix } = useQuery('pix', () => getPixKey(), {
-    placeholderData: { key: 'saudedarua@gmail.com' },
+    placeholderData: { key: '' },
     enabled: false,
   });
-  console.log(pix);
 
   const handleSelection = (value) => {
     setSelectedValue(value);
@@ -112,17 +110,43 @@ const HelpNowDesktop = () => {
             <p>Destinatário: Gustavo Zaborowsky Graicer</p>
           </PIXInstructionsContainer>
           <div>
-            <OutlinedImage
-              width="160px"
-              height="160px"
-              borderWidth="4px"
-              topOffset="-12px"
-              leftOffset="-12px"
-              rightOffset="-12px"
-              bottomOffset="-12px"
-              src={qrCodes[selectedValue.qrCode]}
-              alt={`QR Code para doar ${selectedValue.value}`}
-            />
+            <PixQRCode
+              pixParams={{
+                chave: pix.key,
+                recebedor: 'Saude da Rua',
+                valor: selectedValue.value,
+                mensagem: `Doação de ${selectedValue.displayValue} pelo site ^^`,
+                identificador: `SITE:SAUDEDARUA-${
+                  selectedValue.valueCode
+                }@${new Date().toISOString()}`,
+              }}
+              size={196}
+              includeMargin
+              style={{
+                border: '4px solid rgb(0, 149, 246)',
+                borderRadius: '8px',
+                padding: '6px',
+              }}
+            >
+              <>
+                <p>Poxa, não foi possível gerar o QR Code :(</p>
+                <p>Pode ser que você esteja sem conexão com a internet.</p>
+                <p>
+                  Tente novamente mais tarde. Se persistir, entre em contato com
+                  a equipe pelo e-mail{' '}
+                  <a
+                    href="mailto:saudedarua@gmail.org"
+                    style={{ color: 'white' }}
+                  >
+                    saudedarua@gmail.com
+                  </a>
+                </p>
+                <p>
+                  Você também pode tentar outros meios de doação clicando em
+                  "Qualquer valor"
+                </p>
+              </>
+            </PixQRCode>
           </div>
         </PIXDonationContainer>
       )}
