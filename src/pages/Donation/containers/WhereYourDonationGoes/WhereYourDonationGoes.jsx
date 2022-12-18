@@ -15,7 +15,7 @@ const WhereYourDonationGoes = () => {
 
   async function fetchReports() {
     try {
-      const { data } = await api.get(`/file/PDF?limit=5`);
+      const { data } = await api.get('/file/PDF', { params: { limit: 20 } });
       setReportsApi(data);
     } catch (e) {
       console.log(e);
@@ -34,7 +34,7 @@ const WhereYourDonationGoes = () => {
       </StyledP>
       <Reports>
         {mobile ? (
-          <ReportMobile reportsApi={reportsApi} />
+          <ReportMobile reports={reportsApi} />
         ) : (
           <ReportDesktop reportsApi={reportsApi} />
         )}
