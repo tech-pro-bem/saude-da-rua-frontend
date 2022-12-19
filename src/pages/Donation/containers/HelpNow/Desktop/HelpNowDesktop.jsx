@@ -112,12 +112,10 @@ const HelpNowDesktop = () => {
             <PixQRCode
               pixParams={{
                 chave: pix.key,
-                recebedor: 'Saude da Rua',
                 valor: selectedValue.value,
-                mensagem: `Doação de ${selectedValue.displayValue} pelo site ^^`,
-                identificador: `ONG:SITE:SAUDEDARUA.ORG-${
-                  selectedValue.valueCode
-                }@${new Date().toISOString()}`,
+                recebedor: 'Gustavo Zaborowsky Graicer',
+                cidade: 'SAO PAULO',
+                mensagem: `Doação de ${selectedValue.displayValue} via site`,
               }}
               size={196}
               includeMargin

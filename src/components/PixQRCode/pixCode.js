@@ -18,14 +18,14 @@ export function generatePixCode({
 
   const versao = '01';
   const BRL = '986';
-  const repeticao = '11';
+  // const repeticao = '11';
   const pais = 'BR';
 
   const payloadKeyString = generateKey(chave, mensagem);
 
   const payload = [
     genEMV('00', versao),
-    genEMV('01', repeticao),
+    // genEMV('01', repeticao),
     genEMV('26', payloadKeyString),
     genEMV('52', '0000'),
     genEMV('53', BRL),
@@ -36,7 +36,7 @@ export function generatePixCode({
   }
 
   payload.push(genEMV('58', pais));
-  payload.push(genEMV('59', recebedor));
+  payload.push(genEMV('59', recebedor.slice(0, 25)));
   payload.push(genEMV('60', cidade.toLocaleUpperCase()));
 
   if (cep) {

@@ -4,9 +4,9 @@ import { QRCodeSVG } from 'qrcode.react';
 const PixQRCode = ({ pixParams, children, onError, ...qrCodeProps }) => {
   // pixParams mandatory: chave, valor
 
-  const recebedor = 'Não Identificado';
-  const cidade = 'Não Identificada';
-  const identificador = '00000';
+  const recebedor = 'undefined';
+  const cidade = 'undefined';
+  const identificador = '***';
   const pixParamsWithFallbacks = {
     recebedor,
     cidade,
