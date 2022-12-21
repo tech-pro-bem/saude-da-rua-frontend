@@ -178,7 +178,7 @@ const MedicineDonationForm = () => {
           userGaveUpAddingMedicines={userGaveUpAddingMedicines}
         />
 
-        {medicines.length && (
+        {medicines.length > 0 && (
           <ButtonCancelNewMedicine type="button" onClick={handleCancel}>
             Cancelar novo medicamento
           </ButtonCancelNewMedicine>
