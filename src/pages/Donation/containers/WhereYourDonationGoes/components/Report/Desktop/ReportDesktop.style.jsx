@@ -7,6 +7,7 @@ export const Container = styled.div`
 
 export const ReportWrapper = styled.div`
   width: 40%;
+  padding-right: 8px;
 `;
 
 export const Title = styled.p`
@@ -27,10 +28,13 @@ export const LoadA = styled.a`
 
 export const OtherReport = styled.div`
   display: flex;
+  cursor: pointer;
+  width: fit-content;
+  padding-right: 8px;
+  user-select: none;
   img {
     margin-bottom: 10px;
     margin-left: 10px;
-    cursor: pointer;
   }
 `;
 

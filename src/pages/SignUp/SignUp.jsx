@@ -79,6 +79,7 @@ const SignUp = () => {
         navigate('/inscreva-se/sucesso');
     } catch (e) {
       console.log(e);
+      // console.log(e.response.data);
       navigate('/inscreva-se/falha');
     }
   };

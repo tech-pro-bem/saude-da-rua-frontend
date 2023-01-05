@@ -143,6 +143,18 @@ const howMuchParticipate = [
   'Sim, em mais de 5 ações',
 ];
 
+const courses = [
+  'Medicina',
+  'Enfermagem',
+  'Técnico de Enfermagem',
+  'Psicologia',
+  'Nutrição',
+  'Assistência Social',
+  'Farmácia',
+  'Odontologia',
+  'Veterinária',
+];
+
 export const Experience = ({
   register,
   Controller,
@@ -213,9 +225,27 @@ export const Experience = ({
                 name="university"
                 id="university"
                 placeholder="Informe a sua instituição de ensino"
-                {...register('university', { required: true })}
+                {...register('university', { required: false })}
               />
-              {errors.university && (
+            </BoxInput>
+            <BoxInput>
+              <label htmlFor="course">Curso</label>
+              <Controller
+                rules={{ required: true }}
+                defaultValue=""
+                control={control}
+                name="course"
+                render={({ field }) => (
+                  <Select
+                    name="course"
+                    value={field.value}
+                    onChange={field.onChange}
+                    errors={errors}
+                    options={courses}
+                  />
+                )}
+              />
+              {errors.semester && (
                 <ErrorMessage message="Esse campo deve ser preenchido." />
               )}
             </BoxInput>
