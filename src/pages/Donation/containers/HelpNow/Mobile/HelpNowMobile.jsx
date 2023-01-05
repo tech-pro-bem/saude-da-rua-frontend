@@ -1,10 +1,11 @@
 import React from 'react';
+import { useQuery } from 'react-query';
 import { HelpMobileDivision } from './containers/HelpNow.style';
 import HelpNowHero from './containers/HelpNowHero';
 import HowHelpContent from './containers/HowHelpContent';
+import { getPixKey } from '@shared/services';
 
 const HelpInformation = {
-  key: 'saudedarua@gmail.com',
   pix: {
     1: 'Copie a chave pix acima',
     2: 'Acesse a área pix no app do seu banco',
@@ -25,12 +26,19 @@ const HelpInformation = {
     second: 'Aguarde nossa resposta, enviaremos o boleto no valor solicitado.',
   },
 };
+
 const HelpNowMobile = () => {
+  const { data: pix } = useQuery('pix', () => getPixKey(), {
+    placeholderData: { key: '' },
+  });
+
   return (
     <>
       <HelpNowHero />
       <HelpMobileDivision>
-        <HowHelpContent HelpInformation={HelpInformation} />
+        <HowHelpContent
+          HelpInformation={{ ...HelpInformation, key: pix.key }}
+        />
       </HelpMobileDivision>
     </>
   );
